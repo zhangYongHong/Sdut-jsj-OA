@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="cn.opencil.oa.core.domain.User" table="jsj_user">
+		<id name="uid" type="java.lang.Long" length="5" column="uid">
+			<generator class="native"></generator>
+		</id>
+		<property name="employeenum" type="java.lang.String" length="20"></property>
+		<property name="userName" type="java.lang.String" length="50"></property>
+		<property name="password" type="java.lang.String" length="50"></property>
+		<property name="deptid" type="java.lang.Integer" length="20"></property>
+		<property name="phone" type="java.lang.String" length="50"></property>
+		<property name="email" type="java.lang.String" length="50"></property>
+		
+	</class>
+</hibernate-mapping>

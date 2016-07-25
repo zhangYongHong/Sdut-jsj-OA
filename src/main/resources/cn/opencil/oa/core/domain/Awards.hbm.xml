@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="cn.opencil.oa.core.domain.Awards" table="jsj_awards">
+		<id name="aid" type="java.lang.Long" length="5">
+			<generator class="native"></generator>
+		</id>
+		<property name="competitionid" type="java.lang.Integer" length="20"></property>
+		<property name="level" type="java.lang.Integer" length="20"></property>
+		<property name="grade" type="java.lang.Integer" length="20"></property>
+		<property name="deptid" type="java.lang.Integer" length="20"></property>
+		<property name="achievement" type="java.lang.String" length="50"></property>
+		<property name="stuname" type="java.lang.String" length="50"></property>
+		<property name="classe" type="java.lang.String" length="50"></property>
+		<property name="teacher" type="java.lang.String" length="50"></property>
+		<property name="prizeunit" type="java.lang.String" length="50"></property>	
+		<property name="comment" type="java.lang.String" length="50"></property>	
+		<property name="uri" type="java.lang.String" length="50"></property>	
+		<property name="atime" type="java.lang.String"></property>
+		
+	</class>
+</hibernate-mapping>

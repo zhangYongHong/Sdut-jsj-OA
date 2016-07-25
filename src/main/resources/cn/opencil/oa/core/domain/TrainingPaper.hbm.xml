@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="cn.opencil.oa.core.domain.TrainingPaper" table="jsj_training_paper">
+		<id name="tid" type="java.lang.Long" length="5">
+			<generator class="native"></generator>
+		</id>
+	
+		<property name="teacher" type="java.lang.String" length="50"></property>
+		<property name="className" type="java.lang.String" length="300"></property>
+		<property name="course" type="java.lang.String" length="50"></property>
+		<property name="psource" type="java.lang.Integer" length="20"></property>
+		<property name="examineway" type="java.lang.Integer" length="20"></property>
+		<property name="num" type="java.lang.Integer" length="20"></property>
+		<property name="tnum" type="java.lang.Integer" length="20"></property>
+		<property name="nature" type="java.lang.String" length="20"></property>
+		<property name="analyzes" type="java.lang.Integer" length="20"></property>
+		<property name="plan" type="java.lang.Integer" length="20"></property>
+		<property name="standard" type="java.lang.Integer" length="20"></property>
+		<property name="score" type="java.lang.Integer" length="20"></property>
+		<property name="comment" type="java.lang.String" length="300"></property>
+		<property name="fileNum" type="java.lang.String" length="100"></property>
+		<property name="schoolYear" type="java.lang.String" length="50"></property>
+		<property name="isChange" type="java.lang.String" length="25"></property>
+		
+	</class>
+</hibernate-mapping>

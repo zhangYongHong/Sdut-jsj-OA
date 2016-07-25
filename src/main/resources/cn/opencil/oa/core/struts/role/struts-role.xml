@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.ui.theme" value="simple"></constant>
+    <constant name="struts.devMode" value="true"/>
+    <package name="role" extends="interceptor-login" namespace="/">
+        <action name="roleAction_home" class="roleAction" method="home">
+            <result>WEB-INF/jsp/role/role.jsp</result>
+        </action>
+    </package>
+</struts>

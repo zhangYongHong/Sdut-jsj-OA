@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.devMode" value="true"/>
+
+	<!-- 添加页面跳转 -->
+	<package name="page" extends="struts-default" namespace="/">
+		<action name="page_*">
+			<result>/WEB-INF/jsp/frame/{1}.jsp</result>
+		</action>
+	</package>
+
+	<!-- 拦截器 -->
+	<include file="cn/opencil/oa/core/struts/interceptor/struts-interceptor-login.xml"></include>
+
+	<!-- 基础数据模块 -->
+
+	<include file="cn/opencil/oa/core/struts/basedata/struts-user.xml"></include>
+	<include file="cn/opencil/oa/core/struts/awards/struts-awards.xml"></include>
+	<include file="cn/opencil/oa/core/struts/login/struts-login.xml"></include>
+
+	<!-- 试卷管理模块 -->
+	<include file="cn/opencil/oa/core/struts/paper/struts-tpaper.xml"></include>
+	<include file="cn/opencil/oa/core/struts/paper/struts-qpaper.xml"></include>
+
+	<!--权限管理-->
+	<include file="cn/opencil/oa/core/struts/role/struts-role.xml"></include>
+</struts>
+	
