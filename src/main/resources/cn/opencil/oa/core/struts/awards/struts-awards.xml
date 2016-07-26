@@ -11,8 +11,8 @@
 	<package name="awards" extends="interceptor-login" namespace="/">
 	
 		<action name="awardsAction_*" class="awardsAction" method="{1}">
-			<result name="listAction">/WEB-INF/jsp/awards/list.jsp</result>
-			<result name="addUI">/WEB-INF/jsp/awards/add.jsp</result>
+			<result name="listAction">/WEB-INF/jsp/paper/awards/list.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/paper/awards/add.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">awardsAction_list</param>
 				<param name="namespace">/</param>

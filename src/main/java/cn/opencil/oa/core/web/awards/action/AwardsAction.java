@@ -7,7 +7,6 @@ import cn.opencil.oa.core.query.AwardsQuery;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.logging.impl.Log4JLogger;
-import org.hibernate.exception.DataException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -40,37 +39,18 @@ public class AwardsAction extends BaseAction<Awards> {
         this.awardsQuery = awardsQuery;
     }
 
-    /**
-     * 保存奖项信息
-     *
-     * @return
-     */
-    public String save() {//如果有上传文件操作,先进行保存文件操作,得到uri在保存awards
-        Awards awards = new Awards();
-        BeanUtils.copyProperties(this.getModel(), awards);
-        try {
-            this.awardsService.addEntry(awards);
-        } catch (DataException e) {
-            System.out.println("sdasdsada");
-        }
-
-        return action2action;
-    }
-
-    public String addUI() {
-        return addUI;
-    }
-
     public String list() {
-        String fileNum = this.getModel().getFileNum();
         try {
-
             PageResult<Awards> awardsPageResult = awardsService.getAwaPageResult(awardsQuery);
-            ActionContext.getContext().put("awards", awardsPageResult);
+            ActionContext.getContext().put("awardsPapers", awardsPageResult);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
         return listAction;
+    }
+
+    public String addUI() {
+        return addUI;
     }
 
     public String update() {

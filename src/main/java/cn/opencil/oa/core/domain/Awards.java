@@ -16,6 +16,7 @@ public class Awards implements Serializable {
 
 	private Long aid;	//id,自增长
 	private Integer competitionid;//竞赛项目
+	private String competitionView;
 	private String achievement;//成果名称
 	private Integer level;//获奖级别     1.国家级  2.省级  3.校级  4.院级
 	private Integer grade;//获奖等级	1.特等奖  2.一等奖   3.二等奖   4.三等级
@@ -45,6 +46,14 @@ public class Awards implements Serializable {
 
 	public void setCompetitionid(Integer competitionid) {
 		this.competitionid = competitionid;
+	}
+
+	public String getCompetitionView() {
+		return competitionView;
+	}
+
+	public void setCompetitionView(String competitionView) {
+		this.competitionView = competitionView;
 	}
 
 	public String getAchievement() {

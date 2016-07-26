@@ -14,17 +14,7 @@ import java.util.Map;
  */
 public class AwardsQuery extends BaseQuery{
 
-
-	private String fileNum;
 	private String schoolYear;
-
-	public String getFileNum() {
-		return fileNum;
-	}
-
-	public void setFileNum(String fileNum) {
-		this.fileNum = fileNum;
-	}
 
 	public String getSchoolYear() {
 		return schoolYear;
@@ -39,10 +29,6 @@ public class AwardsQuery extends BaseQuery{
 	 */
 	@Override
 	public Map<String, Object> buildWhere() {
-		if(null != fileNum) {
-			this.getWhereKV().put("fileNum", this.getFileNum());
-		}
-
 		if(null != schoolYear){
 			this.getWhereKV().put("schoolYear", this.schoolYear);
 		}else{
