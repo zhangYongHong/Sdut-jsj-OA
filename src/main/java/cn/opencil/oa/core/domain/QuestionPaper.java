@@ -53,11 +53,11 @@ public class QuestionPaper extends BasePaper implements Serializable {
         this.ab = ab;
     }
 
-    public int getAnswer() {
-        return answer;
-    }
-
     public void setAnswer(int answer) {
         this.answer = answer;
+    }
+
+    public int getAnswer() {
+        return answer;
     }
 }
