@@ -46,9 +46,9 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	@Override
 	public Collection<User> getUserByName(final BaseQuery baseQuery) {
 		return this.getHibernateTemplate().execute(
-				new HibernateCallback<Collection<User>>() {
+				new org.springframework.orm.hibernate4.HibernateCallback<Collection<User>>() {
 					@Override
-					public Collection<User> doInHibernate(Session session) throws HibernateException, SQLException {
+					public Collection<User> doInHibernate(Session session) throws HibernateException {
 						StringBuilder hql = new StringBuilder("from QuestionPaper where 1=1 ");
 
 						UserQuery userQuery = (UserQuery) baseQuery;
@@ -62,7 +62,8 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 
 						return query.list();
 					}
-				});
+				}
+		);
 	}
 
 	@Override

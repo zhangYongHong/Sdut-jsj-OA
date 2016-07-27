@@ -9,15 +9,14 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.exception.DataException;
 import org.hibernate.metadata.ClassMetadata;
-import org.springframework.orm.hibernate3.HibernateCallback;
-import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.orm.hibernate4.HibernateCallback;
+import org.springframework.orm.hibernate4.HibernateTemplate;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.sql.SQLException;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -118,73 +117,73 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     public int getCount(final BaseQuery baseQuery) {
 
 
-        return this.hibernateTemplate.execute(new HibernateCallback<Integer>() {
+        return this.hibernateTemplate.execute(
+                new HibernateCallback<Integer>() {
+                    @Override
+                    public Integer doInHibernate(Session session) throws HibernateException {
+                        StringBuilder hql = new StringBuilder();
+                        /**
+                         * 使用select count(1) 报错?
+                         */
+                        hql.append("select count(" + classMetadata.getIdentifierPropertyName() + ") from ");
+                        String name = entityClass.getSimpleName();
+                        hql.append(name);
+                        hql.append(" where 1 = 1 ");
+                        Map<String, Object> buildWhere = baseQuery.buildWhere();
 
-            @Override
-            public Integer doInHibernate(Session session) throws HibernateException,
-                    SQLException {
-                StringBuilder hql = new StringBuilder();
-                /**
-                 * 使用select count(1) 报错?
-                 */
-                hql.append("select count(" + classMetadata.getIdentifierPropertyName() + ") from ");
-                String name = entityClass.getSimpleName();
-                hql.append(name);
-                hql.append(" where 1 = 1 ");
-                Map<String, Object> buildWhere = baseQuery.buildWhere();
+                        /**
+                         * 构造 where 1 = 1 and key=:key  注意: "=:"的前后是不允许有空格的
+                         */
+                        for (Entry<String, Object> entry : buildWhere.entrySet()) {
+                            hql.append(" and " + entry.getKey() + "=:" + entry.getKey());
+                        }
 
-                /**
-                 * 构造 where 1 = 1 and key=:key  注意: "=:"的前后是不允许有空格的
-                 */
-                for (Entry<String, Object> entry : buildWhere.entrySet()) {
-                    hql.append(" and " + entry.getKey() + "=:" + entry.getKey());
+                        Query query = session.createQuery(hql.toString());
+
+                        for (Entry<String, Object> entry : buildWhere.entrySet()) {
+                            query.setParameter(entry.getKey(), entry.getValue());
+                        }
+
+                        Long count = (Long) query.uniqueResult();
+
+                        return count.intValue();
+                    }
                 }
-
-                Query query = session.createQuery(hql.toString());
-
-                for (Entry<String, Object> entry : buildWhere.entrySet()) {
-                    query.setParameter(entry.getKey(), entry.getValue());
-                }
-
-                Long count = (Long) query.uniqueResult();
-
-                return count.intValue();
-            }
-        });
+        );
     }
 
     @Override
     public PageResult<T> getPageResult(final BaseQuery baseQuery) {
         //找到符合条件的总记录数
         final int count = this.getCount(baseQuery);
-        return this.hibernateTemplate.execute(new HibernateCallback<PageResult<T>>() {
+        return this.hibernateTemplate.execute(
+                new HibernateCallback<PageResult<T>>() {
+                    @Override
+                    public PageResult<T> doInHibernate(Session session) throws HibernateException {
+                        StringBuilder hql = new StringBuilder();
+                        hql.append("from " + entityClass.getSimpleName() + " where 1 = 1 ");
+                        Map<String, Object> whereKV = baseQuery.buildWhere();
 
-            @Override
-            public PageResult<T> doInHibernate(Session session) throws HibernateException,
-                    SQLException {
-                StringBuilder hql = new StringBuilder();
-                hql.append("from " + entityClass.getSimpleName() + " where 1 = 1 ");
-                Map<String, Object> whereKV = baseQuery.buildWhere();
+                        for (Entry<String, Object> entry : whereKV.entrySet()) {
+                            hql.append(" and " + entry.getKey() + "=:" + entry.getKey());
+                        }
+                        hql.append(" order by id desc ");
+                        Query query = session.createQuery(hql.toString());
 
-                for (Entry<String, Object> entry : whereKV.entrySet()) {
-                    hql.append(" and " + entry.getKey() + "=:" + entry.getKey());
+                        for (Entry<String, Object> entry : whereKV.entrySet()) {
+                            query.setParameter(entry.getKey(), entry.getValue());
+                        }
+
+                        //分页
+                        int firstResult = (baseQuery.getCurrentPage() - 1) * baseQuery.getPageSize();
+                        query.setFirstResult(firstResult).setMaxResults(baseQuery.getPageSize());
+                        PageResult<T> pageResult = new PageResult<T>(baseQuery.getCurrentPage(), baseQuery.getPageSize(), count);
+                        List list = query.list();
+                        pageResult.setRows(list);
+                        return pageResult;
+                    }
                 }
-                hql.append(" order by id desc ");
-                Query query = session.createQuery(hql.toString());
-
-                for (Entry<String, Object> entry : whereKV.entrySet()) {
-                    query.setParameter(entry.getKey(), entry.getValue());
-                }
-
-                //分页
-                int firstResult = (baseQuery.getCurrentPage() - 1) * baseQuery.getPageSize();
-                query.setFirstResult(firstResult).setMaxResults(baseQuery.getPageSize());
-                PageResult<T> pageResult = new PageResult<T>(baseQuery.getCurrentPage(), baseQuery.getPageSize(), count);
-                List list = query.list();
-                pageResult.setRows(list);
-                return pageResult;
-            }
-        });
+        );
 
     }
 

@@ -6,12 +6,10 @@ import cn.opencil.oa.core.web.role.dao.UserRoleDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
-import java.sql.SQLException;
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by 张树伟 on 16-5-16.
@@ -25,7 +23,7 @@ public class UserRoleDaoImpl extends BaseDaoImpl<UserRole> implements UserRoleDa
         return this.getHibernateTemplate().execute(
                 new HibernateCallback<Collection<UserRole>>() {
                     @Override
-                    public Collection<UserRole> doInHibernate(Session session) throws HibernateException,SQLException {
+                    public Collection<UserRole> doInHibernate(Session session) throws HibernateException {
                         StringBuilder hql = new StringBuilder("from UserRole where 1=1 ");
 
                         Query query = session.createQuery(hql.toString());

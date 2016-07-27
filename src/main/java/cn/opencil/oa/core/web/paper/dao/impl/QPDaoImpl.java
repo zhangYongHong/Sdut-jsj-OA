@@ -8,10 +8,9 @@ import cn.opencil.oa.core.web.paper.dao.QPDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
-import java.sql.SQLException;
 import java.util.Collection;
 
 /**
@@ -29,7 +28,7 @@ public class QPDaoImpl extends BaseDaoImpl<QuestionPaper> implements QPDao{
 		return this.getHibernateTemplate().execute(
 				new HibernateCallback<Collection<QuestionPaper>>() {
 					@Override
-					public Collection<QuestionPaper> doInHibernate(Session session) throws HibernateException,SQLException {
+					public Collection<QuestionPaper> doInHibernate(Session session) throws HibernateException {
 						StringBuilder hql = new StringBuilder("from QuestionPaper where 1=1 ");
 
 						PaperQuery qpQuery = (PaperQuery) baseQuery;

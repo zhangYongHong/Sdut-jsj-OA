@@ -14,7 +14,7 @@
     
     <!-- Hibernate配置 -->
    
-   	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+   	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
    		<property name="dataSource" ref="dataSource"></property>
    		
    			<!-- 目录及子目录的映射文件的路径-->
@@ -33,7 +33,7 @@
 		</property>
    	</bean>
    	<!-- Hibernate模板 -->
-    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+    <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory"/>
 		</property>

@@ -6,7 +6,7 @@ import cn.opencil.oa.core.web.role.dao.RolePopedomDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
@@ -30,7 +30,7 @@ public class RolePopedomDaoImpl extends BaseDaoImpl<RolePopedom> implements Role
         return this.getHibernateTemplate().execute(
                 new HibernateCallback<Collection<RolePopedom>>() {
                     @Override
-                    public Collection<RolePopedom> doInHibernate(Session session) throws HibernateException, SQLException {
+                    public Collection<RolePopedom> doInHibernate(Session session) throws HibernateException {
                         String hql = "from RolePopedom where 1=1 ";
                         Query query = session.createQuery(hql);
                         List<RolePopedom> rolePopedomList = query.list();

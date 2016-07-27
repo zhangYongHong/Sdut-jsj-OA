@@ -8,10 +8,9 @@ import cn.opencil.oa.core.web.basedata.dao.SystemDDLDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -33,7 +32,7 @@ public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDD
 
 			@Override
 			public PageResult<SystemDDL> doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws HibernateException {
 
 				String hql = "from SystemDDL where 1=1 and keyword=:keyword";
 				Query query = session.createQuery(hql);
@@ -59,7 +58,7 @@ public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDD
 
 			@Override
 			public Integer doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws HibernateException {
 
 					String hql = "SELECT COUNT(sid) from systemddl where 1=1 and keyword=:keyword";
 					Query query = session.createQuery(hql);
@@ -82,7 +81,7 @@ public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDD
 
 			@Override
 			public Integer doInHibernate(Session session)
-					throws HibernateException, SQLException {
+					throws HibernateException {
 				String hql = "SELECT MAX(ddlCode) from SystemDDL where keyword=:keyword";
 				Query query = session.createQuery(hql);
 				query.setParameter("keyword", keyword);
