@@ -13,7 +13,7 @@
   </context-param>
   <filter>
     <filter-name>OpenSessionInViewFilter</filter-name>
-    <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+    <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>OpenSessionInViewFilter</filter-name>
@@ -27,14 +27,14 @@
     <filter-name>struts2</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  <error-page>
-    <error-code>404</error-code>
-    <location>/WEB-INF/jsp/error/404.jsp</location>
-  </error-page>
-  <error-page>
-    <error-code>500</error-code>
-    <location>/WEB-INF/jsp/error/500.jsp</location>
-  </error-page>
+  <!--<error-page>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/WEB-INF/jsp/error/404.jsp</location>-->
+  <!--</error-page>-->
+  <!--<error-page>-->
+    <!--<error-code>500</error-code>-->
+    <!--<location>/WEB-INF/jsp/error/500.jsp</location>-->
+  <!--</error-page>-->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
