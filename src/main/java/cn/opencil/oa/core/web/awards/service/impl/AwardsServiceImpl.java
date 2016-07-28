@@ -40,13 +40,14 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 
 
 	@Override
-	public PageResult<Awards> getAwaPageResult(BaseQuery baseQuery) {
+	public PageResult<Awards> getAwardsPageResult(BaseQuery baseQuery) {
 		PageResult<Awards> awardsPageResult = null;
+        SystemDDL systemDDL;
 		try {
 			awardsPageResult = this.awardsDao.getAwaPageResult(baseQuery);
 			List<Awards> awardses = awardsPageResult.getRows();
 			for (Awards awards : awardses) {
-				SystemDDL systemDDL = systemDDLService.getSystenDDL("competitionView", awards.getCompetitionid());
+				systemDDL = systemDDLService.getSystenDDL("competitionView", awards.getCompetitionid());
 				awards.setCompetitionView(systemDDL.getDdlName());
 			}
 		} catch (Exception e) {

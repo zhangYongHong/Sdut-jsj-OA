@@ -65,12 +65,12 @@
                             <div class="row-fluid">
                                 <label class="form-label span2">学年:</label>
                                 <div class="span8 controls">
-                                    <select name="select">
-                                        <option>2014-2015学年上学期</option>
-                                        <option selected="selected">2014-2015学年下学期</option>
-                                        <option>2015-2016学年上学期</option>
-                                        <option>2015-2016学年下学期</option>
-                                        <option>2016-2017学年上学期</option>
+                                    <select name="schoolYear" id="schoolYear" onchange="selectChanage()">
+                                        <option value="2014-2015-1">2014-2015学年上学期</option>
+                                        <option value="2014-2015-2">2014-2015学年下学期</option>
+                                        <option value="2015-2016-1">2015-2016学年上学期</option>
+                                        <option value="2015-2016-2">2015-2016学年下学期</option>
+                                        <option value="2016-2017-1">2016-2017学年上学期</option>
                                     </select>
                                 </div>
                             </div>
@@ -113,14 +113,31 @@
                             <s:iterator value="#awardsPapers.rows" status="i">
                                 <tr class="odd gradeX">
                                     <td><s:property value="#i.index+1"/></td>
-                                    <td>
-                                        <s:if test="competitionid == 1"></s:if>
-                                    </td>
+                                    <td><s:property value="competitionView"/></td>
                                     <td><s:property value="achievement"/></td>
-                                    <td><s:property value="levelview"/></td>
-                                    <td><s:property value="gradeview"/></td>
+                                    <td>
+                                        <s:if test="level == 1">国家级</s:if>
+                                        <s:elseif test="level == 2">省级</s:elseif>
+                                        <s:elseif test="level == 3">校级</s:elseif>
+                                        <s:elseif test="level == 4">院级</s:elseif>
+                                        <s:else></s:else>
+                                    </td>
+                                    <td>
+                                        <s:if test="grade == 1">特等奖</s:if>
+                                        <s:elseif test="grade == 2">一等奖</s:elseif>
+                                        <s:elseif test="grade == 3">二等奖</s:elseif>
+                                        <s:elseif test="grade == 4">三等奖</s:elseif>
+                                        <s:elseif test="grade == 5">优胜奖</s:elseif>
+                                        <s:else></s:else>
+                                    </td>
                                     <td><s:property value="stuname"/></td>
-                                    <td><s:property value="deptview"/></td>
+                                    <td>
+                                        <s:if test="deptid == 1">计算机科学与技术</s:if>
+                                        <s:elseif test="deptid == 2">软件工程</s:elseif>
+                                        <s:elseif test="deptid == 3">通信工程</s:elseif>
+                                        <s:elseif test="deptid == 4">基础部</s:elseif>
+                                        <s:else></s:else>
+                                    </td>
                                     <td><s:property value="classe"/></td>
                                     <td><s:property value="teacher"/></td>
                                     <td><s:property value="atime"/></td>
@@ -160,12 +177,20 @@
 </div><!-- End #wrapper -->
 <!-- Le javascript
 ================================================== -->
+<script type="text/javascript">
+    function selectChanage() {
+        var selObj = document.getElementById("schoolYear");
+        var i = selObj.selectedIndex;
+        window.location.href="awardsAction_list.action?schoolYear=" + selObj.options[i].value;
+    }
+</script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 
 <!--Load plugins-->
 <script type="text/javascript" src="plugins/qtip/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
 
 
 <script type="text/javascript" src="plugins/knob/jquery.knob.js"></script>

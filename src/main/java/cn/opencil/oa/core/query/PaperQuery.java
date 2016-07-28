@@ -14,7 +14,7 @@ import java.util.Map;
 public class PaperQuery extends BaseQuery{
 
 	private String teacher;
-	private String shoolYear;
+	private String schoolYear;
 
 	public String getTeacher() {
 		return teacher;
@@ -24,12 +24,12 @@ public class PaperQuery extends BaseQuery{
 		this.teacher = teacher;
 	}
 
-	public String getShoolYear() {
-		return shoolYear;
+	public String getSchoolYear() {
+		return schoolYear;
 	}
 
-	public void setShoolYear(String shoolYear) {
-		this.shoolYear = shoolYear;
+	public void setSchoolYear(String schoolYear) {
+		this.schoolYear = schoolYear;
 	}
 
 	@Override
@@ -39,8 +39,8 @@ public class PaperQuery extends BaseQuery{
 			this.getWhereKV().put("teacher", this.getTeacher());
 		}
 
-		if (StringUtils.isNotBlank(this.getShoolYear())) {
-			this.getWhereKV().put("schoolYear", this.getShoolYear());
+		if (StringUtils.isNotBlank(this.getSchoolYear())) {
+			this.getWhereKV().put("schoolYear", this.getSchoolYear());
 		}
 		return this.getWhereKV();
 	}

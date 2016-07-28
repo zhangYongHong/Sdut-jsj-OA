@@ -1,12 +1,13 @@
 package cn.opencil.oa.core.web.awards.action;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.query.AwardsQuery;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import com.opensymphony.xwork2.ActionContext;
-import org.apache.commons.logging.impl.Log4JLogger;
+import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -27,21 +28,16 @@ public class AwardsAction extends BaseAction<Awards> {
     @Autowired
     private AwardsService awardsService;
 
-    private AwardsQuery awardsQuery = new AwardsQuery();
-
-    private Log4JLogger log;
-
-    public AwardsQuery getAwardsQuery() {
-        return awardsQuery;
-    }
-
-    public void setAwardsQuery(AwardsQuery awardsQuery) {
-        this.awardsQuery = awardsQuery;
-    }
+    private Logger log;
 
     public String list() {
+        AwardsQuery awardsQuery = new AwardsQuery();
+        if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
+            awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
+        else
+            awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
         try {
-            PageResult<Awards> awardsPageResult = awardsService.getAwaPageResult(awardsQuery);
+            PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);
         } catch (Exception e) {
             log.error(e.getMessage());
