@@ -34,16 +34,16 @@ public class TPDaoImpl extends BaseDaoImpl<TrainingPaper> implements TPDao {
 
                         PaperQuery tquery = (PaperQuery) baseQuery;
 
-                        if (tquery != null && tquery.getShoolYear() != null
-                                && !tquery.getShoolYear().trim().equals("")) {
+                        if (tquery != null && tquery.getSchoolYear() != null
+                                && !tquery.getSchoolYear().trim().equals("")) {
                             hql.append(" and grade = ? ");
                         }
 
                         Query query = session.createQuery(hql.toString());
 
-                        if (tquery != null && tquery.getShoolYear() != null
-                                && !tquery.getShoolYear().trim().equals("")) {
-                            query.setParameter(0, tquery.getShoolYear());
+                        if (tquery != null && tquery.getSchoolYear() != null
+                                && !tquery.getSchoolYear().trim().equals("")) {
+                            query.setParameter(0, tquery.getSchoolYear());
                         }
 
                         return query.list();

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - sdutoa@localhost" uuid="62f535d6-7be1-4086-8d01-6eb1c546c52b">
+    <database-info product="MySQL" version="5.6.28-0ubuntu0.15.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="sdutoa">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="activiti-test"/>
+      <schema id="3" name="db_studentmanage"/>
+      <schema id="4" name="information_schema"/>
+      <schema id="5" name="kugou"/>
+      <schema id="6" name="mysql"/>
+      <schema id="7" name="performance_schema"/>
+      <schema id="8" name="school"/>
+      <schema id="9" name="sys"/>
+      <schema id="10" name="test"/>
+      <table id="11" parent="1" name="jsj_awards"/>
+      <table id="12" parent="1" name="jsj_question_paper"/>
+      <table id="13" parent="1" name="jsj_role_popedom"/>
+      <table id="14" parent="1" name="jsj_systemddl"/>
+      <table id="15" parent="1" name="jsj_training_paper"/>
+      <table id="16" parent="1" name="jsj_user"/>
+      <table id="17" parent="1" name="jsj_user_role"/>
+      <column id="18" parent="11" name="aid">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="19" parent="11" name="competitionid">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="20" parent="11" name="level">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="21" parent="11" name="grade">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="22" parent="11" name="deptid">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="23" parent="11" name="achievement">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="24" parent="11" name="stuname">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="25" parent="11" name="classe">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="26" parent="11" name="teacher">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="27" parent="11" name="prizeunit">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="28" parent="11" name="comment">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="29" parent="11" name="fileNum">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="30" parent="11" name="schoolYear">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <key id="31" parent="11" name="PRIMARY">
+        <columns>aid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="32" parent="12" name="qid">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="33" parent="12" name="teacher">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="34" parent="12" name="className">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="35" parent="12" name="course">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="36" parent="12" name="psource">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="37" parent="12" name="examineway">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="38" parent="12" name="num">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="39" parent="12" name="pnum">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="40" parent="12" name="analyzes">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="41" parent="12" name="plan">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="42" parent="12" name="invigilation">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="43" parent="12" name="ab">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="44" parent="12" name="answer">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="45" parent="12" name="standard">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="46" parent="12" name="score">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="47" parent="12" name="comment">
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <column id="48" parent="12" name="schoolYear">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="49" parent="12" name="fileNum">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="50" parent="12" name="isChange">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <key id="51" parent="12" name="PRIMARY">
+        <columns>qid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="52" parent="13" name="rid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="53" parent="13" name="popedomCode">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <key id="54" parent="13" name="PRIMARY">
+        <columns>rid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="55" parent="14" name="sid">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="56" parent="14" name="keyword">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="57" parent="14" name="ddlCode">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="58" parent="14" name="ddlName">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <key id="59" parent="14" name="PRIMARY">
+        <columns>sid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="60" parent="15" name="tid">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="61" parent="15" name="teacher">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="62" parent="15" name="className">
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <column id="63" parent="15" name="course">
+        <data-type>varchar(50)|0</data-type>
+      </column>
+      <column id="64" parent="15" name="psource">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="65" parent="15" name="examineway">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="66" parent="15" name="num">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="67" parent="15" name="tnum">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="68" parent="15" name="nature">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="69" parent="15" name="analyzes">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="70" parent="15" name="plan">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="71" parent="15" name="standard">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="72" parent="15" name="score">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="73" parent="15" name="comment">
+        <data-type>varchar(300)|0</data-type>
+      </column>
+      <column id="74" parent="15" name="fileNum">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <column id="75" parent="15" name="schoolYear">
+        <data-type>varchar(100)|0</data-type>
+      </column>
+      <column id="76" parent="15" name="isChange">
+        <data-type>varchar(25)|0</data-type>
+      </column>
+      <key id="77" parent="15" name="PRIMARY">
+        <columns>tid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="78" parent="16" name="uid">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="79" parent="16" name="employeenum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="80" parent="16" name="username">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="81" parent="16" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="82" parent="16" name="deptid">
+        <data-type>int(11)|0</data-type>
+      </column>
+      <column id="83" parent="16" name="phone">
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="84" parent="16" name="email">
+        <data-type>varchar(30)|0</data-type>
+      </column>
+      <key id="85" parent="16" name="PRIMARY">
+        <columns>uid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="17" name="uid">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="87" parent="17" name="rid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)|0</data-type>
+      </column>
+      <key id="88" parent="17" name="PRIMARY">
+        <columns>uid</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

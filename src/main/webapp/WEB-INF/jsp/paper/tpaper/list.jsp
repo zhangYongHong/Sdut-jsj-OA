@@ -58,12 +58,12 @@
                             <div class="row-fluid">
                                 <label class="form-label span2">学年:</label>
                                 <div class="span8 controls">
-                                    <select name="select">
-                                        <option>2014-2015学年上学期</option>
-                                        <option selected="selected">2014-2015学年下学期</option>
-                                        <option>2015-2016学年上学期</option>
-                                        <option>2015-2016学年下学期</option>
-                                        <option>2016-2017学年上学期</option>
+                                    <select name="schoolYear" id="schoolYear" onchange="selectChange()">
+                                        <option value="2014-2015-1">2014-2015学年上学期</option>
+                                        <option value="2014-2015-2">2014-2015学年下学期</option>
+                                        <option value="2015-2016-1">2015-2016学年上学期</option>
+                                        <option value="2015-2016-2">2015-2016学年下学期</option>
+                                        <option value="2016-2017-1">2016-2017学年上学期</option>
                                     </select>
                                 </div>
                             </div>
@@ -165,6 +165,13 @@
 </div><!-- End #wrapper -->
 <!-- Le javascript
 ================================================== -->
+<script type="text/javascript">
+    function selectChange() {
+        var selObj = document.getElementById("schoolYear");
+        var i = selObj.selectedIndex;
+        window.location.href="tPAction_list.action?schoolYear=" + selObj.options[i].value;
+    }
+</script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
