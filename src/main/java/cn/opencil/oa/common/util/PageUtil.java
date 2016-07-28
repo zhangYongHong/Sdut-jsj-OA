@@ -135,16 +135,6 @@ public class PageUtil {
                     list.set(j, temp);
                 } else if (list.get(j - 1).getLevel() == list.get(j).getLevel()) {
                     //若获奖级别相同时按照获奖等级排序
-//                    for (int k = 0; k < list.size(); k++) {
-//                        for (int l = 1; l < list.size(); l++) {
-//                            if (list.get(l - 1).getGrade() > list.get(l).getGrade()) {
-//                                temp1 = list.get(l - 1);
-//                                list.set(l - 1, list.get(l));
-//                                list.set(l, temp1);
-//                            }
-//                        }
-//
-//                    }
                     if (list.get(j - 1).getGrade() > list.get(j).getGrade()) {
                         temp = list.get(j - 1);
                         list.set(j - 1, list.get(j));
