@@ -65,7 +65,7 @@
                             <div class="row-fluid">
                                 <label class="form-label span2">学年:</label>
                                 <div class="span8 controls">
-                                    <select name="schoolYear" id="schoolYear" onchange="selectChanage()">
+                                    <select name="schoolYear" id="schoolYear" onchange="selectChange()">
                                         <option value="2014-2015-1">2014-2015学年上学期</option>
                                         <option value="2014-2015-2">2014-2015学年下学期</option>
                                         <option value="2015-2016-1">2015-2016学年上学期</option>
@@ -178,7 +178,7 @@
 <!-- Le javascript
 ================================================== -->
 <script type="text/javascript">
-    function selectChanage() {
+    function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
         window.location.href="awardsAction_list.action?schoolYear=" + selObj.options[i].value;

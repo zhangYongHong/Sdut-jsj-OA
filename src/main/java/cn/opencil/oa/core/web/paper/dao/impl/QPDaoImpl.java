@@ -33,14 +33,14 @@ public class QPDaoImpl extends BaseDaoImpl<QuestionPaper> implements QPDao{
 
 						PaperQuery qpQuery = (PaperQuery) baseQuery;
 
-						if (qpQuery != null && qpQuery.getShoolYear() != null && !qpQuery.getShoolYear().trim().equals("")) {
+						if (qpQuery != null && qpQuery.getSchoolYear() != null && !qpQuery.getSchoolYear().trim().equals("")) {
 							hql.append(" and schoolYear = ? ");
 						}
 
 						Query query = session.createQuery(hql.toString());
-						if (qpQuery != null && qpQuery.getShoolYear() != null
-								&& !qpQuery.getShoolYear().trim().equals("")) {
-							query.setParameter(0, qpQuery.getShoolYear());
+						if (qpQuery != null && qpQuery.getSchoolYear() != null
+								&& !qpQuery.getSchoolYear().trim().equals("")) {
+							query.setParameter(0, qpQuery.getSchoolYear());
 						}
 
 						return query.list();

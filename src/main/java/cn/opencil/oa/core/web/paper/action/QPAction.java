@@ -97,10 +97,10 @@ public class QPAction extends BaseAction<QuestionPaper> {
             if (this.checkUserForRole(user) == false)
                 qpQuery.setTeacher(user.getUserName());
 
-            if (qpQuery.getShoolYear() != "" || qpQuery.getShoolYear() != null) {
-                qpQuery.setShoolYear(this.getModel().getSchoolYear());
-            } else
-                qpQuery.setShoolYear(DateUtil.groupSchoolYear());
+            if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
+                qpQuery.setSchoolYear(DateUtil.groupSchoolYear());
+            else
+                qpQuery.setSchoolYear(this.getModel().getSchoolYear());
             qustionPapers = this.qpService.getPageResultForQP(qpQuery);
         } catch (Exception e) {
             this.addFieldError("qpListError", "试卷列表获取失败！");
