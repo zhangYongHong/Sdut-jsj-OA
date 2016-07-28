@@ -1,6 +1,7 @@
 package cn.opencil.oa.core.web.awards.service.impl;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.Awards;
@@ -50,6 +51,7 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 				systemDDL = systemDDLService.getSystenDDL("competitionView", awards.getCompetitionid());
 				awards.setCompetitionView(systemDDL.getDdlName());
 			}
+			PageUtil.sortAwards(awardses);
 		} catch (Exception e) {
 			logger.error(e.getMessage());
 		}
