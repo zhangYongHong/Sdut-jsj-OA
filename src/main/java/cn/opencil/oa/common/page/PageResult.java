@@ -1,7 +1,6 @@
 package cn.opencil.oa.common.page;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +21,7 @@ public class PageResult<T> implements Serializable{
 	// 总页数:计算出来
 	private int totalPages;
 	// 当前页的数据
-	private List<T> rows = new ArrayList<T>();
+	private List<T> rows;
 
 	public PageResult() {
 	}

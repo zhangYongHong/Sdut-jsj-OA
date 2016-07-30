@@ -17,7 +17,7 @@ import org.springframework.stereotype.Controller;
  * Project Name:SdutOA
  * File Name:AwardsAction.java
  * Date:2016-4-15下午1:39:44
- * Author : 王基伟
+ * Author : 张树伟
  */
 @Controller("awardsAction")
 @Scope("prototype")

@@ -15,6 +15,8 @@ public class Awards implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Long aid;	//id,自增长
+	private long id; //用于排序是确定第一位的数字
+	private String idView;// 序号
 	private Integer competitionid;//竞赛项目
 	private String competitionView;
 	private String achievement;//成果名称
@@ -38,6 +40,22 @@ public class Awards implements Serializable {
 
 	public void setAid(Long aid) {
 		this.aid = aid;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getIdView() {
+		return idView;
+	}
+
+	public void setIdView(String idView) {
+		this.idView = idView;
 	}
 
 	public Integer getCompetitionid() {
@@ -166,5 +184,29 @@ public class Awards implements Serializable {
 
 	public void setInputStream(InputStream inputStream) {
 		this.inputStream = inputStream;
+	}
+
+	public Awards clone() {
+		Awards awards = new Awards();
+		awards.setAid(this.aid);
+		awards.setId(this.id);
+		awards.setIdView(this.idView);
+		awards.setCompetitionid(this.competitionid);
+		awards.setCompetitionView(this.competitionView);
+		awards.setAchievement(this.achievement);
+		awards.setLevel(this.level);
+		awards.setGrade(this.grade);
+		awards.setStuname(this.stuname);
+		awards.setDeptid(this.deptid);
+		awards.setClasse(this.classe);
+		awards.setTeacher(this.teacher);
+		awards.setAtime(this.atime);
+		awards.setPrizeunit(this.prizeunit);
+		awards.setComment(this.comment);
+		awards.setFileNum(this.fileNum);
+		awards.setSchoolYear(this.schoolYear);
+		awards.setIsChange(this.isChange);
+		awards.setInputStream(this.inputStream);
+		return awards;
 	}
 }
