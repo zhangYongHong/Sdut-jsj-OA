@@ -79,7 +79,6 @@
                             if (popedomCode.contains("abc")) {
                         %>
                         <div class="bottom ">
-                            <a href="qPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
                             <a href="qPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
                             <a href="qPAction_exportExcel.action" class="btn btip marginR10 marginB10">导出</a>
                         </div>

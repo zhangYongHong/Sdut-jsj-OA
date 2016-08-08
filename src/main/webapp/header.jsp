@@ -161,18 +161,40 @@
                         <a href="#"><span class="icon16 icomoon-icon-grid"></span>个人办公</a>
                         <ul class="sub">
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>归档管理</a>
+                                <a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>我的任务</a>
                                 <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/qPAction_list.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>试卷归档管理</a>
+                                    <li><a href="#"><span
+                                            class="icon16 icomoon-icon-accessibility"></span>待办任务</a>
                                     </li>
-                                    <li><a href="${pageContext.request.contextPath}/tPAction_list.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>实训归档管理</a>
+                                    <li><a href="#"><span
+                                            class="icon16 icomoon-icon-accessibility"></span>已办任务</a>
+                                    </li>
+                                    <li><a href="#"><span
+                                            class="icon16 icomoon-icon-accessibility"></span>新建任务</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
-                                    class="icon16  icomoon-icon-king"></span>获奖详情管理</a></li>
+                            <li>
+                                <a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>归档管理</a>
+                                <ul class="sub">
+                                    <li><a href="${pageContext.request.contextPath}/qPAction_list.action"><span
+                                            class="icon16 icomoon-icon-calendar"></span>试卷归档管理</a>
+                                    </li>
+                                    <li><a href="${pageContext.request.contextPath}/tPAction_list.action"><span
+                                            class="icon16 icomoon-icon-calendar"></span>实训归档管理</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>获奖详情管理</a>
+                                <ul class="sub">
+                                    <li><a href="#"><span
+                                            class="icon16 icomoon-icon-cone"></span>申请</a></li>
+                                    <li><a href="#"><span
+                                            class="icon16 icomoon-icon-cone"></span>查看</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
+                                            class="icon16 icomoon-icon-cone"></span>列表</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <%
