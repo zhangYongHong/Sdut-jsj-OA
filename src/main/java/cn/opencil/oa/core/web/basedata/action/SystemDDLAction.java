@@ -1,23 +1,21 @@
 package cn.opencil.oa.core.web.basedata.action;
 
 
-import org.hibernate.exception.DataException;
-import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Controller;
-
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.SystemDDLQuery;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
+import com.opensymphony.xwork2.ActionContext;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 /**
  * Project Name:SdutOA
  * File Name:SystemDDLAction.java
  * Date:2016-4-15下午8:35:50
- * Author : 王基伟
+ * Author : 张树伟
  *
  * 
  */
@@ -29,9 +27,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 	
 	@Autowired
 	private SystemDDLService systemDDLService;
-	
-	private SystemDDLQuery baseQuery = new SystemDDLQuery();
-	
+
 	public String save(){//ajax
 
 		return SUCCESS;
@@ -46,8 +42,15 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 		this.sid = sid;
 	}
 
+
 	public String list(){
-		PageResult<SystemDDL> systemDDLs = this.systemDDLService.getPageResultByKeyword(baseQuery);
+		SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
+		try {
+			PageResult<SystemDDL> systemDDLs = this.systemDDLService.getPageResultByKeyword(systemDDLQuery);
+			ActionContext.getContext().put("systemDDLs", systemDDLs);
+		} catch (Exception e) {
+
+		}
 
 		//System.out.println(systemDDLs.size());
 		return "";

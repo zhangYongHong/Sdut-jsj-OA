@@ -247,7 +247,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
     }
 
     /**
-     * 验证用户是否为
+     * 验证用户权限
      *
      * @param user
      * @return
