@@ -147,11 +147,30 @@
                     %>
                     <li>
                         <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
-                        <%--<ul class="sub">--%>
-                        <%--<li><a href="forms.html"><span class="icon16 icomoon-icon-file"></span>Forms Stuff</a></li>--%>
-                        <%--<li><a href="password.html"><span class="icon16 icomoon-icon-file"></span>Validation</a>--%>
-                        <%--</li>--%>
-                        <%--</ul>--%>
+                        <ul class="sub">
+                            <li>
+                                <a href="#"><span class="icon16 icomoon-icon-xing"></span>流程管理</a>
+                                <ul>
+                                    <li><a href="#"><span class="input-small"/>流程列表</a></li>
+                                    <li><a href="#"><span class="input-small"/>流程部署</a></li>
+                                    <li><a href="#"><span class="input-small"/>运行的中流程</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon16 icomoon-icon-file"></span>字典管理</a>
+                                <ul>
+                                    <li><a href="#"><span class="input-small"/>字典列表</a></li>
+                                    <li><a href="#"><span class="input-small"/>字典添加</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon16 icomoon-icon-file"></span>角色管理</a>
+                                <ul>
+                                    <li><a href="#"><span class="input-small"/>角色列表</a></li>
+                                    <li><a href="#"><span class="input-small"/>角色添加</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                     <%
                         }
