@@ -380,6 +380,7 @@ public class ExcelFileGeneratorUtil {
             c.setCellValue(titleName);
             c.setCellStyle(cs);
             r.setHeightInPoints(25);//设置行的高度
+            //设置列表标题
             for (int j = 0; j < fieldName.size(); j++) {//循环excel的标题
                 HSSFCell cell = r.createCell(j);//使用行对象创建列对象，0表示第1列
                 /**************对标题添加样式begin********************/
@@ -445,8 +446,6 @@ public class ExcelFileGeneratorUtil {
                     HSSFFont font = workBook.createFont();//创建字体对象
                     font.setFontName("宋体");
                     font.setFontHeightInPoints((short) 11);//设置字体大小
-                    //字体加粗
-//					font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
                     //字体颜色
                     font.setColor(HSSFColor.BLACK.index);
                     //如果font中存在设置后的字体，并放置到cellStyle对象中，此时该单元格中就具有了样式字体

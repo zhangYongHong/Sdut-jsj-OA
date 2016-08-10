@@ -116,8 +116,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
             trainingPaper.setFileNum(PageUtil.getFileNum(trainingPaper.getClassName()));
             trainingPaper.setIsChange("已修改");
             this.tpService.updateEntry(trainingPaper);
-//			this.loadingValue();
-//			this.addFieldError("tpError", "更新成功！");
             return "redirect";
         } catch (Exception e) {
             this.loadingValue();
@@ -138,33 +136,34 @@ public class TPAction extends BaseAction<TrainingPaper> {
      * 导出excel
      *
      * @return
-     * @throws Exception
      */
-    public String exportExcel() throws Exception {
+    public String exportExcel() {
+        try {
+            tpQuery.setSchoolYear(this.getModel().getSchoolYear());
+            ArrayList<String> fieldDataName = this.tpService
+                    .getFieldDataNameExcel();
+            ArrayList<ArrayList<String>> fieldDatas = this.tpService
+                    .getFieldDataExcel(tpQuery);
+            ExcelFileGeneratorUtil excelFileGenerator = new ExcelFileGeneratorUtil(
+                    fieldDataName, fieldDatas);
 
-        ArrayList<String> fieldDataName = this.tpService
-                .getFieldDataNameExcel();
-        ArrayList<ArrayList<String>> fieldDatas = this.tpService
-                .getFieldDataExcel(tpQuery);
+            excelFileGenerator
+                    .setTitle(StringUtils.isNotBlank(
+                            tpQuery.getSchoolYear()) ? tpQuery.getSchoolYear() : "" + " 实训试题归档汇总表");
 
-        ExcelFileGeneratorUtil excelFileGenerator = new ExcelFileGeneratorUtil(
-                fieldDataName, fieldDatas);
+            String filename = DateUtil.dateToYMD() + ".xls";
+            filename = new String(filename.getBytes("gbk"), "iso-8859-1");// 转换文件名编码
+            this.getRequest().setAttribute("filename", filename);// 将文件名设置到request中
 
-        excelFileGenerator
-                .setTitle(StringUtils.isNotBlank(tpQuery.getSchoolYear()) ? tpQuery
-                        .getSchoolYear() : "" + " 实训试题归档汇总表");
-
-        excelFileGenerator.setTitle(tpQuery.getSchoolYear() + " 实训试题归档汇总表");
-        String filename = DateUtil.dateToYMD() + ".xls";
-        filename = new String(filename.getBytes("gbk"), "iso-8859-1");// 转换文件名编码
-        this.getRequest().setAttribute("filename", filename);// 将文件名设置到request中
-
-        ByteArrayOutputStream os = new ByteArrayOutputStream();
-        excelFileGenerator.expordExcel(os);// 使用输出流，导出
-        byte[] buf = os.toByteArray();
-        ByteArrayInputStream in = new ByteArrayInputStream(buf);
-        // 将文件放置到输入流InputStream
-        this.getModel().setInputStream(in);
+            ByteArrayOutputStream os = new ByteArrayOutputStream();
+            excelFileGenerator.expordExcel(os);// 使用输出流，导出
+            byte[] buf = os.toByteArray();
+            ByteArrayInputStream in = new ByteArrayInputStream(buf);
+            // 将文件放置到输入流InputStream
+            this.getModel().setInputStream(in);
+        } catch (Exception e) {
+            this.addFieldError("tpError", "文件导出失败！");
+        }
         return "excel";
     }
 

@@ -74,7 +74,7 @@
                         <div class="bottom ">
                             <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
                             <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                            <a href="tPAction_exportExcel.action" class="btn btip marginR10 marginB10">导出</a>
+                            <a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>" class="btn btip marginR10 marginB10">导出</a>
                         </div>
                         <%
                             }

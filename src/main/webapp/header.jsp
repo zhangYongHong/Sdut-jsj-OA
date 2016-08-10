@@ -151,23 +151,23 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-xing"></span>流程管理</a>
                                 <ul>
-                                    <li><a href="#"><span class="input-small"/>流程列表</a></li>
-                                    <li><a href="#"><span class="input-small"/>流程部署</a></li>
-                                    <li><a href="#"><span class="input-small"/>运行的中流程</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/activitiAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
+                                    <li><a href="#"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a></li>
+                                    <li><a href="#"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-file"></span>字典管理</a>
                                 <ul>
-                                    <li><a href="#"><span class="input-small"/>字典列表</a></li>
-                                    <li><a href="#"><span class="input-small"/>字典添加</a></li>
+                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
+                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-file"></span>角色管理</a>
                                 <ul>
-                                    <li><a href="#"><span class="input-small"/>角色列表</a></li>
-                                    <li><a href="#"><span class="input-small"/>角色添加</a></li>
+                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a></li>
+                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a></li>
                                 </ul>
                             </li>
                         </ul>

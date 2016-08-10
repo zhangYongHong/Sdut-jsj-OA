@@ -12,6 +12,7 @@ import cn.opencil.oa.core.web.paper.service.QPService;
 import cn.opencil.oa.core.web.role.service.RolePopedomService;
 import cn.opencil.oa.core.web.role.service.UserRoleService;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -179,18 +180,21 @@ public class QPAction extends BaseAction<QuestionPaper> {
      * 导出excel
      *
      * @return
-     * @throws Exception
      */
-    public String exportExcel() throws Exception {
+    public String exportExcel() {
         try {
+            qpQuery.setSchoolYear(this.getModel().getSchoolYear());
             ArrayList<String> fieldDataName = this.qpService
                     .getFieldDataNameExcel();
             ArrayList<ArrayList<String>> fieldDatas = this.qpService
                     .getFieldDataExcel(qpQuery);
-
+            if (fieldDatas.size() == 0) {
+                this.addFieldError("qpError","当前学期数据为空不可导出！");
+            }
             ExcelFileGeneratorUtil excelFileGenerator = new ExcelFileGeneratorUtil(
                     fieldDataName, fieldDatas);
-
+            excelFileGenerator.setTitle(StringUtils.isNotBlank(
+                    qpQuery.getSchoolYear()) ? qpQuery.getSchoolYear() : "" + " 试题归档汇总表");
             String filename = DateUtil.dateToYMD() + ".xls";
             filename = new String(filename.getBytes("gbk"), "iso-8859-1");// 转换文件名编码
             this.getRequest().setAttribute("filename", filename);// 将文件名设置到request中
