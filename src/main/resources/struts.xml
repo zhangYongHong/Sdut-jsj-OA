@@ -7,13 +7,6 @@
 	<constant name="struts.ui.theme" value="simple"></constant>
 	<constant name="struts.devMode" value="true"/>
 
-	<!-- 添加页面跳转 -->
-	<!--<package name="page" extends="struts-default" namespace="/">-->
-		<!--<action name="page_*">-->
-			<!--<result>/WEB-INF/jsp/frame/{1}.jsp</result>-->
-		<!--</action>-->
-	<!--</package>-->
-
 	<!-- 拦截器 -->
 	<include file="cn/opencil/oa/core/struts/interceptor/struts-interceptor-login.xml"></include>
 
