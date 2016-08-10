@@ -16,6 +16,17 @@
       </configuration>
       <facet type="Struts2" name="Struts 2">
         <configuration>
+          <fileset id="s2fileset" name="My Fileset " removed="false">
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/awards/struts-awards.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/interceptor/struts-interceptor-login.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/login/struts-login.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/paper/struts-qpaper.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/login/struts-register.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/role/struts-role.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/paper/struts-tpaper.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/basedata/struts-user.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/struts.xml</file>
+          </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
       </facet>
@@ -28,6 +39,7 @@
           <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-hibernate.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-properties.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-transaction.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-activiti.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -64,6 +76,7 @@
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.18" level="project" />
     <orderEntry type="library" name="Maven: ognl:ognl:3.0.4" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.struts:struts2-dojo-plugin:2.3.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:4.3.11.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.1.3.GA" level="project" />
@@ -76,75 +89,26 @@
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.18.1-GA" level="project" />
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:jandex:1.1.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-engine:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-converter:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-process-validation:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-image-generator:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-email:1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
-    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.5" level="project" />
-    <orderEntry type="library" name="Maven: joda-time:joda-time:2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.6" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.6" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-spring:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-explorer:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-json-converter:5.16" level="project" />
-    <orderEntry type="library" name="Maven: math.geom2d:javaGeom:0.11.1" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-crystalball:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.6" level="project" />
-    <orderEntry type="library" name="Maven: com.vaadin:vaadin:6.8.8" level="project" />
-    <orderEntry type="library" name="Maven: com.h2database:h2:1.3.170" level="project" />
-    <orderEntry type="library" name="Maven: org.imgscalr:imgscalr-lib:4.2" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-all:2.1.3" level="project" />
-    <orderEntry type="library" name="Maven: org.vaadin.addons:dcharts-widget:0.10.0" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-modeler:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-common-rest:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet:2.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.servlet:2.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.jackson:2.2.1" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.2.0" level="project" />
-    <orderEntry type="library" name="Maven: javax.xml.stream:stax-api:1.0-2" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.woodstox:stax2-api:3.1.3" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.fileupload:2.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-engine:5.20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-converter:5.20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-model:5.20.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.2.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.2.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-parser:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-awt-util:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-util:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-xml:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-transcoder:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:fop:0.94" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:xmlgraphics-commons:1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.avalon.framework:avalon-framework-api:4.3.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.avalon.framework:avalon-framework-impl:4.3.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-dom:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-gvt:1.7" level="project" />
-    <orderEntry type="library" name="Maven: xml-apis:xml-apis-ext:1.3.04" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-bridge:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-anim:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-ext:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-script:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-js:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-codec:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-css:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svg-dom:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svggen:1.7" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-diagram-rest:5.16" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-simple-workflow:5.20.0" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-model:5.20.0" level="project" />
-    <orderEntry type="library" name="Maven: org.activiti:activiti-bpmn-layout:5.20.0" level="project" />
-    <orderEntry type="library" name="Maven: org.tinyjee.jgraphx:jgraphx:1.10.4.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-process-validation:5.20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-image-generator:5.20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-email:1.4" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.3.0" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.6" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.activiti:activiti-spring:5.20.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi:3.9" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.5" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.3" level="project" />
     <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1.2" level="project" />
@@ -162,9 +126,5 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.4.1" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.testng:testng:6.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
-    <orderEntry type="library" name="Maven: com.beust:jcommander:1.12" level="project" />
-    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
   </component>
 </module>
