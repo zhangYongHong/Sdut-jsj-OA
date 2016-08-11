@@ -18,6 +18,10 @@
 				<param name="actionName">WokeAction_list</param>
 				<param name="namespace">/</param>
 			</result>
+            <result name="flowImage" type="stream">
+                <param name="contentType">image/png</param>
+                <param name="inputName">inputStream</param>
+            </result>
 		</action>
 	</package>
 	

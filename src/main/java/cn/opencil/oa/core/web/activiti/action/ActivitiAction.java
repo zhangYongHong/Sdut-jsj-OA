@@ -32,6 +32,10 @@ public class ActivitiAction extends BaseAction<Awards> {
         return inputStream;
     }
 
+    public void setInputStream(InputStream inputStream) {
+        this.inputStream = inputStream;
+    }
+
     public void setProcessFile(File processFile) {
         this.processFile = processFile;
     }
@@ -85,7 +89,7 @@ public class ActivitiAction extends BaseAction<Awards> {
      */
     public String showImage() {
         inputStream = activitiService.getResourceAsStream(deploymentId, resourceName);
-        return "";
+        return "flowImage";
     }
 
     /**
