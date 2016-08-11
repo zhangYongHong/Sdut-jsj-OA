@@ -1,9 +1,11 @@
 package cn.opencil.oa.core.web.awards.action;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.ContantKey;
 import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Awards;
+import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.AwardsQuery;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import com.opensymphony.xwork2.ActionContext;
@@ -28,10 +30,11 @@ public class AwardsAction extends BaseAction<Awards> {
     @Autowired
     private AwardsService awardsService;
 
-    private Logger log;
+    private Logger log = Logger.getLogger(AwardsAction.class);
+    private AwardsQuery awardsQuery;
 
     public String list() {
-        AwardsQuery awardsQuery = new AwardsQuery();
+        awardsQuery = new AwardsQuery();
         if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
             awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
         else
@@ -43,6 +46,20 @@ public class AwardsAction extends BaseAction<Awards> {
             log.error(e.getMessage());
         }
         return listAction;
+    }
+
+    public String waitForCheckList() {
+        awardsQuery = new AwardsQuery();
+        User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
+        awardsQuery.setEmployeenum(user.getEmployeenum());
+        awardsQuery.setState(0);
+        try {
+            PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
+            ActionContext.getContext().put("awardsPapers", awardsPageResult);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+        return "notCheck";
     }
 
     public String addUI() {

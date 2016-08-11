@@ -94,10 +94,11 @@
                                 <th>参赛学生</th>
                                 <th>专业</th>
                                 <th>班级</th>
-                                <th>指导老师姓名</th>
+                                <th>指导老师</th>
                                 <th>获奖时间</th>
                                 <th>颁奖单位</th>
                                 <th>备注</th>
+                                <th>状态</th>
                                 <th>操作</th>
                             </tr>
                             </thead>
@@ -135,19 +136,15 @@
                                     <td><s:property value="atime"/></td>
                                     <td><s:property value="prizeunit"/></td>
                                     <td><s:property value="comment"/></td>
+                                    <td style="color: #002a80">
+                                        <s:if test="state == 0">新提交</s:if>
+                                        <s:elseif test="state == 1">审核中</s:elseif>
+                                        <s:elseif test="state == 2">已通过</s:elseif>
+                                        <s:elseif test="state == 3">驳回</s:elseif>
                                     <td>
                                         <div class="controls center">
                                             <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
-                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <%
-                                                if (popedomCode.contains("abc")) {
-                                            %>
-                                            <a href="qPAction_delete.action?qid=<s:property value="qid"/>"
-                                               onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
-                                            <%
-                                                }
-                                            %>
+                                               class="tip">详情</a>
                                         </div>
                                     </td>
                                 </tr>

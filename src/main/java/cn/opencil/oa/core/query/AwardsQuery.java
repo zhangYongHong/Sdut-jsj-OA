@@ -1,41 +1,56 @@
 package cn.opencil.oa.core.query;
 
-import cn.opencil.oa.common.util.DateUtil;
-
-import java.util.Date;
 import java.util.Map;
 
 /**
  * Project Name:SdutOA
  * File Name:AwardsQuery.java
  * Date:2016-4-16下午4:21:18
- * Author : 王基伟
- *
+ * Author : 张树伟
  */
-public class AwardsQuery extends BaseQuery{
+public class AwardsQuery extends BaseQuery {
+    private String employeenum;
 
-	private String schoolYear;
+    private String schoolYear;
 
-	public String getSchoolYear() {
-		return schoolYear;
-	}
+    private int state;
 
-	public void setSchoolYear(String schoolYear) {
-		this.schoolYear = schoolYear;
-	}
+    public String getEmployeenum() {
+        return employeenum;
+    }
 
-	/**
-	 * 根据条件构造where
-	 */
-	@Override
-	public Map<String, Object> buildWhere() {
-		if(null != schoolYear){
-			this.getWhereKV().put("schoolYear", this.schoolYear);
-		}else{
-			this.getWhereKV().put("schoolYear", DateUtil.dateToYear(new Date()));
-		}
+    public void setEmployeenum(String employeenum) {
+        this.employeenum = employeenum;
+    }
 
-		return this.getWhereKV();
-	}
+    public String getSchoolYear() {
+        return schoolYear;
+    }
+
+    public void setSchoolYear(String schoolYear) {
+        this.schoolYear = schoolYear;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
+    /**
+     * 根据条件构造where
+     */
+    @Override
+    public Map<String, Object> buildWhere() {
+        if (null != employeenum)
+            this.getWhereKV().put("employeenum", employeenum);
+        if (null != schoolYear)
+            this.getWhereKV().put("schoolYear", this.schoolYear);
+        if (state == 0)
+            this.getWhereKV().put("state", state);
+        return this.getWhereKV();
+    }
 
 }

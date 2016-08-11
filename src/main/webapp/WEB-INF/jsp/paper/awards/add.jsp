@@ -39,7 +39,6 @@
                         <h4>
                             <span>获奖情况申请</span>
                         </h4>
-
                     </div>
                     <div class="content">
                         <div class="offset5">
@@ -49,7 +48,7 @@
                             <div class="form-row row-fluid">
                                 <div class="row-fluid">
                                     <label class="form-label span3">竞赛项目:</label>
-                                    <div class="span2">
+                                    <div class="span5">
                                         <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
                                                   name="rid" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
@@ -57,10 +56,10 @@
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="span12">
+                                <div class="span7">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">成果展示</label>
-                                        <input class="span8" id="normalInput" type="text" name="teacher"/>
+                                        <label class="form-label span5">成果展示</label>
+                                        <input class="span6" id="normalInput" type="text" name="teacher"/>
                                     </div>
                                 </div>
                             </div>
@@ -87,8 +86,8 @@
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">参赛学生</label>
-                                        <input class="span8 focused" id="focusedInput" type="text"
+                                        <label class="form-label span3" for="focusedInput">参赛学生</label>
+                                        <input class="span4 focused" id="focusedInput" type="text"
                                                name="className"/>
                                     </div>
                                 </div>
@@ -114,37 +113,37 @@
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="span12">
+                                <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">指导老师</label>
-                                        <input class="span8 focused"  type="text"
+                                        <input class="span5 focused"  type="text"
                                                name="className"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="span12">
+                                <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">获奖时间</label>
-                                        <input class="span8 focused"  type="text"
+                                        <input class="span6 focused"  type="text"
                                                name="className"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="span12">
+                                <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">颁奖单位</label>
-                                        <input class="span8 focused" id="" type="text"
+                                        <input class="span6 focused" id="" type="text"
                                                name="className"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="span12">
+                                <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">备注 </label>
-                                        <textarea class="span8 elastic" rows="3" name="comment"></textarea>
+                                        <textarea class="span6 elastic" rows="3" name="comment"></textarea>
                                     </div>
                                 </div>
                             </div>

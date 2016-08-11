@@ -206,9 +206,9 @@
                             </li>
                             <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>获奖详情管理</a>
                                 <ul class="sub">
-                                    <li><a href="#"><span
+                                    <li><a href="${pageContext.request.contextPath}/awardsAction_addUI.action"><span
                                             class="icon16 icomoon-icon-cone"></span>申请</a></li>
-                                    <li><a href="#"><span
+                                    <li><a href="${pageContext.request.contextPath}/awardsAction_notCheck.action"><span
                                             class="icon16 icomoon-icon-cone"></span>查看</a></li>
                                     <li><a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
                                             class="icon16 icomoon-icon-cone"></span>列表</a></li>
