@@ -1,18 +1,16 @@
 package cn.opencil.oa.core.base.action;
 
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
-import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 
 /**
  * Project Name:SdutOA
@@ -74,6 +72,7 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T>,Servl
 	public static final String ACTION2ACTION = "action2action";//action跳转到action
 	public static final String ADDUI = "addUI";//跳转到添加页面
 	public static final String UPDATEUI = "updateUI";//挑战到更新页面
+	public static final String NEWPROCESSUI = "newProcessUI";
 
 	public String listAction = LISTACTION;
 	public String action2action = ACTION2ACTION;

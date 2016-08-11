@@ -4,5 +4,8 @@
     <stateFile url="file://$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/activiti/awards.bpmn">
       <view grid="false" />
     </stateFile>
+    <stateFile url="file://$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/activiti/Awards.bpmn">
+      <view grid="false" />
+    </stateFile>
   </component>
 </project>

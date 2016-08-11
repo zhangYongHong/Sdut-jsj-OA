@@ -25,22 +25,23 @@
 <body>
 <s:include value="/header.jsp"/>
 <!--Body content-->
+
 <div id="content" class="clearfix">
     <div class="contentwrapper"><!--Content wrapper-->
 
         <div class="heading">
 
-            <h3>文件上传</h3>
+            <h3>流程规则上传</h3>
 
         </div><!-- End .heading-->
 
         <!-- Build page from here: -->
-        <form action="qPAction_uploadExcel.action" enctype="multipart/form-data" method="post">
+        <form action="WokeAction_newProcess.action" enctype="multipart/form-data" method="post">
             <div class="row-fluid">
                 <div class="span12">
                     <div class="well well-small">
-                        <form action="tPAction_uploadExcel.action" enctype="multipart/form-data" method="post">
-                            <input type="file" id="upload" name="uploadfile"/>
+                        <form action="WokeAction_newProcess.action" enctype="multipart/form-data" method="post">
+                            <input type="file" id="upload" name="processFile"/>
                             <button class="offset1" type="submit" id="uploader"><span
                                     class="icon16 icomoon-icon-upload-3"></span> 上传
                             </button>

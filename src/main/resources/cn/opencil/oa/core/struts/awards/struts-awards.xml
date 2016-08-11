@@ -22,7 +22,6 @@
   				<param name="method">list</param>
 			</result>
 		</action>
-		
 	</package>
 	
 </struts>

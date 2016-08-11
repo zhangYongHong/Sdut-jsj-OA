@@ -79,11 +79,12 @@
                                     <td><s:property value="version"/></td>
                                     <td><s:property value="deploymentId"/></td>
                                     <td><s:property value="resourceName"/></td>
+                                    <td><s:property value="diagramResourceName"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a href="#" class="tip"><span class="icon12 icomoon-icon-pencil">图片查看</span></a>
-                                            <a href="#" onclick="return confirm('你确定要删除？')" class="tip">删除<span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
+                                            <a target="_blank" href="WokeAction_showImage?deploymentId=<s:property value="deploymentId"/>&resourceName=<s:property value="diagramResourceName"/>" class="tip">查看流程图</a>
+                                            <a href="WokeAction_deleteProcess.action?deploymentId=<s:property value="deploymentId"/>"
+                                               onclick="return confirm('你确定要删除？')" class="tip">删除</a>
                                         </div>
                                     </td>
                                 </tr>

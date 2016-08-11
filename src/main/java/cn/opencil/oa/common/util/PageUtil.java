@@ -200,4 +200,13 @@ public class PageUtil {
         }
         return awardsList;
     }
+
+    /**
+     * 获取文件名后缀
+     */
+    public static String getExtension(String fileName) {
+        int temp = fileName.indexOf('.');
+        String extension = fileName.substring(temp + 1, fileName.length());
+        return extension;
+    }
 }

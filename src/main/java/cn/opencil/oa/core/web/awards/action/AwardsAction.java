@@ -49,6 +49,12 @@ public class AwardsAction extends BaseAction<Awards> {
         return addUI;
     }
 
+    public String add() {
+        Awards awards = this.getModel();
+        awardsService.addEntry(awards);
+        return SUCCESS;
+    }
+
     public String update() {
 
         Awards awards = this.awardsService.getEntryById(this.getModel().getAid());
@@ -62,5 +68,14 @@ public class AwardsAction extends BaseAction<Awards> {
         return "redirect";
     }
 
+    /**
+     * 提交获奖管理信息
+     * @return
+     */
+    public String startProcess() {
+        Long id = this.getModel().getId();
+        awardsService.startProcess(id);
+        return null;
+    }
 
 }

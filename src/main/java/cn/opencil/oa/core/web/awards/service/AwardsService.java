@@ -15,6 +15,8 @@ import cn.opencil.oa.core.query.BaseQuery;
  */
 public interface AwardsService  extends BaseService<Awards>{
 
-	public static final String SERVICENAME = "cn.opencil.oa.core.web.awards.service.impl.AwardsServiceImpl";
-	public PageResult<Awards> getAwardsPageResult(BaseQuery baseQuery);
+	String SERVICENAME = "cn.opencil.oa.core.web.awards.service.impl.AwardsServiceImpl";
+	PageResult<Awards> getAwardsPageResult(BaseQuery baseQuery);
+
+    void startProcess(Long id);
 }

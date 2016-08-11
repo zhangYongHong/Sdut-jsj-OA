@@ -1,19 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
-        "http://struts.apache.org/dtds/struts-2.3.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <constant name="struts.ui.theme" value="simple"></constant>
-    <constant name="struts.devMode" value="true"/>
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.devMode" value="true"/>
+	
+	
+	<package name="activiti" extends="interceptor-login" namespace="/">
 
-
-    <package name="activiti" extends="interceptor-login" namespace="/">
-
-        <action name="activitiAction_*" class="ActivitiAction" method="{1}">
-            <result name="listAction">/WEB-INF/jsp/workFlow/list.jsp</result>
-            <result name="addUI">/WEB-INF/jsp/paper/awards/add.jsp</result>
-        </action>
-    </package>
+		<action name="WokeAction_*" class="ActivitiAction" method="{1}">
+			<result name="listAction">/WEB-INF/jsp/workFlow/list.jsp</result>
+			<result name="newProcessUI">/WEB-INF/jsp/common/uploadForAc.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/workFlow/</result>
+			<result name="redirect" type="redirectAction">
+				<param name="actionName">WokeAction_list</param>
+				<param name="namespace">/</param>
+			</result>
+		</action>
+	</package>
+	
 </struts>
+	

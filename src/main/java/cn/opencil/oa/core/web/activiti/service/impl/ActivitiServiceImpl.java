@@ -1,6 +1,8 @@
 package cn.opencil.oa.core.web.activiti.service.impl;
 
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.web.activiti.service.ActivitiService;
+import cn.opencil.oa.core.web.awards.dao.AwardsDao;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
@@ -9,7 +11,10 @@ import org.activiti.engine.repository.ProcessDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.zip.ZipInputStream;
 
 /**
  * Created by mnzero on 16-8-10.
@@ -22,16 +27,28 @@ public class ActivitiServiceImpl implements ActivitiService {
     RuntimeService runtimeService;
     @Autowired
     TaskService taskService;
-
+    @Autowired
+    AwardsDao awardsDao;
     /**
      * 流程的部署与发布
      */
     @Override
-    public void deploy() {
-        DeploymentBuilder deploymentBuilder = repositoryService.createDeployment();
-        deploymentBuilder.name("award")
-                .addClasspathResource("cn/opencil/oa/core/activiti/Awards.bpmn")
-                .addClasspathResource("cn/opencil/oa/core/activiti/Awards.png").deploy();
+    public void deploy(File processFile) {
+        try {
+            DeploymentBuilder deploymentBuilder = repositoryService.createDeployment();
+            InputStream inputStream = new FileInputStream(processFile);
+            String fileName = processFile.getName();
+            String extension = PageUtil.getExtension(fileName);
+            if (extension.equals("zip") || extension.equals("bar")) {
+                ZipInputStream zip = new ZipInputStream(inputStream);
+                deploymentBuilder.addZipInputStream(zip);
+            } else {
+                deploymentBuilder.addInputStream(fileName, inputStream);
+            }
+            deploymentBuilder.deploy();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException("部署流程失败！");
+        }
     }
 
     @Override
@@ -46,17 +63,27 @@ public class ActivitiServiceImpl implements ActivitiService {
     }
 
     @Override
-    public void start() {
-        runtimeService.startProcessInstanceById("award:1:4");
-    }
-
-    @Override
     public void task() {
         taskService.createTaskQuery().list();
     }
 
     @Override
     public List<ProcessDefinition> getDefinitions() {
-        return repositoryService.createProcessDefinitionQuery().list();
+        return repositoryService.createProcessDefinitionQuery().orderByProcessDefinitionKey().desc().list();
+    }
+
+    @Override
+    public void delete(String id) {
+        repositoryService.deleteDeployment(id, true);
+    }
+
+    @Override
+    public InputStream getResourceAsStream(String deploymentId, String resourceName) {
+        return repositoryService.getResourceAsStream(deploymentId, resourceName);
+    }
+
+    @Override
+    public void start(String key, HashMap<String, Object> value) {
+        runtimeService.startProcessInstanceByKey(key, value);
     }
 }

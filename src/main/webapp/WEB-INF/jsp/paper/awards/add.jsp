@@ -117,7 +117,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">指导老师</label>
-                                        <input class="span8 focused" id="" type="text"
+                                        <input class="span8 focused"  type="text"
                                                name="className"/>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">获奖时间</label>
-                                        <input class="span8 focused" id="" type="text"
+                                        <input class="span8 focused"  type="text"
                                                name="className"/>
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <s:hidden name="state" value="0"/>
                             <div class="form-actions offset2">
                                 <button type="submit" class="btn btn-info">保存</button>
                                 <button type="button" class="btn">取消</button>

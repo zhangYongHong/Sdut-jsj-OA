@@ -7,6 +7,7 @@ import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.BaseQuery;
+import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import cn.opencil.oa.core.web.awards.dao.AwardsDao;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -31,6 +33,9 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 
 	@Autowired
 	private SystemDDLService systemDDLService;
+
+	@Autowired
+	private ActivitiService activitiService;
 
 	private Logger logger = Logger.getLogger(AwardsServiceImpl.class);
 	
@@ -59,5 +64,22 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 		}
 		return awardsPageResult;
 	}
+
+    @Override
+    public void startProcess(Long id) {
+        Awards awards = awardsDao.getEntryById(id);
+		if (awards != null) {
+			//将状态改为审核中
+			awards.setState(1);
+			awardsDao.updateEntry(awards);
+			//获取业务对象的类名作为key
+			String key = awards.getClass().getSimpleName();
+			//设置流程变量
+			HashMap<String, Object> value = new HashMap<>();
+			value.put("classType", key);
+			value.put("objId", awards.getAid());
+			activitiService.start(key, value);
+		}
+    }
 
 }
