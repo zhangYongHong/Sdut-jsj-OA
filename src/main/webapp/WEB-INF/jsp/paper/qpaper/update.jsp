@@ -25,7 +25,7 @@
 <div id="content" class="clearfix">
     <div class="contentwrapper "><!--Content wrapper-->
         <div class="heading">
-            <h3>详情表</h3>
+            <h3>试卷归档管理</h3>
         </div><!-- End .heading-->
         <!-- Build page from here: Usual with <div class="row-fluid"></div> -->
 
@@ -37,7 +37,7 @@
 
                     <div class="title center">
                         <h4>
-                            <span>试卷归档详情</span>
+                            <span>试卷归档情况修改</span>
                         </h4>
 
                     </div>

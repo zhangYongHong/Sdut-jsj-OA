@@ -35,7 +35,7 @@
 
         <div class="heading">
 
-            <h3>数据表</h3>
+            <h3>实训管理</h3>
 
 
         </div><!-- End .heading-->
@@ -50,38 +50,40 @@
 
                     <div class="title">
                         <h4>
-                            <span>数据表</span>
+                            <span>实训详情表</span>
                         </h4>
                     </div>
-                    <div class="form-row row-fluid">
-                        <div class="span4">
-                            <div class="row-fluid">
-                                <label class="form-label span2">学年:</label>
-                                <div class="span8 controls">
-                                    <select name="schoolYear" id="schoolYear" onchange="selectChange()">
-                                        <option value="2014-2015-1">2014-2015学年上学期</option>
-                                        <option value="2014-2015-2">2014-2015学年下学期</option>
-                                        <option value="2015-2016-1">2015-2016学年上学期</option>
-                                        <option value="2015-2016-2">2015-2016学年下学期</option>
-                                        <option value="2016-2017-1">2016-2017学年上学期</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <%
-                            if (popedomCode.contains("abc")) {
-                        %>
-                        <div class="bottom ">
-                            <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
-                            <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                            <a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>" class="btn btip marginR10 marginB10">导出</a>
-                        </div>
-                        <%
-                            }
-                        %>
-                    </div>
+
 
                     <div class="content noPad clearfix">
+                        <div class="form-row row-fluid">
+                            <div class="span4">
+                                <div class="row-fluid">
+                                    <label class="form-label span2">学年:</label>
+                                    <div class="span8 controls">
+                                        <select name="schoolYear" id="schoolYear" onchange="selectChange()">
+                                            <option>请选择</option>
+                                            <option value="2014-2015-1">2014-2015学年上学期</option>
+                                            <option value="2014-2015-2">2014-2015学年下学期</option>
+                                            <option value="2015-2016-1">2015-2016学年上学期</option>
+                                            <option value="2015-2016-2">2015-2016学年下学期</option>
+                                            <option value="2016-2017-1">2016-2017学年上学期</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <%
+                                if (popedomCode.contains("abc")) {
+                            %>
+                            <div class="bottom ">
+                                <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
+                                <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
+                                <a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>" class="btn btip marginR10 marginB10">导出</a>
+                            </div>
+                            <%
+                                }
+                            %>
+                        </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
                             <!-- dynamicTable -->

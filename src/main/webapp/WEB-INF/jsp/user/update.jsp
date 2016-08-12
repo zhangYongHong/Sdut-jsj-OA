@@ -34,7 +34,7 @@
 
         <div class="heading">
 
-            <h3>个人信息</h3>
+            <h3>个人信息管理</h3>
 
         </div><!-- End .heading-->
 
@@ -44,7 +44,7 @@
             <div class="span12">
 
                 <div class="page-header">
-                    <h4>个人信息</h4>
+                    <h4>个人信息修改</h4>
                 </div>
 
                 <form class="form-horizontal seperator" action="userAction_update.action" method="post">

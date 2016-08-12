@@ -40,7 +40,7 @@
 
         <div class="heading">
 
-            <h3>密码修改</h3>
+            <h3>个人信息管理</h3>
 
         </div><!-- End .heading-->
 

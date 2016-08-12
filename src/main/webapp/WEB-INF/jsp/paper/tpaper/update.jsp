@@ -44,7 +44,7 @@
 
                     <div class="title center">
                         <h4>
-                            <span>实训归档详情</span>
+                            <span>实训情况修改</span>
                         </h4>
 
                     </div>
