@@ -35,7 +35,7 @@
 
         <div class="heading">
 
-            <h3>数据表</h3>
+            <h3>获奖管理</h3>
 
 
         </div><!-- End .heading-->
@@ -50,7 +50,7 @@
 
                     <div class="title">
                         <h4>
-                            <span>数据表</span>
+                            <span>获奖情况表</span>
                         </h4>
                     </div>
                     <div class="form-row row-fluid">
@@ -59,6 +59,7 @@
                                 <label class="form-label span2">学年:</label>
                                 <div class="span8 controls">
                                     <select name="schoolYear" id="schoolYear" onchange="selectChange()">
+                                        <option>请选择</option>
                                         <option value="2014-2015-1">2014-2015学年上学期</option>
                                         <option value="2014-2015-2">2014-2015学年下学期</option>
                                         <option value="2015-2016-1">2015-2016学年上学期</option>

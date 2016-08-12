@@ -59,7 +59,6 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 					awards.setCompetitionView(systemDDL.getDdlName());
 				else
 					awards.setCompetitionView("");
-
 			}
 			//对获奖信息按照获奖级别、获奖等级排序
 			PageUtil.sortAwards(awardses);
