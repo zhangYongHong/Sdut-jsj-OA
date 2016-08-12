@@ -149,7 +149,7 @@
                         <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
                         <ul class="sub">
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-xing"></span>流程管理</a>
+                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/WokeAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
                                     <li><a href="${pageContext.request.contextPath}/WokeAction_newProcessUI.action"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a></li>
@@ -157,14 +157,14 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-file"></span>字典管理</a>
+                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
                                 <ul class="sub">
                                     <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
                                     <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-file"></span>角色管理</a>
+                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
                                 <ul class="sub">
                                     <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a></li>
                                     <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a></li>
@@ -180,38 +180,38 @@
                         <a href="#"><span class="icon16 icomoon-icon-grid"></span>个人办公</a>
                         <ul class="sub">
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>我的任务</a>
+                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>我的任务</a>
                                 <ul class="sub">
                                     <li><a href="#"><span
-                                            class="icon16 icomoon-icon-accessibility"></span>待办任务</a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>待办任务<span class="notification">3</span></a>
                                     </li>
                                     <li><a href="#"><span
-                                            class="icon16 icomoon-icon-accessibility"></span>已办任务</a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>已办任务</a>
                                     </li>
                                     <li><a href="#"><span
-                                            class="icon16 icomoon-icon-accessibility"></span>新建任务</a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>新建任务</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>归档管理</a>
+                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>归档管理</a>
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/qPAction_list.action"><span
-                                            class="icon16 icomoon-icon-calendar"></span>试卷归档管理</a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>试卷归档管理</a>
                                     </li>
                                     <li><a href="${pageContext.request.contextPath}/tPAction_list.action"><span
-                                            class="icon16 icomoon-icon-calendar"></span>实训归档管理</a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>实训归档管理</a>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>获奖详情管理</a>
+                            <li><a href="#"><span class="icon16 icomoon-icon-list-view"></span>获奖详情管理</a>
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/awardsAction_addUI.action"><span
-                                            class="icon16 icomoon-icon-cone"></span>申请</a></li>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>申请</a></li>
                                     <li><a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList.action"><span
-                                            class="icon16 icomoon-icon-cone"></span>查看</a></li>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
                                     <li><a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
-                                            class="icon16 icomoon-icon-cone"></span>列表</a></li>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
                                 </ul>
                             </li>
                         </ul>

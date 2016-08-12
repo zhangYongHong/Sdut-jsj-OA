@@ -44,22 +44,14 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="#" method="post">
+                        <form class="form-horizontal" action="awardsAction_add.action" method="post">
                             <div class="form-row row-fluid">
                                 <div class="row-fluid">
                                     <label class="form-label span3">竞赛项目:</label>
                                     <div class="span5">
                                         <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="rid" headerKey="0" headerValue="请选择" value="rid"
+                                                  name="competitionid" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span7">
-                                    <div class="row-fluid">
-                                        <label class="form-label span5">成果展示</label>
-                                        <input class="span6" id="normalInput" type="text" name="teacher"/>
                                     </div>
                                 </div>
                             </div>
@@ -68,27 +60,14 @@
                                     <label class="form-label span3">获奖级别:</label>
                                     <div class="span2">
                                         <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="rid" headerKey="0" headerValue="请选择" value="rid"
+                                                  name="level" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="row-fluid">
-                                    <label class="form-label span3">获奖等级:</label>
+                                    <label class="form-label span2">获奖等级:</label>
                                     <div class="span2">
                                         <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="rid" headerKey="0" headerValue="请选择" value="rid"
+                                                  name="grade" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span12">
-                                    <div class="row-fluid">
-                                        <label class="form-label span3" for="focusedInput">参赛学生</label>
-                                        <input class="span4 focused" id="focusedInput" type="text"
-                                               name="className"/>
                                     </div>
                                 </div>
                             </div>
@@ -97,17 +76,13 @@
                                     <label class="form-label span3">专业:</label>
                                     <div class="span2">
                                         <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="rid" headerKey="0" headerValue="请选择" value="rid"
+                                                  name="deptid" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="row-fluid">
-                                    <label class="form-label span3">班级:</label>
+                                    <label class="form-label span2">班级:</label>
                                     <div class="span2">
                                         <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="rid" headerKey="0" headerValue="请选择" value="rid"
+                                                  name="classe" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
@@ -115,40 +90,54 @@
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">指导老师</label>
-                                        <input class="span5 focused"  type="text"
-                                               name="className"/>
+                                        <label class="form-label span4">成果展示:</label>
+                                        <input class="span6" id="normalInput" type="text" name="achievement"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">获奖时间</label>
-                                        <input class="span6 focused"  type="text"
-                                               name="className"/>
+                                        <label class="form-label span4" for="focusedInput">参赛学生:</label>
+                                        <input class="span6 focused" id="focusedInput" type="text" name="stuname"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4" for="focusedInput">指导老师:</label>
+                                        <input class="span6 focused"  type="text" name="teacher"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">颁奖单位</label>
-                                        <input class="span6 focused" id="" type="text"
-                                               name="className"/>
+                                        <label class="form-label span4" for="focusedInput">获奖时间:</label>
+                                        <input class="span6 focused"  type="text" name="atime"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">备注 </label>
+                                        <label class="form-label span4" for="focusedInput">颁奖单位:</label>
+                                        <input class="span6 focused" id="" type="text" name="prizeunit"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4">备注:</label>
                                         <textarea class="span6 elastic" rows="3" name="comment"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <s:hidden name="state" value="0"/>
-                            <div class="form-actions offset2">
+                            <div class="form-actions offset1">
                                 <button type="submit" class="btn btn-info">保存</button>
                                 <button type="button" class="btn">取消</button>
                             </div>

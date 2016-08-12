@@ -73,9 +73,12 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String add() {
+        User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
         Awards awards = this.getModel();
+        awards.setSchoolYear(DateUtil.groupSchoolYear());
+        awards.setEmployeenum(user.getEmployeenum());
         awardsService.addEntry(awards);
-        return SUCCESS;
+        return "redirectToCheck";
     }
 
     public String update() {

@@ -18,6 +18,10 @@
 				<param name="actionName">awardsAction_list</param>
 				<param name="namespace">/</param>
 			</result>
+			<result name="redirectToCheck" type="redirectAction">
+				<param name="actionName">awardsAction_waitForCheckList</param>
+				<param name="namespace">/</param>
+			</result>
 			<result name="action2action" type="chain">
 				<param name="actionName">awardsAction</param>
   				<param name="method">list</param>

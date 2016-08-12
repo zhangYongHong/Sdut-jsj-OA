@@ -52,15 +52,20 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 		try {
 			awardsPageResult = this.awardsDao.getAwaPageResult(baseQuery);
 			List<Awards> awardses = awardsPageResult.getRows();
-			for (Awards awards : awardses) {
+			for (int i = 0; i < awardses.size(); i++) {
+				Awards awards = awardses.get(i);
 				systemDDL = systemDDLService.getSystenDDL("competitionView", awards.getCompetitionid());
-				awards.setCompetitionView(systemDDL.getDdlName());
+				if (systemDDL != null)
+					awards.setCompetitionView(systemDDL.getDdlName());
+				else
+					awards.setCompetitionView("");
+
 			}
 			//对获奖信息按照获奖级别、获奖等级排序
 			PageUtil.sortAwards(awardses);
 			awardsPageResult.setRows(PageUtil.getListByStuname(awardses));
 		} catch (Exception e) {
-			logger.error(e.getMessage());
+			System.out.println(e.getMessage());
 		}
 		return awardsPageResult;
 	}

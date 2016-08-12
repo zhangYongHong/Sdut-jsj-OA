@@ -59,6 +59,7 @@
                                 <label class="form-label span2">状态:</label>
                                 <div class="span8 controls">
                                     <select name="state" id="state" onchange="selectChange()">
+                                        <option>请选择</option>
                                         <option value="0">新提交</option>
                                         <option value="1">审核中</option>
                                         <option value="2">已通过</option>

@@ -1,11 +1,5 @@
 package cn.opencil.oa.core.web.basedata.service.impl;
 
-import java.util.List;
-
-import javax.annotation.Resource;
-
-import org.springframework.stereotype.Service;
-
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
@@ -13,6 +7,11 @@ import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.BaseQuery;
 import cn.opencil.oa.core.web.basedata.dao.SystemDDLDao;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.sql.SQLDataException;
+import java.util.List;
 
 /**
  * Project Name:SdutOA
@@ -34,7 +33,11 @@ public class SystemDDLServiceImpl extends BaseServiceImpl<SystemDDL> implements 
 
 	@Override
 	public SystemDDL getSystenDDL(String keyword, Integer ddlCode) {
-		return this.systemDDLDao.getSystenDDL(keyword, ddlCode);
+		try {
+			return this.systemDDLDao.getSystenDDL(keyword, ddlCode);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 	@Override
