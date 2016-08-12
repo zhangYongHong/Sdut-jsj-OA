@@ -33,7 +33,8 @@ public class Awards implements Serializable {
 	private String schoolYear; // 学年
 	private String isChange; //修改标记
 	private InputStream inputStream;//导出Excel
-	private int state; //0.初始录入 1. 开始审批 2.审批通过 3.驳回
+	private Integer state; //0.初始录入 1. 开始审批 2.审批通过 3.驳回
+    private String checkIde;//审批意见
 	private String employeenum; //申请人对应工号
 
 	public Long getAid() {
@@ -188,15 +189,23 @@ public class Awards implements Serializable {
 		this.inputStream = inputStream;
 	}
 
-	public int getState() {
+	public Integer getState() {
 		return state;
 	}
 
-	public void setState(int state) {
+	public void setState(Integer state) {
 		this.state = state;
 	}
 
-	public String getEmployeenum() {
+    public String getCheckIde() {
+        return checkIde;
+    }
+
+    public void setCheckIde(String checkIde) {
+        this.checkIde = checkIde;
+    }
+
+    public String getEmployeenum() {
 		return employeenum;
 	}
 
@@ -226,6 +235,7 @@ public class Awards implements Serializable {
 		awards.setIsChange(this.isChange);
 		awards.setInputStream(this.inputStream);
 		awards.setState(this.state);
+        awards.setCheckIde(this.checkIde);
 		awards.setEmployeenum(this.employeenum);
 		return awards;
 	}

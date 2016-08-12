@@ -67,11 +67,11 @@ public class AwardsDaoImpl extends BaseDaoImpl<Awards> implements AwardsDao{
 					@Override
 					public PageResult<Awards> doInHibernate(Session session) throws HibernateException {
 						StringBuilder hql = new StringBuilder();
-						hql.append("from Awards where ");
+						hql.append("from Awards where 1 = 1 ");
 						Map<String, Object> whereKV = baseQuery.buildWhere();
 
 						for(Entry<String,Object> entry : whereKV.entrySet()){
-							hql.append(entry.getKey() + " = '"+entry.getValue()+"'");
+							hql.append("and " + entry.getKey() + " = '"+entry.getValue()+"'");
 						}
 						Query query = session.createQuery(hql.toString());
 						//分页

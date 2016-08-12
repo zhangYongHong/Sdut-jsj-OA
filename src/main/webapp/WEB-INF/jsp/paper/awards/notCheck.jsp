@@ -35,7 +35,7 @@
 
         <div class="heading">
 
-            <h3>数据表</h3>
+            <h3>获奖情况管理</h3>
 
 
         </div><!-- End .heading-->
@@ -50,34 +50,23 @@
 
                     <div class="title">
                         <h4>
-                            <span>数据表</span>
+                            <span>查看申请状态表</span>
                         </h4>
                     </div>
                     <div class="form-row row-fluid">
                         <div class="span4">
                             <div class="row-fluid">
-                                <label class="form-label span2">学年:</label>
+                                <label class="form-label span2">状态:</label>
                                 <div class="span8 controls">
-                                    <select name="schoolYear" id="schoolYear" onchange="selectChange()">
-                                        <option value="2014-2015-1">2014-2015学年上学期</option>
-                                        <option value="2014-2015-2">2014-2015学年下学期</option>
-                                        <option value="2015-2016-1">2015-2016学年上学期</option>
-                                        <option value="2015-2016-2">2015-2016学年下学期</option>
-                                        <option value="2016-2017-1">2016-2017学年上学期</option>
+                                    <select name="state" id="state" onchange="selectChange()">
+                                        <option value="0">新提交</option>
+                                        <option value="1">审核中</option>
+                                        <option value="2">已通过</option>
+                                        <option value="3">驳回</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <%
-                            if (popedomCode.contains("abc")) {
-                        %>
-                        <div class="bottom ">
-                            <a href="qPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                            <a href="qPAction_exportExcel.action" class="btn btip marginR10 marginB10">导出</a>
-                        </div>
-                        <%
-                            }
-                        %>
                     </div>
 
                     <div class="content noPad clearfix">
@@ -168,9 +157,9 @@
 ================================================== -->
 <script type="text/javascript">
     function selectChange() {
-        var selObj = document.getElementById("schoolYear");
+        var selObj = document.getElementById("state");
         var i = selObj.selectedIndex;
-        window.location.href="awardsAction_list.action?schoolYear=" + selObj.options[i].value;
+        window.location.href="awardsAction_waitForCheckList.action?state=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

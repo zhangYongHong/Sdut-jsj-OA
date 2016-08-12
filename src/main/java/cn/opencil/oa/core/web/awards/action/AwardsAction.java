@@ -51,8 +51,14 @@ public class AwardsAction extends BaseAction<Awards> {
     public String waitForCheckList() {
         awardsQuery = new AwardsQuery();
         User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
+        //默认显示登陆用户新提交的表单信息
         awardsQuery.setEmployeenum(user.getEmployeenum());
-        awardsQuery.setState(0);
+        if (this.getModel().getState() == null) {
+            awardsQuery.setState(0);
+        } else {
+            awardsQuery.setState(this.getModel().getState());
+        }
+
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);

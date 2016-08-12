@@ -20,6 +20,7 @@
 		<property name="fileNum" type="java.lang.String" length="50"></property>
 		<property name="schoolYear" type="java.lang.String" length="255"></property>
 		<property name="state" type="java.lang.Integer" length="2"></property>
+        <property name="checkIde" type="java.lang.String" length="200"></property>
 		<property name="employeenum" type="java.lang.String" length="30"></property>
 	</class>
 </hibernate-mapping>

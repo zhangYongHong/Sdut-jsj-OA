@@ -13,11 +13,7 @@ public class AwardsQuery extends BaseQuery {
 
     private String schoolYear;
 
-    private int state;
-
-    public String getEmployeenum() {
-        return employeenum;
-    }
+    private Integer state;
 
     public void setEmployeenum(String employeenum) {
         this.employeenum = employeenum;
@@ -47,9 +43,10 @@ public class AwardsQuery extends BaseQuery {
         if (null != employeenum)
             this.getWhereKV().put("employeenum", employeenum);
         if (null != schoolYear)
-            this.getWhereKV().put("schoolYear", this.schoolYear);
-        if (state == 0)
+            this.getWhereKV().put("schoolYear", schoolYear);
+        if (null!= state) {
             this.getWhereKV().put("state", state);
+        }
         return this.getWhereKV();
     }
 
