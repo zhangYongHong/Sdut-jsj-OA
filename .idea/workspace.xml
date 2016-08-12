@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/service/impl/AwardsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/service/impl/AwardsServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" />
     </list>
     <ignored path="SdutOA.iws" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="AwardsAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/action/AwardsAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
+            <state relative-caret-position="-530">
               <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -47,17 +46,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+            <state relative-caret-position="428">
+              <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AwardsServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AwardsServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/service/impl/AwardsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-170">
@@ -214,8 +213,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/notCheck.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/service/impl/SystemDDLServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/service/impl/AwardsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" />
       </list>
     </option>
   </component>
@@ -1155,7 +1154,7 @@
       <workItem from="1470909966842" duration="13069000" />
       <workItem from="1470975198008" duration="3181000" />
       <workItem from="1470983002238" duration="1889000" />
-      <workItem from="1470990775291" duration="5453000" />
+      <workItem from="1470990775291" duration="5550000" />
     </task>
     <task id="LOCAL-00001" summary="更新：用Hibernate 4.3.11.Final">
       <created>1469595208617</created>
@@ -1297,7 +1296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1470997674685</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="修改：页面显示的问题">
+      <created>1470998038770</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1470998038770</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1333,7 +1339,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113446000" />
+    <option name="totallyTimeSpent" value="113543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -1454,7 +1460,8 @@
     <MESSAGE value="新增：前端页面对应页面的添加" />
     <MESSAGE value="修改：获奖管理中的审核列表显示功能" />
     <MESSAGE value="修改：获取竞赛项目的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改：获取竞赛项目的bug" />
+    <MESSAGE value="修改：页面显示的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改：页面显示的问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1939,24 +1946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/action/AwardsAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/service/impl/SystemDDLServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -1977,6 +1966,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/action/AwardsAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-530">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
           <folding />
         </state>
       </provider>
