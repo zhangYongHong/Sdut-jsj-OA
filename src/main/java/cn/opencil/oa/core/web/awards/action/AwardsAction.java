@@ -3,6 +3,7 @@ package cn.opencil.oa.core.web.awards.action;
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.common.util.ContantKey;
 import cn.opencil.oa.common.util.DateUtil;
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.User;
@@ -73,16 +74,16 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String add() {
-        User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
+        User user = PageUtil.getUser();
         Awards awards = this.getModel();
         awards.setSchoolYear(DateUtil.groupSchoolYear());
         awards.setEmployeenum(user.getEmployeenum());
         awardsService.addEntry(awards);
+        startProcess(awards.getAid());
         return "redirectToCheck";
     }
 
     public String update() {
-
         Awards awards = this.awardsService.getEntryById(this.getModel().getAid());
         BeanUtils.copyProperties(this.getModel(), awards);
         this.awardsService.updateEntry(awards);
@@ -97,11 +98,10 @@ public class AwardsAction extends BaseAction<Awards> {
     /**
      * 提交获奖管理信息
      * @return
+     * @param id
      */
-    public String startProcess() {
-        Long id = this.getModel().getId();
+    private void startProcess(Long id) {
         awardsService.startProcess(id);
-        return null;
     }
 
 }

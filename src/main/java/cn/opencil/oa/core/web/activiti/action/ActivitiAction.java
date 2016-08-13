@@ -1,7 +1,6 @@
 package cn.opencil.oa.core.web.activiti.action;
 
 import cn.opencil.oa.core.base.action.BaseAction;
-import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.repository.ProcessDefinition;
@@ -18,7 +17,7 @@ import java.util.List;
  */
 @Controller("ActivitiAction")
 @Scope("prototype")
-public class ActivitiAction extends BaseAction<Awards> {
+public class ActivitiAction extends BaseAction<ProcessDefinition> {
 
     @Resource
     private ActivitiService activitiService;
@@ -91,11 +90,4 @@ public class ActivitiAction extends BaseAction<Awards> {
         inputStream = activitiService.getResourceAsStream(deploymentId, resourceName);
         return "flowImage";
     }
-
-    /**
-     *
-     */
-//    public String taskList() {
-//        String assignee =
-//    }
 }

@@ -11,9 +11,11 @@ import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import cn.opencil.oa.core.web.awards.dao.AwardsDao;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
+import org.activiti.engine.TaskService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
@@ -26,6 +28,7 @@ import java.util.List;
  * Author : 张树伟
  */
 @Service(AwardsService.SERVICENAME)
+@Transactional(readOnly = false)
 public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements AwardsService {
 
 	@Resource(name=AwardsDao.DAONAME)
@@ -33,10 +36,9 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 
 	@Autowired
 	private SystemDDLService systemDDLService;
-
 	@Autowired
 	private ActivitiService activitiService;
-
+	private TaskService taskService;
 	private Logger logger = Logger.getLogger(AwardsServiceImpl.class);
 	
 	@Override
@@ -73,16 +75,19 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     public void startProcess(Long id) {
         Awards awards = awardsDao.getEntryById(id);
 		if (awards != null) {
-			//将状态改为审核中
 			awards.setState(1);
 			awardsDao.updateEntry(awards);
 			//获取业务对象的类名作为key
-			String key = awards.getClass().getSimpleName();
+			String processDefinitionKey = awards.getClass().getSimpleName();
+			String businessKey = processDefinitionKey + ":" + id.toString();
 			//设置流程变量
 			HashMap<String, Object> value = new HashMap<>();
-			value.put("classType", key);
+			//classType: 业务对象类型
+			//objId:业务ID
+			value.put("classType", processDefinitionKey);
 			value.put("objId", awards.getAid());
-			activitiService.start(key, value);
+            //业务对象与流程建立关系
+			activitiService.start(processDefinitionKey, businessKey, value);
 		}
     }
 

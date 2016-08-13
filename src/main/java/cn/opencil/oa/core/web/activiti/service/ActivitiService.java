@@ -11,7 +11,7 @@ import java.util.List;
  * Created by mnzero on 16-8-10.
  */
 public interface ActivitiService {
-    String SERVICENAME = "cn.opencil.oa.core.web.activiti.service.impl";
+    String SERVICENAME = "cn.opencil.oa.core.web.activiti.service.impl.ActivitiServiceImpl";
 
     /**
      * 流程的部署与发布
@@ -23,7 +23,7 @@ public interface ActivitiService {
      */
     void deployed();
 
-    void task();
+
 
     /**
      * 返回部署的流程列表
@@ -49,5 +49,6 @@ public interface ActivitiService {
      * 根据任务的key启动流程
      * key: 为对应业务对象的类名
      */
-    void start(String key, HashMap<String, Object> value);
+    void start(String processDefinitionKey, String businessKey, HashMap<String, Object> value);
+
 }

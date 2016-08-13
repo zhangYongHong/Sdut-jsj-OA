@@ -10,8 +10,12 @@ import org.activiti.engine.repository.DeploymentBuilder;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.zip.ZipInputStream;
@@ -20,6 +24,7 @@ import java.util.zip.ZipInputStream;
  * Created by mnzero on 16-8-10.
  */
 @Service(ActivitiService.SERVICENAME)
+@Transactional(readOnly = false)
 public class ActivitiServiceImpl implements ActivitiService {
     @Autowired
     RepositoryService repositoryService;
@@ -39,12 +44,12 @@ public class ActivitiServiceImpl implements ActivitiService {
             InputStream inputStream = new FileInputStream(processFile);
             String fileName = processFile.getName();
             String extension = PageUtil.getExtension(fileName);
-            if (extension.equals("zip") || extension.equals("bar")) {
+//            if (extension.equals("zip") || extension.equals("bar")) {
                 ZipInputStream zip = new ZipInputStream(inputStream);
                 deploymentBuilder.addZipInputStream(zip);
-            } else {
-                deploymentBuilder.addInputStream(fileName, inputStream);
-            }
+//            } else {
+//                deploymentBuilder.addInputStream(fileName, inputStream);
+//            }
             deploymentBuilder.deploy();
         } catch (FileNotFoundException e) {
             throw new RuntimeException("部署流程失败！");
@@ -63,11 +68,6 @@ public class ActivitiServiceImpl implements ActivitiService {
     }
 
     @Override
-    public void task() {
-        taskService.createTaskQuery().list();
-    }
-
-    @Override
     public List<ProcessDefinition> getDefinitions() {
         return repositoryService.createProcessDefinitionQuery().orderByProcessDefinitionKey().desc().list();
     }
@@ -83,7 +83,8 @@ public class ActivitiServiceImpl implements ActivitiService {
     }
 
     @Override
-    public void start(String key, HashMap<String, Object> value) {
-        runtimeService.startProcessInstanceByKey(key, value);
+    public void start(String processDefinitionKey, String businessKey, HashMap<String, Object> value) {
+        runtimeService.startProcessInstanceByKey(processDefinitionKey, businessKey, value);
     }
+
 }
