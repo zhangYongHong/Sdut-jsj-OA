@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * Created by mnzero on 16-8-13.
  */
-@Controller("TasksAction")
+@Controller
 @Scope("prototype")
 public class TasksAction extends BaseAction<Task> {
     @Autowired

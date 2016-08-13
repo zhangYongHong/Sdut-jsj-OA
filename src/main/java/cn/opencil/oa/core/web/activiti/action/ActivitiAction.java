@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by mnzero on 16-8-10.
  */
-@Controller("ActivitiAction")
+@Controller
 @Scope("prototype")
 public class ActivitiAction extends BaseAction<ProcessDefinition> {
 
