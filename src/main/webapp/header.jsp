@@ -188,9 +188,6 @@
                                     <li><a href="#"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>已办任务</a>
                                     </li>
-                                    <li><a href="#"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>新建任务</a>
-                                    </li>
                                 </ul>
                             </li>
                             <li>
