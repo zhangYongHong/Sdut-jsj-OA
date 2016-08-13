@@ -48,22 +48,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
 
     private File uploadfile;
 
-    public File getUploadfile() {
-        return uploadfile;
-    }
-
-    public void setUploadfile(File uploadfile) {
-        this.uploadfile = uploadfile;
-    }
-
-    public PaperQuery getQpQuery() {
-        return qpQuery;
-    }
-
-    public void setQpQuery(PaperQuery qpQuery) {
-        this.qpQuery = qpQuery;
-    }
-
     public String list() {
         PageResult<QuestionPaper> qustionPapers = null;
         try {
@@ -248,4 +232,22 @@ public class QPAction extends BaseAction<QuestionPaper> {
         Matcher matcher = numRegular.matcher(num);
         return matcher.matches();
     }
+
+    //==============================================================
+    public File getUploadfile() {
+        return uploadfile;
+    }
+
+    public void setUploadfile(File uploadfile) {
+        this.uploadfile = uploadfile;
+    }
+
+    public PaperQuery getQpQuery() {
+        return qpQuery;
+    }
+
+    public void setQpQuery(PaperQuery qpQuery) {
+        this.qpQuery = qpQuery;
+    }
+
 }

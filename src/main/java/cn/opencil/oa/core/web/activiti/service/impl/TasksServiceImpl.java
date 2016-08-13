@@ -3,6 +3,7 @@ package cn.opencil.oa.core.web.activiti.service.impl;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
+import org.activiti.engine.FormService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class TasksServiceImpl implements TasksService {
 
     @Autowired
     TaskService taskService;
+
+    @Autowired
+    FormService formService;
 
     @Override
     public List<Task> taskList() {
@@ -37,6 +41,16 @@ public class TasksServiceImpl implements TasksService {
     @Override
     public void completeTask(String taskId, Map<String, Object> variables) {
         taskService.complete(taskId, variables);
+    }
+
+    @Override
+    public String getFormKey(String taskId) {
+        return formService.getTaskFormData(taskId).getFormKey();
+    }
+
+    @Override
+    public String getObjId(String taskId) {
+        return (String) taskService.getVariable(taskId, "objId");
     }
 
 }

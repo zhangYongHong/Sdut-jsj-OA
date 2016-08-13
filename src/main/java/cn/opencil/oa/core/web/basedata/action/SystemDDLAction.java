@@ -28,21 +28,8 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 	@Autowired
 	private SystemDDLService systemDDLService;
 
-	public String save(){//ajax
-
-		return SUCCESS;
-	}
-	
 	private Long sid;
 	
-	public Long getSid() {
-		return sid;
-	}
-	public void setSid(Long sid) {
-		this.sid = sid;
-	}
-
-
 	public String list(){
 		SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
 		try {
@@ -65,6 +52,14 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 		
 		this.systemDDLService.deleteEntry(this.getSid());
 		return "";
+	}
+
+//=======================================================================
+	public Long getSid() {
+		return sid;
+	}
+	public void setSid(Long sid) {
+		this.sid = sid;
 	}
 	
 

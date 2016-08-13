@@ -1,7 +1,6 @@
 package cn.opencil.oa.core.web.activiti.action;
 
 import cn.opencil.oa.common.util.PageUtil;
-import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
 import com.opensymphony.xwork2.ActionContext;
@@ -19,14 +18,12 @@ import java.util.Map;
  */
 @Controller
 @Scope("prototype")
-public class TasksAction extends BaseAction<Task> {
+public class TasksAction {
     @Autowired
     TasksService tasksService;
     Long id;
+    private String formUrl;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * 待办任务列表
@@ -34,7 +31,7 @@ public class TasksAction extends BaseAction<Task> {
     public String taskList() {
         List<Task> taskList = tasksService.taskList();
         ActionContext.getContext().put("taskList", taskList);
-        return listAction;
+        return "listAction";
     }
 
     /**
@@ -51,9 +48,15 @@ public class TasksAction extends BaseAction<Task> {
     /**
      * 跳转到业务对象的表单
      */
-    public String redirectAtion() {
-
-        return "";
+    public String viewTaskForm() {
+        //通过taskID获取formKey
+        String taskId = id.toString();
+        String formKey = tasksService.getFormKey(taskId);
+        //通过taskID获取业务对象ID
+        String objId = tasksService.getObjId(taskId);
+        //拼装URL
+        formUrl = formKey + "qid?=" + objId;
+        return "taskForm";
     }
 
     /**
@@ -66,4 +69,14 @@ public class TasksAction extends BaseAction<Task> {
         tasksService.completeTask(taskId, variables);
         return "redirect";
     }
+
+    public void setFormUrl(String formUrl) {
+        this.formUrl = formUrl;
+    }
+
+//=====================================================================
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }

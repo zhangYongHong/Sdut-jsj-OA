@@ -37,8 +37,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     private static final long serialVersionUID = 1L;
 
-    private static Long tempId;
-    private PaperQuery tpQuery = new PaperQuery();
     @Autowired
     private TPService tpService;
     @Autowired
@@ -46,13 +44,8 @@ public class TPAction extends BaseAction<TrainingPaper> {
     @Autowired
     private RolePopedomService rolePopedomService;
 
-    public PaperQuery getTpQuery() {
-        return tpQuery;
-    }
-
-    public void setTpQuery(PaperQuery tpQuery) {
-        this.tpQuery = tpQuery;
-    }
+    private static Long tempId;
+    private PaperQuery tpQuery = new PaperQuery();
 
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
@@ -230,5 +223,14 @@ public class TPAction extends BaseAction<TrainingPaper> {
             this.addFieldError("QPError", "权限验证失败！");
         }
         return rolePopedom.getPopedomCode().contains("b");
+    }
+
+    //===========================================================================
+    public PaperQuery getTpQuery() {
+        return tpQuery;
+    }
+
+    public void setTpQuery(PaperQuery tpQuery) {
+        this.tpQuery = tpQuery;
     }
 }

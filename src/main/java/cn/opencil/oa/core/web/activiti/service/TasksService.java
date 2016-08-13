@@ -23,4 +23,8 @@ public interface TasksService {
      * 办理任务
      */
     void completeTask(String taskId, Map<String, Object> variables);
+
+    String getFormKey(String taskId);
+
+    String getObjId(String taskId);
 }

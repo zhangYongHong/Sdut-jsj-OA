@@ -10,11 +10,14 @@
 	
 	<package name="tasks" extends="interceptor-login" namespace="/">
 
-		<action name="tasksAction_*" class="TasksAction" method="{1}">
+		<action name="tasksAction_*" class="tasksAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/workFlow/taskList.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">tasksAction_taskList</param>
 				<param name="namespace">/</param>
+			</result>
+			<result name="taskForm" type="redirectAction">
+				${formUrl}
 			</result>
 		</action>
 	</package>

@@ -51,7 +51,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
     /**
      * 流程部署列表
      *
-     * @return
      */
     public String list() {
         List<ProcessDefinition> definitions = activitiService.getDefinitions();

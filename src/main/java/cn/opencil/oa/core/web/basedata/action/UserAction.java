@@ -26,6 +26,13 @@ import java.util.regex.Pattern;
 public class UserAction extends BaseAction<User> {
 
     private static final long serialVersionUID = 1L;
+
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private UserRoleService userRoleService;
+
+
     private static Long tempUid;
     private static String employeenum;
     private String oldPassword;
@@ -33,42 +40,7 @@ public class UserAction extends BaseAction<User> {
     private int rid = 3;
     private UserRole userRole;
     private UserQuery userQuery = new UserQuery();
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private UserRoleService userRoleService;
 
-    public int getRid() {
-        return rid;
-    }
-
-    public void setRid(int rid) {
-        this.rid = rid;
-    }
-
-    public UserQuery getUserQuery() {
-        return userQuery;
-    }
-
-    public void setUserQuery(UserQuery userQuery) {
-        this.userQuery = userQuery;
-    }
-
-    public String getOldPassword() {
-        return oldPassword;
-    }
-
-    public void setOldPassword(String oldPassword) {
-        this.oldPassword = oldPassword;
-    }
-
-    public String getNewPassword() {
-        return newPassword;
-    }
-
-    public void setNewPassword(String newPassword) {
-        this.newPassword = newPassword;
-    }
 
     public String list() {
 
@@ -326,4 +298,39 @@ public class UserAction extends BaseAction<User> {
         Matcher matcher = phoneRegular.matcher(phone);
         return matcher.matches();
     }
+
+    //=====================================================================
+
+    public int getRid() {
+        return rid;
+    }
+
+    public void setRid(int rid) {
+        this.rid = rid;
+    }
+
+    public UserQuery getUserQuery() {
+        return userQuery;
+    }
+
+    public void setUserQuery(UserQuery userQuery) {
+        this.userQuery = userQuery;
+    }
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+    }
+
 }
