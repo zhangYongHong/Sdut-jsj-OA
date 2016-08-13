@@ -7,10 +7,9 @@ import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.BaseQuery;
 import cn.opencil.oa.core.web.basedata.dao.SystemDDLDao;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.sql.SQLDataException;
 import java.util.List;
 
 /**
@@ -19,10 +18,10 @@ import java.util.List;
  * Date:2016-4-15下午8:35:17
  * Author : 王基伟
  */
-@Service(SystemDDLService.SERVICENAME)
+@Service
 public class SystemDDLServiceImpl extends BaseServiceImpl<SystemDDL> implements SystemDDLService{
 
-	@Resource(name=SystemDDLDao.DAONAME)
+	@Autowired
 	private SystemDDLDao systemDDLDao;
 	
 	@Override

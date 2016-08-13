@@ -36,21 +36,19 @@
         </div><!-- End .heading-->
 
         <!-- Build page from here: -->
-        <form action="WokeAction_newProcess.action" enctype="multipart/form-data" method="post">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="well well-small">
-                        <form action="WokeAction_newProcess.action" enctype="multipart/form-data" method="post">
-                            <input type="file" id="upload" name="processFile"/>
-                            <button class="offset1" type="submit" id="uploader"><span
-                                    class="icon16 icomoon-icon-upload-3"></span> 上传
-                            </button>
-                        </form>
-                    </div>
-                </div><!-- End .span12 -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="well well-small">
+                    <form action="activitiAction_newProcess.action" enctype="multipart/form-data" method="post">
+                        <input type="file" id="upload" name="processFile"/>
+                        <button class="offset1" type="submit" id="uploader"><span
+                                class="icon16 icomoon-icon-upload-3"></span> 上传
+                        </button>
+                    </form>
+                </div>
+            </div><!-- End .span12 -->
 
-            </div><!-- End .row-fluid -->
-        </form>
+        </div><!-- End .row-fluid -->
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->
 

@@ -1,11 +1,8 @@
 package cn.opencil.oa.core.web.basedata.dao;
 
-import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.BaseQuery;
-import cn.opencil.oa.core.query.UserQuery;
-import org.apache.poi.ss.formula.functions.T;
 
 import java.util.Collection;
 
@@ -19,8 +16,6 @@ import java.util.Collection;
  *
  */
 public interface UserDao extends BaseDao<User>{
-
-	String DAONAME = "cn.opencil.oa.core.web.basedata.dao.impl.UserDaoImpl";
 
 	User validation(String username);
 

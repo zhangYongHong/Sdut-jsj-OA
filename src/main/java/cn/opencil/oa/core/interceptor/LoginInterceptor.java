@@ -19,7 +19,7 @@ import org.springframework.stereotype.Controller;
  * Author : 张树伟
  * 登录拦截
  */
-@Controller("loginInterceptor")
+@Controller
 @Scope("prototype")
 public class LoginInterceptor extends AbstractInterceptor {
 

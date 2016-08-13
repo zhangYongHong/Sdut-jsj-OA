@@ -13,7 +13,7 @@
 		<action name="tasksAction_*" class="TasksAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/workFlow/taskList.jsp</result>
 			<result name="redirect" type="redirectAction">
-				<param name="actionName">tasksAction_claimTask</param>
+				<param name="actionName">tasksAction_taskList</param>
 				<param name="namespace">/</param>
 			</result>
 		</action>

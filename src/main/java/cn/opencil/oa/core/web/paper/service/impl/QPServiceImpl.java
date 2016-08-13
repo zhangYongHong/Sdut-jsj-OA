@@ -11,9 +11,9 @@ import cn.opencil.oa.core.query.BaseQuery;
 import cn.opencil.oa.core.web.excel.service.ExcelService;
 import cn.opencil.oa.core.web.paper.dao.QPDao;
 import cn.opencil.oa.core.web.paper.service.QPService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -23,17 +23,17 @@ import java.util.List;
  * Project Name:SdutOA 
  * File Name:QPServiceImpl.java 
  * Date:2016-4-19下午9:34:18
- * Author : 王基伟
+ * Author : 张树伟
  * 
  */
-@Service(QPService.SERVICENAME)
+@Service
 public class QPServiceImpl extends BaseServiceImpl<QuestionPaper> implements
 		QPService {
 
-	@Resource(name = QPDao.DAONAME)
+	@Autowired
 	private QPDao qpDao;
 
-	@Resource(name = ExcelService.SERVICENAME)
+	@Autowired
 	private ExcelService excelService;
 
 	@Override

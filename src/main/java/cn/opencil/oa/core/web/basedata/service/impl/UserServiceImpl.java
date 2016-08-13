@@ -1,25 +1,16 @@
 package cn.opencil.oa.core.web.basedata.service.impl;
 
-import javax.annotation.Resource;
-
 import cn.opencil.oa.common.page.PageResult;
-import cn.opencil.oa.common.util.MD5Util;
-import cn.opencil.oa.core.domain.SystemDDL;
-import cn.opencil.oa.core.domain.UserRole;
-import cn.opencil.oa.core.query.UserQuery;
-import cn.opencil.oa.core.web.role.dao.UserRoleDao;
-import cn.opencil.oa.core.web.role.service.UserRoleService;
-import com.opensymphony.xwork2.ActionContext;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.User;
+import cn.opencil.oa.core.query.UserQuery;
 import cn.opencil.oa.core.web.basedata.dao.UserDao;
 import cn.opencil.oa.core.web.basedata.service.UserService;
+import cn.opencil.oa.core.web.role.service.UserRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -29,10 +20,10 @@ import java.util.List;
  * Author : 王基伟
  */
 
-@Service(UserService.SERVICENAME)
+@Service
 public class UserServiceImpl extends BaseServiceImpl<User> implements UserService {
 
-    @Resource(name = UserDao.DAONAME)
+    @Autowired
     private UserDao userDao;
 
     @Autowired

@@ -19,7 +19,7 @@ import org.springframework.stereotype.Controller;
  *
  * 
  */
-@Controller("systemDDLAction")
+@Controller
 @Scope("prototype")
 public class SystemDDLAction extends BaseAction<SystemDDL>{
 

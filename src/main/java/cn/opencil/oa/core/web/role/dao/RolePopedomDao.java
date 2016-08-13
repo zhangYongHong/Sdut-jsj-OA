@@ -9,7 +9,6 @@ import java.util.Collection;
  * Created by 张树伟 on 16-5-16.
  */
 public interface RolePopedomDao extends BaseDao<RolePopedom> {
-    String DAONAME = "cn.opencil.oa.core.web.role.dao.impl.RolePopedomDaoImpl";
 
     RolePopedom getRolePopedom(final Integer rid);
 

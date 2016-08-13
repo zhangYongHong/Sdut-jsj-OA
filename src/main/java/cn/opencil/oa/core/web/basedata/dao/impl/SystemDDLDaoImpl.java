@@ -21,7 +21,7 @@ import java.util.Map;
  * Author : 王基伟
  * 数据字典的dao
  */
-@Repository(SystemDDLDao.DAONAME)
+@Repository
 public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDDLDao {
 
 	@Override

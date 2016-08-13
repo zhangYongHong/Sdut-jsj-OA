@@ -2,9 +2,9 @@ package cn.opencil.oa.core.web.excel.service.impl;
 
 import cn.opencil.oa.core.web.excel.dao.ExcelDao;
 import cn.opencil.oa.core.web.excel.service.ExcelService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 
 /**
@@ -12,10 +12,10 @@ import java.util.ArrayList;
  * Author : 张树伟
  * 
  */
-@Service(ExcelService.SERVICENAME)
+@Service
 public class ExcelServiceImpl implements ExcelService {
 
-	@Resource(name = ExcelDao.DAONAME)
+	@Autowired
 	private ExcelDao excelDao;
 
 	@Override

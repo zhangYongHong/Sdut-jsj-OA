@@ -27,7 +27,7 @@ import java.util.List;
  * Date:2016-4-15下午1:38:01
  * Author : 张树伟
  */
-@Service(AwardsService.SERVICENAME)
+@Service
 @Transactional(readOnly = false)
 public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements AwardsService {
 

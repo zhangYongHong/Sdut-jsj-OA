@@ -8,9 +8,8 @@ import java.util.ArrayList;
  */
 public interface ExcelDao {
 
-	public static final String DAONAME = "cn.opencil.oa.core.web.excel.dao.impl.ExcelDaoImpl";
 
-	public ArrayList<String> getFieldDataNameExcel(ArrayList<String> titleList);
+	ArrayList<String> getFieldDataNameExcel(ArrayList<String> titleList);
 
-	public ArrayList<String> importFieldData(ArrayList<String> titleList);
+	ArrayList<String> importFieldData(ArrayList<String> titleList);
 }

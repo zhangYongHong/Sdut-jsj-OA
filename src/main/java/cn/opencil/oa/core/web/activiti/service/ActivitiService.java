@@ -11,8 +11,6 @@ import java.util.List;
  * Created by mnzero on 16-8-10.
  */
 public interface ActivitiService {
-    String SERVICENAME = "cn.opencil.oa.core.web.activiti.service.impl.ActivitiServiceImpl";
-
     /**
      * 流程的部署与发布
      */

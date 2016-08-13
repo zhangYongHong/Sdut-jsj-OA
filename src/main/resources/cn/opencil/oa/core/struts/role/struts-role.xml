@@ -9,7 +9,6 @@
     <constant name="struts.devMode" value="true"/>
     <package name="role" extends="interceptor-login" namespace="/">
         <action name="roleAction_home" class="roleAction" method="home">
-            <result>WEB-INF/jsp/role/role.jsp</result>
         </action>
     </package>
 </struts>

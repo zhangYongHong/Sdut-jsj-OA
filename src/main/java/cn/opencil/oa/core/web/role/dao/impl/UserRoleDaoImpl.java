@@ -14,7 +14,7 @@ import java.util.Collection;
 /**
  * Created by 张树伟 on 16-5-16.
  */
-@Repository(UserRoleDao.DAONAME)
+@Repository
 public class UserRoleDaoImpl extends BaseDaoImpl<UserRole> implements UserRoleDao{
 
     @Override

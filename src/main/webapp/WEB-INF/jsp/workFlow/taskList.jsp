@@ -63,7 +63,6 @@
                                 <th>ID</th>
                                 <th>流程名称</th>
                                 <th>节点</th>
-                                <th>申请人</th>
                                 <th>受理人</th>
                                 <th>申请时间</th>
                                 <th>相关操作</th>
@@ -75,7 +74,6 @@
                                     <td><s:property value="id"/></td>
                                     <td><s:property value="processDefinitionId"/></td>
                                     <td><s:property value="name"/></td>
-                                    <td><s:property value="owner"/></td>
                                     <td><s:property value="assignee"/></td>
                                     <td><s:date name="createTime" format="yyyy-MM-dd"/> </td>
                                     <td>
@@ -85,11 +83,9 @@
                                                    class="tip">签收</a>
                                             </s:if>
                                             <s:else>
-                                                <a href="WokeAction_showImage?deploymentId=<s:property value="deploymentId"/>&resourceName=<s:property value="diagramResourceName"/>"
+                                                <a href="tasksAction_completeTask.action?id=<s:property value="id"/>"
                                                    class="tip">办理</a>
                                             </s:else>
-                                            <a href="WokeAction_deleteProcess.action?deploymentId=<s:property value="deploymentId"/>"
-                                               onclick="return confirm('你确定要删除？')" class="tip">删除</a>
                                         </div>
                                     </td>
                                 </tr>
@@ -111,13 +107,6 @@
 </div><!-- End #wrapper -->
 <!-- Le javascript
 ================================================== -->
-<script type="text/javascript">
-    function selectChange() {
-        var selObj = document.getElementById("schoolYear");
-        var i = selObj.selectedIndex;
-        window.location.href = "awardsAction_list.action?schoolYear=" + selObj.options[i].value;
-    }
-</script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>

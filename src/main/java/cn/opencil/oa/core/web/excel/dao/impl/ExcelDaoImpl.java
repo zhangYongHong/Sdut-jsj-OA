@@ -1,10 +1,9 @@
 package cn.opencil.oa.core.web.excel.dao.impl;
 
-import java.util.ArrayList;
-
+import cn.opencil.oa.core.web.excel.dao.ExcelDao;
 import org.springframework.stereotype.Repository;
 
-import cn.opencil.oa.core.web.excel.dao.ExcelDao;
+import java.util.ArrayList;
 
 /**
  * Project Name:SdutOA
@@ -12,7 +11,7 @@ import cn.opencil.oa.core.web.excel.dao.ExcelDao;
  * Date:2016-5-3下午6:30:18
  * Author : 张树伟
  */
-@Repository(ExcelDao.DAONAME)
+@Repository
 public class ExcelDaoImpl implements ExcelDao {
 
 	@Override

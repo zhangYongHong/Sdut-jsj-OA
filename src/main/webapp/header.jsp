@@ -16,7 +16,7 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="index.jsp"><img src="images/logo.png" alt="logo"/></a>
+                <a class="brand" href="index.jsp">协同办公系统.<span class="slogan">CS</span></a>
                 <div class="nav-no-collapse">
                     <ul class="nav">
                         <li class="active"><a href="index.jsp"><span class="icon16 icomoon-icon-screen-2"></span>
@@ -151,8 +151,8 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
                                 <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/WokeAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/WokeAction_newProcessUI.action"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/activitiAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/activitiAction_newProcessUI.action"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a></li>
                                     <li><a href="#"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
                                 </ul>
                             </li>

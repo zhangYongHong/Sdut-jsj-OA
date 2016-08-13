@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
  * Date:2016-5-10下午1:39:44
  * Author : 张树伟
  */
-@Controller("userAction")
+@Controller
 @Scope("prototype")
 public class UserAction extends BaseAction<User> {
 

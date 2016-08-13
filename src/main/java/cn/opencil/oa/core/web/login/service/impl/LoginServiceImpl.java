@@ -1,27 +1,25 @@
 package cn.opencil.oa.core.web.login.service.impl;
 
-import javax.annotation.Resource;
-
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
-import org.springframework.stereotype.Service;
-
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.login.dao.LoginDao;
 import cn.opencil.oa.core.web.login.service.LoginService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Project Name:SdutOA
  * File Name:LoginServiceImpl.java
  * Date:2016-4-15下午1:51:44
- * Author : 王基伟
+ * Author : 张树伟
  * 
  */
 
-@Service(LoginService.SERVICENAME)
+@Service
 public class LoginServiceImpl extends BaseServiceImpl<User> implements LoginService{
 
-	@Resource(name=LoginDao.DAONAME)
+	@Autowired
 	private LoginDao loginDao;
 	
 	@Override

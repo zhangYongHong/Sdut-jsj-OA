@@ -10,13 +10,13 @@
 	
 	<package name="activiti" extends="interceptor-login" namespace="/">
 
-		<action name="WokeAction_*" class="ActivitiAction" method="{1}">
+		<action name="activitiAction_*" class="ActivitiAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/workFlow/list.jsp</result>
 			<result name="newProcessUI">/WEB-INF/jsp/common/uploadForAc.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/workFlow/</result>
 			<result name="taskList">/WEB-INF/jsp/workFlow/taskList.jsp</result>
 			<result name="redirect" type="redirectAction">
-				<param name="actionName">WokeAction_list</param>
+				<param name="actionName">activitiAction_list</param>
 				<param name="namespace">/</param>
 			</result>
             <result name="flowImage" type="stream">

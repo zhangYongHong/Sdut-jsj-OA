@@ -12,12 +12,10 @@ import java.util.ArrayList;
  * Project Name:SdutOA
  * File Name:QPService.java
  * Date:2016-4-19下午9:30:05
- * Author : 王基伟
+ * Author : 张树伟
  *
  */
 public interface QPService  extends BaseService<QuestionPaper>{
-
-	String SERVICENAME = "cn.opencil.oa.core.web.paper.service.impl.QPServiceImpl";
 
 	ArrayList<String> getFieldDataNameExcel();
 

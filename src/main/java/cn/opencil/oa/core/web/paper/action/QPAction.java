@@ -31,7 +31,7 @@ import java.util.regex.Pattern;
  * Author : 张树伟
  */
 
-@Controller("qPAction")
+@Controller
 @Scope("prototype")
 public class QPAction extends BaseAction<QuestionPaper> {
 

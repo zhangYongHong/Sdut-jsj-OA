@@ -10,7 +10,7 @@
 	
 	<package name="qpaper" extends="interceptor-login" namespace="/">
 	
-		<action name="qPAction_*" class="qPAction" method="{1}">
+		<action name="qPAction_*" class="QPAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/paper/qpaper/list.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/paper/qpaper/add.jsp</result>
 			<result name="redirect" type="redirectAction">

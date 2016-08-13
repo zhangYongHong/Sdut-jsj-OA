@@ -7,7 +7,7 @@ import java.util.Map;
  * Project Name:SdutOA
  * File Name:BaseQuery.java
  * Date:2016-4-15下午1:17:51
- * Author : 王基伟
+ * Author : 张树伟
  *
  * 查询的操作的虚类，与接口相比扩展性高
  */

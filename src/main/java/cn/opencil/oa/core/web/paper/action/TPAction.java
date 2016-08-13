@@ -31,7 +31,7 @@ import java.util.ArrayList;
  * Date:2016-4-19下午9:29:27
  * Author : 张树伟
  */
-@Controller("tPAction")
+@Controller
 @Scope("prototype")
 public class TPAction extends BaseAction<TrainingPaper> {
 

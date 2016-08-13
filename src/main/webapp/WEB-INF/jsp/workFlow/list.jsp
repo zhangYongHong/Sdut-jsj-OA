@@ -82,8 +82,8 @@
                                     <td><s:property value="diagramResourceName"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a target="_blank" href="WokeAction_showImage?deploymentId=<s:property value="deploymentId"/>&resourceName=<s:property value="diagramResourceName"/>" class="tip">查看流程图</a>
-                                            <a href="WokeAction_deleteProcess.action?deploymentId=<s:property value="deploymentId"/>"
+                                            <a target="_blank" href="activitiAction_showImage?deploymentId=<s:property value="deploymentId"/>&resourceName=<s:property value="diagramResourceName"/>" class="tip">查看流程图</a>
+                                            <a href="activitiAction_deleteProcess.action?deploymentId=<s:property value="deploymentId"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip">删除</a>
                                         </div>
                                     </td>

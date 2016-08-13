@@ -1,6 +1,8 @@
 package cn.opencil.oa.core.web.activiti.action;
 
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
+import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.task.Task;
@@ -27,7 +29,7 @@ public class TasksAction extends BaseAction<Task> {
     }
 
     /**
-     *
+     * 待办任务列表
      */
     public String taskList() {
         List<Task> taskList = tasksService.taskList();
@@ -41,7 +43,8 @@ public class TasksAction extends BaseAction<Task> {
      */
     public String claimTask() {
         String taskId = id.toString();
-        tasksService.claimTask(taskId);
+        User user = PageUtil.getUser();
+        tasksService.claimTask(taskId, user.getUserName());
         return "redirect";
     }
 
@@ -59,7 +62,8 @@ public class TasksAction extends BaseAction<Task> {
     public String completeTask() {
         String taskId = id.toString();
         Map<String, Object> variables = new HashedMap();
-//        tasksService.completeTask();
-        return "";
+        variables.put("assignee", PageUtil.getUser().getUserName());
+        tasksService.completeTask(taskId, variables);
+        return "redirect";
     }
 }

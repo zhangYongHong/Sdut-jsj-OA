@@ -22,7 +22,7 @@ import org.springframework.stereotype.Controller;
  * Date:2016-4-15下午1:39:44
  * Author : 张树伟
  */
-@Controller("awardsAction")
+@Controller
 @Scope("prototype")
 public class AwardsAction extends BaseAction<Awards> {
 

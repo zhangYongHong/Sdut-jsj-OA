@@ -9,10 +9,9 @@ import cn.opencil.oa.core.web.basedata.dao.SystemDDLDao;
 import cn.opencil.oa.core.web.role.dao.RolePopedomDao;
 import cn.opencil.oa.core.web.role.dao.UserRoleDao;
 import cn.opencil.oa.core.web.role.service.UserRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,15 +19,16 @@ import java.util.List;
 /**
  * Created by 张树伟 on 16-5-16.
  */
-@Service(UserRoleService.SERVICENAME)
+@Service
 public class UserRoleServiceImpl extends BaseServiceImpl implements UserRoleService {
-    @Resource(name = UserRoleDao.DAONAME)
+
+    @Autowired
     private UserRoleDao userRoleDao;
 
-    @Resource(name = RolePopedomDao.DAONAME)
+    @Autowired
     private RolePopedomDao rolePopedomDao;
 
-    @Resource(name = SystemDDLDao.DAONAME)
+    @Autowired
     private SystemDDLDao systemDDLDao;
 
 

@@ -1,20 +1,18 @@
 package cn.opencil.oa.core.web.login.action;
 
-import javax.servlet.http.HttpSession;
-
+import cn.opencil.oa.common.util.ContantKey;
+import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.SystemDDL;
+import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
+import cn.opencil.oa.core.web.login.service.LoginService;
 import cn.opencil.oa.core.web.role.service.UserRoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import cn.opencil.oa.common.util.ContantKey;
-import cn.opencil.oa.core.base.action.BaseAction;
-import cn.opencil.oa.core.domain.User;
-import cn.opencil.oa.core.web.login.service.LoginService;
-
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
@@ -25,7 +23,7 @@ import java.util.List;
  * Author : 张树伟
  *
  */
-@Controller("loginAction")
+@Controller
 @Scope("prototype")
 public class LoginAction extends BaseAction<User>{
 

@@ -9,9 +9,9 @@ import java.util.ArrayList;
  */
 
 public interface ExcelService {
-	public static final String SERVICENAME = "cn.opencil.oa.core.web.excel.service.impl.ExcelServiceImpl";
+	String SERVICENAME = "cn.opencil.oa.core.web.excel.service.impl.ExcelServiceImpl";
 
-	public ArrayList<String> getExcelByQPaper();
+	ArrayList<String> getExcelByQPaper();
 
-	public ArrayList<String> getExcelByTPaper();
+	ArrayList<String> getExcelByTPaper();
 }

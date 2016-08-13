@@ -17,8 +17,6 @@ import java.util.ArrayList;
  */
 public interface TPService extends BaseService<TrainingPaper> {
 
-	String SERVICENAME = "cn.opencil.oa.core.web.paper.service.impl.TPServiceImpl";
-
 	ArrayList<String> getFieldDataNameExcel();
 
 	ArrayList<ArrayList<String>> getFieldDataExcel(BaseQuery baseQuery);

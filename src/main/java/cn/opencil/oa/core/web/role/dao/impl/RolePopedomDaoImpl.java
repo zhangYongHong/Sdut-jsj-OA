@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Created by 张树伟 on 16-5-16.
  */
-@Repository(RolePopedomDao.DAONAME)
+@Repository
 public class RolePopedomDaoImpl extends BaseDaoImpl<RolePopedom> implements RolePopedomDao {
 
     @Override

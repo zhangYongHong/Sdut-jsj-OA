@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * Created by mnzero on 16-8-13.
  */
-@Service(TasksService.SERVICENAME)
+@Service
 public class TasksServiceImpl implements TasksService {
 
     @Autowired
@@ -30,10 +30,8 @@ public class TasksServiceImpl implements TasksService {
     }
 
     @Override
-    public void claimTask(String taskId) {
-        Task task = taskService.createTaskQuery().taskId(taskId).singleResult();
-        User user = PageUtil.getUser();
-        task.setAssignee(user.getUserName());
+    public void claimTask(String id, String userName) {
+        taskService.claim(id, userName);
     }
 
     @Override

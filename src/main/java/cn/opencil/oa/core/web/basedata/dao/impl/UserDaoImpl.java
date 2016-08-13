@@ -28,7 +28,7 @@ import cn.opencil.oa.core.web.basedata.dao.UserDao;
  * 用户管理的dao
  */
 
-@Repository(UserDao.DAONAME)
+@Repository
 public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 
 

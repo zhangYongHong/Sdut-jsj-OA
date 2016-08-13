@@ -4,10 +4,10 @@ import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.repository.ProcessDefinition;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import javax.annotation.Resource;
 import java.io.File;
 import java.io.InputStream;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
 @Scope("prototype")
 public class ActivitiAction extends BaseAction<ProcessDefinition> {
 
-    @Resource
+    @Autowired
     private ActivitiService activitiService;
 
     private File processFile;

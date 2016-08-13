@@ -1,13 +1,11 @@
 package cn.opencil.oa.core.web.basedata.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.service.BaseService;
 import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.BaseQuery;
+
+import java.util.List;
 
 /**
  * Project Name:SdutOA
@@ -18,8 +16,6 @@ import cn.opencil.oa.core.query.BaseQuery;
  */
 
 public interface SystemDDLService extends BaseService<SystemDDL>{
-
-	String SERVICENAME = "cn.opencil.oa.core.web.basedata.service.impl.SystemDDLServiceImpl";
 
 	PageResult<SystemDDL> getPageResultByKeyword(BaseQuery baseQuery);
 

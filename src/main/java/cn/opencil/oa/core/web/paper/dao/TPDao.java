@@ -1,10 +1,10 @@
 package cn.opencil.oa.core.web.paper.dao;
 
-import java.util.Collection;
-
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.domain.TrainingPaper;
 import cn.opencil.oa.core.query.BaseQuery;
+
+import java.util.Collection;
 
 /**
  * Project Name:SdutOA
@@ -13,9 +13,7 @@ import cn.opencil.oa.core.query.BaseQuery;
  * Author : 张树伟
  *
  */
-public interface TPDao  extends BaseDao<TrainingPaper>{
-
-	String DAONAME = "cn.opencil.oa.core.web.paper.dao.impl.TPDaoImpl";
+public interface TPDao extends BaseDao<TrainingPaper>{
 
 	Collection<TrainingPaper> getEntrysByQuery(BaseQuery baseQuery);
 }

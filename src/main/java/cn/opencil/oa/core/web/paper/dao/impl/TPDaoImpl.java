@@ -19,7 +19,7 @@ import java.util.Collection;
  * Date:2016-4-19下午9:33:57
  * Author: 张树伟
  */
-@Repository(TPDao.DAONAME)
+@Repository
 public class TPDaoImpl extends BaseDaoImpl<TrainingPaper> implements TPDao {
 
     @Override

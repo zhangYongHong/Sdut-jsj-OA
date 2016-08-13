@@ -11,9 +11,9 @@ import cn.opencil.oa.core.query.BaseQuery;
 import cn.opencil.oa.core.web.excel.service.ExcelService;
 import cn.opencil.oa.core.web.paper.dao.TPDao;
 import cn.opencil.oa.core.web.paper.service.TPService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,14 +24,14 @@ import java.util.List;
  * Author : 张树伟
  * 
  */
-@Service(TPService.SERVICENAME)
+@Service
 public class TPServiceImpl extends BaseServiceImpl<TrainingPaper> implements
 		TPService {
 
-	@Resource(name = TPDao.DAONAME)
+	@Autowired
 	private TPDao tpDao;
 
-	@Resource(name = ExcelService.SERVICENAME)
+	@Autowired
 	private ExcelService excelService;
 
 	@Override

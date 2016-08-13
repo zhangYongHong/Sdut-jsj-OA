@@ -12,7 +12,6 @@
 			<result name="listAction">/WEB-INF/jsp/user/list.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/user/add.jsp</result>
 			<result name="updateUI">/WEB-INF/jsp/user/update.jsp</result>
-			<result name="personInfoUI">/WEB-INF/jsp/user/personInfo.jsp</result>
 			<result name="passWordUI">WEB-INF/jsp/user/password.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">userAction_list</param>

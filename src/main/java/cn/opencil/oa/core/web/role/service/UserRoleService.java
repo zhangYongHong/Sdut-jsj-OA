@@ -2,9 +2,7 @@ package cn.opencil.oa.core.web.role.service;
 
 import cn.opencil.oa.core.base.service.BaseService;
 import cn.opencil.oa.core.domain.UserRole;
-import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -13,8 +11,6 @@ import java.util.List;
  */
 
 public interface UserRoleService extends BaseService {
-    String SERVICENAME = "cn.opencil.oa.core.web.role.service.impl.UserRoleServiceImpl";
-
     /**
      * 获取数据字典中的角色名称
      * @param keyWorld

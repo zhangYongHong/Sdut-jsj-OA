@@ -10,7 +10,7 @@
 	
 	<package name="tpaper" extends="interceptor-login" namespace="/">
 	
-		<action name="tPAction_*" class="tPAction" method="{1}">
+		<action name="tPAction_*" class="TPAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/paper/tpaper/list.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/paper/tpaper/add.jsp</result>
 			<result name="updateUI">/WEB-INF/jsp/paper/tpaper/update.jsp</result>

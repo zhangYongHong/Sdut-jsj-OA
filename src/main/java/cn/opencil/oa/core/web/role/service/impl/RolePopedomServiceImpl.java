@@ -5,18 +5,18 @@ import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.RolePopedom;
 import cn.opencil.oa.core.web.role.dao.RolePopedomDao;
 import cn.opencil.oa.core.web.role.service.RolePopedomService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * Created by mnzero on 16-5-20.
  */
-@Service(RolePopedomService.SERVICENAME)
+@Service
 public class RolePopedomServiceImpl extends BaseServiceImpl<RolePopedom> implements RolePopedomService {
 
-    @Resource(name = RolePopedomDao.DAONAME)
+    @Autowired
     private RolePopedomDao rolePopedomDao;
 
 

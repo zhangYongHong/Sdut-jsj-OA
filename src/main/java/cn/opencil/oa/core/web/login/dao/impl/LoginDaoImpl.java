@@ -11,9 +11,9 @@ import cn.opencil.oa.core.web.login.dao.LoginDao;
 
 /**
  * Project Name:SdutOA File Name:LoginDaoImpl.java Date:2016-4-15下午1:53:22
- * Author : 王基伟
+ * Author : 张树伟
  */
-@Repository(LoginDao.DAONAME)
+@Repository
 public class LoginDaoImpl extends BaseDaoImpl<User> implements LoginDao {
 
 	@Override

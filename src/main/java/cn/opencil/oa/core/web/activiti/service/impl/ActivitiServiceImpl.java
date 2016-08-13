@@ -23,7 +23,7 @@ import java.util.zip.ZipInputStream;
 /**
  * Created by mnzero on 16-8-10.
  */
-@Service(ActivitiService.SERVICENAME)
+@Service
 @Transactional(readOnly = false)
 public class ActivitiServiceImpl implements ActivitiService {
     @Autowired

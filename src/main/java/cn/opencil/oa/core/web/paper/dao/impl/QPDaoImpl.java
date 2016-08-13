@@ -17,10 +17,10 @@ import java.util.Collection;
  * Project Name:SdutOA
  * File Name:QPDaoImpl.java
  * Date:2016-4-19下午9:33:41
- * Author : 王基伟
+ * Author : 张树伟
  *
  */
-@Repository(QPDao.DAONAME)
+@Repository
 public class QPDaoImpl extends BaseDaoImpl<QuestionPaper> implements QPDao{
 
 	@Override

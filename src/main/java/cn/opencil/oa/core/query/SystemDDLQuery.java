@@ -7,7 +7,7 @@ import java.util.Map;
  * Project Name:SdutOA
  * File Name:AwardsQuery.java
  * Date:2016-4-16下午4:21:18
- * Author : 王基伟
+ * Author : 张树伟
  *
  */
 public class SystemDDLQuery extends BaseQuery{
