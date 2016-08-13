@@ -24,5 +24,6 @@
 	<include file="cn/opencil/oa/core/struts/role/struts-role.xml"></include>
 	<!-- 流程管理 -->
 	<include file="cn/opencil/oa/core/struts/activiti/struts-activiti.xml"></include>
+	<include file="cn/opencil/oa/core/struts/activiti/struts-task.xml"></include>
 </struts>
 	

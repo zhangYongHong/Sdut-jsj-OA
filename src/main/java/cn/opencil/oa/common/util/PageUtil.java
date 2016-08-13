@@ -2,6 +2,8 @@ package cn.opencil.oa.common.util;
 
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.BasePaper;
+import cn.opencil.oa.core.domain.User;
+import com.opensymphony.xwork2.ActionContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -208,5 +210,10 @@ public class PageUtil {
         int temp = fileName.indexOf('.');
         String extension = fileName.substring(temp + 1, fileName.length());
         return extension;
+    }
+
+    public static User getUser() {
+        User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
+        return user;
     }
 }

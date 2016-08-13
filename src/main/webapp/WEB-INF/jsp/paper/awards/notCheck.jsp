@@ -53,24 +53,24 @@
                             <span>查看申请状态表</span>
                         </h4>
                     </div>
-                    <div class="form-row row-fluid">
-                        <div class="span4">
-                            <div class="row-fluid">
-                                <label class="form-label span2">状态:</label>
-                                <div class="span8 controls">
-                                    <select name="state" id="state" onchange="selectChange()">
-                                        <option>请选择</option>
-                                        <option value="0">新提交</option>
-                                        <option value="1">审核中</option>
-                                        <option value="2">已通过</option>
-                                        <option value="3">驳回</option>
-                                    </select>
+
+                    <div class="content noPad clearfix">
+                        <div class="form-row row-fluid">
+                            <div class="span4">
+                                <div class="row-fluid">
+                                    <label class="form-label span2">状态:</label>
+                                    <div class="span8 controls">
+                                        <select name="state" id="state" onchange="selectChange()">
+                                            <option>请选择</option>
+                                            <option value="0">新提交</option>
+                                            <option value="1">审核中</option>
+                                            <option value="2">已通过</option>
+                                            <option value="3">驳回</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="content noPad clearfix">
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
                             <!-- dynamicTable -->

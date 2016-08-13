@@ -182,7 +182,7 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>我的任务</a>
                                 <ul class="sub">
-                                    <li><a href="#"><span
+                                    <li><a href="${pageContext.request.contextPath}/tasksAction_taskList.action"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>待办任务<span class="notification">3</span></a>
                                     </li>
                                     <li><a href="#"><span
