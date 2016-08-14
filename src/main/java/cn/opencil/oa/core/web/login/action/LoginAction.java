@@ -77,8 +77,17 @@ public class LoginAction extends BaseAction<User>{
         this.loadSource("role");
         //系别
         this.loadSource("dept");
-        //年纪
+        //获奖等级
         this.loadSource("grade");
+        //获奖级别
+        this.loadSource("level");
+        //班级
+        this.loadSource("classe");
+        //竞赛项目
+        this.loadSource("competitionView");
+        this.loadSource("state");
+
+
 
 		return SUCCESS;
 	}

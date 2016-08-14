@@ -1297,13 +1297,13 @@ TENANT_ID_</columns>
       </key>
       <foreign-key id="397" parent="40" name="ACT_FK_EXE_PROCINST">
         <columns>PROC_INST_ID_</columns>
-        <ref-key>PRIMARY</ref-key>
+        <ref-key>~.jsj_awards.PRIMARY</ref-key>
         <cascade-update-rule>update</cascade-update-rule>
         <cascade-delete-rule>delete</cascade-delete-rule>
       </foreign-key>
       <foreign-key id="398" parent="40" name="ACT_FK_EXE_PARENT">
         <columns>PARENT_ID_</columns>
-        <ref-key>PRIMARY</ref-key>
+        <ref-key>~.jsj_awards.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
@@ -1315,7 +1315,7 @@ TENANT_ID_</columns>
       </foreign-key>
       <foreign-key id="400" parent="40" name="ACT_FK_EXE_SUPER">
         <columns>SUPER_EXEC_</columns>
-        <ref-key>PRIMARY</ref-key>
+        <ref-key>~.jsj_awards.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>

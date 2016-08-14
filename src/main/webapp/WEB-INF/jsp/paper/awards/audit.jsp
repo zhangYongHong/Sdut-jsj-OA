@@ -49,8 +49,8 @@
                                 <div class="row-fluid">
                                     <label class="form-label span3">竞赛项目:</label>
                                     <div class="span5">
-                                        <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="competitionid" headerKey="0" headerValue="请选择" value="rid"
+                                        <s:select list="%{#session.competitionViewList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="competitionid" value="%{#awards.competitionid}"
                                                   cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
@@ -59,14 +59,14 @@
                                 <div class="row-fluid">
                                     <label class="form-label span3">获奖级别:</label>
                                     <div class="span2">
-                                        <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="level" headerKey="0" headerValue="请选择" value="rid"
+                                        <s:select list="%{#session.levelList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="level" value="%{#awards.level}"
                                                   cssClass="select2-active" readonly="readonly"></s:select>
                                     </div>
                                     <label class="form-label span2">获奖等级:</label>
                                     <div class="span2">
-                                        <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="grade" headerKey="0" headerValue="请选择" value="rid"
+                                        <s:select list="%{#session.gradeList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="grade" value="%{#awards.grade}"
                                                   cssClass="select2-active" readonly="readonly"></s:select>
                                     </div>
                                 </div>
@@ -75,14 +75,14 @@
                                 <div class="row-fluid">
                                     <label class="form-label span3">专业:</label>
                                     <div class="span2">
-                                        <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="deptid" headerKey="0" headerValue="请选择" value="rid"
+                                        <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="deptid"  value="%{#awards.deptid}"
                                                   cssClass="select2-active" readonly="readonly"></s:select>
                                     </div>
                                     <label class="form-label span2">班级:</label>
                                     <div class="span2">
-                                        <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="classe" headerKey="0" headerValue="请选择" value="rid"
+                                        <s:select list="%{#session.classeList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="classe" value="%{#awards.classe}"
                                                   cssClass="select2-active" readonly="readonly"></s:select>
                                     </div>
                                 </div>
@@ -148,9 +148,9 @@
                                 <div class="row-fluid">
                                     <label class="form-label span3">审批意见:</label>
                                     <div class="span2">
-                                        <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="state" headerKey="0" headerValue="请选择" value="rid"
-                                                  cssClass="select2-active" readonly="readonly"></s:select>
+                                        <s:select list="%{#session.stateList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="state" headerKey="0" headerValue="请选择" value="state"
+                                                  cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
                             </div>
