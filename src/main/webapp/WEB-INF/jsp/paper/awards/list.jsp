@@ -137,8 +137,6 @@
                                     <td><s:property value="comment"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
-                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
                                             <%
                                                 if (popedomCode.contains("abc")) {
                                             %>

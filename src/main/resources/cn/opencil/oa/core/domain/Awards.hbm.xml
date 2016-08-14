@@ -15,12 +15,13 @@
 		<property name="stuname" type="java.lang.String" length="50"></property>
 		<property name="classe" type="java.lang.String" length="50"></property>
 		<property name="teacher" type="java.lang.String" length="50"></property>
-		<property name="prizeunit" type="java.lang.String" length="50"></property>
+		<property name="atime" type="java.lang.String" length="50"></property>
+ 		<property name="prizeunit" type="java.lang.String" length="50"></property>
 		<property name="comment" type="java.lang.String" length="50"></property>
 		<property name="fileNum" type="java.lang.String" length="50"></property>
 		<property name="schoolYear" type="java.lang.String" length="255"></property>
 		<property name="state" type="java.lang.Integer" length="2"></property>
-        <property name="checkIde" type="java.lang.String" length="200"></property>
+        <property name="postil" type="java.lang.String" length="200"></property>
 		<property name="employeenum" type="java.lang.String" length="30"></property>
 	</class>
 </hibernate-mapping>

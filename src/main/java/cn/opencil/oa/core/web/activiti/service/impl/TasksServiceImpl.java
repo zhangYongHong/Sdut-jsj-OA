@@ -49,8 +49,8 @@ public class TasksServiceImpl implements TasksService {
     }
 
     @Override
-    public String getObjId(String taskId) {
-        return (String) taskService.getVariable(taskId, "objId");
+    public Long getObjId(String taskId) {
+        return (Long) taskService.getVariable(taskId, "objId");
     }
 
 }

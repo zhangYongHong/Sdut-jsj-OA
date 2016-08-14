@@ -36,6 +36,7 @@ public class AwardsAction extends BaseAction<Awards> {
 
     public String list() {
         awardsQuery = new AwardsQuery();
+        awardsQuery.setState(2);
         if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
             awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
         else
@@ -55,7 +56,7 @@ public class AwardsAction extends BaseAction<Awards> {
         //默认显示登陆用户新提交的表单信息
         awardsQuery.setEmployeenum(user.getEmployeenum());
         if (this.getModel().getState() == null) {
-            awardsQuery.setState(0);
+            awardsQuery.setState(1);
         } else {
             awardsQuery.setState(this.getModel().getState());
         }
@@ -76,6 +77,7 @@ public class AwardsAction extends BaseAction<Awards> {
     public String add() {
         User user = PageUtil.getUser();
         Awards awards = this.getModel();
+        awards.setFileNum(PageUtil.getFileNum(awards.getClasse()));
         awards.setSchoolYear(DateUtil.groupSchoolYear());
         awards.setEmployeenum(user.getEmployeenum());
         awardsService.addEntry(awards);
@@ -102,6 +104,21 @@ public class AwardsAction extends BaseAction<Awards> {
      */
     private void startProcess(Long id) {
         awardsService.startProcess(id);
+    }
+
+    /**
+     * 办理
+     */
+    public String audit() {
+        Long aid = this.getModel().getAid();
+        Awards awards = awardsService.getEntryById(aid);
+        ActionContext.getContext().put("awards", awards);
+        return "audit";
+    }
+
+    public String auditDo() {
+        awardsService.updateEntry(this.getModel());
+        return "redirectToTask";
     }
 
 }

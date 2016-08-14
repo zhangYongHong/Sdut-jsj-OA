@@ -14,6 +14,7 @@
 			<result name="listAction">/WEB-INF/jsp/paper/awards/list.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/paper/awards/add.jsp</result>
 			<result name="notCheck">/WEB-INF/jsp/paper/awards/notCheck.jsp</result>
+			<result name="audit">/WEB-INF/jsp/paper/awards/audit.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">awardsAction_list</param>
 				<param name="namespace">/</param>
@@ -26,6 +27,12 @@
 				<param name="actionName">awardsAction</param>
   				<param name="method">list</param>
 			</result>
+			<!--完成任务表单后跳转到tasksAction中的办理任务功能选项-->
+			<result name="redirectToTask" type="redirectAction">
+				<param name="actionName">tasksAction_completeTask</param>
+				<param name="namespace">/</param>
+			</result>
+			<!--<result name="redirectToTask">/WEB-INF/jsp/paper/awards/list.jsp</result>-->
 		</action>
 	</package>
 	

@@ -26,5 +26,5 @@ public interface TasksService {
 
     String getFormKey(String taskId);
 
-    String getObjId(String taskId);
+    Long getObjId(String taskId);
 }

@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Project Name:SdutOA
  * File Name:Awards.java
  * Date:2016-4-15下午12:58:29
- * Author : 王基伟
+ * Author : 张树伟
  *
  */
 public class Awards implements Serializable {
@@ -34,7 +34,7 @@ public class Awards implements Serializable {
 	private String isChange; //修改标记
 	private InputStream inputStream;//导出Excel
 	private Integer state; //0.初始录入 1. 开始审批 2.审批通过 3.驳回
-    private String checkIde;//审批意见
+    private String postil;//审批意见
 	private String employeenum; //申请人对应工号
 
 	public Long getAid() {
@@ -197,15 +197,15 @@ public class Awards implements Serializable {
 		this.state = state;
 	}
 
-    public String getCheckIde() {
-        return checkIde;
-    }
+	public String getPostil() {
+		return postil;
+	}
 
-    public void setCheckIde(String checkIde) {
-        this.checkIde = checkIde;
-    }
+	public void setPostil(String postil) {
+		this.postil = postil;
+	}
 
-    public String getEmployeenum() {
+	public String getEmployeenum() {
 		return employeenum;
 	}
 
@@ -235,7 +235,7 @@ public class Awards implements Serializable {
 		awards.setIsChange(this.isChange);
 		awards.setInputStream(this.inputStream);
 		awards.setState(this.state);
-        awards.setCheckIde(this.checkIde);
+        awards.setPostil(this.postil);
 		awards.setEmployeenum(this.employeenum);
 		return awards;
 	}

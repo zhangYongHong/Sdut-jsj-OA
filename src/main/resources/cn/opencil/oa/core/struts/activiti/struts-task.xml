@@ -17,7 +17,7 @@
 				<param name="namespace">/</param>
 			</result>
 			<result name="taskForm" type="redirectAction">
-				${formUrl}
+				${#formUrl}
 			</result>
 		</action>
 	</package>
