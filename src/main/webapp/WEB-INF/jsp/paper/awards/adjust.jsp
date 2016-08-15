@@ -8,8 +8,6 @@
     <title>Supr admin</title>
 
     <!-- Le styles -->
-
-
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/icons.css" rel="stylesheet" type="text/css"/>
     <!-- Plugin stylesheets -->
@@ -51,7 +49,7 @@
                                     <div class="span5">
                                         <s:select list="%{#session.competitionViewList}" listKey="ddlCode" listValue="ddlName"
                                                   name="competitionid" value="%{#awards.competitionid}"
-                                                  cssClass="select2-active" readonly="readonly"></s:select>
+                                                  cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
                             </div>
@@ -61,13 +59,13 @@
                                     <div class="span2">
                                         <s:select list="%{#session.levelList}" listKey="ddlCode" listValue="ddlName"
                                                   name="level" value="%{#awards.level}"
-                                                  cssClass="select2-active" readonly="readonly"></s:select>
+                                                  cssClass="select2-active"></s:select>
                                     </div>
                                     <label class="form-label span2">获奖等级:</label>
                                     <div class="span2">
                                         <s:select list="%{#session.gradeList}" listKey="ddlCode" listValue="ddlName"
                                                   name="grade" value="%{#awards.grade}"
-                                                  cssClass="select2-active" readonly="readonly"></s:select>
+                                                  cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
                             </div>
@@ -77,13 +75,13 @@
                                     <div class="span2">
                                         <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
                                                   name="deptid"  value="%{#awards.deptid}"
-                                                  cssClass="select2-active" readonly="readonly"></s:select>
+                                                  cssClass="select2-active"></s:select>
                                     </div>
                                     <label class="form-label span2">班级:</label>
                                     <div class="span2">
                                         <s:select list="%{#session.classeList}" listKey="ddlCode" listValue="ddlName"
                                                   name="classe" value="%{#awards.classe}"
-                                                  cssClass="select2-active" readonly="readonly"></s:select>
+                                                  cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +89,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">成果展示:</label>
-                                        <input class="span6" id="normalInput" type="text" name="achievement" value="<s:property value="#awards.achievement"/>" readonly="readonly"/>
+                                        <input class="span6" id="normalInput" type="text" name="achievement" value="<s:property value="#awards.achievement"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +97,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">参赛学生:</label>
-                                        <input class="span6 focused" id="focusedInput" type="text" name="stuname" value="<s:property value="#awards.stuname"/>" readonly="readonly"/>
+                                        <input class="span6 focused" id="focusedInput" type="text" name="stuname" value="<s:property value="#awards.stuname"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +106,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">指导老师:</label>
-                                        <input class="span6 focused"  type="text" name="teacher" value="<s:property value="#awards.teacher"/>" readonly="readonly"/>
+                                        <input class="span6 focused"  type="text" name="teacher" value="<s:property value="#awards.teacher"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +114,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">获奖时间:</label>
-                                        <input class="span6 focused"  type="text" name="atime" value="<s:property value="#awards.atime"/>" readonly="readonly"/>
+                                        <input class="span6 focused"  type="text" name="atime" value="<s:property value="#awards.atime"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +122,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">颁奖单位:</label>
-                                        <input class="span6 focused" id="" type="text" name="prizeunit" value="<s:property value="#awards.prizeunit"/>" readonly="readonly"/>
+                                        <input class="span6 focused" id="" type="text" name="prizeunit" value="<s:property value="#awards.prizeunit"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +130,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">备注:</label>
-                                        <textarea class="span6 elastic" rows="3" name="comment" value="<s:property value="#awards.comment"/>" readonly="readonly"></textarea>
+                                        <textarea class="span6 elastic" rows="3" name="comment" value="<s:property value="#awards.comment"/>"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -141,16 +139,6 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4">审核批注:</label>
                                         <textarea class="span6 elastic" rows="3" name="postil"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="row-fluid">
-                                    <label class="form-label span3">审批意见:</label>
-                                    <div class="span2">
-                                        <s:select list="%{#session.stateList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="state" headerKey="0" headerValue="请选择" value="state"
-                                                  cssClass="select2-active"></s:select>
                                     </div>
                                 </div>
                             </div>

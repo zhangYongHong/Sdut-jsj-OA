@@ -15,6 +15,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Project Name:SdutOA
@@ -24,6 +25,7 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 @Scope("prototype")
+@Transactional
 public class AwardsAction extends BaseAction<Awards> {
 
     private static final long serialVersionUID = 1L;
@@ -39,8 +41,7 @@ public class AwardsAction extends BaseAction<Awards> {
         awardsQuery.setState(2);
         if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
             awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
-        else
-            awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
+        else            awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);
@@ -85,6 +86,7 @@ public class AwardsAction extends BaseAction<Awards> {
         return "redirectToCheck";
     }
 
+
     public String update() {
         Awards awards = this.awardsService.getEntryById(this.getModel().getAid());
         BeanUtils.copyProperties(this.getModel(), awards);
@@ -118,6 +120,17 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String auditDo() {
+        awardsService.updateEntry(this.getModel());
+        return "redirectToTask";
+    }
+
+    public String adjustUI() {
+        Long aid = this.getModel().getAid();
+        Awards awards = awardsService.getEntryById(aid);
+        ActionContext.getContext().put("awards", awards);
+        return "adjust";
+    }
+    public String adjust() {
         awardsService.updateEntry(this.getModel());
         return "redirectToTask";
     }

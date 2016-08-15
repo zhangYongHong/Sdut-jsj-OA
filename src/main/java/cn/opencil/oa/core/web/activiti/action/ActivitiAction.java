@@ -27,30 +27,8 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
     private String resourceName;
     private InputStream inputStream;
 
-    public InputStream getInputStream() {
-        return inputStream;
-    }
-
-    public void setInputStream(InputStream inputStream) {
-        this.inputStream = inputStream;
-    }
-
-    public void setProcessFile(File processFile) {
-        this.processFile = processFile;
-    }
-
-    public void setDeploymentId(String deploymentId) {
-        this.deploymentId = deploymentId;
-    }
-
-    public void setResourceName(String resourceName) {
-        this.resourceName = resourceName;
-    }
-
-
     /**
      * 流程部署列表
-     *
      */
     public String list() {
         List<ProcessDefinition> definitions = activitiService.getDefinitions();
@@ -58,6 +36,9 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
         return listAction;
     }
 
+//    public String runList() {
+//        List<Execution> executionList =
+//    }
     /**
      * 跳转到规则文件上传页面
      * @return
@@ -88,5 +69,27 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
     public String showImage() {
         inputStream = activitiService.getResourceAsStream(deploymentId, resourceName);
         return "flowImage";
+    }
+
+
+    //==============================================================================
+    public InputStream getInputStream() {
+        return inputStream;
+    }
+
+    public void setInputStream(InputStream inputStream) {
+        this.inputStream = inputStream;
+    }
+
+    public void setProcessFile(File processFile) {
+        this.processFile = processFile;
+    }
+
+    public void setDeploymentId(String deploymentId) {
+        this.deploymentId = deploymentId;
+    }
+
+    public void setResourceName(String resourceName) {
+        this.resourceName = resourceName;
     }
 }

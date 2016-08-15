@@ -33,7 +33,7 @@ public class Awards implements Serializable {
 	private String schoolYear; // 学年
 	private String isChange; //修改标记
 	private InputStream inputStream;//导出Excel
-	private Integer state; //0.初始录入 1. 开始审批 2.审批通过 3.驳回
+	private Integer state; //0.初始录入 1. 开始审批 2.审批通过 3.驳回 4.重新调整 5.重新提交 6.取消重新提交
     private String postil;//审批意见
 	private String employeenum; //申请人对应工号
 
