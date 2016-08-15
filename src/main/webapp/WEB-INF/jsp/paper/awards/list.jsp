@@ -140,7 +140,7 @@
                                             <%
                                                 if (popedomCode.contains("abc")) {
                                             %>
-                                            <a href="qPAction_delete.action?qid=<s:property value="qid"/>"
+                                            <a href="awardsAction_delete.action?aid=<s:property value="aid"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                             <%

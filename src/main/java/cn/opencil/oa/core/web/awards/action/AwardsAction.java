@@ -93,7 +93,8 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String delete() {//管理员才能删除
-        this.awardsService.deleteEntry(this.getModel().getAid());
+        Long aid = this.getModel().getAid();
+        this.awardsService.deleteEntry(aid);
         return "redirect";
     }
 
