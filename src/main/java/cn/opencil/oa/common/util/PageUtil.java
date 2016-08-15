@@ -4,7 +4,9 @@ import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.BasePaper;
 import cn.opencil.oa.core.domain.User;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.struts2.ServletActionContext;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -215,5 +217,9 @@ public class PageUtil {
     public static User getUser() {
         User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
         return user;
+    }
+
+    public static HttpSession getHttpSession() {
+        return ServletActionContext.getRequest().getSession();
     }
 }

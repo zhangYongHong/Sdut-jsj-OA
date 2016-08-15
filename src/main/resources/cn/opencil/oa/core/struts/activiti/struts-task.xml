@@ -16,6 +16,10 @@
 				<param name="actionName">tasksAction_taskList</param>
 				<param name="namespace">/</param>
 			</result>
+			<result name="adjust" type="redirectAction">
+				<param name="actionName">awardsAction_adjustUI</param>
+				<param name="namespace">/</param>
+			</result>
 			<result name="taskForm" type="redirectAction">
 				${#formUrl}
 			</result>

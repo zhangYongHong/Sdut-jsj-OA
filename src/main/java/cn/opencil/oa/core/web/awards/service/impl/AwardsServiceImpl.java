@@ -6,6 +6,7 @@ import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.SystemDDL;
+import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.BaseQuery;
 import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import cn.opencil.oa.core.web.awards.dao.AwardsDao;
@@ -74,6 +75,7 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     @Override
     public void startProcess(Long id) {
         Awards awards = awardsDao.getEntryById(id);
+		User user = PageUtil.getUser();
 		if (awards != null) {
 			awards.setState(1);
 			awardsDao.updateEntry(awards);
@@ -84,6 +86,7 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 			HashMap<String, Object> value = new HashMap<>();
 			//classType: 业务对象类型
 			//objId:业务ID
+			value.put("inputUser", user.getUserName());
 			value.put("classType", processDefinitionKey);
 			value.put("objId", awards.getAid());
             //业务对象与流程建立关系

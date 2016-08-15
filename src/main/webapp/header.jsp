@@ -151,9 +151,13 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
                                 <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/activitiAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/activitiAction_newProcessUI.action"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a></li>
-                                    <li><a href="#"><span class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/activitiAction_list.action"><span
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/activitiAction_newProcessUI.action"><span
+                                            class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
+                                    </li>
+                                    <li><a href="#"><span class="input-small"/><span
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -176,14 +180,14 @@
                         }
                     %>
                     <li>
-
                         <a href="#"><span class="icon16 icomoon-icon-grid"></span>个人办公</a>
                         <ul class="sub">
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>我的任务</a>
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/tasksAction_taskList.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>待办任务<span class="notification">3</span></a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>待办任务<span
+                                            class="notification">3</span></a>
                                     </li>
                                     <li><a href="#"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>已办任务</a>
@@ -205,8 +209,9 @@
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/awardsAction_addUI.action"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>申请</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
                                     <li><a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
                                 </ul>

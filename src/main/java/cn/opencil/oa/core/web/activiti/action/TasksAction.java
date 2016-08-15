@@ -3,6 +3,7 @@ package cn.opencil.oa.core.web.activiti.action;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
+import cn.opencil.oa.core.web.awards.service.AwardsService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.task.Task;
 import org.apache.commons.collections.map.HashedMap;
@@ -22,9 +23,12 @@ import java.util.Map;
 @Scope("prototype")
 public class TasksAction {
     @Autowired
-    TasksService tasksService;
-    Long id;
+    private TasksService tasksService;
 
+    @Autowired
+    private AwardsService awardsService;
+    private Long id;
+    private HttpSession httpSession;
     /**
      * 待办任务列表
      */
@@ -67,11 +71,21 @@ public class TasksAction {
      * 办理任务
      */
     public String completeTask() {
-        HttpSession session = ServletActionContext.getRequest().getSession();
-        String taskId = (String) session.getAttribute("taskId");
+        httpSession = ServletActionContext.getRequest().getSession();
+        String taskId = (String) httpSession.getAttribute("taskId");
+        Integer state = (Integer) httpSession.getAttribute("state");
         Map<String, Object> variables = new HashedMap();
         variables.put("assignee", PageUtil.getUser().getUserName());
-        tasksService.completeTask(taskId, variables);
+        if (state == null) {
+            tasksService.completeTask(taskId, variables);
+            return "redirect";
+        } else if (state == 2){
+            variables.put("state", 2);
+            tasksService.completeTask(taskId, variables);
+        } else if (state == 3) {
+            variables.put("state", 3);
+            tasksService.completeTask(taskId, variables);
+        }
         return "redirect";
     }
 

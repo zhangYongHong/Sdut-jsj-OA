@@ -33,7 +33,6 @@
 				<param name="actionName">tasksAction_completeTask</param>
 				<param name="namespace">/</param>
 			</result>
-			<!--<result name="redirectToTask">/WEB-INF/jsp/paper/awards/list.jsp</result>-->
 		</action>
 	</package>
 	

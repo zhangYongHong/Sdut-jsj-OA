@@ -8,5 +8,5 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
     String popedomCode = (String) request.getSession().getAttribute("globleUserRole");
-//    response.setHeader("P3P","CP=CAO PSA OUR");
+    response.setHeader("P3P","CP=CAO PSA OUR");
 %>

@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.activiti.service.impl;
 
+import cn.opencil.oa.common.util.ContantKey;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
@@ -19,17 +20,22 @@ import java.util.Map;
 public class TasksServiceImpl implements TasksService {
 
     @Autowired
-    TaskService taskService;
+    private TaskService taskService;
 
     @Autowired
-    FormService formService;
-
+    private FormService formService;
     @Override
     public List<Task> taskList() {
         User user = PageUtil.getUser();
         //判断用户权限
         //通过用户名查找对应的任务
+        String popedomCode = (String) PageUtil.getHttpSession().getAttribute(ContantKey.GLOBLE_USER_ROLE);
+        if (popedomCode.equals("abc")) {
+            return taskService.createTaskQuery()
+                    .orderByTaskCreateTime().desc().list();
+        }
         return taskService.createTaskQuery()
+                .taskCandidateOrAssigned(user.getUserName())
                 .orderByTaskCreateTime().desc().list();
     }
 

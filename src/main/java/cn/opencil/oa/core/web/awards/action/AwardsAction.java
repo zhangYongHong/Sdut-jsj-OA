@@ -15,7 +15,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Project Name:SdutOA
@@ -25,7 +26,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Controller
 @Scope("prototype")
-@Transactional
 public class AwardsAction extends BaseAction<Awards> {
 
     private static final long serialVersionUID = 1L;
@@ -35,6 +35,7 @@ public class AwardsAction extends BaseAction<Awards> {
 
     private Logger log = Logger.getLogger(AwardsAction.class);
     private AwardsQuery awardsQuery;
+    private Long aid;
 
     public String list() {
         awardsQuery = new AwardsQuery();
@@ -113,26 +114,42 @@ public class AwardsAction extends BaseAction<Awards> {
      * 办理
      */
     public String audit() {
-        Long aid = this.getModel().getAid();
+        aid = this.getModel().getAid();
         Awards awards = awardsService.getEntryById(aid);
+        HttpSession session = PageUtil.getHttpSession();
+        session.setAttribute("aid", aid);
         ActionContext.getContext().put("awards", awards);
         return "audit";
     }
 
     public String auditDo() {
         awardsService.updateEntry(this.getModel());
+        HttpSession session = PageUtil.getHttpSession();
+        session.setAttribute("state", this.getModel().getState());
         return "redirectToTask";
     }
 
     public String adjustUI() {
-        Long aid = this.getModel().getAid();
+        aid = this.getModel().getAid();
         Awards awards = awardsService.getEntryById(aid);
         ActionContext.getContext().put("awards", awards);
         return "adjust";
     }
     public String adjust() {
+        this.getModel().setState(1);
         awardsService.updateEntry(this.getModel());
+        PageUtil.getHttpSession().setAttribute("state", 1);
         return "redirectToTask";
     }
 
+    //==================================================================
+
+
+    public Long getAid() {
+        return aid;
+    }
+
+    public void setAid(Long aid) {
+        this.aid = aid;
+    }
 }
