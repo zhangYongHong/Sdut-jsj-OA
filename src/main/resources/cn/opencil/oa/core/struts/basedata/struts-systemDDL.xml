@@ -11,14 +11,12 @@
 
         <action name="systemDDLAction_*" class="systemDDLAction" method="{1}">
             <result name="listAction">/WEB-INF/jsp/systemDDL/list.jsp</result>
-            <result name="addUI">/WEB-INF/jsp/user/add.jsp</result>
-            <result name="updateUI">/WEB-INF/jsp/user/update.jsp</result>
-            <result name="passWordUI">WEB-INF/jsp/user/password.jsp</result>
+            <result name="addUI">/WEB-INF/jsp/systemDDL/add.jsp</result>
+            <result name="updateUI">/WEB-INF/jsp/systemDDL/update.jsp</result>
             <result name="redirect" type="redirectAction">
                 <param name="actionName">systemDDLAction_list</param>
                 <param name="namespace">/</param>
             </result>
-            <result name="input">/WEB-INF/jsp/user/add.jsp</result>
         </action>
 
     </package>

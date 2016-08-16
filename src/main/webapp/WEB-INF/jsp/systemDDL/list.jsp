@@ -98,12 +98,12 @@
                                     <td><s:property value="ddlName"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
+                                            <a href="systemDDLAction_updateUI.action?sid=<s:property value="sid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
                                             <%
                                                 if (popedomCode.contains("abc")) {
                                             %>
-                                            <a href="qPAction_delete.action?qid=<s:property value="qid"/>"
+                                            <a href="systemDDLAction_delete.action?sid=<s:property value="sid"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                             <%
