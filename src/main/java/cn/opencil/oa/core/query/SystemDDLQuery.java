@@ -8,37 +8,33 @@ import java.util.Map;
  * File Name:AwardsQuery.java
  * Date:2016-4-16下午4:21:18
  * Author : 张树伟
- *
  */
-public class SystemDDLQuery extends BaseQuery{
+public class SystemDDLQuery extends BaseQuery {
 
 
-	private String keyword;
-	
+    private String keyword;
 
-	public String getKeyword() {
-		return keyword;
-	}
+    /**
+     * 根据条件构造where
+     */
+    @Override
+    public Map<String, Object> buildWhere() {
+
+        if (null != keyword) {
+            this.getWhereKV().put("keyword", keyword);
+        }
+        return this.getWhereKV();
+    }
 
 
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
+    //==========================================================
+    public String getKeyword() {
+        return keyword;
+    }
 
 
-	/**
-	 * 根据条件构造where
-	 */
-	@Override
-	public Map<String, Object> buildWhere() {
-		
-		if(null != keyword){
-			this.getWhereKV().put("keyword", keyword);
-		}else{
-			this.getWhereKV().put("keyword", "竞赛项目");
-		}
-		
-		return this.getWhereKV();
-	}
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
 
 }

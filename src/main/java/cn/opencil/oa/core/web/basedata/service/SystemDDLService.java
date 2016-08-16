@@ -3,7 +3,7 @@ package cn.opencil.oa.core.web.basedata.service;
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.service.BaseService;
 import cn.opencil.oa.core.domain.SystemDDL;
-import cn.opencil.oa.core.query.BaseQuery;
+import cn.opencil.oa.core.query.SystemDDLQuery;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import java.util.List;
 
 public interface SystemDDLService extends BaseService<SystemDDL>{
 
-	PageResult<SystemDDL> getPageResultByKeyword(BaseQuery baseQuery);
+	PageResult<SystemDDL> getPageResultByKeyword(SystemDDLQuery baseQuery);
 
 	SystemDDL getSystenDDL(String keyword,Integer ddlCode);
 

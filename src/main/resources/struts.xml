@@ -25,5 +25,7 @@
 	<!-- 流程管理 -->
 	<include file="cn/opencil/oa/core/struts/activiti/struts-activiti.xml"></include>
 	<include file="cn/opencil/oa/core/struts/activiti/struts-task.xml"></include>
+	<!-- 数据字典管理 -->
+	<include file="cn/opencil/oa/core/struts/basedata/struts-systemDDL.xml"></include>
 </struts>
 	

@@ -28,39 +28,63 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 	@Autowired
 	private SystemDDLService systemDDLService;
 
-	private Long sid;
-	
 	public String list(){
 		SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
+		if (this.getModel().getKeyword() == null)
+			systemDDLQuery.setKeyword("role");
+		else
+			systemDDLQuery.setKeyword(this.getModel().getKeyword());
 		try {
 			PageResult<SystemDDL> systemDDLs = this.systemDDLService.getPageResultByKeyword(systemDDLQuery);
 			ActionContext.getContext().put("systemDDLs", systemDDLs);
 		} catch (Exception e) {
 
 		}
-
-		//System.out.println(systemDDLs.size());
-		return "";
+		return LISTACTION;
 	}
-	
-	public String delete(){
-		
-		SystemDDL ddl = this.systemDDLService.getEntryById(this.getSid());
-		if(null!=ddl){
-			this.addActionError("该竞赛项目下存在数据,不能删除!");
+
+	public String addUI() {
+		return addUI;
+	}
+
+	public String add() {
+		try {
+			systemDDLService.addEntry(this.getModel());
+		} catch (Exception e) {
+
 		}
-		
-		this.systemDDLService.deleteEntry(this.getSid());
-		return "";
+		return REDIRECT;
+	}
+
+	public String updateUI() {
+		try {
+			SystemDDL systemDDL = systemDDLService.getEntryById(this.getModel().getSid());
+			ActionContext.getContext().put("systemDDL", systemDDL);
+		} catch (Exception e) {
+
+		}
+		return updateUI;
+	}
+
+	public String update() {
+		try {
+			systemDDLService.updateEntry(this.getModel());
+		} catch (Exception e) {
+
+		}
+		return REDIRECT;
+	}
+
+	public String delete(){
+		try {
+			systemDDLService.deleteEntry(this.getModel().getSid());
+		} catch (Exception e) {
+
+		}
+		return REDIRECT;
 	}
 
 //=======================================================================
-	public Long getSid() {
-		return sid;
-	}
-	public void setSid(Long sid) {
-		this.sid = sid;
-	}
-	
+
 
 }

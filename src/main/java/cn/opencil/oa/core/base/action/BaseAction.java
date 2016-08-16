@@ -73,6 +73,7 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T>,Servl
 	public static final String ADDUI = "addUI";//跳转到添加页面
 	public static final String UPDATEUI = "updateUI";//挑战到更新页面
 	public static final String NEWPROCESSUI = "newProcessUI";
+	public static final String REDIRECT = "redirect";
 
 	public String listAction = LISTACTION;
 	public String action2action = ACTION2ACTION;

@@ -4,7 +4,7 @@ import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.SystemDDL;
-import cn.opencil.oa.core.query.BaseQuery;
+import cn.opencil.oa.core.query.SystemDDLQuery;
 import cn.opencil.oa.core.web.basedata.dao.SystemDDLDao;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +25,7 @@ public class SystemDDLServiceImpl extends BaseServiceImpl<SystemDDL> implements 
 	private SystemDDLDao systemDDLDao;
 	
 	@Override
-	public PageResult<SystemDDL> getPageResultByKeyword(BaseQuery baseQuery) {
-
+	public PageResult<SystemDDL> getPageResultByKeyword(SystemDDLQuery baseQuery) {
 		return this.systemDDLDao.getPageResultByKeyword(baseQuery);
 	}
 

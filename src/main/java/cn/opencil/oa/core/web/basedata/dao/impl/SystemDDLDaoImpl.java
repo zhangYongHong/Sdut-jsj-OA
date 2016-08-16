@@ -4,6 +4,7 @@ import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.dao.impl.BaseDaoImpl;
 import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.BaseQuery;
+import cn.opencil.oa.core.query.SystemDDLQuery;
 import cn.opencil.oa.core.web.basedata.dao.SystemDDLDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -25,9 +26,7 @@ import java.util.Map;
 public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDDLDao {
 
 	@Override
-	public PageResult<SystemDDL> getPageResultByKeyword(final BaseQuery baseQuery) {
-		
-		final Integer count = this.getCount("竞赛项目");
+	public PageResult<SystemDDL> getPageResultByKeyword(final SystemDDLQuery baseQuery) {
 		return this.getHibernateTemplate().execute(new HibernateCallback<PageResult<SystemDDL>>() {
 
 			@Override
@@ -42,10 +41,9 @@ public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDD
 				query.setParameter("keyword", whereKV.get("keyword"));
 				int firstResult = (baseQuery.getCurrentPage()-1)*baseQuery.getPageSize();
 				query.setFirstResult(firstResult).setMaxResults(baseQuery.getPageSize());
-				PageResult<SystemDDL> pageResult = new PageResult<SystemDDL>(baseQuery.getCurrentPage(),baseQuery.getPageSize(),count);
+				PageResult<SystemDDL> pageResult = new PageResult<SystemDDL>();
 				List list = query.list();
 				pageResult.setRows(list);
-				
 				
 				return pageResult;
 			}
@@ -60,7 +58,7 @@ public class SystemDDLDaoImpl extends BaseDaoImpl<SystemDDL> implements SystemDD
 			public Integer doInHibernate(Session session)
 					throws HibernateException {
 
-					String hql = "SELECT COUNT(sid) from systemddl where 1=1 and keyword=:keyword";
+					String hql = "SELECT COUNT(sid) from systemddl where keyword=:keyword";
 					Query query = session.createQuery(hql);
 				
 					query.setParameter("keyword", keyword);

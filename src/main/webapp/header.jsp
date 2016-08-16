@@ -163,7 +163,7 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
                                 <ul class="sub">
-                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
                                     <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a></li>
                                 </ul>
                             </li>
