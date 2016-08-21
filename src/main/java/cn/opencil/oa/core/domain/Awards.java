@@ -23,8 +23,8 @@ public class Awards implements Serializable {
 	private Integer level;//获奖级别     1.国家级  2.省级  3.校级  4.院级
 	private Integer grade;//获奖等级	1.特等奖  2.一等奖   3.二等奖   4.三等级
 	private String stuname;//参赛学生
-	private Integer deptid;//专业      1.计算机科学与技术  2.软件工程   3.通信工程  4.数字媒体  5.基础部
-	private String classe;//班级
+	private String specialty;//专业      1.计算机科学与技术  2.软件工程   3.通信工程  4.数字媒体  5.基础部
+	private String classes;//班级
 	private String teacher;//指导老师
 	private String atime;//获奖时间
 	private String prizeunit;//颁奖单位
@@ -109,20 +109,20 @@ public class Awards implements Serializable {
 		this.stuname = stuname;
 	}
 
-	public Integer getDeptid() {
-		return deptid;
+	public String getSpecialty() {
+		return specialty;
 	}
 
-	public void setDeptid(Integer deptid) {
-		this.deptid = deptid;
+	public void setSpecialty(String specialty) {
+		this.specialty = specialty;
 	}
 
-	public String getClasse() {
-		return classe;
+	public String getClasses() {
+		return classes;
 	}
 
-	public void setClasse(String classe) {
-		this.classe = classe;
+	public void setClasses(String classes) {
+		this.classes = classes;
 	}
 
 	public String getTeacher() {
@@ -224,8 +224,8 @@ public class Awards implements Serializable {
 		awards.setLevel(this.level);
 		awards.setGrade(this.grade);
 		awards.setStuname(this.stuname);
-		awards.setDeptid(this.deptid);
-		awards.setClasse(this.classe);
+		awards.setSpecialty(this.specialty);
+		awards.setClasses(this.classes);
 		awards.setTeacher(this.teacher);
 		awards.setAtime(this.atime);
 		awards.setPrizeunit(this.prizeunit);

@@ -10,10 +10,10 @@
 		<property name="competitionid" type="java.lang.Integer" length="20"></property>
 		<property name="level" type="java.lang.Integer" length="20"></property>
 		<property name="grade" type="java.lang.Integer" length="20"></property>
-		<property name="deptid" type="java.lang.Integer" length="20"></property>
+		<property name="specialty" type="java.lang.String" length="60"></property>
 		<property name="achievement" type="java.lang.String" length="50"></property>
 		<property name="stuname" type="java.lang.String" length="50"></property>
-		<property name="classe" type="java.lang.String" length="50"></property>
+		<property name="classes" type="java.lang.String" length="50"></property>
 		<property name="teacher" type="java.lang.String" length="50"></property>
 		<property name="atime" type="java.lang.String" length="50"></property>
  		<property name="prizeunit" type="java.lang.String" length="50"></property>

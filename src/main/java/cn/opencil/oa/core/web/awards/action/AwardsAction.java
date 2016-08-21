@@ -79,7 +79,7 @@ public class AwardsAction extends BaseAction<Awards> {
     public String add() {
         User user = PageUtil.getUser();
         Awards awards = this.getModel();
-        awards.setFileNum(PageUtil.getFileNum(awards.getClasse()));
+        awards.setFileNum(PageUtil.getFileNum(awards.getClasses()));
         awards.setSchoolYear(DateUtil.groupSchoolYear());
         awards.setEmployeenum(user.getEmployeenum());
         awardsService.addEntry(awards);
@@ -123,7 +123,8 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String auditDo() {
-        awardsService.updateEntry(this.getModel());
+        Awards awards = this.getModel();
+        awardsService.updateEntry(awards);
         HttpSession session = PageUtil.getHttpSession();
         session.setAttribute("state", this.getModel().getState());
         return "redirectToTask";

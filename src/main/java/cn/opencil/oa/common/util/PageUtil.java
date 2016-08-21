@@ -184,15 +184,22 @@ public class PageUtil {
      * 将获奖管理中获取的list中的每条数据按照其中学生姓名的个数来扩充。
      */
     public static List<Awards> getListByStuname(List<Awards> list) {
-        List<String> stringList = null;
+        List<String> stuNameList;
+        List<String> specialtyList;
+        List<String> classesList;
+
         List<Awards> awardsList = new ArrayList<>();
         Awards awards;
         for (int i = 0; i < list.size(); i++) {
-            stringList = getStringList(list.get(i).getStuname());
-            if(0 != stringList.size()) {
-                for (int j = 0; j < stringList.size(); j++) {
+            stuNameList = getStringList(list.get(i).getStuname());
+            specialtyList = getStringList(list.get(i).getSpecialty());
+            classesList = getStringList(list.get(i).getClasses());
+            if(0 != stuNameList.size()) {
+                for (int j = 0; j < stuNameList.size(); j++) {
                     awards = list.get(i).clone();
-                    awards.setStuname(stringList.get(j));
+                    awards.setStuname(stuNameList.get(j));
+                    awards.setSpecialty(specialtyList.get(j));
+                    awards.setClasses(classesList.get(j));
                     awards.setIdView(awards.getId() + "-" + (j + 1));
                     awardsList.add(awards);
                 }
