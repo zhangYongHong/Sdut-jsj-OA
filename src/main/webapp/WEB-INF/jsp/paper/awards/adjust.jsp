@@ -70,22 +70,6 @@
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="row-fluid">
-                                    <label class="form-label span3">专业:</label>
-                                    <div class="span2">
-                                        <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="deptid"  value="%{#awards.deptid}"
-                                                  cssClass="select2-active"></s:select>
-                                    </div>
-                                    <label class="form-label span2">班级:</label>
-                                    <div class="span2">
-                                        <s:select list="%{#session.classeList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="classe" value="%{#awards.classe}"
-                                                  cssClass="select2-active"></s:select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">成果展示:</label>
@@ -101,28 +85,44 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4">专业:</label>
+                                        <input class="span6 focused" type="text" name="specialty" value="<s:property value="#awards.specialty"/>"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4">班级:</label>
+                                        <input class="span6 focused" type="text" name="classes" value="<s:property value="#awards.classes"/>"/>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">指导老师:</label>
-                                        <input class="span6 focused"  type="text" name="teacher" value="<s:property value="#awards.teacher"/>"/>
+                                        <label class="form-label span4" for="teacher">指导老师:</label>
+                                        <input class="span6 focused"  type="text" id="teacher" name="teacher" value="<s:property value="#awards.teacher"/>"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">获奖时间:</label>
-                                        <input class="span6 focused"  type="text" name="atime" value="<s:property value="#awards.atime"/>"/>
+                                        <label class="form-label span4" for="atime">获奖时间:</label>
+                                        <input class="span6 focused" id="atime" type="text" name="atime" value="<s:property value="#awards.atime"/>"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">颁奖单位:</label>
-                                        <input class="span6 focused" id="" type="text" name="prizeunit" value="<s:property value="#awards.prizeunit"/>"/>
+                                        <label class="form-label span4" for="prizeunit">颁奖单位:</label>
+                                        <input class="span6 focused" id="prizeunit" type="text" name="prizeunit" value="<s:property value="#awards.prizeunit"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -159,6 +159,7 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
 
 
 <!-- Load plugins -->

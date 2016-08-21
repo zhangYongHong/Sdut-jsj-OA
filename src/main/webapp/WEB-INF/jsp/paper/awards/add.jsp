@@ -72,25 +72,9 @@
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                <div class="row-fluid">
-                                    <label class="form-label span3">专业:</label>
-                                    <div class="span2">
-                                        <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="deptid" headerKey="0" headerValue="请选择" value="rid"
-                                                  cssClass="select2-active"></s:select>
-                                    </div>
-                                    <label class="form-label span2">班级:</label>
-                                    <div class="span2">
-                                        <s:select list="%{#session.classeList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="classe" headerKey="0" headerValue="请选择" value="rid"
-                                                  cssClass="select2-active"></s:select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">成果展示:</label>
+                                        <label class="form-label span4">成果名称:</label>
                                         <input class="span6" id="normalInput" type="text" name="achievement"/>
                                     </div>
                                 </div>
@@ -100,10 +84,28 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">参赛学生:</label>
                                         <input class="span6 focused" id="focusedInput" type="text" name="stuname"/>
+                                        <span class="help-inline">(学生姓名之间用逗号分割)</span>
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4">专业:</label>
+                                        <input class="span6 focused" type="text" name="specialty"/>
+                                        <span class="help-inline">(专业与学生对应,逗号分割)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
+                                    <div class="span9">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4">班级:</label>
+                                        <input class="span6 focused" type="text" name="classes"/>
+                                        <span class="help-inline">(班级与学生对应,逗号分割)</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
@@ -115,8 +117,8 @@
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">获奖时间:</label>
-                                        <input class="span6 focused"  type="text" name="atime"/>
+                                        <label class="form-label span4" for="atime">获奖时间:</label>
+                                        <input class="laydate-icon span6 focused " id="atime" type="text" name="atime" onclick="laydate()"/>
                                     </div>
                                 </div>
                             </div>
@@ -158,8 +160,7 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
-
-
+<script type="text/javascript" src="js/laydate/laydate.js"></script>
 <!-- Load plugins -->
 <script type="text/javascript" src="plugins/qtip/jquery.qtip.min.js"></script>
 

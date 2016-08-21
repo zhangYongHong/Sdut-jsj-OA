@@ -68,7 +68,7 @@
                                             <option value="level">获奖等级</option>
                                             <option value="grade">获奖级别</option>
                                             <option value="state">审核状态</option>
-                                            <option value="classe">班级</option>
+                                            <option value="classes">班级</option>
                                         </select>
                                     </div>
                                 </div>

@@ -89,7 +89,6 @@
                                 <th>颁奖单位</th>
                                 <th>备注</th>
                                 <th>状态</th>
-                                <th>操作</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -114,14 +113,8 @@
                                         <s:else></s:else>
                                     </td>
                                     <td><s:property value="stuname"/></td>
-                                    <td>
-                                        <s:if test="deptid == 1">计算机科学与技术</s:if>
-                                        <s:elseif test="deptid == 2">软件工程</s:elseif>
-                                        <s:elseif test="deptid == 3">通信工程</s:elseif>
-                                        <s:elseif test="deptid == 4">基础部</s:elseif>
-                                        <s:else></s:else>
-                                    </td>
-                                    <td><s:property value="classe"/></td>
+                                    <td><s:property value="specialty"/></td>
+                                    <td><s:property value="classes"/></td>
                                     <td><s:property value="teacher"/></td>
                                     <td><s:property value="atime"/></td>
                                     <td><s:property value="prizeunit"/></td>
@@ -131,11 +124,6 @@
                                         <s:elseif test="state == 1">审核中</s:elseif>
                                         <s:elseif test="state == 2">已通过</s:elseif>
                                         <s:elseif test="state == 3">驳回</s:elseif>
-                                    <td>
-                                        <div class="controls center">
-                                            <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
-                                               class="tip">详情</a>
-                                        </div>
                                     </td>
                                 </tr>
                             </s:iterator>

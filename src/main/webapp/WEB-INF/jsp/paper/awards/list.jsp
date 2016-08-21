@@ -123,15 +123,8 @@
                                         <s:else></s:else>
                                     </td>
                                     <td><s:property value="stuname"/></td>
-                                    <td>
-                                        <s:if test="deptid == 1">计算机科学与技术</s:if>
-                                        <s:elseif test="deptid == 2">软件工程</s:elseif>
-                                        <s:elseif test="deptid == 3">通信工程</s:elseif>
-                                        <s:elseif test="deptid == 4">数字媒体技术</s:elseif>
-                                        <s:elseif test="deptid == 5">基础部</s:elseif>
-                                        <s:else></s:else>
-                                    </td>
-                                    <td><s:property value="classe"/></td>
+                                    <td><s:property value="specialty"/></td>
+                                    <td><s:property value="classes"/></td>
                                     <td><s:property value="teacher"/></td>
                                     <td><s:property value="atime"/></td>
                                     <td><s:property value="prizeunit"/></td>
