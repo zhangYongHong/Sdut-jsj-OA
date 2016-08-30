@@ -36,9 +36,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
         return listAction;
     }
 
-//    public String runList() {
-//        List<Execution> executionList =
-//    }
     /**
      * 跳转到规则文件上传页面
      * @return

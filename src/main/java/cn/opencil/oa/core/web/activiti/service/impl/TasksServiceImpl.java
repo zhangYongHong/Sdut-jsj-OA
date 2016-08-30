@@ -10,6 +10,7 @@ import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -27,12 +28,22 @@ public class TasksServiceImpl implements TasksService {
     @Override
     public List<Task> taskList() {
         User user = PageUtil.getUser();
+        List<Task> list = new ArrayList<>();
         //判断用户权限
         //通过用户名查找对应的任务
         String popedomCode = (String) PageUtil.getHttpSession().getAttribute(ContantKey.GLOBLE_USER_ROLE);
+
         if (popedomCode.equals("abc")) {
-            return taskService.createTaskQuery()
+            List<Task> taskList = new ArrayList<>();
+
+            taskList = taskService.createTaskQuery()
                     .orderByTaskCreateTime().desc().list();
+            for (int i = 0; i < taskList.size(); i++) {
+                if (taskList.get(i).getAssignee() == null || taskList.get(i).getAssignee().equals("超级管理员")) {
+                    list.add(taskList.get(i));
+                }
+            }
+            return list;
         }
         return taskService.createTaskQuery()
                 .taskCandidateOrAssigned(user.getUserName())

@@ -42,7 +42,7 @@ public class AwardsAction extends BaseAction<Awards> {
         awardsQuery.setState(2);
         if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
             awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
-        else            awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
+        else awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);
@@ -57,11 +57,7 @@ public class AwardsAction extends BaseAction<Awards> {
         User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
         //默认显示登陆用户新提交的表单信息
         awardsQuery.setEmployeenum(user.getEmployeenum());
-        if (this.getModel().getState() == null) {
-            awardsQuery.setState(1);
-        } else {
-            awardsQuery.setState(this.getModel().getState());
-        }
+        awardsQuery.setState(this.getModel().getState());
 
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
@@ -103,8 +99,9 @@ public class AwardsAction extends BaseAction<Awards> {
 
     /**
      * 提交获奖管理信息
-     * @return
+     *
      * @param id
+     * @return
      */
     private void startProcess(Long id) {
         awardsService.startProcess(id);
@@ -136,6 +133,7 @@ public class AwardsAction extends BaseAction<Awards> {
         ActionContext.getContext().put("awards", awards);
         return "adjust";
     }
+
     public String adjust() {
         this.getModel().setState(1);
         awardsService.updateEntry(this.getModel());
