@@ -20,81 +20,12 @@
                 <div class="nav-no-collapse">
                     <ul class="nav">
                         <li class="active"><a href="index.jsp"><span class="icon16 icomoon-icon-screen-2"></span>
-                            仪表</a></li>
-                        <!--信息相关模块-->
-                        <%--<li class="dropdown">--%>
-                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<span class="icon16 icomoon-icon-mail-3"></span>信息 <span class="notification">8</span>--%>
-                            <%--</a>--%>
-                            <%--<ul class="dropdown-menu">--%>
-                                <%--<li class="menu">--%>
-                                    <%--<ul class="messages">--%>
-                                        <%--<li class="header"><strong>Messages</strong> (10) emails and (2) PM</li>--%>
-                                        <%--<li>--%>
-                                            <%--<span class="icon"><span class="icon16 icomoon-icon-user-3"></span></span>--%>
-                                            <%--<span class="name"><a data-toggle="modal" href="#myModal1"><strong>Sammy--%>
-                                                <%--Morerira</strong></a><span class="time">35 min ago</span></span>--%>
-                                            <%--<span class="msg">I have question about new function ...</span>--%>
-                                        <%--</li>--%>
-                                        <%--<li>--%>
-                                            <%--<span class="icon avatar"><img src="images/avatar.jpg" alt=""/></span>--%>
-                                            <%--<span class="name"><a data-toggle="modal" href="#myModal1"><strong>George--%>
-                                                <%--Michael</strong></a><span class="time">1 hour ago</span></span>--%>
-                                            <%--<span class="msg">I need to meet you urgent please call me ...</span>--%>
-                                        <%--</li>--%>
-                                        <%--<li>--%>
-                                            <%--<span class="icon"><span class="icon16 icomoon-icon-mail-3"></span></span>--%>
-                                            <%--<span class="name"><a data-toggle="modal"--%>
-                                                                  <%--href="#myModal1"><strong>Ivanovich</strong></a><span--%>
-                                                    <%--class="time">1 day ago</span></span>--%>
-                                            <%--<span class="msg">I send you my suggestion, please look and ...</span>--%>
-                                        <%--</li>--%>
-                                        <%--<li class="view-all"><a href="#">View all messages <span--%>
-                                                <%--class="icon16 icomoon-icon-arrow-right-8"></span></a></li>--%>
-                                    <%--</ul>--%>
-                                <%--</li>--%>
-                            <%--</ul>--%>
-                        <%--</li>--%>
+                            首页</a></li>
                     </ul>
 
                     <ul class="nav pull-right usernav">
-                        <%--<li class="dropdown">--%>
-                            <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
-                                <%--<span class="icon16 icomoon-icon-bell-2"></span><span class="notification">3</span>--%>
-                            <%--</a>--%>
-                            <%--<ul class="dropdown-menu">--%>
-                                <%--<li class="menu">--%>
-                                    <%--<ul class="notif">--%>
-                                        <%--<li class="header"><strong>Notifications</strong> (3) items</li>--%>
-                                        <%--<li>--%>
-                                            <%--<a href="#">--%>
-                                                <%--<span class="icon"><span--%>
-                                                        <%--class="icon16 icomoon-icon-user-3"></span></span>--%>
-                                                <%--<span class="event">1 User is registred</span>--%>
-                                            <%--</a>--%>
-                                        <%--</li>--%>
-                                        <%--<li>--%>
-                                            <%--<a href="#">--%>
-                                                <%--<span class="icon"><span class="icon16 icomoon-icon-comments-4"></span></span>--%>
-                                                <%--<span class="event">Jony add 1 comment</span>--%>
-                                            <%--</a>--%>
-                                        <%--</li>--%>
-                                        <%--<li>--%>
-                                            <%--<a href="#">--%>
-                                                <%--<span class="icon"><span--%>
-                                                        <%--class="icon16 icomoon-icon-new-2"></span></span>--%>
-                                                <%--<span class="event">admin Julia added post with a long description</span>--%>
-                                            <%--</a>--%>
-                                        <%--</li>--%>
-                                        <%--<li class="view-all"><a href="#">View all notifications <span--%>
-                                                <%--class="icon16 icomoon-icon-arrow-right-8"></span></a></li>--%>
-                                    <%--</ul>--%>
-                                <%--</li>--%>
-                            <%--</ul>--%>
-                        <%--</li>--%>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
-                                <%--<img src="images/avatar.jpg" alt="" class="image"/>--%>
                                 <span class="txt"><s:property value="#session.globleUser.userName"/> </span>
                                 <b class="caret"></b>
                             </a>
@@ -163,7 +94,8 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
                                 <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
                                     <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a></li>
                                 </ul>
                             </li>
@@ -186,8 +118,7 @@
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>我的任务</a>
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/tasksAction_taskList.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>待办任务<span
-                                            class="notification">3</span></a>
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>待办任务</a>
                                     </li>
                                     <li><a href="#"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>已办任务</a>
@@ -218,22 +149,30 @@
                             </li>
                         </ul>
                     </li>
-                    <%
-                        if (popedomCode.contains("abc")) {
-                    %>
+
                     <li>
                         <a href="#"><span class="icon16 icomoon-icon-users"></span>人员管理</a>
                         <ul class="sub">
+                            <%
+                                if (popedomCode.contains("abc")) {
+                            %>
                             <li><a href="userAction_list.action"><span class="icon16 icomoon-icon-address-2"></span>用户列表</a>
                             </li>
+                            <%
+                                }
+                            %>
                             <li>
                                 <a href="userAction_updateUI.action?uid=<s:property value="#session.globleUser.uid"/>"><span
-                                        class="icon16 icomoon-icon-user-3"></span>个人信息</a></li>
+                                        class="icon16 icomoon-icon-user-3"></span>个人信息</a>
+                            </li>
+                            <li>
+                                <a href="userAction_passWordUI.action"><span
+                                        class="icon16  icomoon-icon-locked-2"></span>密码修改</a>
+                            </li>
+
                         </ul>
                     </li>
-                    <%
-                        }
-                    %>
+
                 </ul>
             </div>
         </div><!-- End sidenav -->
