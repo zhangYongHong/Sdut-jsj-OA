@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="修改: pom.xml 添加shiro相关Jar包">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-shiro.xml" />
+    <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SdutOA.iml" afterPath="$PROJECT_DIR$/SdutOA.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-activiti.xml" afterPath="$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-activiti.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="SdutOA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1265,7 +1260,7 @@
       <workItem from="1472865756537" duration="627000" />
       <workItem from="1472957124149" duration="763000" />
       <workItem from="1473040546061" duration="4146000" />
-      <workItem from="1473072549090" duration="29000" />
+      <workItem from="1473072549090" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="更新：用Hibernate 4.3.11.Final">
       <created>1469595208617</created>
@@ -1547,7 +1542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473045188546</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="添加: shiro相关的配置文件">
+      <created>1473072627125</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1473072627125</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1583,7 +1585,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234148000" />
+    <option name="totallyTimeSpent" value="234247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -1684,7 +1686,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="：无用文件" />
     <MESSAGE value="修改：前端页面" />
     <MESSAGE value="修改: 获奖情况对象" />
     <MESSAGE value="新增：完成查看流程规则图片功能" />
@@ -1709,7 +1710,8 @@
     <MESSAGE value="修改: 完善前端页面" />
     <MESSAGE value="修改: 待办事务显示,获奖管理查看功能" />
     <MESSAGE value="修改: pom.xml 添加shiro相关Jar包" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改: pom.xml 添加shiro相关Jar包" />
+    <MESSAGE value="添加: shiro相关的配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加: shiro相关的配置文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
