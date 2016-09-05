@@ -44,6 +44,7 @@
           <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-properties.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-transaction.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-activiti.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/spring/applicationContext-shiro.xml</file>
         </fileset>
       </configuration>
     </facet>
