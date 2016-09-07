@@ -1,6 +1,7 @@
 package cn.opencil.oa.core.web.role.dao;
 
 import cn.opencil.oa.core.base.dao.BaseDao;
+import cn.opencil.oa.core.domain.Role;
 import cn.opencil.oa.core.domain.UserRole;
 
 import java.util.Collection;
@@ -11,6 +12,10 @@ import java.util.Collection;
 public interface UserRoleDao extends BaseDao<UserRole> {
 
     UserRole getUserRole(final Long uid);
+
+    Role getOne(Long roleId);
+
+    Collection<Role> getAll();
 
     Collection<UserRole> getUserRoleList();
 }

@@ -11,13 +11,15 @@ import cn.opencil.oa.core.web.role.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Project Name:SdutOA
  * File Name:UserServiceImpl.java
  * Date:2016-4-15下午1:44:52
- * Author : 王基伟
+ * Author : 张树伟
  */
 
 @Service
@@ -34,10 +36,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         return this.userDao;
     }
 
-    @Override
-    public User validation(String username) {
-        return this.userDao.validation(username);
-    }
 
     @Override
     public PageResult<User> getUserPageResult(final UserQuery userQuery) {
@@ -58,14 +56,21 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         return this.userDao.getUserByEmployeenum(value);
     }
 
+    @Override
+    public Set<String> getRoles(String employeenum) {
+        User user = getUserByEmployeenum(employeenum);
+        if (user == null) {
+            return Collections.emptySet();
+        }
+        return userRoleService.findRoles(user.getRoleIds().toArray(new Long[0]));
+    }
 
-
-
-//	@Override
-//	public void addEntry(User user) {
-//		//密码 MD5加密
-//		MD5Util md5Util =  new MD5Util();
-//		user.setPassword(md5Util.getkeyBeanofStr(user.getPassword()));
-//		super.addEntry(user);
-//	}
+    @Override
+    public Set<String> getPermissions(String employeenum) {
+        User user = getUserByEmployeenum(employeenum);
+        if(user == null) {
+            return Collections.EMPTY_SET;
+        }
+        return userRoleService.findPermissions(user.getRoleIds().toArray(new Long[0]));
+    }
 }

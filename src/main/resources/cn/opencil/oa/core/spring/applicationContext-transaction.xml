@@ -19,7 +19,19 @@
    			<ref bean="sessionFactory"/>
    		</property>
    </bean>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
    
    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+	<aop:config expose-proxy="true" proxy-target-class="true">
+		<!-- 只对业务逻辑层实施事务 -->
+		<aop:pointcut id="txPointcut" expression="execution(* cn.opencil.oa..service..*+.*(..))"/>
+		<aop:advisor id="txAdvisor" advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+	</aop:config>
     
 </beans>
