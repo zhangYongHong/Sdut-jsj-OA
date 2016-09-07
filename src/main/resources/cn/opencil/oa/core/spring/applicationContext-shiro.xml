@@ -115,8 +115,8 @@
         </property>
         <property name="filterChainDefinitions">
             <value>
-                /loginAction_login.action = authc
-                /logout = logout
+                /loginAction_login.action = anon
+                /loginAction_signOut.action = anon
                 /authenticated = authc
                 /** = user,sysUser
             </value>
