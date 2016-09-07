@@ -24,16 +24,16 @@ public class UserRealm extends AuthorizingRealm {
 
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         authorizationInfo.setRoles(userService.getRoles(employeenum));
-        authorizationInfo.setStringPermissions(userService.findPermissions(employeenum));
+        authorizationInfo.setStringPermissions(userService.getPermissions(employeenum));
         return authorizationInfo;
     }
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 
-        String username = (String)token.getPrincipal();
+        String employeenum = (String)token.getPrincipal();
 
-        User user = userService.findByUsername(username);
+        User user = userService.getUserByEmployeenum(employeenum);
 
         if(user == null) {
             throw new UnknownAccountException();//没找到帐号
@@ -44,7 +44,7 @@ public class UserRealm extends AuthorizingRealm {
         }
 
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
-                user.getUsername(), //用户名
+                user.getEmployeenum(), //工号
                 user.getPassword(), //密码
                 ByteSource.Util.bytes(user.getCredentialsSalt()),//salt=username+salt
                 getName()  //realm name

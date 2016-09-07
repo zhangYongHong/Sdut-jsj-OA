@@ -3,7 +3,6 @@ package cn.opencil.oa.core.web.activiti.action;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
-import cn.opencil.oa.core.web.awards.service.AwardsService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.task.Task;
 import org.apache.commons.collections.map.HashedMap;
@@ -25,8 +24,6 @@ public class TasksAction {
     @Autowired
     private TasksService tasksService;
 
-    @Autowired
-    private AwardsService awardsService;
     private Long id;
     private HttpSession httpSession;
     /**

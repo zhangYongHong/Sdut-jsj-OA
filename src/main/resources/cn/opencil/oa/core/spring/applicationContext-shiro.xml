@@ -8,13 +8,21 @@
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <bean id="springCacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+        <property name="cacheManager" ref="ehcacheManager"/>
+    </bean>
+
+    <!--ehcache-->
+    <bean id="ehcacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:ehcache/ehcache.xml"/>
+    </bean>
     <!-- 缓存管理器 -->
-    <bean id="cacheManager" class="com.github.zhangkaitao.shiro.spring.SpringCacheManagerWrapper">
+    <bean id="cacheManager" class="cn.opencil.oa.core.ehcache.SpringCacheManagerWrapper">
         <property name="cacheManager" ref="springCacheManager"/>
     </bean>
 
     <!-- 凭证匹配器 -->
-    <bean id="credentialsMatcher" class="com.github.zhangkaitao.shiro.chapter16.credentials.RetryLimitHashedCredentialsMatcher">
+    <bean id="credentialsMatcher" class="cn.opencil.oa.core.credentials.RetryLimitHashedCredentialsMatcher">
         <constructor-arg ref="cacheManager"/>
         <property name="hashAlgorithmName" value="md5"/>
         <property name="hashIterations" value="2"/>
@@ -22,7 +30,7 @@
     </bean>
 
     <!-- Realm实现 -->
-    <bean id="userRealm" class="com.github.zhangkaitao.shiro.chapter16.realm.UserRealm">
+    <bean id="userRealm" class="cn.opencil.oa.core.realm.UserRealm">
         <property name="credentialsMatcher" ref="credentialsMatcher"/>
         <property name="cachingEnabled" value="false"/>
         <!--<property name="authenticationCachingEnabled" value="true"/>-->
@@ -90,7 +98,7 @@
         <property name="usernameParam" value="username"/>
         <property name="passwordParam" value="password"/>
         <property name="rememberMeParam" value="rememberMe"/>
-        <property name="loginUrl" value="/login"/>
+        <property name="loginUrl" value="/loginAction_login.action"/>
     </bean>
 
     <bean id="sysUserFilter" class="cn.opencil.oa.core.web.shiro.filter.SysUserFilter"/>
@@ -98,7 +106,7 @@
     <!-- Shiro的Web过滤器 -->
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
-        <property name="loginUrl" value="/login"/>
+        <property name="loginUrl" value="/login.jsp"/>
         <property name="filters">
             <util:map>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
@@ -107,7 +115,7 @@
         </property>
         <property name="filterChainDefinitions">
             <value>
-                /login = authc
+                /loginAction_login.action = authc
                 /logout = logout
                 /authenticated = authc
                 /** = user,sysUser

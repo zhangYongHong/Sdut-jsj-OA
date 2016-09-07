@@ -2,7 +2,7 @@ package cn.opencil.oa.core.web.organization.dao.impl;
 
 import cn.opencil.oa.core.base.dao.impl.BaseDaoImpl;
 import cn.opencil.oa.core.domain.Organization;
-import cn.opencil.oa.core.web.organization.server.OrganizationService;
+import cn.opencil.oa.core.web.organization.dao.OrganizationDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -10,12 +10,13 @@ import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by mnzero on 16-9-7.
  */
 @Repository
-public class OrganizationDaoImpl extends BaseDaoImpl<Organization> implements OrganizationService {
+public class OrganizationDaoImpl extends BaseDaoImpl<Organization> implements OrganizationDao {
     @Override
     public Organization findOne(Long organizationId) {
         return this.getHibernateTemplate().get(Organization.class, organizationId);
@@ -35,8 +36,8 @@ public class OrganizationDaoImpl extends BaseDaoImpl<Organization> implements Or
     }
 
     @Override
-    public Object findAllWithExclude(final Organization excludeOraganization) {
-        return this.getHibernateTemplate().execute(
+    public List<Organization> findAllWithExclude(final Organization excludeOraganization) {
+        return (List<Organization>) this.getHibernateTemplate().execute(
                 new HibernateCallback<Collection<Organization>>() {
 
                     @Override
