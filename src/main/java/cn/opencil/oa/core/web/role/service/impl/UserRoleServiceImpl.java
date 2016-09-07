@@ -21,7 +21,7 @@ import java.util.*;
  * Created by 张树伟 on 16-5-16.
  */
 @Service
-public class UserRoleServiceImpl extends BaseServiceImpl implements UserRoleService {
+public class UserRoleServiceImpl extends BaseServiceImpl<UserRole> implements UserRoleService {
 
     @Autowired
     private UserRoleDao userRoleDao;

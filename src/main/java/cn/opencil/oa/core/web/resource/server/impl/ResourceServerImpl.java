@@ -1,5 +1,7 @@
 package cn.opencil.oa.core.web.resource.server.impl;
 
+import cn.opencil.oa.core.base.dao.BaseDao;
+import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.Resource;
 import cn.opencil.oa.core.web.resource.dao.ResourceDao;
 import cn.opencil.oa.core.web.resource.server.ResourceServer;
@@ -14,7 +16,7 @@ import java.util.*;
  * Created by mnzero on 16-9-5.
  */
 @Service
-public class ResourceServerImpl implements ResourceServer {
+public class ResourceServerImpl extends BaseServiceImpl<Resource> implements ResourceServer {
     @Autowired
     private ResourceDao resourceDao;
 
@@ -71,5 +73,10 @@ public class ResourceServerImpl implements ResourceServer {
             }
         }
         return false;
+    }
+
+    @Override
+    public BaseDao getBaseDao() {
+        return resourceDao;
     }
 }

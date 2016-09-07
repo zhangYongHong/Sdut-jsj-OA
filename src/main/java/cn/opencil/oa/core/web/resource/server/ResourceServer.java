@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.resource.server;
 
+import cn.opencil.oa.core.base.service.BaseService;
 import cn.opencil.oa.core.domain.Resource;
 
 import java.util.Collection;
@@ -9,7 +10,7 @@ import java.util.Set;
 /**
  * Created by mnzero on 16-9-5.
  */
-public interface ResourceServer {
+public interface ResourceServer extends BaseService<Resource> {
     /**
      * 得到资源对应的权限字符串
      * @param resourceIds

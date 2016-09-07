@@ -43,10 +43,8 @@ public class UserAction extends BaseAction<User> {
 
 
     public String list() {
-
         PageResult<User> userPageResult = this.userService
                 .getUserPageResult(userQuery);
-
         ActionContext.getContext().put("userPapers", userPageResult);
         return listAction;
     }

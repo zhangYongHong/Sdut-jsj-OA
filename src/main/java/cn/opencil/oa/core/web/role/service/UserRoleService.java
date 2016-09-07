@@ -13,7 +13,7 @@ import java.util.Set;
  * Created by 张树伟 on 16-5-16.
  */
 
-public interface UserRoleService extends BaseService {
+public interface UserRoleService extends BaseService<UserRole> {
     /**
      * 获取数据字典中的角色名称
      * @param keyWorld
