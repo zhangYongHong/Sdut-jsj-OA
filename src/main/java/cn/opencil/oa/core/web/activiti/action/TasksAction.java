@@ -6,6 +6,7 @@ import cn.opencil.oa.core.web.activiti.service.TasksService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.task.Task;
 import org.apache.commons.collections.map.HashedMap;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -26,9 +27,11 @@ public class TasksAction {
 
     private Long id;
     private HttpSession httpSession;
+
     /**
      * 待办任务列表
      */
+    @RequiresPermissions("task:view")
     public String taskList() {
         List<Task> taskList = tasksService.taskList();
         ActionContext.getContext().put("taskList", taskList);
@@ -39,6 +42,7 @@ public class TasksAction {
      * 签收任务
      * @return
      */
+    @RequiresPermissions("task:claim")
     public String claimTask() {
         String taskId = id.toString();
         User user = PageUtil.getUser();
@@ -49,6 +53,7 @@ public class TasksAction {
     /**
      * 跳转到业务对象的表单
      */
+    @RequiresPermissions("viewTaskForm")
     public String viewTaskForm() {
         String formUrl;
         //通过taskID获取formKey
@@ -67,6 +72,7 @@ public class TasksAction {
     /**
      * 办理任务
      */
+    @RequiresPermissions("completeTask")
     public String completeTask() {
         httpSession = ServletActionContext.getRequest().getSession();
         String taskId = (String) httpSession.getAttribute("taskId");

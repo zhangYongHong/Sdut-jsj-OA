@@ -11,6 +11,7 @@ import cn.opencil.oa.core.query.AwardsQuery;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.log4j.Logger;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -37,6 +38,7 @@ public class AwardsAction extends BaseAction<Awards> {
     private AwardsQuery awardsQuery;
     private Long aid;
 
+    @RequiresPermissions("awards:view")
     public String list() {
         awardsQuery = new AwardsQuery();
         awardsQuery.setState(2);
@@ -68,10 +70,12 @@ public class AwardsAction extends BaseAction<Awards> {
         return "notCheck";
     }
 
+    @RequiresPermissions("awards:add")
     public String addUI() {
         return addUI;
     }
 
+    @RequiresPermissions("awards:add")
     public String add() {
         User user = PageUtil.getUser();
         Awards awards = this.getModel();
@@ -83,7 +87,7 @@ public class AwardsAction extends BaseAction<Awards> {
         return "redirectToCheck";
     }
 
-
+    @RequiresPermissions("awards:update")
     public String update() {
         Awards awards = this.awardsService.getEntryById(this.getModel().getAid());
         BeanUtils.copyProperties(this.getModel(), awards);
@@ -91,7 +95,8 @@ public class AwardsAction extends BaseAction<Awards> {
         return "redirect";
     }
 
-    public String delete() {//管理员才能删除
+    @RequiresPermissions("awards:delete")
+    public String delete() {
         Long aid = this.getModel().getAid();
         this.awardsService.deleteEntry(aid);
         return "redirect";
@@ -103,6 +108,7 @@ public class AwardsAction extends BaseAction<Awards> {
      * @param id
      * @return
      */
+    @RequiresPermissions("awards:startProcess")
     private void startProcess(Long id) {
         awardsService.startProcess(id);
     }
@@ -110,6 +116,7 @@ public class AwardsAction extends BaseAction<Awards> {
     /**
      * 办理
      */
+    @RequiresPermissions("awards:audit")
     public String audit() {
         aid = this.getModel().getAid();
         Awards awards = awardsService.getEntryById(aid);
@@ -119,6 +126,7 @@ public class AwardsAction extends BaseAction<Awards> {
         return "audit";
     }
 
+    @RequiresPermissions("awards:audit")
     public String auditDo() {
         Awards awards = this.getModel();
         awardsService.updateEntry(awards);
@@ -127,6 +135,7 @@ public class AwardsAction extends BaseAction<Awards> {
         return "redirectToTask";
     }
 
+    @RequiresPermissions("awards:adjust")
     public String adjustUI() {
         aid = this.getModel().getAid();
         Awards awards = awardsService.getEntryById(aid);
@@ -134,6 +143,7 @@ public class AwardsAction extends BaseAction<Awards> {
         return "adjust";
     }
 
+    @RequiresPermissions("awards:adjust")
     public String adjust() {
         this.getModel().setState(1);
         awardsService.updateEntry(this.getModel());

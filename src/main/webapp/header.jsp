@@ -73,44 +73,51 @@
             <div class="mainnav">
                 <ul>
                     <li><a href="index.jsp"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
-                        <%--<%--%>
-                        <%--if (popedomCode.contains("abc")) {--%>
-                        <%--%>--%>
-                    <li>
-                        <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
-                                <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/activitiAction_list.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/activitiAction_newProcessUI.action"><span
-                                            class="input-small"/><span class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
+                    <shiro:hasRole name="admin">
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
+                            <ul class="sub">
+                                <li>
+                                    <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
+                                    <ul class="sub">
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/activitiAction_list.action"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/activitiAction_newProcessUI.action"><span
+                                                    class="input-small"/><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
+                                        </li>
+                                        <li><a href="#"><span class="input-small"/><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
+                                    </ul>
+                                </li>
+                                <shiro:hasPermission name="systemDDLAction:*">
+                                    <li>
+                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
+                                        <ul class="sub">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
+                                                        class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
+                                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li><a href="#"><span class="input-small"/><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
-                                <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
-                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
-                                <ul class="sub">
-                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a></li>
-                                    <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                        <%--<%--%>
-                        <%--}--%>
-                        <%--%>--%>
+                                </shiro:hasPermission>
+                                <shiro:hasPermission name="role:*">
+                                    <li>
+                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
+                                        <ul class="sub">
+                                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
+                                            </li>
+                                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </shiro:hasPermission>
+                            </ul>
+                        </li>
+                    </shiro:hasRole>
                     <li>
                         <a href="#"><span class="icon16 icomoon-icon-grid"></span>个人办公</a>
                         <ul class="sub">
