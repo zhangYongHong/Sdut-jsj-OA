@@ -43,24 +43,24 @@ public class ResourceServerImpl extends BaseServiceImpl<Resource> implements Res
         return resourceDao.getAll();
     }
 
-    @Override
-    public List<Resource> findMenus(Set<String> permissions) {
-        List<Resource> allResources = (List<Resource>) getAll();
-        List<Resource> menus = new ArrayList<Resource>();
-        for(Resource resource : allResources) {
-            if(resource.isRootNode()) {
-                continue;
-            }
-            if(resource.getType() != Resource.ResourceType.menu) {
-                continue;
-            }
-            if(!hasPermission(permissions, resource)) {
-                continue;
-            }
-            menus.add(resource);
-        }
-        return menus;
-    }
+//    @Override
+//    public List<Resource> findMenus(Set<String> permissions) {
+//        List<Resource> allResources = (List<Resource>) getAll();
+//        List<Resource> menus = new ArrayList<Resource>();
+//        for(Resource resource : allResources) {
+//            if(resource.isRootNode()) {
+//                continue;
+//            }
+//            if(resource.getType() != Resource.ResourceType.menu) {
+//                continue;
+//            }
+//            if(!hasPermission(permissions, resource)) {
+//                continue;
+//            }
+//            menus.add(resource);
+//        }
+//        return menus;
+//    }
     private boolean hasPermission(Set<String> permissions, Resource resource) {
         if(StringUtils.isEmpty(resource.getPermission())) {
             return true;

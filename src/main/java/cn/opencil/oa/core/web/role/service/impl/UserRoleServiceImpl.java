@@ -81,18 +81,6 @@ public class UserRoleServiceImpl extends BaseServiceImpl<UserRole> implements Us
     }
 
     @Override
-    public Set<String> getPermissions(Long[] roleIds) {
-        Set<Long> resourceIds = new HashSet<>();
-        for (Long roleId : roleIds) {
-            Role role = getOne(roleId);
-            if (role != null) {
-                resourceIds.addAll(role.getResourceIds());
-            }
-        }
-        return resourceServer.getPermissions(resourceIds);
-    }
-
-    @Override
     public List getDDLs(String keyWorld) {
         ArrayList<SystemDDL> arrayList;
         arrayList = (ArrayList<SystemDDL>) systemDDLDao.getDDLs(keyWorld);

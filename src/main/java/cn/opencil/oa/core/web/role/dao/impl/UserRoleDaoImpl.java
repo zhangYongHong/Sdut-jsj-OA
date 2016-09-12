@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.role.dao.impl;
 
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.impl.BaseDaoImpl;
 import cn.opencil.oa.core.domain.Role;
 import cn.opencil.oa.core.domain.UserRole;
@@ -11,6 +12,7 @@ import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by 张树伟 on 16-5-16.
@@ -42,7 +44,9 @@ public class UserRoleDaoImpl extends BaseDaoImpl<UserRole> implements UserRoleDa
 
     @Override
     public Role getOne(Long roleId) {
-        return this.getHibernateTemplate().get(Role.class, roleId);
+        Role role = this.getHibernateTemplate().get(Role.class, roleId);
+        role.setResourceIds(PageUtil.StrListTOLongList(PageUtil.getStringList(role.getResourceIdsStr())));
+        return role;
     }
 
     @Override
@@ -54,7 +58,11 @@ public class UserRoleDaoImpl extends BaseDaoImpl<UserRole> implements UserRoleDa
                         StringBuilder hql = new StringBuilder("from Role where 1=1 ");
 
                         Query query = session.createQuery(hql.toString());
-                        return query.list();
+                        List<Role> list = query.list();
+                        for (Role role : list) {
+                            role.setResourceIds(PageUtil.StrListTOLongList(PageUtil.getStringList(role.getResourceIdsStr())));
+                        }
+                        return list;
                     }
                 });
     }

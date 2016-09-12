@@ -39,7 +39,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
 
     @Override
     public PageResult<User> getUserPageResult(final UserQuery userQuery) {
-
         String roleName;
         PageResult<User> userPageResult = this.getPageResult(userQuery);
         List<User> userList = userPageResult.getRows();

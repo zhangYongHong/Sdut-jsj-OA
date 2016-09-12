@@ -1,10 +1,6 @@
 package cn.opencil.oa.core.domain;
 
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
-
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +23,7 @@ public class User implements Serializable {
     private String email;
     private String deptview;//页面显示
     private List<Long> roleIds; //拥有的角色列表
+    private String roleIdsStr;
     private Boolean locked = Boolean.FALSE;
 
 
@@ -78,6 +75,14 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -127,9 +132,6 @@ public class User implements Serializable {
     }
 
     public List<Long> getRoleIds() {
-        if (roleIds == null) {
-            roleIds = new ArrayList<Long>();
-        }
         return roleIds;
     }
 
@@ -138,28 +140,30 @@ public class User implements Serializable {
     }
 
     public String getRoleIdsStr() {
-        if(CollectionUtils.isEmpty(roleIds)) {
-            return "";
-        }
-        StringBuilder s = new StringBuilder();
-        for(Long roleId : roleIds) {
-            s.append(roleId);
-            s.append(",");
-        }
-        return s.toString();
+//        if(CollectionUtils.isEmpty(roleIds)) {
+//            return "";
+//        }
+//        StringBuilder s = new StringBuilder();
+//        for(Long roleId : roleIds) {
+//            s.append(roleId);
+//            s.append(",");
+//        }
+//        return s.toString();
+        return roleIdsStr;
     }
 
     public void setRoleIdsStr(String roleIdsStr) {
-        if(StringUtils.isEmpty(roleIdsStr)) {
-            return;
-        }
-        String[] roleIdStrs = roleIdsStr.split(",");
-        for(String roleIdStr : roleIdStrs) {
-            if(StringUtils.isEmpty(roleIdStr)) {
-                continue;
-            }
-            getRoleIds().add(Long.valueOf(roleIdStr));
-        }
+//        if(StringUtils.isEmpty(roleIdsStr)) {
+//            return;
+//        }
+//        String[] roleIdStrs = roleIdsStr.split(",");
+//        for(String roleIdStr : roleIdStrs) {
+//            if(StringUtils.isEmpty(roleIdStr)) {
+//                continue;
+//            }
+//            getRoleIds().add(Long.valueOf(roleIdStr));
+//        }
+        this.roleIdsStr = roleIdsStr;
     }
 
     public Boolean getLocked() {

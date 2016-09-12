@@ -8,26 +8,26 @@ import java.io.Serializable;
 public class Resource implements Serializable {
     private Long id; //编号
     private String name; //资源名称
-    private ResourceType type = ResourceType.menu; //资源类型
+    private String type; //资源类型
     private String url; //资源路径
     private String permission; //权限字符串
     private Long parentId; //父编号
     private String parentIds; //父编号列表
     private Boolean available = Boolean.FALSE;
 
-    public static enum ResourceType {
-        menu("菜单"), button("按钮");
-
-        private final String info;
-
-        private ResourceType(String info) {
-            this.info = info;
-        }
-
-        public String getInfo() {
-            return info;
-        }
-    }
+//    public static enum ResourceType {
+//        menu("菜单"), button("按钮");
+//
+//        private final String info;
+//
+//        private ResourceType(String info) {
+//            this.info = info;
+//        }
+//
+//        public String getInfo() {
+//            return info;
+//        }
+//    }
 
 
     public Long getId() {
@@ -46,11 +46,11 @@ public class Resource implements Serializable {
         this.name = name;
     }
 
-    public ResourceType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(ResourceType type) {
+    public void setType(String type) {
         this.type = type;
     }
 

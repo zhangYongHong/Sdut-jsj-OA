@@ -1,18 +1,18 @@
 package cn.opencil.oa.core.web.paper.action;
 
 import cn.opencil.oa.common.page.PageResult;
-import cn.opencil.oa.common.util.*;
+import cn.opencil.oa.common.util.DateUtil;
+import cn.opencil.oa.common.util.ExcelFileGeneratorUtil;
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.QuestionPaper;
-import cn.opencil.oa.core.domain.RolePopedom;
-import cn.opencil.oa.core.domain.User;
-import cn.opencil.oa.core.domain.UserRole;
 import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.paper.service.QPService;
 import cn.opencil.oa.core.web.role.service.RolePopedomService;
 import cn.opencil.oa.core.web.role.service.UserRoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -21,8 +21,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Project Name:SdutOA
@@ -48,14 +46,10 @@ public class QPAction extends BaseAction<QuestionPaper> {
 
     private File uploadfile;
 
+    @RequiresPermissions("questionPaper:view")
     public String list() {
         PageResult<QuestionPaper> qustionPapers = null;
         try {
-            //获取登陆用户
-            User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
-            if (this.checkUserForRole(user) == false)
-                qpQuery.setTeacher(user.getUserName());
-
             if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
                 qpQuery.setSchoolYear(DateUtil.groupSchoolYear());
             else
@@ -69,10 +63,12 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return listAction;
     }
 
+    @RequiresPermissions("questionPaper:add")
     public String addUI() {
         return addUI;
     }
 
+    @RequiresPermissions("questionPaper:add")
     public String add() {
         QuestionPaper paper = this.getModel();
         try {
@@ -91,12 +87,14 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return "redirect";
     }
 
+    @RequiresPermissions("questionPaper:update")
     public String updateUI() {
         tempId = this.getModel().getQid();
         this.loadingValue();
         return updateUI;
     }
 
+    @RequiresPermissions("questionPaper:update")
     public String update() {
         QuestionPaper questionPaper = this.getModel();
         questionPaper.setQid(tempId);
@@ -112,7 +110,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
             this.qpService.updateEntry(questionPaper);
             this.loadingValue();
             this.addFieldError("qpError", "更新成功！");
-            return "redirect";
+            return updateUI;
         } catch (Exception e) {
             e.getStackTrace();
             this.loadingValue();
@@ -121,6 +119,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
         }
     }
 
+    @RequiresPermissions("questionPaper:delete")
     public String delete() {
         Long id = null;
         try {
@@ -206,31 +205,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
         } else {
             this.addFieldError("qpError", "信息获取错误，请重新加载页面！");
         }
-    }
-
-    /**
-     * 验证用户权限
-     *
-     * @param user
-     * @return
-     */
-    private boolean checkUserForRole(User user) {
-        UserRole userRole = null;
-        RolePopedom rolePopedom = null;
-        try {
-            userRole = userRoleService.getUserRole(user.getUid());
-            rolePopedom = rolePopedomService.getRolePopedom(userRole.getRid());
-        } catch (Exception e) {
-            this.addFieldError("QPError", "权限验证失败！");
-        }
-        return rolePopedom.getPopedomCode().contains("b");
-    }
-
-    private boolean checkNum(String num) {
-        String check = "^[0-9]*$";
-        Pattern numRegular = Pattern.compile(check);
-        Matcher matcher = numRegular.matcher(num);
-        return matcher.matches();
     }
 
     //==============================================================

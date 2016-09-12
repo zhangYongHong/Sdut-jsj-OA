@@ -10,6 +10,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Set;
+
 /**
  * Created by mnzero on 16-9-5.
  */
@@ -21,7 +23,8 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         String employeenum = (String)principals.getPrimaryPrincipal();
-
+        Set<String> strings = userService.getRoles(employeenum);
+        Set<String> strings1 = userService.getPermissions(employeenum);
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         authorizationInfo.setRoles(userService.getRoles(employeenum));
         authorizationInfo.setStringPermissions(userService.getPermissions(employeenum));
@@ -32,13 +35,11 @@ public class UserRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 
         String employeenum = (String)token.getPrincipal();
-
         User user = userService.getUserByEmployeenum(employeenum);
 
         if(user == null) {
             throw new UnknownAccountException();//没找到帐号
         }
-
         if(Boolean.TRUE.equals(user.getLocked())) {
             throw new LockedAccountException(); //帐号锁定
         }

@@ -1,6 +1,7 @@
 package cn.opencil.oa.core.web.basedata.action;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.PasswordHelper;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.domain.UserRole;
@@ -31,6 +32,8 @@ public class UserAction extends BaseAction<User> {
     private UserService userService;
     @Autowired
     private UserRoleService userRoleService;
+    @Autowired
+    private PasswordHelper passwordHelper;
 
 
     private static Long tempUid;
@@ -58,7 +61,7 @@ public class UserAction extends BaseAction<User> {
         user = this.getModel();
         String employeenum = user.getEmployeenum();
         user.setPassword("000000");
-
+        passwordHelper.encryptPassword(user);
         if (!this.checkInfo(user)) {
 
             User userByDataBase = userService.getUserByEmployeenum(employeenum);
@@ -170,6 +173,7 @@ public class UserAction extends BaseAction<User> {
         try {
             user = userService.getEntryById(uid);
             user.setPassword("000000");
+            passwordHelper.encryptPassword(user);
             userService.updateEntry(user);
         } catch (Exception e) {
             return "redirect";
@@ -200,6 +204,7 @@ public class UserAction extends BaseAction<User> {
         }
         try {
             userByDB.setPassword(user.getPassword());
+            passwordHelper.encryptPassword(userByDB);
             userService.updateEntry(userByDB);
         } catch (Exception e) {
             this.addFieldError("userError", "密码修改失败！");

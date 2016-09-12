@@ -16,6 +16,7 @@ import cn.opencil.oa.core.web.role.service.RolePopedomService;
 import cn.opencil.oa.core.web.role.service.UserRoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -47,6 +48,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
     private static Long tempId;
     private PaperQuery tpQuery = new PaperQuery();
 
+    @RequiresPermissions("questionPaper:view")
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
         try {
@@ -70,10 +72,12 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
+    @RequiresPermissions("questionPaper:add")
     public String addUI() {
         return addUI;
     }
 
+    @RequiresPermissions("questionPaper:add")
     public String add() {
         TrainingPaper paper = this.getModel();
         if (checkValue(paper)) {
@@ -92,12 +96,14 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
+    @RequiresPermissions("questionPaper:update")
     public String updateUI() {
         tempId = this.getModel().getTid();
         this.loadingValue();
         return updateUI;
     }
 
+    @RequiresPermissions("questionPaper:update")
     public String update() {
         TrainingPaper trainingPaper = this.getModel();
         trainingPaper.setTid(tempId);
@@ -117,6 +123,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
+    @RequiresPermissions("questionPaper:delete")
     public String delete() {
         Long id = this.getModel().getTid();
         this.tpService.deleteEntry(id);

@@ -161,21 +161,25 @@ public class PageUtil {
         List<String> list = new ArrayList<>();
         List listNum = new ArrayList();
         int start = 0, end;
-        for (int i = 0; i < str.toCharArray().length; i++) {
-            if (str.charAt(i) == '，' || str.charAt(i) == ',') {
-                listNum.add(i);
-            }
-        }
-        if (listNum.size() != 0) {
-            for (int i = 0; i < listNum.size() + 1; i++) {
-                if (i != listNum.size()) {
-                    end = (int) listNum.get(i);
-                    list.add(str.substring(start, end));
-                    start = end + 1;
-                } else {
-                    list.add(str.substring(start, str.length()));
+        if (str.length() > 1) {
+            for (int i = 0; i < str.toCharArray().length; i++) {
+                if (str.charAt(i) == '，' || str.charAt(i) == ',') {
+                    listNum.add(i);
                 }
             }
+            if (listNum.size() != 0) {
+                for (int i = 0; i < listNum.size() + 1; i++) {
+                    if (i != listNum.size()) {
+                        end = (int) listNum.get(i);
+                        list.add(str.substring(start, end));
+                        start = end + 1;
+                    } else {
+                        list.add(str.substring(start, str.length()));
+                    }
+                }
+            }
+        } else {
+            list.add(str);
         }
         return list;
     }
@@ -194,7 +198,7 @@ public class PageUtil {
             stuNameList = getStringList(list.get(i).getStuname());
             specialtyList = getStringList(list.get(i).getSpecialty());
             classesList = getStringList(list.get(i).getClasses());
-            if(0 != stuNameList.size()) {
+            if (0 != stuNameList.size()) {
                 for (int j = 0; j < stuNameList.size(); j++) {
                     awards = list.get(i).clone();
                     awards.setStuname(stuNameList.get(j));
@@ -229,4 +233,16 @@ public class PageUtil {
     public static HttpSession getHttpSession() {
         return ServletActionContext.getRequest().getSession();
     }
+
+    public static List<Long> StrListTOLongList(List<String> stringList) {
+        if (stringList.size() > 0) {
+            List<Long> longs = new ArrayList<>();
+            for (String str : stringList) {
+                longs.add(Long.parseLong(str));
+            }
+            return longs;
+        }
+        return null;
+    }
+
 }

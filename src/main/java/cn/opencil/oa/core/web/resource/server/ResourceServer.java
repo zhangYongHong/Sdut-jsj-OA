@@ -4,7 +4,6 @@ import cn.opencil.oa.core.base.service.BaseService;
 import cn.opencil.oa.core.domain.Resource;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -27,5 +26,5 @@ public interface ResourceServer extends BaseService<Resource> {
      * @param permissions
      * @return
      */
-    List<Resource> findMenus(Set<String> permissions);
+//    List<Resource> findMenus(Set<String> permissions);
 }

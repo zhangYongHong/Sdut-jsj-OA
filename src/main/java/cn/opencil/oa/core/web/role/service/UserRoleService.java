@@ -47,5 +47,4 @@ public interface UserRoleService extends BaseService<UserRole> {
 
     String getRoleName(final Long uid);
 
-    Set<String> getPermissions(Long[] roleIds);
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.query.BaseQuery;
 import cn.opencil.oa.core.query.UserQuery;
 import org.hibernate.HibernateException;
@@ -69,8 +70,13 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
 	@Override
 	public User getUserByEmployeenum(String value) {
 		List list = this.getHibernateTemplate().find("from User where employeenum = ?",value);
-
-		return (User) ((null != list && list.size() > 0)?list.get(0):null);
+		User user = (User) ((null != list && list.size() > 0)?list.get(0):null);
+		/*
+		 * 因为数据库中类型为varchar,而domian中对应的数据类型为list，故将数据库中取出的数据缓存到RoleIdsStr中
+		 * 再转换为list
+		*/
+		user.setRoleIds(PageUtil.StrListTOLongList(PageUtil.getStringList(user.getRoleIdsStr())));
+		return user;
 	}
 
 }
