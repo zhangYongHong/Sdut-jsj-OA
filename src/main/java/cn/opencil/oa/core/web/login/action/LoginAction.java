@@ -8,7 +8,7 @@ import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import cn.opencil.oa.core.web.basedata.service.UserService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -45,7 +45,19 @@ public class LoginAction extends BaseAction<User>{
             UsernamePasswordToken token = new UsernamePasswordToken(employeenum, passwd);
             currentUser.login(token);
             user = userService.getUserByEmployeenum(employeenum);
-        } catch (Exception e) {
+        } catch (UnknownAccountException uae) {
+            this.addFieldError("loginError", "用户名或密码错误！");
+            return "login";
+        } catch (IncorrectCredentialsException ice) {
+            this.addFieldError("loginError", "登陆错误！");
+            return "login";
+        } catch (LockedAccountException lae) {
+            this.addFieldError("loginError", "您的账号已锁定，请联系管理员解锁！");
+            return "login";
+        } catch (ExcessiveAttemptsException eae) {
+            this.addFieldError("loginError", "登陆错误！");
+            return "login";
+        } catch (AuthenticationException e) {
             this.addFieldError("loginError", "登陆错误！");
             return "login";
         }
@@ -67,8 +79,6 @@ public class LoginAction extends BaseAction<User>{
         this.loadSource("competitionView");
         this.loadSource("state");
 
-
-
 		return SUCCESS;
 	}
 
@@ -85,19 +95,4 @@ public class LoginAction extends BaseAction<User>{
         }
         return false;
     }
-//    private boolean checkValue(User user) {
-//        if(user != null) {
-//            if(user.getEmployeenum() == null || user.getEmployeenum().trim().equals("")) {
-//                this.addFieldError("loginEmError", "工号不能为空！");
-//                return true;
-//            }
-//            if(user.getPassword() == null || user.getPassword().trim().equals("")) {
-//                this.addFieldError("loginPSError", "密码不能为空！");
-//                return true;
-//            }
-//        } else {
-//            return true;
-//        }
-//        return false;
-//    }
 }
