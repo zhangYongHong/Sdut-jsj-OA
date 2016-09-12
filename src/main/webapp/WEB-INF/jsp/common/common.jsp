@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%
-    String popedomCode = (String) request.getSession().getAttribute("globleUserRole");
-    response.setHeader("P3P","CP=CAO PSA OUR");
-%>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<%--<%--%>
+    <%--String popedomCode = (String) request.getSession().getAttribute("globleUserRole");--%>
+    <%--response.setHeader("P3P","CP=CAO PSA OUR");--%>
+<%--%>--%>

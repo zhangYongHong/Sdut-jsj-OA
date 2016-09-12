@@ -12,19 +12,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Supr admin</title>
+    <title>计算机学院办公系统</title>
 
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
     <link href="css/icons.css" rel="stylesheet" type="text/css"/>
     <!-- Main stylesheets -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
-
-    <!--<script type="text/javascript">-->
-    <!--//adding load class to body and hide page-->
-    <!--document.documentElement.className += 'loadstate';-->
-    <!--</script>-->
-
 </head>
 
 <body>
@@ -70,43 +64,38 @@
                             </div>
                         </div>
                     </div>
-                    <%
-                        if (popedomCode.contains("abc")) {
-                    %>
-                    <div class="form-row row-fluid">
-                        <div class="row-fluid">
-                            <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
-                            <div class="span2">
-                                <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                          name="rid" headerKey="0" headerValue="请选择"
-                                          cssClass="select2-active"></s:select>
+                    <shiro:hasRole name="admin">
+                        <div class="form-row row-fluid">
+                            <div class="row-fluid">
+                                <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
+                                <div class="span2">
+                                    <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
+                                              name="rid" headerKey="0" headerValue="请选择"
+                                              cssClass="select2-active"></s:select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row row-fluid">
-                        <div class="row-fluid">
-                            <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
-                            <div class="span2">
-                                <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
-                                          name="deptid" value="%{#oldUser.deptid}"></s:select>
+                        <div class="form-row row-fluid">
+                            <div class="row-fluid">
+                                <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
+                                <div class="span2">
+                                    <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
+                                              name="deptid" value="%{#oldUser.deptid}"></s:select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <%
-                    } else {
-                    %>
-                    <div class="form-row row-fluid">
-                        <div class="row-fluid">
-                            <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
-                            <div class="span2">
-                                <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
-                                          name="deptid" headerValue="请选择" readonly="readonly"></s:select>
+                    </shiro:hasRole>
+                    <shiro:hasRole name="teacher">
+                        <div class="form-row row-fluid">
+                            <div class="row-fluid">
+                                <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
+                                <div class="span2">
+                                    <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
+                                              name="deptid" headerValue="请选择" readonly="readonly"></s:select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <%
-                        }
-                    %>
+                    </shiro:hasRole>
                     <div class="form-row row-fluid">
                         <div class="span12">
                             <div class="row-fluid">
@@ -138,65 +127,9 @@
                             </div>
                         </div>
                     </div>
-
-
                 </form>
-
             </div><!-- End .span12 -->
-
         </div><!-- End .row-fluid -->
-
-        <div class="modal fade hide" id="myModal1">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span
-                        class="icon12 minia-icon-close"></span></button>
-                <h3>Chat layout</h3>
-            </div>
-            <div class="modal-body">
-                <ul class="messages">
-                    <li class="user clearfix">
-                        <a href="#" class="avatar">
-                            <img src="images/avatar2.jpeg" alt=""/>
-                        </a>
-                        <div class="message">
-                            <div class="head clearfix">
-                                <span class="name"><strong>Lazar</strong> says:</span>
-                                <span class="time">25 seconds ago</span>
-                            </div>
-                            <p>
-                                Time to go i call you tomorrow.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="admin clearfix">
-                        <a href="#" class="avatar">
-                            <img src="images/avatar3.jpeg" alt=""/>
-                        </a>
-                        <div class="message">
-                            <div class="head clearfix">
-                                <span class="name"><strong>Sugge</strong> says:</span>
-                                <span class="time">just now</span>
-                            </div>
-                            <p>
-                                OK, have a nice day.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="sendMsg">
-                        <form class="form-horizontal" action="#">
-                                <textarea class="elastic" id="textarea1" rows="1" placeholder="Enter your message ..."
-                                          style="width:98%;"></textarea>
-                            <button type="submit" class="btn btn-info marginT10">Send message</button>
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-            </div>
-        </div>
 
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->

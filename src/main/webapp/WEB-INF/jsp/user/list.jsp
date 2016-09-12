@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Supr admin</title>
+    <title>计算机学院办公系统</title>
 
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/icons.css" rel="stylesheet" type="text/css"/>
@@ -14,10 +14,6 @@
     <link href="plugins/dataTables/jquery.dataTables.css" type="text/css" rel="stylesheet"/>
     <!-- Main stylesheets -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
-    <!--<script type="text/javascript">-->
-    <!--//adding load class to body and hide page-->
-    <!--document.documentElement.className += 'loadstate';-->
-    <!--</script>-->
 
 </head>
 
@@ -27,14 +23,9 @@
     <div class="contentwrapper"><!--Content wrapper-->
 
         <div class="heading">
-
             <h3>用户管理表</h3>
-
-
         </div><!-- End .heading-->
-
         <!-- Build page from here: Usual with <div class="row-fluid"></div> -->
-
         <div class="row-fluid">
 
             <div class="span12">

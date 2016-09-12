@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>计算机学院OA</title>
+    <title>计算机学院办公系统</title>
 
     <!-- Le styles -->
 
@@ -72,17 +72,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <%
-                                if (popedomCode.contains("abc")) {
-                            %>
-                            <div class="bottom ">
-                                <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
-                                <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                                <a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>" class="btn btip marginR10 marginB10">导出</a>
-                            </div>
-                            <%
-                                }
-                            %>
+                            <shiro:hasRole name="admin">
+                                <div class="bottom ">
+                                    <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
+                                    <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>"
+                                       class="btn btip marginR10 marginB10">导出</a>
+                                </div>
+                            </shiro:hasRole>
                         </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
@@ -135,17 +132,15 @@
                                     <td><s:property value="isChange"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a href="tPAction_updateUI.action?tid=<s:property value="tid"/>"
-                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <%
-                                                if (popedomCode.contains("abc")) {
-                                            %>
-                                            <a href="tPAction_delete.action?tid=<s:property value="tid"/>"
-                                               onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
-                                            <%
-                                                }
-                                            %>
+                                            <shiro:hasPermission name="trainingPaper:update">
+                                                <a href="tPAction_updateUI.action?tid=<s:property value="tid"/>"
+                                                   class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                            </shiro:hasPermission>
+                                            <shiro:hasPermission name="trainingPaper:delete">
+                                                <a href="tPAction_delete.action?tid=<s:property value="tid"/>"
+                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                        class="icon12 icomoon-icon-remove"></span></a>
+                                            </shiro:hasPermission>
                                         </div>
                                     </td>
                                 </tr>
@@ -171,7 +166,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href="tPAction_list.action?schoolYear=" + selObj.options[i].value;
+        window.location.href = "tPAction_list.action?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

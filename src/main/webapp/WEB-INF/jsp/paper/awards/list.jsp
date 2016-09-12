@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>计算机学院OA</title>
+    <title>计算机学院办公系统</title>
 
     <!-- Le styles -->
 
@@ -70,16 +70,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <%
-                                if (popedomCode.contains("abc")) {
-                            %>
-                            <div class="bottom ">
-                                <a href="qPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                                <a href="qPAction_exportExcel.action" class="btn btip marginR10 marginB10">导出</a>
-                            </div>
-                            <%
-                                }
-                            %>
+                            <shiro:hasRole name="admin">
+                                <div class="bottom ">
+                                    <a href="qPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="qPAction_exportExcel.action" class="btn btip marginR10 marginB10">导出</a>
+                                </div>
+                            </shiro:hasRole>
                         </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
@@ -131,15 +127,11 @@
                                     <td><s:property value="comment"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <%
-                                                if (popedomCode.contains("abc")) {
-                                            %>
-                                            <a href="awardsAction_delete.action?aid=<s:property value="aid"/>"
-                                               onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
-                                            <%
-                                                }
-                                            %>
+                                            <shiro:hasPermission name="awards:delete">
+                                                <a href="awardsAction_delete.action?aid=<s:property value="aid"/>"
+                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                        class="icon12 icomoon-icon-remove"></span></a>
+                                            </shiro:hasPermission>
                                         </div>
                                     </td>
                                 </tr>
@@ -165,7 +157,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href="awardsAction_list.action?schoolYear=" + selObj.options[i].value;
+        window.location.href = "awardsAction_list.action?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
