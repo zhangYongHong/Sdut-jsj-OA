@@ -141,19 +141,19 @@
                                     <td><s:property value="comment"/></td>
                                     <td><s:property value="fileNum"/></td>
                                     <td><s:property value="isChange"/></td>
-                                    <td>
-                                        <div class="controls center">
-                                            <shiro:hasPermission name="questionPaper:update">
+                                    <shiro:hasPermission name="questionPaper:update,delete">
+                                        <td>
+                                            <div class="controls center">
+
                                                 <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            </shiro:hasPermission>
-                                            <shiro:hasPermission name="questionPaper:delete">
+
                                                 <a href="qPAction_delete.action?qid=<s:property value="qid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
-                                            </shiro:hasPermission>
-                                        </div>
-                                    </td>
+                                            </div>
+                                        </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

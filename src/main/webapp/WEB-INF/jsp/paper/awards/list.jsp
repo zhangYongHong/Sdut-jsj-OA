@@ -125,15 +125,16 @@
                                     <td><s:property value="atime"/></td>
                                     <td><s:property value="prizeunit"/></td>
                                     <td><s:property value="comment"/></td>
-                                    <td>
-                                        <div class="controls center">
-                                            <shiro:hasPermission name="awards:delete">
+                                    <shiro:hasPermission name="awards:delete">
+                                        <td>
+                                            <div class="controls center">
+
                                                 <a href="awardsAction_delete.action?aid=<s:property value="aid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
-                                            </shiro:hasPermission>
-                                        </div>
-                                    </td>
+                                            </div>
+                                        </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

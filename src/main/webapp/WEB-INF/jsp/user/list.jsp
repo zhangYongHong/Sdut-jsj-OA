@@ -69,20 +69,22 @@
                                     <td><s:property value="deptview"/></td>
                                     <td><s:property value="phone"/></td>
                                     <td><s:property value="email"/></td>
-                                    <td>
-                                        <div class="controls center">
-                                            <a href="userAction_updateUI.action?uid=<s:property value="uid"/>"
-                                               title="修改" class="tip"><span
-                                                    class="icon12 icomoon-icon-pencil"></span></a>
-                                            <a href="userAction_delete.action?uid=<s:property value="uid"/>"
-                                               title="删除" class="tip" onclick="return confirm('你确定要删除？')"><span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
-                                            <a href="userAction_resetPassword.action?uid=<s:property value="uid"/>"
-                                               title="密码重置" class="tip"
-                                               onclick="return confirm('重置后的密码为000000？')"><span
-                                                    class="icon12 icomoon-icon-locked"></span></a>
-                                        </div>
-                                    </td>
+                                    <shiro:hasPermission name="user:update,delete,reset">
+                                        <td>
+                                            <div class="controls center">
+                                                <a href="userAction_updateUI.action?uid=<s:property value="uid"/>"
+                                                   title="修改" class="tip"><span
+                                                        class="icon12 icomoon-icon-pencil"></span></a>
+                                                <a href="userAction_delete.action?uid=<s:property value="uid"/>"
+                                                   title="删除" class="tip" onclick="return confirm('你确定要删除？')"><span
+                                                        class="icon12 icomoon-icon-remove"></span></a>
+                                                <a href="userAction_resetPassword.action?uid=<s:property value="uid"/>"
+                                                   title="密码重置" class="tip"
+                                                   onclick="return confirm('重置后的密码为000000？')"><span
+                                                        class="icon12 icomoon-icon-locked"></span></a>
+                                            </div>
+                                        </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

@@ -96,19 +96,18 @@
                                     <td><s:property value="keyword"/></td>
                                     <td><s:property value="ddlCode"/></td>
                                     <td><s:property value="ddlName"/></td>
+                                    <shiro:hasPermission name="sysstemDDLAction:update,delete">
                                     <td>
                                         <div class="controls center">
-                                            <shiro:hasPermission name="sysstemDDLAction:update">
+
                                                 <a href="systemDDLAction_updateUI.action?sid=<s:property value="sid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            </shiro:hasPermission>
-                                            <shiro:hasPermission name="systemDDLAction:delete">
                                                 <a href="systemDDLAction_delete.action?sid=<s:property value="sid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
-                                            </shiro:hasPermission>
                                         </div>
                                     </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

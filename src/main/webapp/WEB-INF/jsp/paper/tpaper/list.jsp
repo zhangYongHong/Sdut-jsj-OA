@@ -130,19 +130,19 @@
                                     <td><s:property value="comment"/></td>
                                     <td><s:property value="fileNum"/></td>
                                     <td><s:property value="isChange"/></td>
-                                    <td>
-                                        <div class="controls center">
-                                            <shiro:hasPermission name="trainingPaper:update">
+                                    <shiro:hasPermission name="trainingPaper:update,delete">
+                                        <td>
+                                            <div class="controls center">
+
                                                 <a href="tPAction_updateUI.action?tid=<s:property value="tid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            </shiro:hasPermission>
-                                            <shiro:hasPermission name="trainingPaper:delete">
                                                 <a href="tPAction_delete.action?tid=<s:property value="tid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
-                                            </shiro:hasPermission>
-                                        </div>
-                                    </td>
+
+                                            </div>
+                                        </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>
