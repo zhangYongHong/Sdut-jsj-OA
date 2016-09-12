@@ -8,7 +8,7 @@
 	<constant name="struts.devMode" value="true"/>
 	
 	
-	<package name="tasks" extends="interceptor-login" namespace="/">
+	<package name="tasks" extends="struts-default" namespace="/">
 
 		<action name="tasksAction_*" class="tasksAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/workFlow/taskList.jsp</result>

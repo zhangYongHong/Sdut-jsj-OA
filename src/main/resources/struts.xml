@@ -7,9 +7,6 @@
 	<constant name="struts.ui.theme" value="simple"></constant>
 	<constant name="struts.devMode" value="true"/>
 
-	<!-- 拦截器 -->
-	<include file="cn/opencil/oa/core/struts/interceptor/struts-interceptor-login.xml"></include>
-
 	<!-- 基础数据模块 -->
 
 	<include file="cn/opencil/oa/core/struts/basedata/struts-user.xml"></include>

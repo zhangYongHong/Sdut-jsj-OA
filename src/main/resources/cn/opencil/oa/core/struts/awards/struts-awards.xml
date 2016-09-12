@@ -8,7 +8,7 @@
 	<constant name="struts.devMode" value="true"/>
 	
 	
-	<package name="awards" extends="interceptor-login" namespace="/">
+	<package name="awards" extends="struts-default" namespace="/">
 	
 		<action name="awardsAction_*" class="awardsAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/paper/awards/list.jsp</result>

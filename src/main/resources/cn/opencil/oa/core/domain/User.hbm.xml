@@ -10,9 +10,12 @@
 		<property name="employeenum" type="java.lang.String" length="20"></property>
 		<property name="userName" type="java.lang.String" length="50"></property>
 		<property name="password" type="java.lang.String" length="50"></property>
+		<property name="salt" type="java.lang.String" length="100"></property>
+		<property name="role" type="java.lang.String" length="50"></property>
 		<property name="deptid" type="java.lang.Integer" length="20"></property>
 		<property name="phone" type="java.lang.String" length="50"></property>
 		<property name="email" type="java.lang.String" length="50"></property>
-		
+		<property name="roleIdsStr" type="java.lang.String" length="100" column="role_ids"></property>
+		<property name="locked" type="java.lang.Boolean" length="1"></property>
 	</class>
 </hibernate-mapping>

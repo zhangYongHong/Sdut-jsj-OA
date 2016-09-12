@@ -8,7 +8,7 @@
 	<constant name="struts.devMode" value="true"/>
 	
 	
-	<package name="qpaper" extends="interceptor-login" namespace="/">
+	<package name="qpaper" extends="struts-default" namespace="/">
 	
 		<action name="qPAction_*" class="QPAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/paper/qpaper/list.jsp</result>

@@ -7,7 +7,7 @@
 <struts>
     <constant name="struts.ui.theme" value="simple"></constant>
     <constant name="struts.devMode" value="true"/>
-    <package name="role" extends="interceptor-login" namespace="/">
+    <package name="role" extends="struts-default" namespace="/">
         <action name="roleAction_home" class="roleAction" method="home">
         </action>
     </package>

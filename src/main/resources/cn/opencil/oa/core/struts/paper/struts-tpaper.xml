@@ -8,7 +8,7 @@
 	<constant name="struts.devMode" value="true"/>
 	
 	
-	<package name="tpaper" extends="interceptor-login" namespace="/">
+	<package name="tpaper" extends="struts-default" namespace="/">
 	
 		<action name="tPAction_*" class="TPAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/paper/tpaper/list.jsp</result>

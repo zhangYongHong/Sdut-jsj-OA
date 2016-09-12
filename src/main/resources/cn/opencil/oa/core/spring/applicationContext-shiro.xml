@@ -87,6 +87,12 @@
         <property name="rememberMeManager" ref="rememberMeManager"/>
     </bean>
 
+    <!-- Shiro AOP　权限注解-->
+    <aop:config proxy-target-class="true"></aop:config>
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
     <!-- 相当于调用SecurityUtils.setSecurityManager(securityManager) -->
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="staticMethod" value="org.apache.shiro.SecurityUtils.setSecurityManager"/>
@@ -107,6 +113,8 @@
     <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
         <property name="securityManager" ref="securityManager"/>
         <property name="loginUrl" value="/login.jsp"/>
+        <property name="successUrl" value="/index.jsp"/>
+        <property name="unauthorizedUrl" value="/unauthorized.jsp"/>
         <property name="filters">
             <util:map>
                 <entry key="authc" value-ref="formAuthenticationFilter"/>
@@ -115,9 +123,13 @@
         </property>
         <property name="filterChainDefinitions">
             <value>
+                /css/** = anon
+                /images/** = anon
+                /js/** = anon
+                /plugins/** = anon
+                /login.jsp = anon
                 /loginAction_login.action = anon
-                /loginAction_signOut.action = anon
-                /authenticated = authc
+                /unauthorized.jsp = anon
                 /** = user,sysUser
             </value>
         </property>
@@ -125,5 +137,7 @@
 
     <!-- Shiro生命周期处理器-->
     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+
 
 </beans>

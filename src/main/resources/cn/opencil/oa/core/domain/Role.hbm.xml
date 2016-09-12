@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="cn.opencil.oa.core.domain.Role" table="jsj_role">
+		<id name="id" type="java.lang.Long" length="5">
+			<generator class="native"></generator>
+		</id>
+		<property name="role" type="java.lang.String" length="100"></property>
+		<property name="description" type="java.lang.String" length="100"></property>
+		<property name="resourceIdsStr" type="java.lang.String" length="100" column="resource_ids"></property>
+		<property name="available" type="java.lang.Boolean" length="1"></property>
+	</class>
+</hibernate-mapping>
