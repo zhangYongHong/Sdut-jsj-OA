@@ -3,8 +3,7 @@ package cn.opencil.oa.core.web.role.dao.impl;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.impl.BaseDaoImpl;
 import cn.opencil.oa.core.domain.Role;
-import cn.opencil.oa.core.domain.UserRole;
-import cn.opencil.oa.core.web.role.dao.UserRoleDao;
+import cn.opencil.oa.core.web.role.dao.RoleDao;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -18,29 +17,7 @@ import java.util.List;
  * Created by 张树伟 on 16-5-16.
  */
 @Repository
-public class UserRoleDaoImpl extends BaseDaoImpl<UserRole> implements UserRoleDao {
-
-    @Override
-    public Collection<UserRole> getUserRoleList() {
-
-        return this.getHibernateTemplate().execute(
-                new HibernateCallback<Collection<UserRole>>() {
-                    @Override
-                    public Collection<UserRole> doInHibernate(Session session) throws HibernateException {
-                        StringBuilder hql = new StringBuilder("from UserRole where 1=1 ");
-
-                        Query query = session.createQuery(hql.toString());
-
-                        return query.list();
-                    }
-                });
-
-    }
-
-    @Override
-    public UserRole getUserRole(final Long uid) {
-        return this.getHibernateTemplate().get(UserRole.class, uid);
-    }
+public class RoleDaoImpl extends BaseDaoImpl<Role> implements RoleDao {
 
     @Override
     public Role getOne(Long roleId) {

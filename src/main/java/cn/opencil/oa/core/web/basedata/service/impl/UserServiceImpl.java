@@ -7,12 +7,11 @@ import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.UserQuery;
 import cn.opencil.oa.core.web.basedata.dao.UserDao;
 import cn.opencil.oa.core.web.basedata.service.UserService;
-import cn.opencil.oa.core.web.role.service.UserRoleService;
+import cn.opencil.oa.core.web.role.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -29,7 +28,7 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     private UserDao userDao;
 
     @Autowired
-    private UserRoleService userRoleService;
+    private RoleService userRoleService;
 
     @Override
     public BaseDao getBaseDao() {
@@ -41,12 +40,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     public PageResult<User> getUserPageResult(final UserQuery userQuery) {
         String roleName;
         PageResult<User> userPageResult = this.getPageResult(userQuery);
-        List<User> userList = userPageResult.getRows();
-        //填充user_role表中的用户角色数据
-        for (User user : userList) {
-            roleName = userRoleService.getRoleName(user.getUid());
-            user.setRole(roleName);
-        }
         return userPageResult;
     }
 

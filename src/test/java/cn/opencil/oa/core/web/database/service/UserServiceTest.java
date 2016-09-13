@@ -2,7 +2,7 @@ package cn.opencil.oa.core.web.database.service;
 
 import cn.opencil.oa.core.web.basedata.service.UserService;
 import cn.opencil.oa.core.web.resource.server.ResourceServer;
-import cn.opencil.oa.core.web.role.dao.UserRoleDao;
+import cn.opencil.oa.core.web.role.dao.RoleDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class UserServiceTest {
     @Autowired
     private ResourceServer resourceServer;
     @Autowired
-    private UserRoleDao userRoleDao;
+    private RoleDao userRoleDao;
 
     @Test
     public void getRoleTest() {

@@ -8,8 +8,6 @@ import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.QuestionPaper;
 import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.paper.service.QPService;
-import cn.opencil.oa.core.web.role.service.RolePopedomService;
-import cn.opencil.oa.core.web.role.service.UserRoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -39,10 +37,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
     private PaperQuery qpQuery = new PaperQuery();
     @Autowired
     private QPService qpService;
-    @Autowired
-    private UserRoleService userRoleService;
-    @Autowired
-    private RolePopedomService rolePopedomService;
 
     private File uploadfile;
 
@@ -146,7 +140,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
             ArrayList<ArrayList<String>> fieldDatas = this.qpService
                     .getFieldDataExcel(qpQuery);
             if (fieldDatas.size() == 0) {
-                this.addFieldError("qpError","当前学期数据为空不可导出！");
+                this.addFieldError("qpError", "当前学期数据为空不可导出！");
             }
             ExcelFileGeneratorUtil excelFileGenerator = new ExcelFileGeneratorUtil(
                     fieldDataName, fieldDatas);
@@ -168,6 +162,31 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return "excel";
     }
 
+    @RequiresPermissions("page:upload")
+    public String loadingExcelUI() {
+        return "loadingExcelUI";
+    }
+
+    /**
+     * 导入Excel
+     *
+     * @return String
+     */
+    @RequiresPermissions("page:upload")
+    public String uploadExcel() {
+        qpService.uploadExcel(uploadfile);
+        return "redirect";
+    }
+
+    private void loadingValue() {
+        QuestionPaper old = this.qpService.getEntryById(tempId);
+        if (null != old) {
+            ActionContext.getContext().put("old", old);
+        } else {
+            this.addFieldError("qpError", "信息获取错误，请重新加载页面！");
+        }
+    }
+
     private boolean checkValue(QuestionPaper paper) {
         if (paper.getTeacher() == null || paper.getTeacher().trim().equals("")) {
             this.addFieldError("qpError", "授课教师不能为空！");
@@ -182,29 +201,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
             return true;
         }
         return false;
-    }
-
-    public String loadingExcelUI() {
-        return "loadingExcelUI";
-    }
-
-    /**
-     * 导入Excel
-     *
-     * @return String
-     */
-    public String uploadExcel() {
-        qpService.uploadExcel(uploadfile);
-        return "redirect";
-    }
-
-    private void loadingValue() {
-        QuestionPaper old = this.qpService.getEntryById(tempId);
-        if (null != old) {
-            ActionContext.getContext().put("old", old);
-        } else {
-            this.addFieldError("qpError", "信息获取错误，请重新加载页面！");
-        }
     }
 
     //==============================================================

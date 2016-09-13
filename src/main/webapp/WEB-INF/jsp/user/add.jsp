@@ -76,16 +76,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-row row-fluid">
-                        <div class="row-fluid">
-                            <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
-                            <div class="span2">
-                                <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                          name="rid" headerKey="0" headerValue="请选择" value="rid"
-                                          cssClass="select2-active"></s:select>
+                    <shiro:hasPermission name="role:add">
+                        <div class="form-row row-fluid">
+                            <div class="row-fluid">
+                                <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
+                                <div class="span2">
+                                    <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
+                                              name="role" headerValue="请选择"
+                                              cssClass="select2-active"></s:select>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </shiro:hasPermission>
                     <div class="form-row row-fluid">
                         <div class="row-fluid">
                             <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>

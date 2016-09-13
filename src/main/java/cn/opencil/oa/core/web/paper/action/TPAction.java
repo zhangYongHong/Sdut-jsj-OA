@@ -1,19 +1,13 @@
 package cn.opencil.oa.core.web.paper.action;
 
 import cn.opencil.oa.common.page.PageResult;
-import cn.opencil.oa.common.util.ContantKey;
 import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.common.util.ExcelFileGeneratorUtil;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
-import cn.opencil.oa.core.domain.RolePopedom;
 import cn.opencil.oa.core.domain.TrainingPaper;
-import cn.opencil.oa.core.domain.User;
-import cn.opencil.oa.core.domain.UserRole;
 import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.paper.service.TPService;
-import cn.opencil.oa.core.web.role.service.RolePopedomService;
-import cn.opencil.oa.core.web.role.service.UserRoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -40,10 +34,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     @Autowired
     private TPService tpService;
-    @Autowired
-    private UserRoleService userRoleService;
-    @Autowired
-    private RolePopedomService rolePopedomService;
 
     private static Long tempId;
     private PaperQuery tpQuery = new PaperQuery();
@@ -52,10 +42,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
         try {
-            //获取登陆用户
-            User user = (User) ActionContext.getContext().getSession().get(ContantKey.GLOBLE_USER_INFO);
-            if (this.checkUserForRole(user) == false)
-                tpQuery.setTeacher(user.getUserName());
             if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
                 tpQuery.setSchoolYear(DateUtil.groupSchoolYear());
             else
@@ -219,19 +205,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
             ActionContext.getContext().put("old", old);
         }
     }
-
-    private boolean checkUserForRole(User user) {
-        UserRole userRole = null;
-        RolePopedom rolePopedom = null;
-        try {
-            userRole = userRoleService.getUserRole(user.getUid());
-            rolePopedom = rolePopedomService.getRolePopedom(userRole.getRid());
-        } catch (Exception e) {
-            this.addFieldError("QPError", "权限验证失败！");
-        }
-        return rolePopedom.getPopedomCode().contains("b");
-    }
-
     //===========================================================================
     public PaperQuery getTpQuery() {
         return tpQuery;

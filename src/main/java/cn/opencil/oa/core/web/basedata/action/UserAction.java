@@ -4,16 +4,18 @@ import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.common.util.PasswordHelper;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.User;
-import cn.opencil.oa.core.domain.UserRole;
 import cn.opencil.oa.core.query.UserQuery;
 import cn.opencil.oa.core.web.basedata.service.UserService;
-import cn.opencil.oa.core.web.role.service.UserRoleService;
+import cn.opencil.oa.core.web.role.service.RoleService;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,7 +34,7 @@ public class UserAction extends BaseAction<User> {
     @Autowired
     private UserService userService;
     @Autowired
-    private UserRoleService userRoleService;
+    private RoleService userRoleService;
     @Autowired
     private PasswordHelper passwordHelper;
 
@@ -42,7 +44,6 @@ public class UserAction extends BaseAction<User> {
     private String oldPassword;
     private String newPassword;
     private int rid = 3;
-    private UserRole userRole;
     private UserQuery userQuery = new UserQuery();
 
     @RequiresPermissions("user:view")
@@ -66,7 +67,6 @@ public class UserAction extends BaseAction<User> {
         user.setPassword("000000");
         passwordHelper.encryptPassword(user);
         if (!this.checkInfo(user)) {
-
             User userByDataBase = userService.getUserByEmployeenum(employeenum);
             if (userByDataBase != null) {
                 this.addFieldError("userError", "该工号已存在，请重新输入！");
@@ -74,20 +74,10 @@ public class UserAction extends BaseAction<User> {
             }
 
             try {
+                List<Long> longs = new ArrayList<>();
+                longs.add(user.getRole());
+                user.setRoleIds(longs);
                 this.userService.addEntry(user);
-                if (user.getUid() != null) {
-                    userRole = userRoleService.getUserRole(user.getUid());
-                    if (userRole == null) {
-                        userRole = new UserRole();
-                        userRole.setUid(user.getUid());
-                        userRole.setRid(rid);
-                        userRoleService.addEntry(userRole);
-                    } else {
-                        userRole.setUid(user.getUid());
-                        userRole.setRid(rid);
-                        userRoleService.updateEntry(userRole);
-                    }
-                }
             } catch (Exception e) {
                 e.printStackTrace();
                 this.addFieldError("userError", "用户信息保存失败！");
@@ -112,50 +102,30 @@ public class UserAction extends BaseAction<User> {
         User user = this.getModel();
         try {
             User userByDB = userService.getUserByEmployeenum(employeenum);
-            String popedomCode = "";
-            if (!this.checkNull(this.getModel().getEmail())) {
+            if (!StringUtils.isNotEmpty(this.getModel().getEmail())) {
                 if (!this.checkEmail(this.getModel().getEmail())) {
                     this.loadingInfoForUser();
                     this.addFieldError("userError", "邮箱格式错误");
                     return "updateUI";
                 }
             }
-            if (!this.checkNull(this.getModel().getPhone()))
+            if (!StringUtils.isNotEmpty(this.getModel().getPhone())) {
                 if (!this.checkPhone(this.getModel().getPhone())) {
                     this.loadingInfoForUser();
                     this.addFieldError("userError", "手机号格式错误");
                     return "updateUI";
                 }
-            popedomCode = userRoleService.getPopedomCode(userByDB.getUid());
-            userRole = this.userRoleService.getUserRole(tempUid);
-            if (null == userRole) {
-                userRole = new UserRole();
-                userRole.setUid(tempUid);
-                userRole.setRid(rid);
-                try {
-                    userRoleService.addEntry(userRole);
-                } catch (Exception e) {
-                    this.loadingInfoForUser();
-                    this.addFieldError("userError", "用户权限设置失败！");
-                    return "updateUI";
-                }
             }
-            if (0 == rid) {
-                this.loadingInfoForUser();
-                this.addFieldError("userError", "用户权限设置失败！");
-                return "updateUI";
-            }
-            userRole.setRid(rid);
-            userRoleService.updateEntry(userRole);
+
+
+            List<Long> longs = new ArrayList<>();
+            longs.add(user.getRole());
+            userByDB.setRoleIds(longs);
             userByDB.setDeptid(user.getDeptid());
             userByDB.setEmail(user.getEmail());
             userByDB.setPhone(user.getPhone());
             this.userService.updateEntry(userByDB);
             this.loadingInfoForUser();
-            //若用户为管理员权限，则将跳转到列表页面，否则返回更新成功信息
-            if (popedomCode.contains("abc") || popedomCode.contains("ab")) {
-                return "redirect";
-            }
             this.addFieldError("userError", "信息更新成功！");
             return "updateUI";
         } catch (Exception e) {
@@ -224,11 +194,11 @@ public class UserAction extends BaseAction<User> {
     }
 
     private boolean checkInfo(User user) {
-        if (this.checkNull(user.getEmployeenum())) {
+        if (StringUtils.isNotEmpty(user.getEmployeenum())) {
             this.addFieldError("userError", "工号不能为空！");
             return true;
         }
-        if (user.getEmployeenum().length() != user.getEmployeenum().trim().length()) {
+        if (StringUtils.isNotEmpty(user.getEmployeenum())) {
             this.addFieldError("userError", "工号中不能包含空格！");
             return true;
         }
@@ -236,7 +206,7 @@ public class UserAction extends BaseAction<User> {
             this.addFieldError("userError", "工号只能包含数字！");
             return true;
         }
-        if (this.checkNull(user.getUserName())) {
+        if (StringUtils.isNotEmpty(user.getUserName())) {
             this.addFieldError("userError", "用户名不能为空！");
             return true;
         }
@@ -248,12 +218,12 @@ public class UserAction extends BaseAction<User> {
             this.addFieldError("userError", "用户名中不能包含空格！");
             return true;
         }
-        if (!checkNull(user.getEmail()))
+        if (!StringUtils.isNotEmpty(user.getEmail()))
             if (!this.checkEmail(user.getEmail())) {
                 this.addFieldError("userError", "邮箱格式错误");
                 return true;
             }
-        if (!checkNull(user.getPhone()))
+        if (!StringUtils.isNotEmpty(user.getPhone()))
             if (!this.checkPhone(user.getPhone())) {
                 this.addFieldError("userError", "手机号格式错误");
                 return true;
@@ -271,11 +241,6 @@ public class UserAction extends BaseAction<User> {
         }
     }
 
-
-    private boolean checkNull(String value) {
-        return value.trim().equals("") || (value == null);
-    }
-
     private boolean checkUserName(String userName) {
         String check = "^[\\u4e00-\\u9fa5]*$";
         Pattern userNameRegular = Pattern.compile(check);
@@ -284,7 +249,7 @@ public class UserAction extends BaseAction<User> {
     }
 
     private boolean checkPassword(String password, String name) {
-        if (this.checkNull(password)) {
+        if (StringUtils.isNotEmpty(password)) {
             this.addFieldError("userError", name + "不能为空！");
             return true;
         }

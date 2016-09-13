@@ -17,7 +17,7 @@ public class User implements Serializable {
     private String userName;//昵称
     private String password;
     private String salt; //加密密码的盐
-    private String role;
+    private Long role;
     private Integer deptid;//系别
     private String phone;
     private String email;
@@ -27,11 +27,11 @@ public class User implements Serializable {
     private Boolean locked = Boolean.FALSE;
 
 
-    public String getRole() {
+    public Long getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Long role) {
         this.role = role;
     }
 
@@ -140,29 +140,10 @@ public class User implements Serializable {
     }
 
     public String getRoleIdsStr() {
-//        if(CollectionUtils.isEmpty(roleIds)) {
-//            return "";
-//        }
-//        StringBuilder s = new StringBuilder();
-//        for(Long roleId : roleIds) {
-//            s.append(roleId);
-//            s.append(",");
-//        }
-//        return s.toString();
         return roleIdsStr;
     }
 
     public void setRoleIdsStr(String roleIdsStr) {
-//        if(StringUtils.isEmpty(roleIdsStr)) {
-//            return;
-//        }
-//        String[] roleIdStrs = roleIdsStr.split(",");
-//        for(String roleIdStr : roleIdStrs) {
-//            if(StringUtils.isEmpty(roleIdStr)) {
-//                continue;
-//            }
-//            getRoleIds().add(Long.valueOf(roleIdStr));
-//        }
         this.roleIdsStr = roleIdsStr;
     }
 
