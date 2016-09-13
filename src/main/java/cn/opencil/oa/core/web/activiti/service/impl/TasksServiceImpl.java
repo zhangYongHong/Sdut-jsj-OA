@@ -1,12 +1,13 @@
 package cn.opencil.oa.core.web.activiti.service.impl;
 
-import cn.opencil.oa.common.util.ContantKey;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
 import org.activiti.engine.FormService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.task.Task;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,15 +26,15 @@ public class TasksServiceImpl implements TasksService {
 
     @Autowired
     private FormService formService;
+    
     @Override
     public List<Task> taskList() {
         User user = PageUtil.getUser();
         List<Task> list = new ArrayList<>();
         //判断用户权限
         //通过用户名查找对应的任务
-        String popedomCode = (String) PageUtil.getHttpSession().getAttribute(ContantKey.GLOBLE_USER_ROLE);
-
-        if (popedomCode.equals("abc")) {
+        Subject subject = SecurityUtils.getSubject();
+        if (subject.hasRole("admin")) {
             List<Task> taskList = new ArrayList<>();
 
             taskList = taskService.createTaskQuery()

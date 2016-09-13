@@ -53,7 +53,7 @@ public class TasksAction {
     /**
      * 跳转到业务对象的表单
      */
-    @RequiresPermissions("viewTaskForm")
+    @RequiresPermissions("task:viewTaskForm")
     public String viewTaskForm() {
         String formUrl;
         //通过taskID获取formKey
@@ -72,7 +72,7 @@ public class TasksAction {
     /**
      * 办理任务
      */
-    @RequiresPermissions("completeTask")
+    @RequiresPermissions("task:completeTask")
     public String completeTask() {
         httpSession = ServletActionContext.getRequest().getSession();
         String taskId = (String) httpSession.getAttribute("taskId");
