@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/RolePopedom.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/UserRole.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/dao/RolePopedomDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/dao/impl/RolePopedomDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/RolePopedomService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/impl/RolePopedomServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/domain/RolePopedom.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/domain/UserRole.hbm.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/dao/UserRoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/dao/RoleDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/dao/impl/UserRoleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/dao/impl/RoleDaoImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/UserRoleService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/RoleService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/impl/UserRoleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/impl/RoleServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SdutOA_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SdutOA_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SdutOA.iml" afterPath="$PROJECT_DIR$/SdutOA.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/User.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/action/UserAction.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/action/UserAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/paper/action/QPAction.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/paper/action/QPAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/paper/action/TPAction.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/paper/action/TPAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/action/RoleAction.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/action/RoleAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/opencil/oa/core/web/database/service/UserServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/opencil/oa/core/web/database/service/UserServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp" />
     </list>
     <ignored path="SdutOA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,9 +47,31 @@
       <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/action/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="5520">
               <caret line="251" column="35" selection-start-line="251" selection-start-column="35" selection-end-line="251" selection-end-column="35" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1787#1788#0" expanded="false" />
+                <element signature="e#1815#1816#0" expanded="false" />
+                <element signature="e#5280#5281#0" expanded="false" />
+                <element signature="e#5315#5316#0" expanded="false" />
+                <element signature="e#9764#9765#0" expanded="false" />
+                <element signature="e#9790#9791#0" expanded="false" />
+                <element signature="e#9825#9826#0" expanded="false" />
+                <element signature="e#9855#9856#0" expanded="false" />
+                <element signature="e#9894#9895#0" expanded="false" />
+                <element signature="e#9926#9927#0" expanded="false" />
+                <element signature="e#9979#9980#0" expanded="false" />
+                <element signature="e#10021#10022#0" expanded="false" />
+                <element signature="e#10059#10060#0" expanded="false" />
+                <element signature="e#10093#10094#0" expanded="false" />
+                <element signature="e#10147#10148#0" expanded="false" />
+                <element signature="e#10193#10194#0" expanded="false" />
+                <element signature="e#10231#10232#0" expanded="false" />
+                <element signature="e#10265#10266#0" expanded="false" />
+                <element signature="e#10319#10320#0" expanded="false" />
+                <element signature="e#10365#10366#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +79,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
+            <state relative-caret-position="4560">
               <caret line="190" column="20" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
               <folding />
             </state>
@@ -90,13 +89,60 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
+            <state relative-caret-position="2472">
               <caret line="146" column="11" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
               <folding>
-                <element signature="e#3005#3006#0" expanded="true" />
-                <element signature="e#3038#3039#0" expanded="true" />
-                <element signature="e#3090#3091#0" expanded="true" />
-                <element signature="e#3134#3135#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#722#723#0" expanded="false" />
+                <element signature="e#749#750#0" expanded="false" />
+                <element signature="e#787#788#0" expanded="false" />
+                <element signature="e#819#820#0" expanded="false" />
+                <element signature="e#851#852#0" expanded="false" />
+                <element signature="e#879#880#0" expanded="false" />
+                <element signature="e#921#922#0" expanded="false" />
+                <element signature="e#955#956#0" expanded="false" />
+                <element signature="e#987#988#0" expanded="false" />
+                <element signature="e#1015#1016#0" expanded="false" />
+                <element signature="e#1057#1058#0" expanded="false" />
+                <element signature="e#1091#1092#0" expanded="false" />
+                <element signature="e#1119#1120#0" expanded="false" />
+                <element signature="e#1145#1146#0" expanded="false" />
+                <element signature="e#1181#1182#0" expanded="false" />
+                <element signature="e#1211#1212#0" expanded="false" />
+                <element signature="e#1249#1250#0" expanded="false" />
+                <element signature="e#1283#1284#0" expanded="false" />
+                <element signature="e#1337#1338#0" expanded="false" />
+                <element signature="e#1383#1384#0" expanded="false" />
+                <element signature="e#1418#1419#0" expanded="false" />
+                <element signature="e#1449#1450#0" expanded="false" />
+                <element signature="e#1497#1498#0" expanded="false" />
+                <element signature="e#1537#1538#0" expanded="false" />
+                <element signature="e#1568#1569#0" expanded="false" />
+                <element signature="e#1595#1596#0" expanded="false" />
+                <element signature="e#1635#1636#0" expanded="false" />
+                <element signature="e#1667#1668#0" expanded="false" />
+                <element signature="e#1702#1703#0" expanded="false" />
+                <element signature="e#1733#1734#0" expanded="false" />
+                <element signature="e#1781#1782#0" expanded="false" />
+                <element signature="e#1821#1822#0" expanded="false" />
+                <element signature="e#1855#1856#0" expanded="false" />
+                <element signature="e#1884#1885#0" expanded="false" />
+                <element signature="e#1929#1930#0" expanded="false" />
+                <element signature="e#1965#1966#0" expanded="false" />
+                <element signature="e#2772#2773#0" expanded="false" />
+                <element signature="e#2812#2813#0" expanded="false" />
+                <element signature="e#2850#2851#0" expanded="false" />
+                <element signature="e#2880#2881#0" expanded="false" />
+                <element signature="e#2930#2931#0" expanded="false" />
+                <element signature="e#2968#2969#0" expanded="false" />
+                <element signature="e#3168#3169#0" expanded="false" />
+                <element signature="e#3197#3198#0" expanded="false" />
+                <element signature="e#3242#3243#0" expanded="false" />
+                <element signature="e#3278#3279#0" expanded="false" />
+                <element signature="e#3320#3321#0" expanded="false" />
+                <element signature="e#3361#3362#0" expanded="false" />
+                <element signature="e#3702#3703#0" expanded="false" />
+                <element signature="e#3757#3758#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -105,10 +151,15 @@
       <file leaf-file-name="RoleServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/impl/RoleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="216">
               <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#937#938#0" expanded="false" />
+                <element signature="e#976#977#0" expanded="false" />
+                <element signature="e#1234#1235#0" expanded="false" />
+                <element signature="e#1283#1284#0" expanded="false" />
+                <element signature="e#1337#1338#0" expanded="false" />
+                <element signature="e#1380#1381#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,8 +168,18 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-864">
+            <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2064">
+              <caret line="98" column="40" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -127,39 +188,24 @@
       <file leaf-file-name="add.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="24">
               <caret line="84" column="75" selection-start-line="84" selection-start-column="75" selection-end-line="84" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sdutoa.jsj_user" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_user">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="sdutoa.jsj_systemddl" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_systemddl">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -167,8 +213,20 @@
       <file leaf-file-name="RoleService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/RoleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="216">
               <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.hbm.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/domain/User.hbm.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -227,7 +285,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/domain/User.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/tpaper/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/qpaper/list.jsp" />
@@ -250,6 +307,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/action/UserAction.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp" />
       </list>
     </option>
   </component>
@@ -343,6 +401,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -451,6 +511,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="systemDDL" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1082,8 +1176,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1770,6 +1862,7 @@
       <workItem from="1473557471104" duration="501000" />
       <workItem from="1473558469805" duration="45679000" />
       <workItem from="1473685192818" duration="2027000" />
+      <workItem from="1473751665690" duration="329000" />
     </task>
     <task id="LOCAL-00004" summary="添加：添加对获奖信息的排序功能">
       <created>1469683064710</created>
@@ -2150,7 +2243,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="322201000" />
+    <option name="totallyTimeSpent" value="322530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -2172,7 +2265,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25431034" sideWeight="0.48450243" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431034" sideWeight="0.51549757" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431034" sideWeight="0.5106036" order="3" side_tool="true" content_ui="tabs" />
@@ -2187,6 +2279,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="99" y="127" width="1722" height="854" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2256,98 +2349,62 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -2359,14 +2416,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2391,7 +2448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-30">
           <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2418,99 +2474,99 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_question_paper">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/impl/RolePopedomServiceImpl.java" />
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2518,19 +2574,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4368">
           <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_resource">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2546,7 +2601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2554,9 +2608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2593,82 +2644,73 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_role">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_systemddl">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="84" column="75" selection-start-line="84" selection-start-column="75" selection-end-line="84" selection-end-column="75" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2677,7 +2719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2685,7 +2726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2693,83 +2733,181 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/RoleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="216">
           <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/role/service/impl/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="216">
           <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#937#938#0" expanded="false" />
+            <element signature="e#976#977#0" expanded="false" />
+            <element signature="e#1234#1235#0" expanded="false" />
+            <element signature="e#1283#1284#0" expanded="false" />
+            <element signature="e#1337#1338#0" expanded="false" />
+            <element signature="e#1380#1381#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
+        <state relative-caret-position="2472">
           <caret line="146" column="11" selection-start-line="146" selection-start-column="11" selection-end-line="146" selection-end-column="11" />
           <folding>
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3038#3039#0" expanded="true" />
-            <element signature="e#3090#3091#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#722#723#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#787#788#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#879#880#0" expanded="false" />
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+            <element signature="e#987#988#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1091#1092#0" expanded="false" />
+            <element signature="e#1119#1120#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1181#1182#0" expanded="false" />
+            <element signature="e#1211#1212#0" expanded="false" />
+            <element signature="e#1249#1250#0" expanded="false" />
+            <element signature="e#1283#1284#0" expanded="false" />
+            <element signature="e#1337#1338#0" expanded="false" />
+            <element signature="e#1383#1384#0" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1449#1450#0" expanded="false" />
+            <element signature="e#1497#1498#0" expanded="false" />
+            <element signature="e#1537#1538#0" expanded="false" />
+            <element signature="e#1568#1569#0" expanded="false" />
+            <element signature="e#1595#1596#0" expanded="false" />
+            <element signature="e#1635#1636#0" expanded="false" />
+            <element signature="e#1667#1668#0" expanded="false" />
+            <element signature="e#1702#1703#0" expanded="false" />
+            <element signature="e#1733#1734#0" expanded="false" />
+            <element signature="e#1781#1782#0" expanded="false" />
+            <element signature="e#1821#1822#0" expanded="false" />
+            <element signature="e#1855#1856#0" expanded="false" />
+            <element signature="e#1884#1885#0" expanded="false" />
+            <element signature="e#1929#1930#0" expanded="false" />
+            <element signature="e#1965#1966#0" expanded="false" />
+            <element signature="e#2772#2773#0" expanded="false" />
+            <element signature="e#2812#2813#0" expanded="false" />
+            <element signature="e#2850#2851#0" expanded="false" />
+            <element signature="e#2880#2881#0" expanded="false" />
+            <element signature="e#2930#2931#0" expanded="false" />
+            <element signature="e#2968#2969#0" expanded="false" />
+            <element signature="e#3168#3169#0" expanded="false" />
+            <element signature="e#3197#3198#0" expanded="false" />
+            <element signature="e#3242#3243#0" expanded="false" />
+            <element signature="e#3278#3279#0" expanded="false" />
+            <element signature="e#3320#3321#0" expanded="false" />
+            <element signature="e#3361#3362#0" expanded="false" />
+            <element signature="e#3702#3703#0" expanded="false" />
+            <element signature="e#3757#3758#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/basedata/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="5520">
           <caret line="251" column="35" selection-start-line="251" selection-start-column="35" selection-end-line="251" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1787#1788#0" expanded="false" />
+            <element signature="e#1815#1816#0" expanded="false" />
+            <element signature="e#5280#5281#0" expanded="false" />
+            <element signature="e#5315#5316#0" expanded="false" />
+            <element signature="e#9764#9765#0" expanded="false" />
+            <element signature="e#9790#9791#0" expanded="false" />
+            <element signature="e#9825#9826#0" expanded="false" />
+            <element signature="e#9855#9856#0" expanded="false" />
+            <element signature="e#9894#9895#0" expanded="false" />
+            <element signature="e#9926#9927#0" expanded="false" />
+            <element signature="e#9979#9980#0" expanded="false" />
+            <element signature="e#10021#10022#0" expanded="false" />
+            <element signature="e#10059#10060#0" expanded="false" />
+            <element signature="e#10093#10094#0" expanded="false" />
+            <element signature="e#10147#10148#0" expanded="false" />
+            <element signature="e#10193#10194#0" expanded="false" />
+            <element signature="e#10231#10232#0" expanded="false" />
+            <element signature="e#10265#10266#0" expanded="false" />
+            <element signature="e#10319#10320#0" expanded="false" />
+            <element signature="e#10365#10366#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/UserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/RolePopedom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/UserRole.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/domain/RolePopedom.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
+        <state relative-caret-position="4560">
           <caret line="190" column="20" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/16241396/62f535d6-7be1-4086-8d01-6eb1c546c52b/sdutoa.jsj_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="84" column="75" selection-start-line="84" selection-start-column="75" selection-end-line="84" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cn/opencil/oa/core/domain/User.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2064">
+          <caret line="98" column="40" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
