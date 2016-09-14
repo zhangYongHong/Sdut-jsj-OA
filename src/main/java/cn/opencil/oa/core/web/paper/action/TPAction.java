@@ -10,7 +10,9 @@ import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.paper.service.TPService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
 import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -41,12 +43,15 @@ public class TPAction extends BaseAction<TrainingPaper> {
     @RequiresPermissions("questionPaper:view")
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
+        Subject subject = SecurityUtils.getSubject();
         try {
             if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
                 tpQuery.setSchoolYear(DateUtil.groupSchoolYear());
             else
                 tpQuery.setSchoolYear(this.getModel().getSchoolYear());
-
+            //非管理员只能查看自身的试卷列表
+            if (!subject.hasRole("admin"))
+                tpQuery.setTeacher(PageUtil.getUser().getUserName());
             trainingPapers = this.tpService
                     .getPageResultForTP(tpQuery);
             ActionContext.getContext().put("trainingPapers", trainingPapers);

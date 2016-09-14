@@ -10,7 +10,9 @@ import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.paper.service.QPService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -43,11 +45,14 @@ public class QPAction extends BaseAction<QuestionPaper> {
     @RequiresPermissions("questionPaper:view")
     public String list() {
         PageResult<QuestionPaper> qustionPapers = null;
+        Subject subject = SecurityUtils.getSubject();
         try {
             if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
                 qpQuery.setSchoolYear(DateUtil.groupSchoolYear());
             else
                 qpQuery.setSchoolYear(this.getModel().getSchoolYear());
+            if (!subject.hasRole("admin"))
+                qpQuery.setTeacher(PageUtil.getUser().getUserName());
             qustionPapers = this.qpService.getPageResultForQP(qpQuery);
         } catch (Exception e) {
             this.addFieldError("qpListError", "试卷列表获取失败！");

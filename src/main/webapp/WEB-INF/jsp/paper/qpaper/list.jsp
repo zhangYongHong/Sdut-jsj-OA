@@ -103,9 +103,7 @@
                                 <th>备注</th>
                                 <th>归档号</th>
                                 <th>状态</th>
-                                <shiro:hasPermission name="questionPaper:update,delete">
-                                    <th>操作</th>
-                                </shiro:hasPermission>
+                                <th>操作</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -145,19 +143,19 @@
                                     <td><s:property value="comment"/></td>
                                     <td><s:property value="fileNum"/></td>
                                     <td><s:property value="isChange"/></td>
-                                    <shiro:hasPermission name="questionPaper:update,delete">
-                                        <td>
-                                            <div class="controls center">
-
+                                    <td>
+                                        <div class="controls center">
+                                            <shiro:hasPermission name="questionPaper:update">
                                                 <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-
+                                            </shiro:hasPermission>
+                                            <shiro:hasPermission name="questionPaper:delete">
                                                 <a href="qPAction_delete.action?qid=<s:property value="qid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
-                                            </div>
-                                        </td>
-                                    </shiro:hasPermission>
+                                            </shiro:hasPermission>
+                                        </div>
+                                    </td>
                                 </tr>
                             </s:iterator>
                             </tbody>
