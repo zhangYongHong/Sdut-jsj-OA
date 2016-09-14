@@ -32,8 +32,8 @@ public class AdardsServiceImplTest {
         List<User> users = pageResult.getRows();
         for (User user : users) {
             System.out.println("id:" +user.getUid()+ "　　工号："+ user.getEmployeenum() + "  密码："+ user.getPassword());
-            user.setPassword("000000");
-            passwordHelper.encryptPassword(user);
+            user.setRoleIdsStr("2");
+            user.setRole("普通教师");
             userService.updateEntry(user);
         }
     }

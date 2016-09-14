@@ -69,7 +69,6 @@
             <div class="sidebar-widget" style="margin: -1px 0 0 0;">
                 <h5 class="title" style="margin-bottom:0">Navigation</h5>
             </div><!-- End .sidenav-widget -->
-            <shiro:authenticated>
             <div class="mainnav">
                 <ul>
                     <li><a href="index.jsp"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
@@ -147,7 +146,7 @@
                                     </shiro:hasPermission>
                                 </ul>
                             </li>
-                            <shiro:hasPermission name="awards:*">
+                            <shiro:hasPermission name="awards:view">
                                 <li><a href="#"><span class="icon16 icomoon-icon-list-view"></span>获奖详情管理</a>
                                     <ul class="sub">
                                         <shiro:hasPermission name="awards:add">
@@ -168,29 +167,33 @@
                             </shiro:hasPermission>
                         </ul>
                     </li>
-                    <shiro:hasPermission name="user:*">
-                        <li>
+                    <li>
+                        <shiro:hasRole name="admin">
                             <a href="#"><span class="icon16 icomoon-icon-users"></span>人员管理</a>
-                            <ul class="sub">
-                                <li><a href="userAction_list.action"><span class="icon16 icomoon-icon-address-2"></span>用户列表</a>
+                        </shiro:hasRole>
+                        <shiro:hasRole name="teacher">
+                            <a href="#"><span class="icon16 icomoon-icon-users"></span>个人信息管理</a>
+                        </shiro:hasRole>
+                        <ul class="sub">
+                            <shiro:hasPermission name="user:view">
+                                <li><a href="userAction_list.action"><span
+                                        class="icon16 icomoon-icon-address-2"></span>用户列表</a>
                                 </li>
-                                <li>
-                                    <a href="userAction_updateUI.action?uid=<s:property value="#session.globleUser.uid"/>"><span
-                                            class="icon16 icomoon-icon-user-3"></span>个人信息</a>
-                                </li>
-                                <li>
-                                    <a href="userAction_passWordUI.action"><span
-                                            class="icon16  icomoon-icon-locked-2"></span>密码修改</a>
-                                </li>
+                            </shiro:hasPermission>
+                            <li>
+                                <a href="userAction_updateUI.action?uid=<s:property value="#session.globleUser.uid"/>"><span
+                                        class="icon16 icomoon-icon-user-3"></span>个人信息</a>
+                            </li>
+                            <li>
+                                <a href="userAction_passWordUI.action"><span
+                                        class="icon16  icomoon-icon-locked-2"></span>密码修改</a>
+                            </li>
 
-                            </ul>
-                        </li>
-                    </shiro:hasPermission>
-
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div><!-- End sidenav -->
-        </shiro:authenticated>
 
     </div><!-- End #sidebar -->
 </div>

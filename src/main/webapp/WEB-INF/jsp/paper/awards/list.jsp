@@ -94,7 +94,9 @@
                                 <th>获奖时间</th>
                                 <th>颁奖单位</th>
                                 <th>备注</th>
-                                <th>操作</th>
+                                <shiro:hasPermission name="awards:delete">
+                                    <th>操作</th>
+                                </shiro:hasPermission>
                             </tr>
                             </thead>
                             <tbody>

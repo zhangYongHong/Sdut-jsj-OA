@@ -102,7 +102,9 @@
                                 <th>备注</th>
                                 <th>归档号</th>
                                 <th>状态</th>
-                                <th>操作</th>
+                                <shiro:hasPermission name="trainingPaper:update,delete">
+                                    <th>操作</th>
+                                </shiro:hasPermission>
                             </tr>
                             </thead>
                             <tbody>
