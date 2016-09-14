@@ -8,7 +8,14 @@
     <constant name="struts.ui.theme" value="simple"></constant>
     <constant name="struts.devMode" value="true"/>
     <package name="role" extends="struts-default" namespace="/">
-        <action name="roleAction_home" class="roleAction" method="home">
+        <action name="roleAction_*" class="roleAction" method="{1}">
+            <result name="listAction">/WEB-INF/jsp/role/list.jsp</result>
+            <result name="addUI">/WEB-INF/jsp/role/add.jsp</result>
+            <result name="updateUI">WEB-INF/jsp/role/update.jsp</result>
+            <result name="redirect" type="redirectAction">
+                <param name="actionName">roleAction_list</param>
+                <param name="namespace">/</param>
+            </result>
         </action>
     </package>
 </struts>

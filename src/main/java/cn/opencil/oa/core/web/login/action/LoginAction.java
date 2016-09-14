@@ -78,6 +78,7 @@ public class LoginAction extends BaseAction<User>{
         //竞赛项目
         this.loadSource("competitionView");
         this.loadSource("state");
+        this.loadSource("available");
 
 		return SUCCESS;
 	}

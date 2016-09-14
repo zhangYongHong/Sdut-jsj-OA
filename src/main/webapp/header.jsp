@@ -107,9 +107,9 @@
                                     <li>
                                         <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
                                         <ul class="sub">
-                                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
+                                            <li><a href="${pageContext.request.contextPath}/roleAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
                                             </li>
-                                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
+                                            <li><a href="${pageContext.request.contextPath}/roleAction_addUI.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
                                             </li>
                                         </ul>
                                     </li>
