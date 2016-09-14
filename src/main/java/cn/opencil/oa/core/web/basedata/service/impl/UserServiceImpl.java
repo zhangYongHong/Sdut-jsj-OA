@@ -28,7 +28,7 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     private UserDao userDao;
 
     @Autowired
-    private RoleService userRoleService;
+    private RoleService roleService;
 
     @Override
     public BaseDao getBaseDao() {
@@ -38,7 +38,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
 
     @Override
     public PageResult<User> getUserPageResult(final UserQuery userQuery) {
-        String roleName;
         PageResult<User> userPageResult = this.getPageResult(userQuery);
         return userPageResult;
     }
@@ -54,7 +53,7 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         if (user == null) {
             return Collections.emptySet();
         }
-        return userRoleService.findRoles(user.getRoleIds().toArray(new Long[0]));
+        return roleService.findRoles(user.getRoleIds().toArray(new Long[0]));
     }
 
     @Override
@@ -63,6 +62,6 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
         if(user == null) {
             return Collections.EMPTY_SET;
         }
-        return userRoleService.findPermissions(user.getRoleIds().toArray(new Long[0]));
+        return roleService.findPermissions(user.getRoleIds().toArray(new Long[0]));
     }
 }

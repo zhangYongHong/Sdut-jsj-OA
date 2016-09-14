@@ -37,4 +37,9 @@ public interface RoleService extends BaseService<Role> {
      * @return
      */
     Set<String> findRoles(Long... roleIds);
+
+    /**
+     * 获取角色名称
+     */
+    String getRoleName(Long[] roleIds);
 }

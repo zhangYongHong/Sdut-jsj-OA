@@ -42,7 +42,7 @@
                 </div>
 
                 <form class="form-horizontal seperator" action="userAction_update.action" method="post">
-                    <div class="offset5">
+                    <div class="offset3">
                         <s:fielderror name="userError" cssStyle="color: crimson"/>
                     </div>
                     <div class="form-row row-fluid">
@@ -70,7 +70,7 @@
                                 <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
                                 <div class="span2">
                                     <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                              name="rid" headerKey="0" headerValue="请选择"
+                                              name="role" headerKey="0" headerValue="请选择"
                                               cssClass="select2-active"></s:select>
                                 </div>
                             </div>

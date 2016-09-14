@@ -161,7 +161,7 @@ public class PageUtil {
         List<String> list = new ArrayList<>();
         List listNum = new ArrayList();
         int start = 0, end;
-        if (str.length() > 1) {
+        if (str != null && str.length() > 1) {
             for (int i = 0; i < str.toCharArray().length; i++) {
                 if (str.charAt(i) == '，' || str.charAt(i) == ',') {
                     listNum.add(i);
@@ -235,12 +235,15 @@ public class PageUtil {
     }
 
     public static List<Long> StrListTOLongList(List<String> stringList) {
-        if (stringList.size() > 0) {
-            List<Long> longs = new ArrayList<>();
-            for (String str : stringList) {
-                longs.add(Long.parseLong(str));
+        if (stringList != null && stringList.size() > 0) {
+            if (stringList.get(0) != null) {
+                List<Long> longs = new ArrayList<>();
+                for (String str : stringList) {
+                    longs.add(Long.parseLong(str));
+                }
+                return longs;
             }
-            return longs;
+            return null;
         }
         return null;
     }

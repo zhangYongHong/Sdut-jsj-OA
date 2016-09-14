@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.database.service;
 
+import cn.opencil.oa.core.web.basedata.dao.UserDao;
 import cn.opencil.oa.core.web.basedata.service.UserService;
 import cn.opencil.oa.core.web.resource.server.ResourceServer;
 import cn.opencil.oa.core.web.role.dao.RoleDao;
@@ -23,11 +24,13 @@ public class UserServiceTest {
     private ResourceServer resourceServer;
     @Autowired
     private RoleDao userRoleDao;
+    @Autowired
+    private UserDao userDao;
 
     @Test
     public void getRoleTest() {
         HashSet<String> list = new HashSet<>();
-        list = (HashSet<String>) userService.getPermissions("666666");
+        list = (HashSet<String>) userService.getPermissions("1111112");
         for (String str : list) {
             System.out.println(str);
         }
@@ -37,7 +40,9 @@ public class UserServiceTest {
 //        Resource r = resourceServer.getOne((long) 2);
 //        r.getParentId();
 //        userService.getUserByEmployeenum("666666");
-        userRoleDao.getAll();
+//        userRoleDao.getAll();
+//        userService.deleteEntry("13131313");
+
     }
 
 }

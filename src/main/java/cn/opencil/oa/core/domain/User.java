@@ -17,7 +17,7 @@ public class User implements Serializable {
     private String userName;//昵称
     private String password;
     private String salt; //加密密码的盐
-    private Long role;
+    private String role;
     private Integer deptid;//系别
     private String phone;
     private String email;
@@ -27,11 +27,11 @@ public class User implements Serializable {
     private Boolean locked = Boolean.FALSE;
 
 
-    public Long getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Long role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
@@ -184,7 +184,6 @@ public class User implements Serializable {
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", salt='" + salt + '\'' +
-                ", role='" + role + '\'' +
                 ", deptid=" + deptid +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +

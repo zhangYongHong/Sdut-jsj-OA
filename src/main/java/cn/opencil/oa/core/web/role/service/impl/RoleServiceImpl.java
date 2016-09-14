@@ -67,12 +67,27 @@ public class RoleServiceImpl extends BaseServiceImpl<Role> implements RoleServic
     @Override
     public Set<String> findRoles(Long... roleIds) {
         Set<String> roles = new HashSet<String>();
-        for(Long roleId : roleIds) {
+        for (Long roleId : roleIds) {
             Role role = getOne(roleId);
-            if(role != null) {
+            if (role != null) {
                 roles.add(role.getRole());
             }
         }
         return roles;
+    }
+
+    @Override
+    public String
+    getRoleName(Long[] roleIds) {
+        StringBuffer stringBuffer = new StringBuffer();
+        for (int i = 0; i < roleIds.length; i++) {
+            Long roleId = roleIds[i];
+            if (i != roleIds.length - 1) {
+                stringBuffer.append(getOne(roleId).getDescription() + ",");
+            } else {
+                stringBuffer.append(getOne(roleId).getDescription());
+            }
+        }
+        return stringBuffer.toString();
     }
 }

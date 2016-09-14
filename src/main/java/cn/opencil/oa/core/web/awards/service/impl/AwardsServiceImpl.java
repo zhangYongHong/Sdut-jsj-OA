@@ -12,13 +12,9 @@ import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import cn.opencil.oa.core.web.awards.dao.AwardsDao;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
-import org.activiti.engine.TaskService;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 
@@ -29,19 +25,16 @@ import java.util.List;
  * Author : 张树伟
  */
 @Service
-@Transactional(readOnly = false)
 public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements AwardsService {
 
-	@Resource(name=AwardsDao.DAONAME)
+	@Autowired
 	private AwardsDao awardsDao;
 
 	@Autowired
 	private SystemDDLService systemDDLService;
 	@Autowired
 	private ActivitiService activitiService;
-	private TaskService taskService;
-	private Logger logger = Logger.getLogger(AwardsServiceImpl.class);
-	
+
 	@Override
 	public BaseDao getBaseDao() {
 		return this.awardsDao;

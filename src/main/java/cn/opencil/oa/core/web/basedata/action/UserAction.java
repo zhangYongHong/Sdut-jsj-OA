@@ -14,8 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,7 +32,7 @@ public class UserAction extends BaseAction<User> {
     @Autowired
     private UserService userService;
     @Autowired
-    private RoleService userRoleService;
+    private RoleService roleService;
     @Autowired
     private PasswordHelper passwordHelper;
 
@@ -63,20 +61,13 @@ public class UserAction extends BaseAction<User> {
     public String add() {
         User user;
         user = this.getModel();
-        String employeenum = user.getEmployeenum();
         user.setPassword("000000");
         passwordHelper.encryptPassword(user);
         if (!this.checkInfo(user)) {
-            User userByDataBase = userService.getUserByEmployeenum(employeenum);
-            if (userByDataBase != null) {
-                this.addFieldError("userError", "该工号已存在，请重新输入！");
-                return INPUT;
-            }
-
             try {
-                List<Long> longs = new ArrayList<>();
-                longs.add(user.getRole());
-                user.setRoleIds(longs);
+                user.setRoleIdsStr(user.getRole());
+                Long[] longs = new Long[]{Long.parseLong(user.getRole())};
+                user.setRole(roleService.getRoleName(longs));
                 this.userService.addEntry(user);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -116,11 +107,7 @@ public class UserAction extends BaseAction<User> {
                     return "updateUI";
                 }
             }
-
-
-            List<Long> longs = new ArrayList<>();
-            longs.add(user.getRole());
-            userByDB.setRoleIds(longs);
+            userByDB.setRoleIdsStr(user.getRole());
             userByDB.setDeptid(user.getDeptid());
             userByDB.setEmail(user.getEmail());
             userByDB.setPhone(user.getPhone());
@@ -139,7 +126,6 @@ public class UserAction extends BaseAction<User> {
     public String delete() {
         Long uid = this.getModel().getUid();
         this.userService.deleteEntry(uid);
-        this.userRoleService.deleteEntry(uid);
         return "redirect";
     }
 
@@ -167,22 +153,15 @@ public class UserAction extends BaseAction<User> {
     public String passWord() {
         User user = this.getModel();
         User userByDB = userService.getUserByEmployeenum(user.getEmployeenum());
-        String password = userByDB.getPassword();
-
-        if (this.checkPassword(oldPassword, "原密码")) return "passWordUI";
         if (this.checkPassword(newPassword, "新密码")) return "passWordUI";
         if (this.checkPassword(this.getModel().getPassword(), "确认密码")) return "passWordUI";
 
-        if (!password.equals(oldPassword)) {
-            this.addFieldError("userError", "原密码输入错误！");
-            return "passWordUI";
-        }
         if (!user.getPassword().equals(newPassword)) {
             this.addFieldError("userError", "两次输入的密码一致！");
             return "passWordUI";
         }
         try {
-            userByDB.setPassword(user.getPassword());
+            userByDB.setPassword(newPassword);
             passwordHelper.encryptPassword(userByDB);
             userService.updateEntry(userByDB);
         } catch (Exception e) {
@@ -194,19 +173,15 @@ public class UserAction extends BaseAction<User> {
     }
 
     private boolean checkInfo(User user) {
-        if (StringUtils.isNotEmpty(user.getEmployeenum())) {
+        if (!StringUtils.isNotEmpty(user.getEmployeenum())) {
             this.addFieldError("userError", "工号不能为空！");
-            return true;
-        }
-        if (StringUtils.isNotEmpty(user.getEmployeenum())) {
-            this.addFieldError("userError", "工号中不能包含空格！");
             return true;
         }
         if (!this.checkEmployeenum(user.getEmployeenum())) {
             this.addFieldError("userError", "工号只能包含数字！");
             return true;
         }
-        if (StringUtils.isNotEmpty(user.getUserName())) {
+        if (!StringUtils.isNotEmpty(user.getUserName())) {
             this.addFieldError("userError", "用户名不能为空！");
             return true;
         }
@@ -218,12 +193,12 @@ public class UserAction extends BaseAction<User> {
             this.addFieldError("userError", "用户名中不能包含空格！");
             return true;
         }
-        if (!StringUtils.isNotEmpty(user.getEmail()))
+        if (StringUtils.isNotEmpty(user.getEmail()))
             if (!this.checkEmail(user.getEmail())) {
                 this.addFieldError("userError", "邮箱格式错误");
                 return true;
             }
-        if (!StringUtils.isNotEmpty(user.getPhone()))
+        if (StringUtils.isNotEmpty(user.getPhone()))
             if (!this.checkPhone(user.getPhone())) {
                 this.addFieldError("userError", "手机号格式错误");
                 return true;
@@ -249,7 +224,7 @@ public class UserAction extends BaseAction<User> {
     }
 
     private boolean checkPassword(String password, String name) {
-        if (StringUtils.isNotEmpty(password)) {
+        if (!StringUtils.isNotEmpty(password)) {
             this.addFieldError("userError", name + "不能为空！");
             return true;
         }

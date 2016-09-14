@@ -10,8 +10,6 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Set;
-
 /**
  * Created by mnzero on 16-9-5.
  */
@@ -23,8 +21,6 @@ public class UserRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
         String employeenum = (String)principals.getPrimaryPrincipal();
-        Set<String> strings = userService.getRoles(employeenum);
-        Set<String> strings1 = userService.getPermissions(employeenum);
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         authorizationInfo.setRoles(userService.getRoles(employeenum));
         authorizationInfo.setStringPermissions(userService.getPermissions(employeenum));

@@ -15,12 +15,11 @@ import java.util.Collection;
  * 用户管理的dao
  *
  */
-public interface UserDao extends BaseDao<User>{
+public interface UserDao extends BaseDao<User> {
 
 	User validation(String username);
 
 	Collection<User> getUserByName(final BaseQuery baseQuery);
 
 	User getUserByEmployeenum(String value);
-
 }

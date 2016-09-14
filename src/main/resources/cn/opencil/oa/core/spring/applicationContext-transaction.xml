@@ -8,12 +8,9 @@
           http://www.springframework.org/schema/aop
           http://www.springframework.org/schema/aop/spring-aop.xsd
           http://www.springframework.org/schema/tx
-          http://www.springframework.org/schema/tx/spring-tx.xsd
-          http://www.springframework.org/schema/context
-          http://www.springframework.org/schema/context/spring-context.xsd">
+          http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 事务配置 -->
-
     <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory">
             <ref bean="sessionFactory"/>
@@ -23,11 +20,23 @@
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <tx:method name="*" propagation="REQUIRED"/>
+            <tx:method name="*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="get*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="find*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="list*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="load*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="save*" propagation="REQUIRED" rollback-for="Exception" />
+            <tx:method name="add*" propagation="REQUIRED" rollback-for="Exception" />
+            <tx:method name="save" propagation="REQUIRED" rollback-for="Exception" />
+            <tx:method name="update*" propagation="REQUIRED" rollback-for="Exception" />
+            <tx:method name="update" propagation="REQUIRED" rollback-for="Exception" />
+            <tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception" />
+            <tx:method name="delete" propagation="REQUIRED" rollback-for="Exception" />
         </tx:attributes>
+
     </tx:advice>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
-
     <aop:config expose-proxy="true" proxy-target-class="true">
         <!-- 只对业务逻辑层实施事务 -->
         <aop:pointcut id="txPointcut" expression="execution(* cn.opencil.oa..service..*+.*(..))"/>

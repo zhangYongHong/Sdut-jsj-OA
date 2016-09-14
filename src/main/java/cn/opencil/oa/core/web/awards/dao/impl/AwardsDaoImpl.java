@@ -19,12 +19,12 @@ import java.util.Map.Entry;
  * Project Name:SdutOA
  * File Name:AwardsDaoImpl.java
  * Date:2016-4-15下午1:34:50
- * Author : 王基伟
+ * Author : 张树伟
  *
  * 获奖管理的dao
  */
 
-@Repository(AwardsDao.DAONAME)
+@Repository
 public class AwardsDaoImpl extends BaseDaoImpl<Awards> implements AwardsDao{
 
 	public int getAwaCount(final BaseQuery baseQuery) {

@@ -18,34 +18,33 @@ import java.util.Collection;
  * File Name:QPDaoImpl.java
  * Date:2016-4-19下午9:33:41
  * Author : 张树伟
- *
  */
 @Repository
-public class QPDaoImpl extends BaseDaoImpl<QuestionPaper> implements QPDao{
+public class QPDaoImpl extends BaseDaoImpl<QuestionPaper> implements QPDao {
 
-	@Override
-	public Collection<QuestionPaper> getEntrysByQuery(final BaseQuery baseQuery) {
-		return this.getHibernateTemplate().execute(
-				new HibernateCallback<Collection<QuestionPaper>>() {
-					@Override
-					public Collection<QuestionPaper> doInHibernate(Session session) throws HibernateException {
-						StringBuilder hql = new StringBuilder("from QuestionPaper where 1=1 ");
+    @Override
+    public Collection<QuestionPaper> getEntrysByQuery(final BaseQuery baseQuery) {
+        return this.getHibernateTemplate().execute(
+                new HibernateCallback<Collection<QuestionPaper>>() {
+                    @Override
+                    public Collection<QuestionPaper> doInHibernate(Session session) throws HibernateException {
+                        StringBuilder hql = new StringBuilder("from QuestionPaper where 1=1 ");
 
-						PaperQuery qpQuery = (PaperQuery) baseQuery;
+                        PaperQuery qpQuery = (PaperQuery) baseQuery;
 
-						if (qpQuery != null && qpQuery.getSchoolYear() != null && !qpQuery.getSchoolYear().trim().equals("")) {
-							hql.append(" and schoolYear = ? ");
-						}
+                        if (qpQuery != null && qpQuery.getSchoolYear() != null && !qpQuery.getSchoolYear().trim().equals("")) {
+                            hql.append(" and schoolYear = ? ");
+                        }
 
-						Query query = session.createQuery(hql.toString());
-						if (qpQuery != null && qpQuery.getSchoolYear() != null
-								&& !qpQuery.getSchoolYear().trim().equals("")) {
-							query.setParameter(0, qpQuery.getSchoolYear());
-						}
+                        Query query = session.createQuery(hql.toString());
+                        if (qpQuery != null && qpQuery.getSchoolYear() != null
+                                && !qpQuery.getSchoolYear().trim().equals("")) {
+                            query.setParameter(0, qpQuery.getSchoolYear());
+                        }
 
-						return query.list();
-					}
-				});
-	}
+                        return query.list();
+                    }
+                });
+    }
 
 }

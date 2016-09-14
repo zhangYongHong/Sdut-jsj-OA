@@ -46,10 +46,10 @@ public class LoginAction extends BaseAction<User>{
             currentUser.login(token);
             user = userService.getUserByEmployeenum(employeenum);
         } catch (UnknownAccountException uae) {
-            this.addFieldError("loginError", "用户名或密码错误！");
+            this.addFieldError("loginError", "用户名错误！");
             return "login";
         } catch (IncorrectCredentialsException ice) {
-            this.addFieldError("loginError", "登陆错误！");
+            this.addFieldError("loginError", "密码错误！");
             return "login";
         } catch (LockedAccountException lae) {
             this.addFieldError("loginError", "您的账号已锁定，请联系管理员解锁！");
