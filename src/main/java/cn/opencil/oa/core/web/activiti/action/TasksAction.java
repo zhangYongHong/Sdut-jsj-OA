@@ -83,6 +83,7 @@ public class TasksAction {
             tasksService.completeTask(taskId, variables);
             return "redirect";
         } else if (state == 2){
+            //
             variables.put("state", 2);
             tasksService.completeTask(taskId, variables);
         } else if (state == 3) {

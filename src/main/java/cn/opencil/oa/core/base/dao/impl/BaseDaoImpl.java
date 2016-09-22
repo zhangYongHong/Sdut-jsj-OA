@@ -3,7 +3,6 @@ package cn.opencil.oa.core.base.dao.impl;
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.query.BaseQuery;
-import org.hibernate.FlushMode;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -63,7 +62,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
         //解决导入Excel 时出现此异常
         //这种解决方式有可能引起其他问题
         //http://stackoverflow.com/questions/6810158/java-hibernate-write-operations-are-not-allowed-in-read-only-mode
-        this.getHibernateTemplate().getSessionFactory().getCurrentSession().setFlushMode(FlushMode.AUTO);
+//        this.getHibernateTemplate().getSessionFactory().getCurrentSession().setFlushMode(FlushMode.AUTO);
         this.hibernateTemplate.save(t);
     }
 
@@ -82,6 +81,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
     @Override
     public void updateEntry(T t) {//hibernate的更新操作需要注意
+//        this.getHibernateTemplate().getSessionFactory().getCurrentSession().setFlushMode(FlushMode.AUTO);
         this.hibernateTemplate.update(t);
     }
 

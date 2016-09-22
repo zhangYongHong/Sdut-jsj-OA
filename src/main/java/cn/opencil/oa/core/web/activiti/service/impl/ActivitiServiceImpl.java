@@ -10,7 +10,6 @@ import org.activiti.engine.repository.DeploymentBuilder;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,7 +23,6 @@ import java.util.zip.ZipInputStream;
  * Created by mnzero on 16-8-10.
  */
 @Service
-@Transactional(readOnly = false)
 public class ActivitiServiceImpl implements ActivitiService {
     @Autowired
     RepositoryService repositoryService;

@@ -1,16 +1,14 @@
 package cn.opencil.oa.core.base.service.impl;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Set;
-
-import org.hibernate.exception.DataException;
-import org.springframework.transaction.annotation.Transactional;
-
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.BaseService;
 import cn.opencil.oa.core.query.BaseQuery;
+import org.hibernate.exception.DataException;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Set;
 
 /**
  * Project Name:SdutOA
@@ -29,7 +27,6 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 		return this.getBaseDao().getPageResult(baseQuery);
 	}
 	
-	@Transactional
 	@Override
 	public void addEntry(T t) throws DataException {
 		this.getBaseDao().addEntry(t);
@@ -51,17 +48,14 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 		return this.getBaseDao().getEntrys();
 	}
 
-	@Transactional
 	@Override
 	public void updateEntry(T t) {
 		this.getBaseDao().updateEntry(t);
 	}
-	@Transactional
 	@Override
 	public void deleteEntriesByIDS(Serializable[] ids) {
 		this.getBaseDao().deleteEntriesByIDS(ids);
 	}
-	@Transactional
 	@Override
 	public void deleteEntry(Serializable id) {
 		this.getBaseDao().deleteEntry(id);

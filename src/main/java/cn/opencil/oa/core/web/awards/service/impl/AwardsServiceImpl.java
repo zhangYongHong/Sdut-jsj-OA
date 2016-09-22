@@ -29,7 +29,6 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 
 	@Autowired
 	private AwardsDao awardsDao;
-
 	@Autowired
 	private SystemDDLService systemDDLService;
 	@Autowired
