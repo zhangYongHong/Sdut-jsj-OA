@@ -33,150 +33,23 @@
         <div class="row-fluid">
 
             <div class="span8">
-                <div class="box calendar gradient">
+                <div class="box ">
 
                     <div class="title">
-
                         <h4>
                             <span class="icon16 icomoon-icon-calendar"></span>
                             <span>Calendar</span>
                         </h4>
-                        <!-- <a href="#" class="minimize">Minimize</a> -->
+                        <a href="#" class="minimize">Minimize</a>
                     </div>
                     <div class="content noPad">
-                        <div id="calendar">
-                        </div>
+                        <div id="calendar"></div>
                     </div>
 
                 </div><!-- End .box -->
             </div><!-- End .span8 -->
 
-            <div class="span4">
-
-                <div class="todo">
-                    <h4>To Do List <a href="#" class="icon tip" title="Add task"><span
-                            class="icon16 icomoon-icon-plus-2"></span></a></h4>
-                    <ul>
-                        <li class="clearfix">
-                            <div class="txt">
-                                Fix some bugs
-                                <span class="by label">Admin</span>
-                                <span class="date badge badge-important">Today</span>
-                            </div>
-                            <div class="controls">
-                                <a href="#" title="Edit task" class="tip"><span
-                                        class="icon12 icomoon-icon-pencil"></span></a>
-                                <a href="#" title="Remove task" class="tip"><span
-                                        class="icon12 icomoon-icon-remove"></span></a>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="txt">
-                                Add post about birds
-                                <span class="by label">Julia</span>
-                                <span class="date badge badge-success">Tomorrow</span>
-                            </div>
-                            <div class="controls">
-                                <a href="#" title="Edit task" class="tip"><span
-                                        class="icon12 icomoon-icon-pencil"></span></a>
-                                <a href="#" title="Remove task" class="tip"><span
-                                        class="icon12 icomoon-icon-remove"></span></a>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="txt">
-                                Remove some items
-                                <span class="by label">Admin</span>
-                                <span class="date badge badge-success">Tomorrow</span>
-                            </div>
-                            <div class="controls">
-                                <a href="#" title="Edit task" class="tip"><span
-                                        class="icon12 icomoon-icon-pencil"></span></a>
-                                <a href="#" title="Remove task" class="tip"><span
-                                        class="icon12 icomoon-icon-remove"></span></a>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="txt">
-                                Staff party
-                                <span class="by label">Admin</span>
-                                <span class="date badge badge-info">08.08.2012</span>
-                            </div>
-                            <div class="controls">
-                                <a href="#" title="Edit task" class="tip"><span
-                                        class="icon12 icomoon-icon-pencil"></span></a>
-                                <a href="#" title="Remove task" class="tip"><span
-                                        class="icon12 icomoon-icon-remove"></span></a>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <div class="txt">
-                                Shedule backup
-                                <span class="by label">Steve</span>
-                                <span class="date badge badge-info">08.08.2012</span>
-                            </div>
-                            <div class="controls">
-                                <a href="#" title="Edit task" class="tip"><span
-                                        class="icon12 icomoon-icon-pencil"></span></a>
-                                <a href="#" title="Remove task" class="tip"><span
-                                        class="icon12 icomoon-icon-remove"></span></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div><!-- End .span4 -->
-
         </div><!-- End .row-fluid -->
-
-        <div class="modal fade hide" id="myModal1">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span
-                        class="icon12 minia-icon-close"></span></button>
-                <h3>Chat layout</h3>
-            </div>
-            <div class="modal-body">
-                <ul class="messages">
-                    <li class="user clearfix">
-                        <a href="#" class="avatar">
-                            <img src="images/avatar2.jpeg" alt=""/>
-                        </a>
-                        <div class="message">
-                            <div class="head clearfix">
-                                <span class="name"><strong>Lazar</strong> says:</span>
-                                <span class="time">25 seconds ago</span>
-                            </div>
-                            <p>
-                                Time to go i call you tomorrow.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="admin clearfix">
-                        <a href="#" class="avatar">
-                            <img src="images/avatar3.jpeg" alt=""/>
-                        </a>
-                        <div class="message">
-                            <div class="head clearfix">
-                                <span class="name"><strong>Sugge</strong> says:</span>
-                                <span class="time">just now</span>
-                            </div>
-                            <p>
-                                OK, have a nice day.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="sendMsg">
-                        <form class="form-horizontal" action="#">
-                                <textarea class="elastic" id="textarea1" rows="1" placeholder="Enter your message ..."
-                                          style="width:98%;"></textarea>
-                            <button type="submit" class="btn btn-info marginT10">Send message</button>
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
     </div>
 </div><!-- End contentwrapper -->
 </div><!-- End #content -->
