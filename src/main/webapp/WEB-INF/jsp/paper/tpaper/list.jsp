@@ -158,8 +158,8 @@
         <!-- Page end here -->
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->
-
-</div><!-- End #wrapper -->
+<s:include value="/tail.jsp"/>
+<!-- End #wrapper -->
 <!-- Le javascript
 ================================================== -->
 <script type="text/javascript">

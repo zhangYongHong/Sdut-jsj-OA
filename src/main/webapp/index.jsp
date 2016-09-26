@@ -32,7 +32,7 @@
 
         <div class="row-fluid">
 
-            <div class="span8">
+            <div class="span8 offset1">
                 <div class="box ">
 
                     <div class="title">
@@ -52,9 +52,8 @@
         </div><!-- End .row-fluid -->
     </div>
 </div><!-- End contentwrapper -->
-</div><!-- End #content -->
-
-</div><!-- End #wrapper -->
+<s:include value="/tail.jsp"/>
+<!-- End #wrapper -->
 
 <!-- Le javascript
 ================================================== -->

@@ -262,8 +262,9 @@
         </div>
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->
+<s:include value="/tail.jsp"/>
 
-</div><!-- End #wrapper -->
+<!-- End #wrapper -->
 
 <!-- Le javascript
 ================================================== -->
