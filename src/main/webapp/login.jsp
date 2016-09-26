@@ -24,7 +24,7 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="brand" href="#">协同办公系统.<span class="slogan">CS</span></a>
+                        <a class="brand" href="#">山东理工大学计算机学院协同办公系统</a>
                     </div>
                 </div><!-- /navbar-inner -->
             </div><!-- /navbar -->

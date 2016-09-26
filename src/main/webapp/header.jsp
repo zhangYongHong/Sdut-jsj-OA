@@ -16,13 +16,8 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="index.jsp">协同办公系统.<span class="slogan">CS</span></a>
+                <a class="brand" href="index.jsp">山东理工大学计算机学院协同办公系统</a>
                 <div class="nav-no-collapse">
-                    <ul class="nav">
-                        <li class="active"><a href="index.jsp"><span class="icon16 icomoon-icon-screen-2"></span>
-                            首页</a></li>
-                    </ul>
-
                     <ul class="nav pull-right usernav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
