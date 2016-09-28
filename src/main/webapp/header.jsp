@@ -86,29 +86,27 @@
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
                                     </ul>
                                 </li>
-                                <shiro:hasPermission name="systemDDLAction:*">
-                                    <li>
-                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
-                                        <ul class="sub">
-                                            <li>
-                                                <a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
-                                                        class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
-                                            <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </shiro:hasPermission>
-                                <shiro:hasPermission name="role:*">
-                                    <li>
-                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
-                                        <ul class="sub">
-                                            <li><a href="${pageContext.request.contextPath}/roleAction_list.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
-                                            </li>
-                                            <li><a href="${pageContext.request.contextPath}/roleAction_addUI.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </shiro:hasPermission>
+                                <li>
+                                    <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
+                                    <ul class="sub">
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
+                                        <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
+                                    <ul class="sub">
+                                        <li><a href="${pageContext.request.contextPath}/roleAction_list.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
+                                        </li>
+                                        <li><a href="${pageContext.request.contextPath}/roleAction_addUI.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </shiro:hasRole>
@@ -129,37 +127,27 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>归档管理</a>
                                 <ul class="sub">
-                                    <shiro:hasPermission name="trainingPaper:view">
-                                        <li><a href="${pageContext.request.contextPath}/qPAction_list.action"><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>试卷归档管理</a>
-                                        </li>
-                                    </shiro:hasPermission>
-                                    <shiro:hasPermission name="questionPaper:view">
-                                        <li><a href="${pageContext.request.contextPath}/tPAction_list.action"><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>实训归档管理</a>
-                                        </li>
-                                    </shiro:hasPermission>
+                                    <li><a href="${pageContext.request.contextPath}/qPAction_list.action"><span
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>试卷归档管理</a>
+                                    </li>
+                                    <li><a href="${pageContext.request.contextPath}/tPAction_list.action"><span
+                                            class="icon16 icomoon-icon-arrow-right-2"></span>实训归档管理</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <shiro:hasPermission name="awards:view">
-                                <li><a href="#"><span class="icon16 icomoon-icon-list-view"></span>获奖详情管理</a>
-                                    <ul class="sub">
-                                        <shiro:hasPermission name="awards:add">
-                                            <li>
-                                                <a href="${pageContext.request.contextPath}/awardsAction_addUI.action"><span
-                                                        class="icon16 icomoon-icon-arrow-right-2"></span>申请</a></li>
-                                        </shiro:hasPermission>
-                                        <shiro:hasPermission name="awards:view">
-                                            <li>
-                                                <a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList.action"><span
-                                                        class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
-                                            <li>
-                                                <a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
-                                                        class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
-                                        </shiro:hasPermission>
-                                    </ul>
-                                </li>
-                            </shiro:hasPermission>
+                            <li><a href="#"><span class="icon16 icomoon-icon-list-view"></span>获奖详情管理</a>
+                                <ul class="sub">
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/awardsAction_addUI.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>申请</a></li>
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
+                                    <li>
+                                        <a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>
