@@ -12,6 +12,7 @@
 
 		<action name="tasksAction_*" class="tasksAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/workFlow/taskList.jsp</result>
+			<result name="historyList">/WEB-INF/jsp/workFlow/history.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">tasksAction_taskList</param>
 				<param name="namespace">/</param>
@@ -21,7 +22,7 @@
 				<param name="namespace">/</param>
 			</result>
 			<result name="taskForm" type="redirectAction">
-				${#formUrl}
+				${formUrl}
 			</result>
 		</action>
 	</package>

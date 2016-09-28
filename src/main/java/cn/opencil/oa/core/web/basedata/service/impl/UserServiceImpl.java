@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.Set;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Project Name:SdutOA
@@ -26,9 +28,9 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
 
     @Autowired
     private UserDao userDao;
-
     @Autowired
     private RoleService roleService;
+    private Lock lock = new ReentrantLock();
 
     @Override
     public BaseDao getBaseDao() {

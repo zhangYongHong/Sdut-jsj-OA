@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.activiti.service;
 
+import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.task.Task;
 
 import java.util.List;
@@ -22,9 +23,13 @@ public interface TasksService {
     /**
      * 办理任务
      */
-    void completeTask(String taskId, Map<String, Object> variables);
+    void completeTask(String taskId, Map<String, Object> variables, Integer state);
 
     String getFormKey(String taskId);
 
     Long getObjId(String taskId);
+
+    String getFormUrl(Long id);
+
+    List<HistoricTaskInstance> historyList();
 }

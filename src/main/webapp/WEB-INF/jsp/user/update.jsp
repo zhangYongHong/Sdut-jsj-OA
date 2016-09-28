@@ -70,7 +70,7 @@
                                 <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
                                 <div class="span2">
                                     <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                              name="role" headerKey="0" headerValue="请选择"
+                                              name="role" value="%{#oldUser.role}"
                                               cssClass="select2-active"></s:select>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                                 <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
                                 <div class="span2">
                                     <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
-                                              name="deptid" headerValue="请选择" readonly="readonly"></s:select>
+                                              name="deptid" value="%{#oldUser.deptid}" readonly="readonly"></s:select>
                                 </div>
                             </div>
                         </div>

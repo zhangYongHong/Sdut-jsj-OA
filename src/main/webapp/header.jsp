@@ -82,8 +82,6 @@
                                                     class="input-small"/><span
                                                     class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
                                         </li>
-                                        <li><a href="#"><span class="input-small"/><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>运行的中流程</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -92,7 +90,7 @@
                                         <li>
                                             <a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
                                                     class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
-                                        <li><a href="#"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                        <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -119,7 +117,7 @@
                                     <li><a href="${pageContext.request.contextPath}/tasksAction_taskList.action"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>待办任务</a>
                                     </li>
-                                    <li><a href="#"><span
+                                    <li><a href="${pageContext.request.contextPath}/tasksAction_historyList.action"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>已办任务</a>
                                     </li>
                                 </ul>

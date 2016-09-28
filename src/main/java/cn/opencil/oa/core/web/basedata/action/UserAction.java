@@ -92,7 +92,7 @@ public class UserAction extends BaseAction<User> {
     public String update() {
         User user = this.getModel();
         try {
-            User userByDB = userService.getUserByEmployeenum(employeenum);
+            User userByDB = userService.getEntryById(tempUid);
             if (!StringUtils.isNotEmpty(this.getModel().getEmail())) {
                 if (!this.checkEmail(this.getModel().getEmail())) {
                     this.loadingInfoForUser();
@@ -108,6 +108,7 @@ public class UserAction extends BaseAction<User> {
                 }
             }
             userByDB.setRoleIdsStr(user.getRole());
+            userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getDescription());
             userByDB.setDeptid(user.getDeptid());
             userByDB.setEmail(user.getEmail());
             userByDB.setPhone(user.getPhone());

@@ -4,8 +4,8 @@ import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
 import com.opensymphony.xwork2.ActionContext;
+import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.task.Task;
-import org.apache.commons.collections.map.HashedMap;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +28,7 @@ public class TasksAction {
 
     private Long id;
     private HttpSession httpSession;
+    private String formUrl;
 
     /**
      * 待办任务列表
@@ -36,6 +38,15 @@ public class TasksAction {
         List<Task> taskList = tasksService.taskList();
         ActionContext.getContext().put("taskList", taskList);
         return "listAction";
+    }
+
+    /**
+     * 已办任务列表
+     */
+    public String historyList() {
+        List<HistoricTaskInstance> historicTaskInstanceList = tasksService.historyList();
+        ActionContext.getContext().put("historyList", historicTaskInstanceList);
+        return "historyList";
     }
 
     /**
@@ -56,16 +67,10 @@ public class TasksAction {
     @RequiresPermissions("task:viewTaskForm")
     public String viewTaskForm() {
         String formUrl;
-        //通过taskID获取formKey
-        String taskId = id.toString();
-        String formKey = tasksService.getFormKey(taskId);
-        //通过taskID获取业务对象ID
-        Long objId = tasksService.getObjId(taskId);
-        //拼装URL
-        formUrl = formKey + "?aid=" + objId;
+        formUrl = tasksService.getFormUrl(id);
         ActionContext.getContext().put("formUrl", formUrl);
         HttpSession session = ServletActionContext.getRequest().getSession();
-        session.setAttribute("taskId", taskId);
+        session.setAttribute("taskId", id.toString());
         return "taskForm";
     }
 
@@ -77,21 +82,13 @@ public class TasksAction {
         httpSession = ServletActionContext.getRequest().getSession();
         String taskId = (String) httpSession.getAttribute("taskId");
         Integer state = (Integer) httpSession.getAttribute("state");
-        Map<String, Object> variables = new HashedMap();
+        Map<String, Object> variables = new HashMap();
         variables.put("assignee", PageUtil.getUser().getUserName());
-        if (state == null) {
-            tasksService.completeTask(taskId, variables);
-            return "redirect";
-        } else if (state == 2){
-            //
-            variables.put("state", 2);
-            tasksService.completeTask(taskId, variables);
-        } else if (state == 3) {
-            variables.put("state", 3);
-            tasksService.completeTask(taskId, variables);
-        }
+        tasksService.completeTask(taskId, variables, state);
         return "redirect";
     }
+
+
 
 
 
@@ -99,4 +96,9 @@ public class TasksAction {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getFormUrl() {
+        return formUrl;
+    }
+
 }
