@@ -54,22 +54,16 @@
 
                     <div class="content noPad clearfix">
                         <div class="form-row row-fluid">
-                            <div class="span4">
+                            <div class="span8">
                                 <div class="row-fluid">
-                                    <label class="form-label span2">学年:</label>
-                                    <div class="span8 controls">
-                                        <select name="schoolYear" id="schoolYear" onchange="selectChange()">
-                                            <option>请选择</option>
-                                            <option value="2014-2015-1">2014-2015学年上学期</option>
-                                            <option value="2014-2015-2">2014-2015学年下学期</option>
-                                            <option value="2015-2016-1">2015-2016学年上学期</option>
-                                            <option value="2015-2016-2">2015-2016学年下学期</option>
-                                            <option value="2016-2017-1">2016-2017学年上学期</option>
-                                        </select>
+                                    <label class="form-label span1">&nbsp;&nbsp;学年:</label>
+                                    <div class="span3">
+                                        <s:select list="%{#session.schoolYearList}" listKey="ddlCode" listValue="ddlName"
+                                                  name="schoolYear" headerKey="0" headerValue="请选择" cssClass="select2-active" id="schoolYear" onchange="selectChange()"></s:select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="bottom ">
+                            <div class="bottom">
                                 <shiro:hasPermission name="questionPaper:add">
                                     <a href="qPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
                                 </shiro:hasPermission>

@@ -23,5 +23,5 @@ public interface QPService  extends BaseService<QuestionPaper>{
 
 	PageResult<QuestionPaper> getPageResultForQP(BaseQuery baseQuery);
 
-	void uploadExcel(File uploadfile);
+	void uploadExcel(File uploadfile, String schoolYear);
 }

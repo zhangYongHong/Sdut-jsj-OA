@@ -15,11 +15,6 @@
     <!-- Main stylesheets -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
 
-    <!--<script type="text/javascript">-->
-    <!--//adding load class to body and hide page-->
-    <!--document.documentElement.className += 'loadstate';-->
-    <!--</script>-->
-
 </head>
 
 <body>

@@ -20,6 +20,7 @@ import org.springframework.stereotype.Controller;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -39,6 +40,8 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     private static Long tempId;
     private PaperQuery tpQuery = new PaperQuery();
+    private File uploadfile;
+    private String schoolYear;
 
     @RequiresPermissions("questionPaper:view")
     public String list() {
@@ -170,6 +173,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
      */
     public String uploadExcel() {
 
+        tpService.uploadExcel(uploadfile, schoolYear);
         return "redirect";
     }
 
@@ -217,5 +221,21 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     public void setTpQuery(PaperQuery tpQuery) {
         this.tpQuery = tpQuery;
+    }
+
+    public File getUploadfile() {
+        return uploadfile;
+    }
+
+    public void setUploadfile(File uploadfile) {
+        this.uploadfile = uploadfile;
+    }
+
+    public String getSchoolYear() {
+        return schoolYear;
+    }
+
+    public void setSchoolYear(String schoolYear) {
+        this.schoolYear = schoolYear;
     }
 }

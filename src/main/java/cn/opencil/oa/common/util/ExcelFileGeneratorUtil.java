@@ -65,7 +65,7 @@ public class ExcelFileGeneratorUtil {
 
         String filename = file.getName();
         if (filename == null || "".equals(filename)) {
-            log.error("导入excel,文件不存在！");
+            log.error("导入excel文件不存在！");
         }
         try {
             InputStream input = new FileInputStream(file);
@@ -219,7 +219,7 @@ public class ExcelFileGeneratorUtil {
 
         String filename = file.getName();
         if (filename == null || "".equals(filename)) {
-            log.error("导入excel,文件不存在！");
+            log.error("导入excel文件不存在！");
         }
         try {
             InputStream input = new FileInputStream(file);

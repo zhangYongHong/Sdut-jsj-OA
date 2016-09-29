@@ -37,10 +37,12 @@ public class QPAction extends BaseAction<QuestionPaper> {
     //如果不加static 值不会产生变化
     private static Long tempId;
     private PaperQuery qpQuery = new PaperQuery();
+    private File uploadfile;
+    private String schoolYear;
+
     @Autowired
     private QPService qpService;
 
-    private File uploadfile;
 
     @RequiresPermissions("questionPaper:view")
     public String list() {
@@ -48,7 +50,8 @@ public class QPAction extends BaseAction<QuestionPaper> {
         Subject subject = SecurityUtils.getSubject();
         try {
             if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
-                qpQuery.setSchoolYear(DateUtil.groupSchoolYear());
+                //默认显示数据字典中设置的一个学年信息
+                qpQuery.setSchoolYear("1");
             else
                 qpQuery.setSchoolYear(this.getModel().getSchoolYear());
             if (!subject.hasRole("admin"))
@@ -179,7 +182,8 @@ public class QPAction extends BaseAction<QuestionPaper> {
      */
     @RequiresPermissions("page:upload")
     public String uploadExcel() {
-        qpService.uploadExcel(uploadfile);
+        schoolYear = this.getModel().getSchoolYear();
+        qpService.uploadExcel(uploadfile, schoolYear);
         return "redirect";
     }
 
@@ -225,4 +229,11 @@ public class QPAction extends BaseAction<QuestionPaper> {
         this.qpQuery = qpQuery;
     }
 
+    public String getSchoolYear() {
+        return schoolYear;
+    }
+
+    public void setSchoolYear(String schoolYear) {
+        this.schoolYear = schoolYear;
+    }
 }

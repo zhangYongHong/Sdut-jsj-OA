@@ -16,23 +16,20 @@
 
     <!-- Le styles -->
 
-
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/icons.css" rel="stylesheet" type="text/css"/>
-
+    <link href="css/easyui.css" rel="stylesheet" type="text/css"/>
     <link href="plugins/dataTables/jquery.dataTables.css" type="text/css" rel="stylesheet"/>
     <!-- Main stylesheets -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
-
-
 </head>
 
 <body>
 <s:include value="/header.jsp"/>
 <!--Body content-->
+<p>sdasdasdasdas</p>
 <div id="content" class="clearfix">
     <div class="contentwrapper"><!--Content wrapper-->
-
         <div class="heading">
 
             <h3>实训管理</h3>
@@ -57,18 +54,15 @@
 
                     <div class="content noPad clearfix">
                         <div class="form-row row-fluid">
-                            <div class="span4">
+                            <div class="span8">
                                 <div class="row-fluid">
-                                    <label class="form-label span2">学年:</label>
-                                    <div class="span8 controls">
-                                        <select name="schoolYear" id="schoolYear" onchange="selectChange()">
-                                            <option>请选择</option>
-                                            <option value="2014-2015-1">2014-2015学年上学期</option>
-                                            <option value="2014-2015-2">2014-2015学年下学期</option>
-                                            <option value="2015-2016-1">2015-2016学年上学期</option>
-                                            <option value="2015-2016-2">2015-2016学年下学期</option>
-                                            <option value="2016-2017-1">2016-2017学年上学期</option>
-                                        </select>
+                                    <label class="form-label span1">&nbsp;&nbsp;学年:</label>
+                                    <div class="span3">
+                                        <s:select list="%{#session.schoolYearList}" listKey="ddlCode"
+                                                  listValue="ddlName"
+                                                  name="schoolYear" headerKey="0" headerValue="请选择"
+                                                  cssClass="select2-active" id="schoolYear"
+                                                  onchange="selectChange()"></s:select>
                                     </div>
                                 </div>
                             </div>
@@ -76,12 +70,15 @@
                                 <div class="bottom ">
                                     <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
                                     <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                                    <a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>"
-                                       class="btn btip marginR10 marginB10">导出</a>
+                                    <%--<a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>"--%>
+                                       <%--class="btn btip marginR10 marginB10" >导出</a>--%>
+                                    <a data-remodal-target="modal"
+                                       class="btn btip marginR10 marginB10" >导出</a>
                                 </div>
                             </shiro:hasRole>
+
                         </div>
-                        <table cellpadding="0" cellspacing="0" border="0"
+                        <table id="table_id_example" cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
                             <!-- dynamicTable -->
                             <thead>
@@ -132,11 +129,11 @@
                                     <td><s:property value="isChange"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <shiro:hasPermission name="update">
+                                            <shiro:hasPermission name="trainingPaper:update">
                                                 <a href="tPAction_updateUI.action?tid=<s:property value="tid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
                                             </shiro:hasPermission>
-                                            <shiro:hasPermission name="delete">
+                                            <shiro:hasPermission name="trainingPaper:delete">
                                                 <a href="tPAction_delete.action?tid=<s:property value="tid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
@@ -169,7 +166,8 @@
         window.location.href = "tPAction_list.action?schoolYear=" + selObj.options[i].value;
     }
 </script>
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 
@@ -198,10 +196,11 @@
 
 <script type="text/javascript" src="plugins/dataTables/jquery.dataTables.min.js"></script>
 
+
+
 <!-- Important Place before main.js  -->
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
 
 </body>
 </html>

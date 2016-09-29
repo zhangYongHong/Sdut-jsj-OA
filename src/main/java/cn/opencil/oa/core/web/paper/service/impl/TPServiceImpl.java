@@ -1,7 +1,6 @@
 package cn.opencil.oa.core.web.paper.service.impl;
 
 import cn.opencil.oa.common.page.PageResult;
-import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.common.util.ExcelFileGeneratorUtil;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.BaseDao;
@@ -91,9 +90,8 @@ public class TPServiceImpl extends BaseServiceImpl<TrainingPaper> implements
 	}
 
 	@Override
-	public void uploadExcel(File f) {
+	public void uploadExcel(File f, String schoolYear) {
 		if (null != f) {
-			String schoolYear = DateUtil.groupSchoolYear();
 			List<TrainingPaper> list = ExcelFileGeneratorUtil.getTrainingPaperForExcel(f);
 			String fileNum = "";
 

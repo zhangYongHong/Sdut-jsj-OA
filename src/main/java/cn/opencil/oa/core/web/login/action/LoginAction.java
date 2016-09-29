@@ -64,7 +64,6 @@ public class LoginAction extends BaseAction<User>{
 
 		HttpSession session = this.getRequest().getSession();
 		session.setAttribute(ContantKey.GLOBLE_USER_INFO, user);
-
         //角色
         this.loadSource("role");
         //系别
@@ -79,6 +78,7 @@ public class LoginAction extends BaseAction<User>{
         this.loadSource("competitionView");
         this.loadSource("state");
         this.loadSource("available");
+        this.loadSource("schoolYear");
 
 		return SUCCESS;
 	}

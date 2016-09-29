@@ -1,7 +1,6 @@
 package cn.opencil.oa.core.web.paper.service.impl;
 
 import cn.opencil.oa.common.page.PageResult;
-import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.common.util.ExcelFileGeneratorUtil;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.BaseDao;
@@ -92,9 +91,9 @@ public class QPServiceImpl extends BaseServiceImpl<QuestionPaper> implements
 	}
 
 	@Override
-	public void uploadExcel(File uploadfile) {
+	public void uploadExcel(File uploadfile, String schoolYear) {
 		if (null != uploadfile) {
-			String schoolYear = DateUtil.groupSchoolYear();
+//			String schoolYear = DateUtil.groupSchoolYear();
 			List<QuestionPaper> list = ExcelFileGeneratorUtil.getQuerionPaperForExcel(uploadfile);
 			String fileNum = "";
 

@@ -23,5 +23,5 @@ public interface TPService extends BaseService<TrainingPaper> {
 
 	PageResult<TrainingPaper> getPageResultForTP(BaseQuery baseQuery);
 
-	void uploadExcel(File f);
+	void uploadExcel(File f, String schoolYear);
 }

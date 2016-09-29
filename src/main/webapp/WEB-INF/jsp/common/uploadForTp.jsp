@@ -15,11 +15,6 @@
     <!-- Main stylesheets -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
 
-    <!--<script type="text/javascript">-->
-    <!--//adding load class to body and hide page-->
-    <!--document.documentElement.className += 'loadstate';-->
-    <!--</script>-->
-
 </head>
 
 <body>
@@ -30,7 +25,7 @@
 
         <div class="heading">
 
-            <h3>文件上传</h3>
+            <h3>实训管理文件导入</h3>
 
         </div><!-- End .heading-->
 
@@ -41,8 +36,12 @@
                     <div class="well well-small">
                         <form action="tPAction_uploadExcel.action" enctype="multipart/form-data" method="post">
                             <input type="file" id="upload" name="uploadfile"/>
+                            <div class="span2">
+                                <s:select list="%{#session.schoolYearList}" listKey="ddlCode" listValue="ddlName"
+                                          name="schoolYear" cssClass="select2-active"></s:select>
+                            </div>
                             <button class="offset1" type="submit" id="uploader"><span
-                                    class="icon16 icomoon-icon-upload-3"></span> 上传
+                                    class="icon16 icomoon-icon-upload-3"></span> 导入
                             </button>
                         </form>
                     </div>
