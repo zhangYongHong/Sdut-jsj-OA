@@ -61,7 +61,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
                         List<User> list = query.list();
                         for (User user : list) {
                             if (!StringUtils.isNotEmpty(user.getRoleIdsStr())) {
-                                user.setRoleIds(PageUtil.StrListTOLongList(PageUtil.getStringList(user.getRoleIdsStr())));
+                                user.setRoleIds(PageUtil.strListTOLongList(PageUtil.getStringList(user.getRoleIdsStr())));
                                 user.setRole(roleService.getRoleName(user.getRoleIds().toArray(new Long[0])));
                             }
                         }
@@ -80,7 +80,7 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 		 * 再转换为list
 		*/
         if (StringUtils.isNotEmpty(user.getRoleIdsStr())) {
-            user.setRoleIds(PageUtil.StrListTOLongList(PageUtil.getStringList(user.getRoleIdsStr())));
+            user.setRoleIds(PageUtil.strListTOLongList(PageUtil.getStringList(user.getRoleIdsStr())));
             user.setRole(roleService.getRoleName(user.getRoleIds().toArray(new Long[0])));
         }
         return user;

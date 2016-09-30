@@ -46,29 +46,44 @@
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
                         <form class="form-horizontal" action="systemDDLAction_add.action" method="post">
-
-                            <div class="form-row row-fluid">
+                                <%--<div class="form-row row-fluid">--%>
+                                <%--<div class="span12">--%>
+                                    <%--<div class="row-fluid">--%>
+                                        <%--<label class="form-label span4">类型</label>--%>
+                                        <%--<input class="span8" id="normalInput" type="text" name="keyword"/>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                            <div class="form-row row-fluid offset2">
                                 <div class="span12">
-                                    <div class="row-fluid">
-                                        <label class="form-label span4">类型</label>
-                                        <input class="span8" id="normalInput" type="text" name="keyword"/>
+                                    <label class="form-label span2">类型:</label>
+                                    <div class="span3 controls">
+                                        <select name="keyword" id="keyword">
+                                            <option>请选择</option>
+                                            <option value="competitionView">竞赛奖项</option>
+                                            <option value="role">角色</option>
+                                            <option value="dept">系别</option>
+                                            <option value="level">获奖等级</option>
+                                            <option value="grade">获奖级别</option>
+                                            <option value="state">审核状态</option>
+                                            <option value="classes">班级</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-
+                            <%--<div class="form-row row-fluid">--%>
+                                <%--<div class="span12">--%>
+                                    <%--<div class="row-fluid">--%>
+                                        <%--<label class="form-label span4" for="focusedInput">标记</label>--%>
+                                        <%--<input class="span8 focused" id="focusedInput" type="text"--%>
+                                               <%--name="ddlCode"/>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">标记</label>
-                                        <input class="span8 focused" id="focusedInput" type="text"
-                                               name="ddlCode"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span12">
-                                    <div class="row-fluid">
-                                        <label class="form-label span4" for="focusedInput">名称</label>
+                                        <label class="form-label span4">名称</label>
                                         <input class="span8 focused" type="text" name="ddlName"/>
                                     </div>
                                 </div>
@@ -77,9 +92,7 @@
                                 <button type="submit" class="btn btn-info">保存</button>
                                 <button type="button" class="btn">取消</button>
                             </div>
-
                         </form>
-
                     </div>
                 </div><!-- End .box -->
             </div><!-- End .span6 -->

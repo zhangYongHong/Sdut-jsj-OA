@@ -234,7 +234,7 @@ public class PageUtil {
         return ServletActionContext.getRequest().getSession();
     }
 
-    public static List<Long> StrListTOLongList(List<String> stringList) {
+    public static List<Long> strListTOLongList(List<String> stringList) {
         if (stringList != null && stringList.size() > 0) {
             if (stringList.get(0) != null) {
                 List<Long> longs = new ArrayList<>();
@@ -247,5 +247,4 @@ public class PageUtil {
         }
         return null;
     }
-
 }

@@ -22,7 +22,7 @@ public class RoleDaoImpl extends BaseDaoImpl<Role> implements RoleDao {
     @Override
     public Role getOne(Long roleId) {
         Role role = this.getHibernateTemplate().get(Role.class, roleId);
-        role.setResourceIds(PageUtil.StrListTOLongList(PageUtil.getStringList(role.getResourceIdsStr())));
+        role.setResourceIds(PageUtil.strListTOLongList(PageUtil.getStringList(role.getResourceIdsStr())));
         return role;
     }
 
@@ -37,7 +37,7 @@ public class RoleDaoImpl extends BaseDaoImpl<Role> implements RoleDao {
                         Query query = session.createQuery(hql.toString());
                         List<Role> list = query.list();
                         for (Role role : list) {
-                            role.setResourceIds(PageUtil.StrListTOLongList(PageUtil.getStringList(role.getResourceIdsStr())));
+                            role.setResourceIds(PageUtil.strListTOLongList(PageUtil.getStringList(role.getResourceIdsStr())));
                         }
                         return list;
                     }

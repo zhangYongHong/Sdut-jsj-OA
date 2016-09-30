@@ -35,15 +35,42 @@
             <div class="span8 offset1">
                 <div class="box ">
 
-                    <div class="title">
+                    <div class="title center">
                         <h4>
-                            <span class="icon16 icomoon-icon-calendar"></span>
-                            <span>Calendar</span>
+                            <span class="icon16 icomoon-icon-xing"></span>
+                            <span>通知栏</span>
                         </h4>
                         <a href="#" class="minimize">Minimize</a>
                     </div>
-                    <div class="content noPad">
-                        <div id="calendar"></div>
+                    <div class="content noPad center sendMsg" >
+                        <div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <p style="font-size: 20px">欢迎使用山东理工大学计算机学院系统办公系统</p>
+                            <p style="font-size: 20px">由于学生水平有限,无法是使系统做到尽善尽美,若有不合理的地方希望老师能够指正.</p>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
                     </div>
 
                 </div><!-- End .box -->

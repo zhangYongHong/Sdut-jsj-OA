@@ -43,13 +43,14 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="systemDDLAction_add.action" method="post">
+                        <form class="form-horizontal" action="systemDDLAction_update.action" method="post">
 
+                            <s:hidden name="sid" value="%{#systemDDL.sid}"/>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">类型</label>
-                                        <input class="span8" id="normalInput" type="text" name="keyword" value="<s:property value="#systemDDL.keyword"/> "/>
+                                        <input class="span8" id="normalInput" type="text" name="keyword" value="<s:property value="#systemDDL.keyword"/> " readonly="readonly"/>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +60,7 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">标记</label>
                                         <input class="span8 focused" id="focusedInput" type="text"
-                                               name="ddlCode" value="<s:property value="#systemDDL.ddlCode"/>"/>
+                                               name="ddlCode" value="<s:property value="#systemDDL.ddlCode"/>" readonly="readonly"/>
                                     </div>
                                 </div>
                             </div>

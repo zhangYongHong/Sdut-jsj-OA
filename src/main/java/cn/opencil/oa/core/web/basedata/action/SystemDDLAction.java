@@ -17,8 +17,6 @@ import org.springframework.stereotype.Controller;
  * File Name:SystemDDLAction.java
  * Date:2016-4-15下午8:35:50
  * Author : 张树伟
- *
- * 
  */
 @Controller
 @Scope("prototype")
@@ -52,9 +50,10 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 
 	public String add() {
 		try {
-			systemDDLService.addEntry(this.getModel());
+			SystemDDL systemDDL = this.getModel();
+			systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
+			systemDDLService.addEntry(systemDDL);
 		} catch (Exception e) {
-
 		}
 		return REDIRECT;
 	}
@@ -65,7 +64,6 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 			SystemDDL systemDDL = systemDDLService.getEntryById(this.getModel().getSid());
 			ActionContext.getContext().put("systemDDL", systemDDL);
 		} catch (Exception e) {
-
 		}
 		return updateUI;
 	}
@@ -75,7 +73,6 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 		try {
 			systemDDLService.updateEntry(this.getModel());
 		} catch (Exception e) {
-
 		}
 		return REDIRECT;
 	}

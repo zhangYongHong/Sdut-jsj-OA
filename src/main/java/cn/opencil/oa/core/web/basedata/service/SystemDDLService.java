@@ -24,4 +24,11 @@ public interface SystemDDLService extends BaseService<SystemDDL>{
 	void addDDL(String keyword, SystemDDL systemDDL) throws Exception;
 	
 	List<SystemDDL> getDDLs(String keyword);
+
+	/**
+	 * 获取不在DdlCode范围中数
+	 * @return
+     * @param keyword
+	 */
+    Integer getNumberIsNotInDdlCode(String keyword);
 }
