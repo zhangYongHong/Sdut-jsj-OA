@@ -9,7 +9,9 @@ import cn.opencil.oa.core.web.basedata.service.UserService;
 import cn.opencil.oa.core.web.role.service.RoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -91,24 +93,29 @@ public class UserAction extends BaseAction<User> {
     @RequiresPermissions("user:update")
     public String update() {
         User user = this.getModel();
+        Subject currentUser = SecurityUtils.getSubject();
+
         try {
             User userByDB = userService.getEntryById(tempUid);
-            if (!StringUtils.isNotEmpty(this.getModel().getEmail())) {
+            if (StringUtils.isNotEmpty(this.getModel().getEmail())) {
                 if (!this.checkEmail(this.getModel().getEmail())) {
                     this.loadingInfoForUser();
                     this.addFieldError("userError", "邮箱格式错误");
                     return "updateUI";
                 }
             }
-            if (!StringUtils.isNotEmpty(this.getModel().getPhone())) {
+            if (StringUtils.isNotEmpty(this.getModel().getPhone())) {
                 if (!this.checkPhone(this.getModel().getPhone())) {
                     this.loadingInfoForUser();
                     this.addFieldError("userError", "手机号格式错误");
                     return "updateUI";
                 }
             }
-            userByDB.setRoleIdsStr(user.getRole());
-            userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getDescription());
+            //若为管理员权限则可以修改角色
+            if (currentUser.hasRole("admin")) {
+                userByDB.setRoleIdsStr(user.getRole());
+                userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getDescription());
+            }
             userByDB.setDeptid(user.getDeptid());
             userByDB.setEmail(user.getEmail());
             userByDB.setPhone(user.getPhone());
