@@ -44,7 +44,8 @@
 
 			function rep(re, str) {
 				s = s.replace(re, str);
-			}
+			};
+
 			// example: <strong> to [b]
 			rep(/<a.*?href=\"(.*?)\".*?>(.*?)<\/a>/gi,"[url=$1]$2[/url]");
 			rep(/<font.*?color=\"(.*?)\".*?class=\"codeStyle\".*?>(.*?)<\/font>/gi,"[code][color=$1]$2[/color][/code]");
@@ -93,7 +94,8 @@
 
 			function rep(re, str) {
 				s = s.replace(re, str);
-			}
+			};
+
 			// example: [b] to <strong>
 			rep(/\n/gi,"<br />");
 			rep(/\[b\]/gi,"<strong>");

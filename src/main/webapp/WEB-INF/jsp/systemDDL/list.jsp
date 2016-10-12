@@ -65,10 +65,11 @@
                                             <option value="competitionView">竞赛奖项</option>
                                             <option value="role">角色</option>
                                             <option value="dept">系别</option>
+                                            <option value="classes">班级</option>
                                             <option value="level">获奖等级</option>
                                             <option value="grade">获奖级别</option>
                                             <option value="state">审核状态</option>
-                                            <option value="classes">班级</option>
+                                            <option value="schoolYear">学年及学期</option>
                                         </select>
                                     </div>
                                 </div>

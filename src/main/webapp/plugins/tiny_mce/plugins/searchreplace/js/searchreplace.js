@@ -59,10 +59,12 @@ var SearchReplaceDialog = {
 			r = se.getRng().cloneRange();
 			ed.getDoc().execCommand('SelectAll', false, null);
 			se.setRng(r);
-		}
+		};
+
 		function replace() {
 			ed.selection.setContent(rs); // Needs to be duplicated due to selection bug in IE
-		}
+		};
+
 		// IE flags
 		if (ca)
 			fl = fl | 4;

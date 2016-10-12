@@ -66,7 +66,8 @@
 					if (tinymce.isWebKit && deltaSize < 0)
 						resize();
 				}
-			}
+			};
+
 			t.editor = ed;
 
 			// Define minimum height

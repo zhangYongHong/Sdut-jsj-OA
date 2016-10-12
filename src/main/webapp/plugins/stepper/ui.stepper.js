@@ -77,7 +77,7 @@ $.fn.remove = function() {
 
 // $.widget is a factory to create jQuery plugins
 // taking some boilerplate code out of the plugin code
-// created by Scott Gonzï¿½lez and Jï¿½rn Zaefferer
+// created by Scott González and Jörn Zaefferer
 function getter(namespace, plugin, method) {
 	var methods = $[namespace][plugin].getter || [];
 	methods = (typeof methods == "string" ? methods.split(/,?\s+/) : methods);
@@ -290,8 +290,9 @@ $.ui.mouse.defaults = {
  *	jquery.mousewheel.js
  *
  */
-(function ($) {
-	$.widget("ui.stepper", {
+;(function($) {
+
+$.widget("ui.stepper", {
 	plugins: {},
 	
 	ui: function(e) {

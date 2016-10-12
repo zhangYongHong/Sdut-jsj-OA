@@ -84,7 +84,8 @@
 					Event.remove(ed.getDoc(), 'click', hideMenu);
 					t._menu = null;
 				}
-			}
+			};
+
 			ed.onMouseDown.add(hide);
 			ed.onKeyDown.add(hide);
 			ed.onKeyDown.add(function(ed, e) {

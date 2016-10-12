@@ -15,7 +15,8 @@
 				return node;
 			}
 		} while (node = node.parentNode);
-	}
+	};
+
 	tinymce.create('tinymce.plugins.Layer', {
 		init : function(ed, url) {
 			var t = this;

@@ -56,7 +56,8 @@
 				var value = elm.attr(name);
 
 				return value || '';
-			}
+			};
+
 			// Default some values
 			data.fontface = editor.getParam("fullpage_default_fontface", "");
 			data.fontsize = editor.getParam("fullpage_default_fontsize", "");
@@ -123,13 +124,15 @@
 
 			function setAttr(elm, name, value) {
 				elm.attr(name, value ? value : undefined);
-			}
+			};
+
 			function addHeadNode(node) {
 				if (headElement.firstChild)
 					headElement.insert(node, headElement.firstChild);
 				else
 					headElement.append(node);
-			}
+			};
+
 			headerFragment = this._parseHeader();
 			headElement = headerFragment.getAll('head')[0];
 			if (!headElement) {
@@ -302,7 +305,8 @@
 				return s.replace(/<\/?[A-Z]+/g, function(a) {
 					return a.toLowerCase();
 				})
-			}
+			};
+
 			// Ignore raw updated if we already have a head, this will fix issues with undo/redo keeping the head/foot separate
 			if (o.format == 'raw' && self.head)
 				return;

@@ -2,25 +2,354 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/color-picker/marker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/color-picker/mask.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/color-picker/wheel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/arrows-active.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/arrows-normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/crop.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/dialogs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/icons-big.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/icons-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/progress.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/quicklook-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/quicklook-icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/resize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/spinner-mini.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/images/toolbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/ibutton/ibutton-slider-default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/bg-thead.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/column-asc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/column-desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/column-sortable.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/loading2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/images/arrowr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/images/cancel3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/images/check.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/images/cloud-upload.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/images/info.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/images/plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/backgrounds.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/buttons-disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/buttons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/delete.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/done.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/error.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/throbber.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/img/transp50.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_rounded/btnNext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_rounded/btnPrevious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_rounded/contentPattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_rounded/default_thumbnail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_rounded/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_rounded/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_square/btnNext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_square/btnPrevious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_square/contentPattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_square/default_thumbnail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_square/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/dark_square/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/default_thumb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/sprite_next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/sprite_prev.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/sprite_x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/default/sprite_y.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/btnNext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/btnPrevious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/contentPatternBottom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/contentPatternLeft.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/contentPatternRight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/contentPatternTop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/default_thumbnail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/facebook/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_rounded/btnNext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_rounded/btnPrevious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_rounded/default_thumbnail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_rounded/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_rounded/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_square/btnNext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_square/btnPrevious.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_square/default_thumbnail.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_square/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/images/light_square/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/select/select2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/select/spinner.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/color-picker/color-picker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/color-picker/colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/elfinder.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.LANG.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.jp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.pt_BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/i18n/elfinder.zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/proxy/elFinderSupportVer1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.grow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.orderBars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.pie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.resize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.tooltip_0.4.4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/ibutton/jquery.ibutton.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/inputlimiter/jquery.inputlimiter.1.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/inputlimiter/jquery.inputlimiter.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/ios-fix/ios-orientationchange-fix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jpages/jPages.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jpages/jPages.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/jtable.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/jtable/themes/jtable_lightcolor_base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/lazy-load/jquery.lazyload.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/fr-ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/pt-br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/i18n/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/css/jquery.plupload.queue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.plupload.queue/jquery.plupload.queue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/jquery.ui.plupload/css/jquery.ui.plupload.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/plupload.html4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/plupload/plupload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pnotify/jquery.pnotify.default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pnotify/jquery.pnotify.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-apollo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-clj.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-css.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-go.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-hs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-lisp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-lua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-ml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-n.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-proto.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-scala.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-sql.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-tex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-vb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-vhdl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-wiki.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-xq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/lang-yaml.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/prettify/prettify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/prettyPhoto.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/search/tipuesearch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/search/tipuesearch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/search/tipuesearch_data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/search/tipuesearch_set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/select/select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/select/select2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/smartWizzard/smart_wizard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/sparkline/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/sparkline/jquery.sparkline.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/sparkline/jquery.sparkline.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/langs/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/editor_plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/langs/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/langs/en_dlg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example_dependency/editor_plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/editor_plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/langs/en_dlg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/editor_plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/iespell/editor_plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/touch-punch/jquery.ui.touch-punch.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/validate/validate.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.min.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/common/util/PageUtil.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/common/util/PageUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/action/AwardsAction.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/action/AwardsAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/service/impl/AwardsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/awards/service/impl/AwardsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/notCheck.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/notCheck.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/qpaper/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/qpaper/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/tpaper/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/tpaper/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role/list.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/add.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/add.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/taskList.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/taskList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/animated-progress-bar/jquery.progressbar.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/animated-progress-bar/jquery.progressbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/dualselect/jquery.dualListBox-1.3.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/dualselect/jquery.dualListBox-1.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/elastic/jquery.elastic.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elastic/jquery.elastic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/elfinder.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/elfinder/elfinder.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/flot/jquery.flot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/fullcalendar/fullcalendar.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/fullcalendar/fullcalendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/fullcalendar/fullcalendar.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/fullcalendar/fullcalendar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/ibutton/jquery.ibutton.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/ibutton/jquery.ibutton.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/knob/jquery.knob.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/knob/jquery.knob.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/pretty-photo/jquery.prettyPhoto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/qtip/jquery.qtip.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cn/opencil/oa/core/web/awards/service/impl/AdardsServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cn/opencil/oa/core/web/awards/service/impl/AdardsServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/select/select2.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/select/select2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/stepper/ui.stepper.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/stepper/ui.stepper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/timeentry/jquery.timeentry.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/timeentry/jquery.timeentry.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/license.txt" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/css/advhr.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/css/advhr.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/js/rule.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/js/rule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/rule.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/rule.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/css/advimage.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/css/advimage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/image.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/image.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/js/image.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/js/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/css/advlink.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/css/advlink.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/js/advlink.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/js/advlink.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/link.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/link.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autoresize/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/langs/en.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/langs/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/emotions.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/emotions.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/js/emotions.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/js/emotions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/dialog.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/dialog.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/js/dialog.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/js/dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/css/fullpage.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/css/fullpage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/fullpage.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/fullpage.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/js/fullpage.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/js/fullpage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/fullscreen.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/fullscreen.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/template.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/template.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/layer/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/layer/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/css/media.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/css/media.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/embed.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/embed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/media.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/media.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/media.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/media.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pastetext.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pastetext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pasteword.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pasteword.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pastetext.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pastetext.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pasteword.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pasteword.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/example.html" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/example.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/jscripts/embed.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/jscripts/embed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/preview.html" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/print/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/print/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/save/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/save/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/css/searchreplace.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/css/searchreplace.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/js/searchreplace.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/js/searchreplace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/searchreplace.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/searchreplace.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/css/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/css/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/css/props.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/css/props.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/js/props.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/js/props.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/cell.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/cell.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/cell.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/cell.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/row.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/row.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/table.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/cell.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/cell.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/merge_cells.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/merge_cells.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/row.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/row.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/table.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/merge_cells.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/merge_cells.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/row.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/row.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/table.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/table.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/blank.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/blank.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/css/template.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/css/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/js/template.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/js/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/template.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/template.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/css/visualblocks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/abbr.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/abbr.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/acronym.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/acronym.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/attributes.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/attributes.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/cite.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/cite.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/attributes.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/attributes.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/popup.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/del.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/del.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/ins.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/ins.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/about.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/about.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/anchor.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/anchor.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/charmap.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/charmap.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/color_picker.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/color_picker.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/editor_template_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/editor_template_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/image.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/image.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/about.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/about.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/anchor.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/anchor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/charmap.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/charmap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/color_picker.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/color_picker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/image.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/link.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/source_editor.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/source_editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/link.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/link.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/shortcuts.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/shortcuts.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/dialog.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_black.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_black.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/source_editor.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/source_editor.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/editor_template_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/editor_template_src.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/content.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/editable_selects.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/editable_selects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/form_utils.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/form_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/mctabs.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/mctabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/validate.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/validate.js" />
     </list>
     <ignored path="SdutOA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,20 +380,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="notCheck.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/notCheck.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="170" column="82" selection-start-line="170" selection-start-column="82" selection-end-line="170" selection-end-column="82" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/qpaper/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="2520">
               <caret line="105" column="77" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="77" />
               <folding />
             </state>
@@ -74,7 +393,7 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
+            <state relative-caret-position="865">
               <caret line="105" column="77" selection-start-line="105" selection-start-column="77" selection-end-line="105" selection-end-column="77" />
               <folding />
             </state>
@@ -84,7 +403,7 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/tpaper/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
+            <state relative-caret-position="4464">
               <caret line="186" column="82" selection-start-line="186" selection-start-column="82" selection-end-line="186" selection-end-column="82" />
               <folding />
             </state>
@@ -94,7 +413,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="34008">
               <caret line="1417" column="43" selection-start-line="1417" selection-start-column="43" selection-end-line="1417" selection-end-column="43" />
               <folding>
                 <marker date="1476254019677" expanded="true" signature="39654:39767" ph="..." />
@@ -106,7 +425,7 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="3144">
               <caret line="131" column="82" selection-start-line="131" selection-start-column="82" selection-end-line="131" selection-end-column="82" />
               <folding />
             </state>
@@ -116,8 +435,8 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="151" column="82" selection-start-line="151" selection-start-column="82" selection-end-line="151" selection-end-column="82" />
+            <state relative-caret-position="3624">
+              <caret line="151" column="76" selection-start-line="151" selection-start-column="76" selection-end-line="151" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -126,7 +445,7 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="2976">
               <caret line="124" column="82" selection-start-line="124" selection-start-column="82" selection-end-line="124" selection-end-column="82" />
               <folding />
             </state>
@@ -136,7 +455,7 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="3192">
               <caret line="133" column="82" selection-start-line="133" selection-start-column="82" selection-end-line="133" selection-end-column="82" />
               <folding />
             </state>
@@ -146,7 +465,7 @@
       <file leaf-file-name="taskList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/taskList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="3024">
               <caret line="126" column="82" selection-start-line="126" selection-start-column="82" selection-end-line="126" selection-end-column="82" />
               <folding />
             </state>
@@ -327,7 +646,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
@@ -574,6 +892,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -659,86 +1003,6 @@
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="awards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sdut-jsj-OA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sdut-jsj-OA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="awards" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sdut-jsj-OA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sdut-jsj-OA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -768,6 +1032,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -788,22 +1053,22 @@
     <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/plugins/qtip" />
       <recent name="$PROJECT_DIR$/src/main/webapp/plugins" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/plugins" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AdardsServiceImplTest.addTest">
+  <component name="RunManager" selected="Tomcat Server.SdutOA">
     <configuration default="false" name="AdardsServiceImplTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1539,6 +1804,7 @@
       <workItem from="1475398574095" duration="879000" />
       <workItem from="1476239839953" duration="1263000" />
       <workItem from="1476241205721" duration="11344000" />
+      <workItem from="1476257866871" duration="174000" />
     </task>
     <task id="LOCAL-00020" summary="修改：获奖管理中的审核列表显示功能">
       <created>1470978772737</created>
@@ -1919,11 +2185,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="458517000" />
+    <option name="totallyTimeSpent" value="458691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1934,17 +2200,17 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34599155" sideWeight="0.49084052" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34599155" sideWeight="0.49084052" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.47731093" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.47731093" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431034" sideWeight="0.5226891" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431034" sideWeight="0.5106036" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37130803" sideWeight="0.4854526" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37130803" sideWeight="0.4854526" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2080,13 +2346,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/paper/action/TPAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/opencil/oa/core/web/paper/action/QPAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -2218,7 +2477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2226,7 +2484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2256">
           <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2234,7 +2491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-173">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2242,7 +2498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-144">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2250,7 +2505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2258,7 +2512,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -2287,7 +2540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
           <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2295,7 +2547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2319,11 +2570,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="8967" column="8" selection-start-line="8967" selection-start-column="8" selection-end-line="8967" selection-end-column="8" />
-          <folding>
-            <marker date="1476252717437" expanded="true" signature="185184:185256" ph="..." />
-            <marker date="1476252717437" expanded="true" signature="185291:185371" ph="..." />
-            <marker date="1476252717437" expanded="true" signature="185426:185450" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2331,7 +2578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2339,7 +2585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2387,7 +2632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1656">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2417,15 +2661,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/notCheck.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="4080">
           <caret line="170" column="82" selection-start-line="170" selection-start-column="82" selection-end-line="170" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/qpaper/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="105" column="77" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/tpaper/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4464">
+          <caret line="186" column="82" selection-start-line="186" selection-start-column="82" selection-end-line="186" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="34008">
           <caret line="1417" column="43" selection-start-line="1417" selection-start-column="43" selection-end-line="1417" selection-end-column="43" />
           <folding>
             <marker date="1476254019677" expanded="true" signature="39654:39767" ph="..." />
@@ -2433,25 +2693,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="133" column="82" selection-start-line="133" selection-start-column="82" selection-end-line="133" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/taskList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="126" column="82" selection-start-line="126" selection-start-column="82" selection-end-line="126" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/role/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="3144">
           <caret line="131" column="82" selection-start-line="131" selection-start-column="82" selection-end-line="131" selection-end-column="82" />
           <folding />
         </state>
@@ -2459,39 +2703,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/systemDDL/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="151" column="82" selection-start-line="151" selection-start-column="82" selection-end-line="151" selection-end-column="82" />
+        <state relative-caret-position="3624">
+          <caret line="151" column="76" selection-start-line="151" selection-start-column="76" selection-end-line="151" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="2976">
           <caret line="124" column="82" selection-start-line="124" selection-start-column="82" selection-end-line="124" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/tpaper/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="186" column="82" selection-start-line="186" selection-start-column="82" selection-end-line="186" selection-end-column="82" />
+        <state relative-caret-position="3192">
+          <caret line="133" column="82" selection-start-line="133" selection-start-column="82" selection-end-line="133" selection-end-column="82" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/qpaper/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/workFlow/taskList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="105" column="77" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="77" />
+        <state relative-caret-position="3024">
+          <caret line="126" column="82" selection-start-line="126" selection-start-column="82" selection-end-line="126" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/plugins/flot/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/paper/awards/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
+        <state relative-caret-position="865">
           <caret line="105" column="77" selection-start-line="105" selection-start-column="77" selection-end-line="105" selection-end-column="77" />
           <folding />
         </state>
@@ -2588,6 +2840,6 @@
     </states>
   </component>
   <component name="webServersAuthStorage">
-    <data>AAAAsD2os/0pGKf5Vj7+qHWL89JkJY8/r2qHw94VWG4QA6L96aCCZepl+ZbUBLq+qnVAGZOIeR0tMjTL/RxaqQHVofk14v31Fkxsfx+8kG1nm60NM1i7nSzooBsajtkqs8uPN8ZN5NCwynPMS3xlkqUJg+ZcWUDUBerCnZYIIWNjualh4Q7HNxVq2rRGAfXtIjdToY1k5+24zWwqv1wQi8HYjiKTTJJwKxngzyd9hf/WaNYKbv60XwAVYDlSX32+jE3aSg==</data>
+    <data>AAAAsGvQOshVrj3dnn74fScxltn2bKdIB1ZU5PGlSFhqUbVLwQ5Qy1of2V2+OC8uz+d53H4unVbN84hmOv/paue22vjmFbaGV4ShBBYEl/8W2LdDxgNtWzgR1ZXgZJyyRADslAOjJSiuRTzllrKvIeZTLLpYD4JwIBzJ38z83NbcflOXU2BDONDxYI3VBkBNT88iyjjAVBA20afPVhZVIuILr4Vmd0LjCCL0R1nsVNxO3IFGajJkhd1QQs5rHgXG0reTCg==</data>
   </component>
 </project>

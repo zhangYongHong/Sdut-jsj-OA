@@ -36,7 +36,8 @@
 			}
 
 			return null;
-		}
+		};
+
 		// Returns the noneditable parent or null if there is a editable before it or if it wasn't found
 		function getNonEditableParent(node) {
 			var state;
@@ -49,7 +50,8 @@
 
 				node = node.parentNode;
 			}
-		}
+		};
+
 		// Get caret container parent for the specified node
 		function getParentCaretContainer(node) {
 			while (node) {
@@ -59,7 +61,8 @@
 
 				node = node.parentNode;
 			}
-		}
+		};
+
 		// Finds the first text node in the specified node
 		function findFirstTextNode(node) {
 			var walker;
@@ -73,7 +76,8 @@
 					}
 				}
 			}
-		}
+		};
+
 		// Insert caret container before/after target or expand selection to include block
 		function insertCaretContainerOrExpandToBlock(target, before) {
 			var caretContainer, rng;
@@ -111,7 +115,8 @@
 			selection.setRng(rng);
 
 			return caretContainer;
-		}
+		};
+
 		// Removes any caret container except the one we might be in
 		function removeCaretContainer(caretContainer) {
 			var child, currentCaretContainer, lastContainer;
@@ -144,7 +149,8 @@
 					lastContainer = caretContainer;
 				}
 			}
-		}
+		};
+
 		// Modifies the selection to include contentEditable false elements or insert caret containers
 		function moveSelection() {
 			var nonEditableStart, nonEditableEnd, isCollapsed, rng, element;
@@ -190,7 +196,8 @@
 				}
 
 				return element;
-			}
+			};
+
 			// Remove any existing caret containers
 			removeCaretContainer();
 
@@ -233,7 +240,8 @@
 					selection.setRng(rng);
 				}
 			}
-		}
+		};
+
 		function handleKey(ed, e) {
 			var keyCode = e.keyCode, nonEditableParent, caretContainer, startElement, endElement;
 
@@ -243,7 +251,8 @@
 						return node;
 					}
 				}
-			}
+			};
+
 			function positionCaretOnElement(element, start) {
 				selection.select(element);
 				selection.collapse(start);
@@ -328,7 +337,7 @@
 				return true;
 			}
 
-			startElement = selection.getStart();
+			startElement = selection.getStart()
 			endElement = selection.getEnd();
 
 			// Disable all key presses in contentEditable=false except delete or backspace
@@ -402,7 +411,8 @@
 					}
 				}
 			}
-		}
+		};
+
 		ed.onMouseDown.addToTop(function(ed, e) {
 			var node = ed.selection.getNode();
 
@@ -415,7 +425,8 @@
 		ed.onMouseUp.addToTop(moveSelection);
 		ed.onKeyDown.addToTop(handleKey);
 		ed.onKeyUp.addToTop(moveSelection);
-	}
+	};
+
 	tinymce.create('tinymce.plugins.NonEditablePlugin', {
 		init : function(ed, url) {
 			var editClass, nonEditClass, nonEditableRegExps;
@@ -443,7 +454,8 @@
 				}
 
 				args.content = content;
-			}
+			};
+			
 			editClass = " " + tinymce.trim(ed.getParam("noneditable_editable_class", "mceEditable")) + " ";
 			nonEditClass = " " + tinymce.trim(ed.getParam("noneditable_noneditable_class", "mceNonEditable")) + " ";
 
