@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="">
+    <list default="true" id="1a75c0be-daf7-4577-86f6-71551111ad92" name="Default" comment="修改： js插件相关&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/animated-progress-bar/jquery.progressbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/knob/jquery.knob.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/stepper/ui.stepper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/timeentry/jquery.timeentry.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/css/advhr.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/js/rule.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/rule.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/css/advimage.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/image.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/js/image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/css/advlink.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/js/advlink.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/link.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/langs/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/emotions.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/js/emotions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/dialog.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/js/dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/css/fullpage.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/fullpage.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/js/fullpage.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/fullscreen.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/template.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/layer/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/css/media.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/embed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/media.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/media.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pastetext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pasteword.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pastetext.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pasteword.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/example.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/jscripts/embed.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/preview.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/print/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/save/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/css/searchreplace.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/js/searchreplace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/searchreplace.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/css/content.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/css/props.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/js/props.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/cell.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/cell.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/row.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/table.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/cell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/merge_cells.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/row.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/table.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/merge_cells.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/row.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/table.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/blank.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/css/template.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/js/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/template.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/css/visualblocks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/abbr.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/acronym.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/attributes.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/cite.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/attributes.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/popup.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/del.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/ins.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/about.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/anchor.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/charmap.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/color_picker.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/editor_template_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/image.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/about.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/charmap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/link.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/source_editor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/link.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/shortcuts.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/content.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/content.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/content.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_black.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/source_editor.htm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/editor_template_src.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/content.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/content.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/editable_selects.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/form_utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/mctabs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/validate.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/animated-progress-bar/jquery.progressbar.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/animated-progress-bar/jquery.progressbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/knob/jquery.knob.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/knob/jquery.knob.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/stepper/ui.stepper.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/stepper/ui.stepper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/timeentry/jquery.timeentry.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/timeentry/jquery.timeentry.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/license.txt" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/css/advhr.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/css/advhr.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/js/rule.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/js/rule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/rule.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advhr/rule.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/css/advimage.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/css/advimage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/image.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/image.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/js/image.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advimage/js/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/css/advlink.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/css/advlink.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/js/advlink.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/js/advlink.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/link.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlink/link.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/advlist/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/langs/en.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/autosave/langs/en.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/bbcode/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/contextmenu/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/directionality/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/emotions.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/emotions.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/js/emotions.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/emotions/js/emotions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/dialog.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/dialog.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/js/dialog.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/example/js/dialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/css/fullpage.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/css/fullpage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/fullpage.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/fullpage.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/js/fullpage.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullpage/js/fullpage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/fullscreen.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/fullscreen/fullscreen.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/iespell/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/template.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/inlinepopups/template.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/insertdatetime/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/layer/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/layer/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/legacyoutput/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/css/media.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/css/media.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/embed.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/embed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/media.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/js/media.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/media.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/media/media.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/nonbreaking/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/noneditable/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/pagebreak/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pastetext.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pastetext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pasteword.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/js/pasteword.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pastetext.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pastetext.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pasteword.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/paste/pasteword.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/example.html" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/example.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/jscripts/embed.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/jscripts/embed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/preview.html" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/preview/preview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/print/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/print/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/save/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/save/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/css/searchreplace.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/css/searchreplace.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/js/searchreplace.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/js/searchreplace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/searchreplace.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/searchreplace/searchreplace.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/css/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/css/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/spellchecker/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/css/props.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/css/props.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/js/props.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/style/js/props.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/cell.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/cell.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/cell.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/cell.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/row.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/row.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/table.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/css/table.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/cell.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/cell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/merge_cells.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/merge_cells.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/row.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/row.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/table.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/js/table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/merge_cells.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/merge_cells.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/row.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/row.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/table.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/table/table.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/blank.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/blank.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/css/template.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/css/template.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/js/template.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/js/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/template.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/template/template.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualblocks/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/visualchars/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/wordcount/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/abbr.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/abbr.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/acronym.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/acronym.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/attributes.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/attributes.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/cite.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/cite.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/attributes.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/attributes.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/popup.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/css/popup.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/del.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/del.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/ins.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/ins.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/abbr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/acronym.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/attributes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/cite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/del.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/element_common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/plugins/xhtmlxtras/js/ins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/about.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/about.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/anchor.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/anchor.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/charmap.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/charmap.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/color_picker.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/color_picker.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/editor_template_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/editor_template_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/image.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/image.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/about.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/about.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/anchor.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/anchor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/charmap.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/charmap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/image.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/link.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/link.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/source_editor.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/js/source_editor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/link.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/link.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/shortcuts.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/shortcuts.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/default/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/highcontrast/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/dialog.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/dialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_black.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_black.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/source_editor.htm" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/advanced/source_editor.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/editor_template_src.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/editor_template_src.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/default/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/content.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/ui.css" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/themes/simple/skins/o2k7/ui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/editable_selects.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/editable_selects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/form_utils.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/form_utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/mctabs.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/mctabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/validate.js" afterPath="$PROJECT_DIR$/src/main/webapp/plugins/tiny_mce/utils/validate.js" />
     </list>
     <ignored path="SdutOA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -437,7 +437,104 @@
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sdut-jsj-OA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
@@ -1212,14 +1309,7 @@
       <workItem from="1476241205721" duration="11344000" />
       <workItem from="1476257866871" duration="4797000" />
       <workItem from="1476262784251" duration="1022000" />
-      <workItem from="1476267240418" duration="7677000" />
-    </task>
-    <task id="LOCAL-00024" summary="修改：前端页面修改">
-      <created>1470998469569</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1470998469569</updated>
+      <workItem from="1476267240418" duration="7848000" />
     </task>
     <task id="LOCAL-00025" summary="添加：节点管理">
       <created>1471083331885</created>
@@ -1557,7 +1647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476274922577</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="修改： js插件相关&#10;">
+      <created>1476275029847</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1476275029847</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1593,11 +1690,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="472013000" />
+    <option name="totallyTimeSpent" value="472184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1607,18 +1704,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38396624" sideWeight="0.51400864" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34599155" sideWeight="0.49084052" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1875" sideWeight="0.47731093" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.47731093" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431034" sideWeight="0.5226891" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25431034" sideWeight="0.5106036" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38396624" sideWeight="0.4859914" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38396624" sideWeight="0.4859914" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1701,7 +1798,6 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
-    <MESSAGE value="修改: 前端页面的修改" />
     <MESSAGE value="修改: 配置文件的修改" />
     <MESSAGE value="修改:使用shiro做用户权限修改的管理" />
     <MESSAGE value="修改:前端页面修改" />
@@ -1726,7 +1822,8 @@
     <MESSAGE value="修改：学年与学期相关的修改&#10;" />
     <MESSAGE value="修改：审核流程中备注信息丢失的bug&#10;" />
     <MESSAGE value="修改：完善角色管理模块&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改：完善角色管理模块&#10;" />
+    <MESSAGE value="修改： js插件相关&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改： js插件相关&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
