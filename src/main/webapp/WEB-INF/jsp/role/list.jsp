@@ -53,11 +53,6 @@
                     </div>
 
                     <div class="content noPad clearfix">
-                        <div class="form-row row-fluid">
-                            <div class="bottom ">
-                                <a href="roleAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
-                            </div>
-                        </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
                             <!-- dynamicTable -->

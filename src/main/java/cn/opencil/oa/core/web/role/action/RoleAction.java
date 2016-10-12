@@ -1,6 +1,7 @@
 package cn.opencil.oa.core.web.role.action;
 
 
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Role;
 import cn.opencil.oa.core.web.role.service.RoleService;
@@ -31,6 +32,7 @@ public class RoleAction extends BaseAction<Role> {
 
     public String add() {
         Role role = getModel();
+        PageUtil.removeSpaces(role);
         roleService.addEntry(role);
         return "redirect";
     }

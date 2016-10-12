@@ -2,6 +2,7 @@ package cn.opencil.oa.common.util;
 
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.BasePaper;
+import cn.opencil.oa.core.domain.Role;
 import cn.opencil.oa.core.domain.User;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.struts2.ServletActionContext;
@@ -246,5 +247,10 @@ public class PageUtil {
             return null;
         }
         return null;
+    }
+
+    public static void removeSpaces(Role role) {
+        String str = role.getResourceIdsStr();
+        role.setResourceIdsStr(str.replaceAll(" ", ""));
     }
 }

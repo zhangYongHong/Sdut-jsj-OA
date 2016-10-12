@@ -44,12 +44,12 @@
                         <div class="offset5">
                             <s:fielderror name="Error" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="awardsAction_add.action" method="post">
+                        <form class="form-horizontal" action="roleAction_add.action" method="post">
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">角色:</label>
-                                        <input class="span6 focused" type="text" name="description"/>
+                                        <input class="span6 focused" type="text" name="role"/>
                                     </div>
                                 </div>
                             </div>
@@ -57,16 +57,164 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">描述:</label>
-                                        <input class="span6 focused" type="text" name="specialty"/>
+                                        <input class="span6 focused" type="text" name="description"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
+
                                         <label class="form-label span4">权限:</label>
-                                        <input class="span6" id="normalInput" type="text" name="achievement"/>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>流程管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="40" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="41" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="39" name="resourceIdsStr">
+                                                    查看</label>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>字典管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="28" name="resourceIdsStr">
+                                                    查看</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="29" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="30" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="31" name="resourceIdsStr">
+                                                    修改</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>角色管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="23" name="resourceIdsStr">
+                                                    查看</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="24" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="25" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="26" name="resourceIdsStr">
+                                                    修改</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>试卷归档管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="9" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    修改</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="10" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="8" name="resourceIdsStr">
+                                                    查看</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>实训归档管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="13" name="resourceIdsStr">
+                                                    查看</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="14" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="15" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="16" name="resourceIdsStr">
+                                                    修改</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>获奖详情管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="3" name="resourceIdsStr">
+                                                    查看</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="4" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="5" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="6" name="resourceIdsStr">
+                                                    修改</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>人员管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="33" name="resourceIdsStr">
+                                                    查看</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="34" name="resourceIdsStr">
+                                                    添加</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="35" name="resourceIdsStr">
+                                                    删除</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="36" name="resourceIdsStr">
+                                                    修改</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <s:hidden name="available" value="false"/>
