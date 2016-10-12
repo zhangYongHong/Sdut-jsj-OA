@@ -132,7 +132,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">备注:</label>
-                                        <textarea class="span6 elastic" rows="3" name="comment" value="<s:property value="#awards.comment"/>" readonly="readonly"></textarea>
+                                        <textarea class="span6 elastic" rows="3" name="comment" readonly="readonly"><s:property value="#awards.comment"/></textarea>
                                     </div>
                                 </div>
                             </div>
