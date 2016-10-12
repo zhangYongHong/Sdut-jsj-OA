@@ -129,7 +129,6 @@
 <script type="text/javascript" src="plugins/ibutton/jquery.ibutton.min.js"></script>
 <script type="text/javascript" src="plugins/uniform/jquery.uniform.min.js"></script>
 <script type="text/javascript" src="plugins/stepper/ui.stepper.js"></script>
-<script type="text/javascript" src="plugins/color-picker/colorpicker.js"></script>
 <script type="text/javascript" src="plugins/timeentry/jquery.timeentry.min.js"></script>
 <script type="text/javascript" src="plugins/select/select2.min.js"></script>
 <script type="text/javascript" src="plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>

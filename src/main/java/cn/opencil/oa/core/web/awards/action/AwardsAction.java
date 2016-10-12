@@ -44,7 +44,8 @@ public class AwardsAction extends BaseAction<Awards> {
         awardsQuery.setState(2);
         if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
             awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
-        else awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
+        else
+            awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);

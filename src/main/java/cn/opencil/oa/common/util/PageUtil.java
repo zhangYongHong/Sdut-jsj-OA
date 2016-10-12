@@ -188,9 +188,9 @@ public class PageUtil {
      * 将获奖管理中获取的list中的每条数据按照其中学生姓名的个数来扩充。
      */
     public static List<Awards> getListByStuname(List<Awards> list) {
-        List<String> stuNameList;
-        List<String> specialtyList;
-        List<String> classesList;
+        List<String> stuNameList; //姓名列表
+        List<String> specialtyList; //专业列表
+        List<String> classesList; //班级列表
 
         List<Awards> awardsList = new ArrayList<>();
         Awards awards;
@@ -202,14 +202,14 @@ public class PageUtil {
                 for (int j = 0; j < stuNameList.size(); j++) {
                     awards = list.get(i).clone();
                     awards.setStuname(stuNameList.get(j));
-                    awards.setSpecialty(specialtyList.get(j));
+                    awards.setSpecialty (specialtyList.get(j));
                     awards.setClasses(classesList.get(j));
                     awards.setIdView(awards.getId() + "-" + (j + 1));
                     awardsList.add(awards);
                 }
             } else {
                 awards = list.get(i);
-                awards.setIdView(awards.getId() + "-" + "1");
+                awards.setIdView(awards.getId() + "-1");
                 awardsList.add(awards);
             }
         }

@@ -82,6 +82,7 @@
                             <!-- dynamicTable -->
                             <thead>
                             <tr>
+                                <th>排序</th>
                                 <th>序号</th>
                                 <th>竞赛项目</th>
                                 <th>成果展示</th>
@@ -101,9 +102,11 @@
                             </thead>
                             <tbody>
                             <s:iterator value="#awardsPapers.rows" status="i">
-                                <tr class="odd gradeX">
+                                <tr>
+                                    <td><s:property value="#i.index+1"/></td>
                                     <td><s:property value="idView"/></td>
-                                    <td><s:property value="competitionView"/></td>
+                                        <%--<td><s:property value="id"/></td>--%>
+                                        <td><s:property value="competitionView"/></td>
                                     <td><s:property value="achievement"/></td>
                                     <td>
                                         <s:if test="level == 1">国家级</s:if>
@@ -163,14 +166,13 @@
         window.location.href = "awardsAction_list.action?schoolYear=" + selObj.options[i].value;
     }
 </script>
+<%--<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>--%>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 
 <!--Load plugins-->
 <script type="text/javascript" src="plugins/qtip/jquery.qtip.min.js"></script>
-<script type="text/javascript" src="js/select.js"></script>
-
 
 <script type="text/javascript" src="plugins/knob/jquery.knob.js"></script>
 <script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
@@ -181,7 +183,6 @@
 <script type="text/javascript" src="plugins/ibutton/jquery.ibutton.min.js"></script>
 <script type="text/javascript" src="plugins/uniform/jquery.uniform.min.js"></script>
 <script type="text/javascript" src="plugins/stepper/ui.stepper.js"></script>
-<script type="text/javascript" src="plugins/color-picker/colorpicker.js"></script>
 <script type="text/javascript" src="plugins/timeentry/jquery.timeentry.min.js"></script>
 <script type="text/javascript" src="plugins/select/select2.min.js"></script>
 <script type="text/javascript" src="plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>

@@ -57,6 +57,7 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 			}
 			//对获奖信息按照获奖级别、获奖等级排序
 			PageUtil.sortAwards(awardses);
+//			awardsPageResult.setRows(awardses);
 			awardsPageResult.setRows(PageUtil.getListByStuname(awardses));
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
