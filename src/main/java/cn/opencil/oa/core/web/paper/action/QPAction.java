@@ -78,7 +78,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
                 return INPUT;
             }
             paper.setFileNum(PageUtil.getFileNum(paper.getClassName()));
-            paper.setSchoolYear(DateUtil.groupSchoolYear());
             paper.setIsChange("未修改");
             this.qpService.addEntry(paper);
         } catch (Exception e) {

@@ -204,6 +204,17 @@
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
+                                <div class="span13">
+                                    <div class="row-fluid">
+                                        <label class="form-label span4">&nbsp;&nbsp;学年:</label>
+                                        <div class="span3">
+                                            <s:select list="%{#session.schoolYearList}" listKey="ddlCode" listValue="ddlName"
+                                                      name="schoolYear" headerKey="0" headerValue="请选择" cssClass="select2-active" id="schoolYear" onchange="selectChange()"></s:select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">备注 </label>

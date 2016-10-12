@@ -79,7 +79,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
         try {
             paper.setFileNum(PageUtil.getFileNum(paper.getClassName()));
-            paper.setSchoolYear(DateUtil.groupSchoolYear());
             paper.setIsChange("未修改");
             this.tpService.addEntry(paper);
             this.addFieldError("tpError", "信息添加成功！");
