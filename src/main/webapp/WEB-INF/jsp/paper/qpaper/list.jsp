@@ -177,37 +177,38 @@
         window.location.href = "qPAction_list.action?schoolYear=" + selObj.options[i].value;
     }
 </script>
-<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
 
 <!--Load plugins-->
-<script type="text/javascript" src="plugins/qtip/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="/plugins/qtip/jquery.qtip.min.js"></script>
 
-<script type="text/javascript" src="plugins/knob/jquery.knob.js"></script>
-<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
-<script type="text/javascript" src="plugins/prettify/prettify.js"></script>
 
-<script type="text/javascript" src="plugins/watermark/jquery.watermark.min.js"></script>
-<script type="text/javascript" src="plugins/maskedinput/jquery.maskedinput-1.3.min.js"></script>
-<script type="text/javascript" src="plugins/ibutton/jquery.ibutton.min.js"></script>
-<script type="text/javascript" src="plugins/uniform/jquery.uniform.min.js"></script>
-<script type="text/javascript" src="plugins/stepper/ui.stepper.js"></script>
-<script type="text/javascript" src="plugins/timeentry/jquery.timeentry.min.js"></script>
-<script type="text/javascript" src="plugins/select/select2.min.js"></script>
-<script type="text/javascript" src="plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>
-<script type="text/javascript" src="plugins/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="plugins/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/plugins/knob/jquery.knob.js"></script>
+<script type="text/javascript" src="/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
 
-<script type="text/javascript" src="plugins/animated-progress-bar/jquery.progressbar.js"></script>
-<script type="text/javascript" src="plugins/pretty-photo/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="/plugins/watermark/jquery.watermark.min.js"></script>
+<script type="text/javascript" src="/plugins/maskedinput/jquery.maskedinput-1.3.min.js"></script>
+<script type="text/javascript" src="/plugins/ibutton/jquery.ibutton.min.js"></script>
+<script type="text/javascript" src="/plugins/uniform/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="/plugins/stepper/ui.stepper.js"></script>
+<script type="text/javascript" src="/plugins/color-picker/colorpicker.js"></script>
+<script type="text/javascript" src="/plugins/timeentry/jquery.timeentry.min.js"></script>
+<script type="text/javascript" src="/plugins/select/select2.min.js"></script>
+<script type="text/javascript" src="/plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>
+<script type="text/javascript" src="/plugins/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="/plugins/validate/jquery.validate.min.js"></script>
 
-<script type="text/javascript" src="plugins/dataTables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/plugins/animated-progress-bar/jquery.progressbar.js"></script>
+<script type="text/javascript" src="/plugins/pretty-photo/jquery.prettyPhoto.js"></script>
+
+<script type="text/javascript" src="/plugins/dataTables/jquery.dataTables.min.js"></script>
 
 <!-- Important Place before main.js  -->
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 </body>
 </html>
