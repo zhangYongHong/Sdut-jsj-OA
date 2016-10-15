@@ -158,7 +158,10 @@
                         <ul class="sub">
                             <shiro:hasPermission name="user:view">
                                 <li><a href="userAction_list.action"><span
-                                        class="icon16 icomoon-icon-address-2"></span>用户列表</a>
+                                        class="icon16 icomoon-icon-people"></span>用户列表</a>
+                                </li>
+                                <li><a href="userAction_addUI.action"><span
+                                        class="icon16  icomoon-icon-man"></span>用户添加</a>
                                 </li>
                             </shiro:hasPermission>
                             <li>
