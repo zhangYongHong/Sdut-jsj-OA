@@ -163,7 +163,6 @@
         window.location.href = "awardsAction_list.action?schoolYear=" + selObj.options[i].value;
     }
 </script>
-<%--<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>--%>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>

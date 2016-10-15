@@ -61,16 +61,6 @@
                                 <s:fielderror name="userError" cssStyle="color: crimson"/>
                             </div>
                             <s:hidden name="employeenum" value="%{#session.globleUser.employeenum}"/>
-                            <%--<div class="form-row row-fluid">--%>
-                                <%--<div class="span12">--%>
-                                    <%--<div class="row-fluid">--%>
-                                        <%--<label class="form-label span3">原密码</label>--%>
-                                        <%--<div class="span9 controls">--%>
-                                            <%--<input class="span12" name="oldPassword" type="password"/>--%>
-                                        <%--</div>--%>
-                                    <%--</div>--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">

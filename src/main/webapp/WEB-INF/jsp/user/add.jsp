@@ -27,11 +27,6 @@
     <!-- Main stylesheets -->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
 
-    <!--<script type="text/javascript">-->
-    <!--//adding load class to body and hide page-->
-    <!--document.documentElement.className += 'loadstate';-->
-    <!--</script>-->
-
 </head>
 
 <body>
@@ -135,59 +130,6 @@
             </div><!-- End .span12 -->
 
         </div><!-- End .row-fluid -->
-
-        <div class="modal fade hide" id="myModal1">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span
-                        class="icon12 minia-icon-close"></span></button>
-                <h3>Chat layout</h3>
-            </div>
-            <div class="modal-body">
-                <ul class="messages">
-                    <li class="user clearfix">
-                        <a href="#" class="avatar">
-                            <img src="images/avatar2.jpeg" alt=""/>
-                        </a>
-                        <div class="message">
-                            <div class="head clearfix">
-                                <span class="name"><strong>Lazar</strong> says:</span>
-                                <span class="time">25 seconds ago</span>
-                            </div>
-                            <p>
-                                Time to go i call you tomorrow.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="admin clearfix">
-                        <a href="#" class="avatar">
-                            <img src="images/avatar3.jpeg" alt=""/>
-                        </a>
-                        <div class="message">
-                            <div class="head clearfix">
-                                <span class="name"><strong>Sugge</strong> says:</span>
-                                <span class="time">just now</span>
-                            </div>
-                            <p>
-                                OK, have a nice day.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="sendMsg">
-                        <form class="form-horizontal" action="#">
-                                <textarea class="elastic" id="textarea1" rows="1" placeholder="Enter your message ..."
-                                          style="width:98%;"></textarea>
-                            <button type="submit" class="btn btn-info marginT10">Send message</button>
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-            </div>
-        </div>
-
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->
 <s:include value="/tail.jsp"/>

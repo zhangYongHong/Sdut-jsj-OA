@@ -7,7 +7,3 @@
 --%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
-<%--<%--%>
-    <%--String popedomCode = (String) request.getSession().getAttribute("globleUserRole");--%>
-    <%--response.setHeader("P3P","CP=CAO PSA OUR");--%>
-<%--%>--%>
