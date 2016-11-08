@@ -44,12 +44,13 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="awardsAction_add.action" method="post">
+                        <form class="form-horizontal" action="awardsAction_add.action" method="post" enctype="multipart/form-data">
                             <div class="form-row row-fluid">
                                 <div class="row-fluid">
                                     <label class="form-label span3">竞赛项目:</label>
                                     <div class="span5">
-                                        <s:select list="%{#session.competitionViewList}" listKey="ddlCode" listValue="ddlName"
+                                        <s:select list="%{#session.competitionViewList}" listKey="ddlCode"
+                                                  listValue="ddlName"
                                                   name="competitionid" headerKey="0" headerValue="请选择" value="rid"
                                                   cssClass="select2-active"></s:select>
                                     </div>
@@ -98,7 +99,7 @@
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
-                                    <div class="span9">
+                                <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">班级:</label>
                                         <input class="span6 focused" type="text" name="classes"/>
@@ -110,7 +111,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">指导老师:</label>
-                                        <input class="span6 focused"  type="text" name="teacher"/>
+                                        <input class="span6 focused" type="text" name="teacher"/>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +119,8 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="atime">获奖时间:</label>
-                                        <input class="laydate-icon span6 focused " id="atime" type="text" name="atime" onclick="laydate()"/>
+                                        <input class="laydate-icon span6 focused " id="atime" type="text" name="atime"
+                                               onclick="laydate()"/>
                                     </div>
                                 </div>
                             </div>
@@ -136,6 +138,12 @@
                                         <label class="form-label span4">备注:</label>
                                         <textarea class="span6 elastic" rows="3" name="comment"></textarea>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <label class="form-label span4">附件:</label>
+                                    <input type="file" name="annexFile"/>
                                 </div>
                             </div>
                             <s:hidden name="state" value="0"/>

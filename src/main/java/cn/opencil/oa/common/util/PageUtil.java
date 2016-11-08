@@ -5,11 +5,15 @@ import cn.opencil.oa.core.domain.BasePaper;
 import cn.opencil.oa.core.domain.Role;
 import cn.opencil.oa.core.domain.User;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -203,7 +207,7 @@ public class PageUtil {
                 for (int j = 0; j < stuNameList.size(); j++) {
                     awards = list.get(i).clone();
                     awards.setStuname(stuNameList.get(j));
-                    awards.setSpecialty (specialtyList.get(j));
+                    awards.setSpecialty(specialtyList.get(j));
                     awards.setClasses(classesList.get(j));
                     awards.setIdView(awards.getId() + "-" + (j + 1));
                     awardsList.add(awards);
@@ -252,5 +256,18 @@ public class PageUtil {
     public static void removeSpaces(Role role) {
         String str = role.getResourceIdsStr();
         role.setResourceIdsStr(str.replaceAll(" ", ""));
+    }
+
+    public static String uploadAnnex(File srcFile) {
+        String name = srcFile.getName();
+        String path = ServletActionContext.getServletContext().getRealPath("/upload/images") + "/";
+        String fileName = UUID.randomUUID() + ".jpeg";
+        File tempFile = new File(path + fileName);
+        try {
+            FileUtils.copyFile(srcFile, tempFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return path + fileName;
     }
 }

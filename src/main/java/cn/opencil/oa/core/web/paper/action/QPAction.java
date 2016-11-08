@@ -61,7 +61,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
             this.addFieldError("qpListError", "试卷列表获取失败！");
             return listAction;
         }
-        ActionContext.getContext().put("qustionPapers", qustionPapers);
+        ActionContext.getContext().put("questionPapers", qustionPapers);
         return listAction;
     }
 

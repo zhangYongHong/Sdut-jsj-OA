@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpSession;
+import java.io.InputStream;
 
 /**
  * Project Name:SdutOA
@@ -35,8 +36,8 @@ public class AwardsAction extends BaseAction<Awards> {
     private AwardsService awardsService;
 
     private Logger log = Logger.getLogger(AwardsAction.class);
-    private AwardsQuery awardsQuery;
     private Long aid;
+    private AwardsQuery awardsQuery;
 
     @RequiresPermissions("awards:view")
     public String list() {
@@ -78,12 +79,8 @@ public class AwardsAction extends BaseAction<Awards> {
 
     @RequiresPermissions("awards:add")
     public String add() {
-        User user = PageUtil.getUser();
         Awards awards = this.getModel();
-        awards.setFileNum(PageUtil.getFileNum(awards.getClasses()));
-        awards.setSchoolYear(DateUtil.groupSchoolYear());
-        awards.setEmployeenum(user.getEmployeenum());
-        awardsService.addEntry(awards);
+        awardsService.addAwards(awards);
         startProcess(awards.getAid());
         return "redirectToCheck";
     }
@@ -99,7 +96,7 @@ public class AwardsAction extends BaseAction<Awards> {
     @RequiresPermissions("awards:delete")
     public String delete() {
         Long aid = this.getModel().getAid();
-        this.awardsService.deleteEntry(aid);
+        this.awardsService.deleteAwards(aid);
         return "redirect";
     }
 
@@ -130,7 +127,7 @@ public class AwardsAction extends BaseAction<Awards> {
     @RequiresPermissions("awards:audit")
     public String auditDo() {
         Awards awards = this.getModel();
-        awardsService.updateEntry(awards);
+        awardsService.updateAwards(awards);
         HttpSession session = PageUtil.getHttpSession();
         session.setAttribute("state", this.getModel().getState());
         return "redirectToTask";
@@ -147,11 +144,16 @@ public class AwardsAction extends BaseAction<Awards> {
     @RequiresPermissions("awards:adjust")
     public String adjust() {
         this.getModel().setState(1);
-        awardsService.updateEntry(this.getModel());
+        awardsService.updateAwards(this.getModel());
         PageUtil.getHttpSession().setAttribute("state", 1);
         return "redirectToTask";
     }
 
+    public String showAnnex() {
+        InputStream annex = awardsService.showAnnex(this.getModel().getAid());
+        ActionContext.getContext().put("annex", annex);
+        return "showAnnex";
+    }
     //==================================================================
 
 
@@ -162,4 +164,5 @@ public class AwardsAction extends BaseAction<Awards> {
     public void setAid(Long aid) {
         this.aid = aid;
     }
+
 }

@@ -101,7 +101,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <s:iterator value="#qustionPapers.rows" status="i">
+                            <s:iterator value="#questionPapers.rows" status="i">
                                 <tr class="odd gradeX">
                                     <td><s:property value="#i.index+1"/></td>
                                     <td><s:property value="teacher"/></td>

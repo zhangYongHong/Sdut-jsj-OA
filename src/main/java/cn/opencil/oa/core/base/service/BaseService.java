@@ -1,12 +1,12 @@
 package cn.opencil.oa.core.base.service;
 
-import java.io.Serializable;
-import java.util.Collection;
-import java.util.Set;
-
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.core.query.BaseQuery;
 import org.hibernate.exception.DataException;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Set;
 
 /**
  * Project Name:SdutOA
@@ -25,9 +25,8 @@ public interface BaseService<T> {
 	PageResult<T> getPageResult(final BaseQuery baseQuery);
 	/**
 	 * 添加
-	 * 
-	 * @param t
-	 */
+	 *  @param t
+	 * */
 	void addEntry(T t) throws DataException;
 
 	/**

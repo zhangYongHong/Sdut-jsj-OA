@@ -92,6 +92,7 @@
                                 <th>获奖时间</th>
                                 <th>颁奖单位</th>
                                 <th>备注</th>
+                                <th>附件</th>
                                 <shiro:hasPermission name="awards:delete">
                                     <th>操作</th>
                                 </shiro:hasPermission>
@@ -127,10 +128,14 @@
                                     <td><s:property value="atime"/></td>
                                     <td><s:property value="prizeunit"/></td>
                                     <td><s:property value="comment"/></td>
+                                    <td>
+                                        <div>
+                                            <a href="awardsAction_showAnnex.action?aid=<s:property value="aid"/>">查看附件</a>
+                                        </div>
+                                    </td>
                                     <shiro:hasPermission name="awards:delete">
                                         <td>
-                                            <div class="controls center">
-
+                                            <div class="left">
                                                 <a href="awardsAction_delete.action?aid=<s:property value="aid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>

@@ -158,6 +158,7 @@
                             <s:hidden name="fileNum" value="%{#awards.fileNum}"/>
                             <s:hidden name="schoolYear" value="%{#awards.schoolYear}"/>
                             <s:hidden name="employeenum" value="%{#awards.employeenum}"/>
+                            <s:hidden name="annex" value="%{#awards.annex}"/>
                             <div class="form-actions offset2">
                                 <button type="submit" class="btn btn-info">完成任务</button>
                             </div>

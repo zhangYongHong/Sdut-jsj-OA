@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.domain;
 
+import java.io.File;
 import java.io.InputStream;
 import java.io.Serializable;
 
@@ -36,6 +37,16 @@ public class Awards implements Serializable {
 	private Integer state; //0.初始录入 1. 开始审批 2.审批通过 3.驳回 4.重新调整 5.重新提交 6.取消重新提交
     private String postil;//审批意见
 	private String employeenum; //申请人对应工号
+	private String annex; // 附件
+	private File annexFile;
+
+	public String getAnnex() {
+		return annex;
+	}
+
+	public void setAnnex(String annex) {
+		this.annex = annex;
+	}
 
 	public Long getAid() {
 		return aid;
@@ -213,6 +224,14 @@ public class Awards implements Serializable {
 		this.employeenum = employeenum;
 	}
 
+	public File getAnnexFile() {
+		return annexFile;
+	}
+
+	public void setAnnexFile(File annexFile) {
+		this.annexFile = annexFile;
+	}
+
 	public Awards clone() {
 		Awards awards = new Awards();
 		awards.setAid(this.aid);
@@ -237,6 +256,8 @@ public class Awards implements Serializable {
 		awards.setState(this.state);
         awards.setPostil(this.postil);
 		awards.setEmployeenum(this.employeenum);
+		awards.setAnnex(this.annex);
+		awards.setAnnexFile(this.annexFile);
 		return awards;
 	}
 

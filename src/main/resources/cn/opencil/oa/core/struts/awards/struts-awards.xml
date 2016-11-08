@@ -33,6 +33,10 @@
 				<param name="actionName">tasksAction_completeTask</param>
 				<param name="namespace">/</param>
 			</result>
+			<result name="showAnnex" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">annex</param>
+			</result>
 		</action>
 	</package>
 	

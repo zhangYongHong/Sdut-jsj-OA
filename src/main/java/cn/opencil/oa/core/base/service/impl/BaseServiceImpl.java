@@ -29,12 +29,12 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 	
 	@Override
 	public void addEntry(T t) throws DataException {
+
 		this.getBaseDao().addEntry(t);
 	}
 
 	@Override
 	public T getEntryById(Serializable id) {
-
 		return (T) this.getBaseDao().getEntryById(id);
 	}
 

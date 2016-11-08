@@ -42,7 +42,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="awardsAction_auditDo.action" method="post">
+                        <form class="form-horizontal" action="awardsAction_auditDo.action" method="post" enctype="multipart/form-data">
                             <div class="form-row row-fluid">
                                 <div class="row-fluid">
                                     <label class="form-label span3">竞赛项目:</label>
@@ -140,6 +140,12 @@
                                         <label class="form-label span4">审核批注:</label>
                                         <textarea class="span6 elastic" rows="3" name="postil" readonly="readonly"><s:property value="#awards.postil"/></textarea>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
+                                <div class="span9">
+                                    <label class="form-label span4">附件:</label>
+                                    <input type="file" name="annexFile"/>
                                 </div>
                             </div>
                             <s:hidden name="aid" value="%{#awards.aid}"/>

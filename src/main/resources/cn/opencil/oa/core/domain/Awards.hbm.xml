@@ -23,5 +23,6 @@
 		<property name="state" type="java.lang.Integer" length="2"></property>
         <property name="postil" type="java.lang.String" length="200"></property>
 		<property name="employeenum" type="java.lang.String" length="30"></property>
+		<property name="annex" type="java.lang.String" length="300"></property>
 	</class>
 </hibernate-mapping>

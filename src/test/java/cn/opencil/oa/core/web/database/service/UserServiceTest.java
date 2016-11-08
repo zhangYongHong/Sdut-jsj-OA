@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.database.service;
 
+import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.basedata.dao.UserDao;
 import cn.opencil.oa.core.web.basedata.service.UserService;
 import cn.opencil.oa.core.web.resource.server.ResourceServer;
@@ -9,8 +10,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.HashSet;
 
 /**
  * Created by mnzero on 16-9-11.
@@ -29,17 +28,15 @@ public class UserServiceTest {
 
     @Test
     public void getRoleTest() {
-        HashSet<String> list = new HashSet<>();
-        list = (HashSet<String>) userService.getPermissions("1111112");
-        for (String str : list) {
-            System.out.println(str);
-        }
+
     }
     @Test
     public void Test() {
 //        Resource r = resourceServer.getOne((long) 2);
 //        r.getParentId();
-//        userService.getUserByEmployeenum("666666");
+          User user = userService.getUserByEmployeenum("666666");
+          user.setRoleIdsStr("1");
+          userService.updateEntry(user);
 //        userRoleDao.getAll();
 //        userService.deleteEntry("13131313");
 
