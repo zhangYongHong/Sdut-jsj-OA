@@ -32,6 +32,7 @@
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.18" />
           <element id="library" level="project" name="Maven: ognl:ognl:3.0.4" />
           <element id="library" level="project" name="Maven: javassist:javassist:3.11.0.GA" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.2" />
           <element id="library" level="project" name="Maven: org.apache.struts:struts2-dojo-plugin:2.3.1.2" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:4.3.11.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.3.GA" />
@@ -75,7 +76,6 @@
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.37" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.12" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:1.3.2" />
-          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
