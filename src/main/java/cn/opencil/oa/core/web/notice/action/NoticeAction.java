@@ -1,5 +1,6 @@
 package cn.opencil.oa.core.web.notice.action;
 
+import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Notice;
 import cn.opencil.oa.core.web.notice.service.NoticeService;
 import com.opensymphony.xwork2.ActionContext;
@@ -18,7 +19,7 @@ import java.util.Collection;
  */
 @Controller
 @Scope("prototype")
-public class NoticeAction {
+public class NoticeAction extends BaseAction<Notice> {
 
     @Autowired
     NoticeService noticeService;
@@ -27,5 +28,33 @@ public class NoticeAction {
         Collection<Notice> noticeList = noticeService.getEntrys();
         ActionContext.getContext().put("notices", noticeList);
         return "listAction";
+    }
+
+    public String noticeList() {
+        Collection<Notice> noticeList = noticeService.getEntrys();
+        ActionContext.getContext().put("notices", noticeList);
+        return "noticeList";
+    }
+
+    public String content() {
+        Notice notice = noticeService.getEntryById(this.getModel().getUuid());
+        ActionContext.getContext().put("notice", notice);
+        return "content";
+    }
+
+    public String addUI() {
+        return "addUI";
+    }
+
+    public String add() {
+        String content = getRequest().getParameter("editorValue");
+        Notice notice = this.getModel();
+        noticeService.addNotice(notice, content);
+        return "redirect";
+    }
+
+    public String delete() {
+        noticeService.deleteEntry(this.getModel().getUuid());
+        return "redirect";
     }
 }

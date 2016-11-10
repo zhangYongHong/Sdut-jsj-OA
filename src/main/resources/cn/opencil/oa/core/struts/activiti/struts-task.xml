@@ -14,8 +14,6 @@
 			<result name="listAction">/WEB-INF/jsp/workFlow/taskList.jsp</result>
 			<result name="historyList">/WEB-INF/jsp/workFlow/history.jsp</result>
 			<result name="redirect" type="redirectAction">
-				<param name="actionName">tasksAction_taskList</param>
-				<param name="namespace">/</param>
 			</result>
 			<result name="adjust" type="redirectAction">
 				<param name="actionName">awardsAction_adjustUI</param>

@@ -66,7 +66,7 @@
             </div><!-- End .sidenav-widget -->
             <div class="mainnav">
                 <ul>
-                    <li><a href="index.jsp"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
+                    <li><a href="noticeAction_list.action"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
                     <shiro:hasRole name="admin">
                         <li>
                             <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
@@ -102,6 +102,17 @@
                                         </li>
                                         <li><a href="${pageContext.request.contextPath}/roleAction_addUI.action"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="icon16 icomoon-icon-list-view"></span>通知管理</a>
+                                    <ul class="sub">
+                                        <li><a href="${pageContext.request.contextPath}/noticeAction_noticeList.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>通知列表</a>
+                                        </li>
+                                        <li><a href="${pageContext.request.contextPath}/noticeAction_addUI.action"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>添加通知</a>
                                         </li>
                                     </ul>
                                 </li>

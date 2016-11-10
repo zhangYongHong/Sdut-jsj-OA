@@ -58,5 +58,7 @@ public class DateUtil {
 		return schoolYear;
 	}
 
-
+	public static long getDate() {
+		return new Date().getTime();
+	}
 }

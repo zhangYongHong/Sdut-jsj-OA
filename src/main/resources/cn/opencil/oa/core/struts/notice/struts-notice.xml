@@ -12,6 +12,13 @@
 
 		<action name="noticeAction_*" class="noticeAction" method="{1}">
 			<result name="listAction">index.jsp</result>
+			<result name="content">WEB-INF/jsp/notice/notice.jsp</result>
+			<result name="addUI">WEB-INF/jsp/notice/add.jsp</result>
+			<result name="noticeList">WEB-INF/jsp/notice/list.jsp</result>
+			<result name="redirect" type="redirectAction">
+				<param name="actionName">noticeAction_noticeList</param>
+				<param name="namespace">/</param>
+			</result>
 		</action>
 	</package>
 	

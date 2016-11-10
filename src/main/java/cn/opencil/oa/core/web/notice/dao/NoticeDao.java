@@ -13,5 +13,4 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class NoticeDao extends BaseDaoImpl<Notice>{
-
 }

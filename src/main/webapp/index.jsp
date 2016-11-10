@@ -48,7 +48,12 @@
                                 <s:subset source="#notices" start="0" count="5">
                                     <s:iterator>
                                         <li><span class="icon12 typ-icon-arrow-right green"></span>
-                                            <h3><a class="btn-link text-error"><s:property value="title"/></a></h3>[
+                                            <h3>
+                                                <a class="btn-link"
+                                                   href="noticeAction_content.action?uuid=<s:property value="uuid"/>">
+                                                    <s:property value="title"/></a>
+                                            </h3>
+                                            [
                                             <td><s:date name="beginDate" format="yyyy-MM-dd"/></td>
                                             ]
                                         </li>
