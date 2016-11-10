@@ -42,34 +42,19 @@
                         </h4>
                         <a href="#" class="minimize">Minimize</a>
                     </div>
-                    <div class="content noPad center sendMsg" >
+                    <div class="content noPad center">
                         <div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <p style="font-size: 20px">欢迎使用山东理工大学计算机学院系统办公系统</p>
-                            <p style="font-size: 20px">由于学生水平有限,无法是使系统做到尽善尽美,若有不合理的地方希望老师能够指正.</p>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                            <ul class="unstyled">
+                                <s:subset source="#notices" start="0" count="5">
+                                    <s:iterator>
+                                        <li><span class="icon12 typ-icon-arrow-right green"></span>
+                                            <h3><a class="btn-link text-error"><s:property value="title"/></a></h3>[
+                                            <td><s:date name="beginDate" format="yyyy-MM-dd"/></td>
+                                            ]
+                                        </li>
+                                    </s:iterator>
+                                </s:subset>
+                            </ul>
                         </div>
                     </div>
 

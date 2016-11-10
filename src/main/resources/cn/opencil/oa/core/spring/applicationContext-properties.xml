@@ -11,7 +11,6 @@
 			<list>
 				<!-- jdbc配置 -->
 				<value>classpath:jdbc.properties</value>
-				<!-- memcached配置 -->
 			</list>
 		</property>
     </bean>

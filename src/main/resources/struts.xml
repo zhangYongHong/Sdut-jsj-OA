@@ -12,6 +12,7 @@
 	<include file="cn/opencil/oa/core/struts/basedata/struts-user.xml"></include>
 	<include file="cn/opencil/oa/core/struts/awards/struts-awards.xml"></include>
 	<include file="cn/opencil/oa/core/struts/login/struts-login.xml"></include>
+	<include file="cn/opencil/oa/core/struts/notice/struts-notice.xml"></include>
 
 	<!-- 试卷管理模块 -->
 	<include file="cn/opencil/oa/core/struts/paper/struts-tpaper.xml"></include>

@@ -30,6 +30,7 @@
             <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/activiti/struts-activiti.xml</file>
             <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/activiti/struts-task.xml</file>
             <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/basedata/struts-systemDDL.xml</file>
+            <file>file://$MODULE_DIR$/src/main/resources/cn/opencil/oa/core/struts/notice/struts-notice.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>

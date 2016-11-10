@@ -6,13 +6,12 @@
 <struts>
 	<constant name="struts.ui.theme" value="simple"></constant>
 	<constant name="struts.devMode" value="true"/>
-	<package name="login" extends="struts-default" namespace="/">
-		<action name="loginAction_*" class="loginAction" method="{1}">
-			<result name="login">login.jsp</result>
-			<result type="redirectAction">
-				<param name="actionName">noticeAction_list</param>
-				<param name="namespace">/</param>
-			</result>
+	
+	
+	<package name="notice" extends="struts-default" namespace="/">
+
+		<action name="noticeAction_*" class="noticeAction" method="{1}">
+			<result name="listAction">index.jsp</result>
 		</action>
 	</package>
 	
