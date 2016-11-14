@@ -5,8 +5,6 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <constant name="struts.ui.theme" value="simple"></constant>
-    <constant name="struts.devMode" value="true"/>
     <package name="role" extends="struts-default" namespace="/">
         <action name="roleAction_*" class="roleAction" method="{1}">
             <result name="listAction">/WEB-INF/jsp/role/list.jsp</result>

@@ -5,8 +5,6 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-    <constant name="struts.ui.theme" value="simple"></constant>
-    <constant name="struts.devMode" value="true"/>
     <package name="systemDDL" extends="struts-default" namespace="/">
 
         <action name="systemDDLAction_*" class="systemDDLAction" method="{1}">

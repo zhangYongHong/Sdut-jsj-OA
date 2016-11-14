@@ -4,8 +4,8 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<constant name="struts.ui.theme" value="simple"></constant>
-	<constant name="struts.devMode" value="true"/>
+	<!--<constant name="struts.ui.theme" value="simple"></constant>-->
+	<!--<constant name="struts.devMode" value="true"/>-->
 
 	<!-- 基础数据模块 -->
 

@@ -4,10 +4,6 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<constant name="struts.ui.theme" value="simple"></constant>
-	<constant name="struts.devMode" value="true"/>
-	
-	
 	<package name="notice" extends="struts-default" namespace="/">
 
 		<action name="noticeAction_*" class="noticeAction" method="{1}">
