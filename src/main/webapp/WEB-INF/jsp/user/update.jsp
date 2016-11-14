@@ -41,7 +41,7 @@
                     <h4>个人信息修改</h4>
                 </div>
 
-                <form class="form-horizontal seperator" action="userAction_update.action" method="post">
+                <form class="form-horizontal seperator" action="userAction_update" method="post">
                     <div class="offset3">
                         <s:fielderror name="userError" cssStyle="color: crimson"/>
                     </div>

@@ -39,7 +39,7 @@
 <div class="container-fluid">
 
     <div class="loginContainer">
-        <form class="form-horizontal" action="loginAction_login.action" id="loginForm" method="post">
+        <form class="form-horizontal" action="loginAction_login" id="loginForm" method="post">
             <div class="form-row row-fluid">
                 <label style="align-content: center"><s:fielderror name="loginError" cssStyle="color: crimson;"
                                                                    id="error"/></label>

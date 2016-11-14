@@ -20,10 +20,6 @@
 				<param name="actionName">awardsAction_waitForCheckList</param>
 				<param name="namespace">/</param>
 			</result>
-			<result name="action2action" type="chain">
-				<param name="actionName">awardsAction</param>
-  				<param name="method">list</param>
-			</result>
 			<!--完成任务表单后跳转到tasksAction中的办理任务功能选项-->
 			<result name="redirectToTask" type="redirectAction">
 				<param name="actionName">tasksAction_completeTask</param>

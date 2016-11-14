@@ -128,7 +128,7 @@
                 /js/** = anon
                 /plugins/** = anon
                 /login.jsp = anon
-                /loginAction_login.action = anon
+                /loginAction_login = anon
                 /unauthorized.jsp = anon
                 /** = user,sysUser
             </value>

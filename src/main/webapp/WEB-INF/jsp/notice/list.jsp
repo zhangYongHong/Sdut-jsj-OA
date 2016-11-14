@@ -76,7 +76,7 @@
                                     <td><s:property value="user"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a href="noticeAction_delete.action?uuid=<s:property value="uuid"/>"
+                                            <a href="noticeAction_delete?uuid=<s:property value="uuid"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                         </div>

@@ -69,8 +69,8 @@
                             </div>
                             <shiro:hasRole name="admin">
                                 <div class="bottom ">
-                                    <a href="qPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                                    <a href="qPAction_exportExcel.action" class="btn btip marginR10 marginB10">导出</a>
+                                    <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="qPAction_exportExcel" class="btn btip marginR10 marginB10">导出</a>
                                 </div>
                             </shiro:hasRole>
                         </div>
@@ -130,13 +130,13 @@
                                     <td><s:property value="comment"/></td>
                                     <td>
                                         <div>
-                                            <a href="awardsAction_showAnnex.action?aid=<s:property value="aid"/>">查看附件</a>
+                                            <a href="awardsAction_showAnnex?aid=<s:property value="aid"/>">查看附件</a>
                                         </div>
                                     </td>
                                     <shiro:hasPermission name="awards:delete">
                                         <td>
                                             <div class="left">
-                                                <a href="awardsAction_delete.action?aid=<s:property value="aid"/>"
+                                                <a href="awardsAction_delete?aid=<s:property value="aid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>
@@ -165,7 +165,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href = "awardsAction_list.action?schoolYear=" + selObj.options[i].value;
+        window.location.href = "awardsAction_list?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

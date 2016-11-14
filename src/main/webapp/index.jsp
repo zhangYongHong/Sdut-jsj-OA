@@ -50,7 +50,7 @@
                                         <li><span class="icon12 typ-icon-arrow-right green"></span>
                                             <h3>
                                                 <a class="btn-link"
-                                                   href="noticeAction_content.action?uuid=<s:property value="uuid"/>">
+                                                   href="noticeAction_content?uuid=<s:property value="uuid"/>">
                                                     <s:property value="title"/></a>
                                             </h3>
                                             [

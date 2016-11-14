@@ -43,7 +43,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="systemDDLAction_update.action" method="post">
+                        <form class="form-horizontal" action="systemDDLAction_update" method="post">
 
                             <s:hidden name="sid" value="%{#systemDDL.sid}"/>
                             <div class="form-row row-fluid">

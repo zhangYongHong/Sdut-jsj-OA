@@ -28,18 +28,18 @@
                                 <li class="menu">
                                     <ul>
                                         <li>
-                                            <a href="userAction_updateUI.action?uid=<s:property value="#session.globleUser.uid"/>"><span
+                                            <a href="userAction_updateUI?uid=<s:property value="#session.globleUser.uid"/>"><span
                                                     class="icon16 icomoon-icon-user-3"></span>个人信息</a>
                                         </li>
                                         <li>
-                                            <a href="userAction_passWordUI.action"><span
+                                            <a href="userAction_passWordUI"><span
                                                     class="icon16  icomoon-icon-locked-2"></span>密码修改</a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="${pageContext.request.contextPath}/loginAction_signOut.action"><span
+                        <li><a href="${pageContext.request.contextPath}/loginAction_signOut"><span
                                 class="icon16 icomoon-icon-exit"></span> 登出</a></li>
                     </ul>
                 </div><!-- /.nav-collapse -->
@@ -66,7 +66,7 @@
             </div><!-- End .sidenav-widget -->
             <div class="mainnav">
                 <ul>
-                    <li><a href="noticeAction_list.action"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
+                    <li><a href="noticeAction_list"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
                     <shiro:hasRole name="admin">
                         <li>
                             <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
@@ -75,10 +75,10 @@
                                     <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
                                     <ul class="sub">
                                         <li>
-                                            <a href="${pageContext.request.contextPath}/activitiAction_list.action"><span
+                                            <a href="${pageContext.request.contextPath}/activitiAction_list"><span
                                                     class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
                                         <li>
-                                            <a href="${pageContext.request.contextPath}/activitiAction_newProcessUI.action"><span
+                                            <a href="${pageContext.request.contextPath}/activitiAction_newProcessUI"><span
                                                     class="input-small"/><span
                                                     class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
                                         </li>
@@ -88,19 +88,22 @@
                                     <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
                                     <ul class="sub">
                                         <li>
-                                            <a href="${pageContext.request.contextPath}/systemDDLAction_list.action"><span
+                                            <a href="${pageContext.request.contextPath}/systemDDLAction_list"><span
                                                     class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI.action"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                        <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                        </li>
+                                        <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI"><span
+                                                class="icon16 icomoon-icon-arrow-right-2"></span>添加字典</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
                                     <ul class="sub">
-                                        <li><a href="${pageContext.request.contextPath}/roleAction_list.action"><span
+                                        <li><a href="${pageContext.request.contextPath}/roleAction_list"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
                                         </li>
-                                        <li><a href="${pageContext.request.contextPath}/roleAction_addUI.action"><span
+                                        <li><a href="${pageContext.request.contextPath}/roleAction_addUI"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
                                         </li>
                                     </ul>
@@ -108,10 +111,10 @@
                                 <li>
                                     <a href="#"><span class="icon16 icomoon-icon-list-view"></span>通知管理</a>
                                     <ul class="sub">
-                                        <li><a href="${pageContext.request.contextPath}/noticeAction_noticeList.action"><span
+                                        <li><a href="${pageContext.request.contextPath}/noticeAction_noticeList"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>通知列表</a>
                                         </li>
-                                        <li><a href="${pageContext.request.contextPath}/noticeAction_addUI.action"><span
+                                        <li><a href="${pageContext.request.contextPath}/noticeAction_addUI"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>添加通知</a>
                                         </li>
                                     </ul>
@@ -125,10 +128,10 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>我的任务</a>
                                 <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/tasksAction_taskList.action"><span
+                                    <li><a href="${pageContext.request.contextPath}/tasksAction_taskList"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>待办任务</a>
                                     </li>
-                                    <li><a href="${pageContext.request.contextPath}/tasksAction_historyList.action"><span
+                                    <li><a href="${pageContext.request.contextPath}/tasksAction_historyList"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>已办任务</a>
                                     </li>
                                 </ul>
@@ -136,10 +139,10 @@
                             <li>
                                 <a href="#"><span class="icon16 icomoon-icon-list-view"></span>归档管理</a>
                                 <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/qPAction_list.action"><span
+                                    <li><a href="${pageContext.request.contextPath}/qPAction_list"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>试卷归档管理</a>
                                     </li>
-                                    <li><a href="${pageContext.request.contextPath}/tPAction_list.action"><span
+                                    <li><a href="${pageContext.request.contextPath}/tPAction_list"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>实训归档管理</a>
                                     </li>
                                 </ul>
@@ -147,13 +150,13 @@
                             <li><a href="#"><span class="icon16 icomoon-icon-list-view"></span>获奖详情管理</a>
                                 <ul class="sub">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/awardsAction_addUI.action"><span
+                                        <a href="${pageContext.request.contextPath}/awardsAction_addUI"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>申请</a></li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList.action"><span
+                                        <a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/awardsAction_list.action"><span
+                                        <a href="${pageContext.request.contextPath}/awardsAction_list"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
                                 </ul>
                             </li>
@@ -168,19 +171,19 @@
                         </shiro:hasRole>
                         <ul class="sub">
                             <shiro:hasPermission name="user:view">
-                                <li><a href="userAction_list.action"><span
+                                <li><a href="userAction_list"><span
                                         class="icon16 icomoon-icon-people"></span>用户列表</a>
                                 </li>
-                                <li><a href="userAction_addUI.action"><span
+                                <li><a href="userAction_addUI"><span
                                         class="icon16  icomoon-icon-man"></span>用户添加</a>
                                 </li>
                             </shiro:hasPermission>
                             <li>
-                                <a href="userAction_updateUI.action?uid=<s:property value="#session.globleUser.uid"/>"><span
+                                <a href="userAction_updateUI?uid=<s:property value="#session.globleUser.uid"/>"><span
                                         class="icon16 icomoon-icon-user-3"></span>个人信息</a>
                             </li>
                             <li>
-                                <a href="userAction_passWordUI.action"><span
+                                <a href="userAction_passWordUI"><span
                                         class="icon16  icomoon-icon-locked-2"></span>密码修改</a>
                             </li>
 

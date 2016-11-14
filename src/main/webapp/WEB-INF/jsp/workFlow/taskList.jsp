@@ -78,11 +78,11 @@
                                     <td>
                                         <div class="controls center">
                                             <s:if test="assignee == null">
-                                                <a href="tasksAction_claimTask.action?id=<s:property value="id"/>"
+                                                <a href="tasksAction_claimTask?id=<s:property value="id"/>"
                                                    class="tip">签收</a>
                                             </s:if>
                                             <s:else>
-                                                <a href="tasksAction_viewTaskForm.action?id=<s:property value="id"/>"
+                                                <a href="tasksAction_viewTaskForm?id=<s:property value="id"/>"
                                                    class="tip">办理</a>
                                             </s:else>
                                         </div>

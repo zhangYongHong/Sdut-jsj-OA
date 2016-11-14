@@ -44,7 +44,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="awardsAction_add.action" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" action="awardsAction_add" method="post" enctype="multipart/form-data">
                             <div class="form-row row-fluid">
                                 <div class="row-fluid">
                                     <label class="form-label span3">竞赛项目:</label>

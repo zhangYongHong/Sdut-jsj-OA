@@ -80,10 +80,10 @@
                                     <td>
                                         <div class="controls center">
 
-                                            <a href="roleAction_updateUI.action?id=<s:property value="id"/>"
+                                            <a href="roleAction_updateUI?id=<s:property value="id"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
 
-                                            <a href="roleAction_delete.action?id=<s:property value="id"/>"
+                                            <a href="roleAction_delete?id=<s:property value="id"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                         </div>

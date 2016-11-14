@@ -55,7 +55,7 @@
                     </div>
                     <div class="content">
 
-                        <form class="form-horizontal" id="form-validate" action="userAction_passWord.action"
+                        <form class="form-horizontal" id="form-validate" action="userAction_passWord"
                               method="post">
                             <div class="offset5">
                                 <s:fielderror name="userError" cssStyle="color: crimson"/>

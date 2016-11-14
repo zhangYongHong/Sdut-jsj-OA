@@ -74,9 +74,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bottom ">
-                                <a href="systemDDLAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
-                            </div>
                         </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
@@ -100,9 +97,9 @@
                                     <td>
                                         <div class="controls center">
 
-                                            <a href="systemDDLAction_updateUI.action?sid=<s:property value="sid"/>"
+                                            <a href="systemDDLAction_updateUI?sid=<s:property value="sid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <a href="systemDDLAction_delete.action?sid=<s:property value="sid"/>"
+                                            <a href="systemDDLAction_delete?sid=<s:property value="sid"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                         </div>
@@ -131,7 +128,7 @@
     function selectChange() {
         var selObj = document.getElementById("keyword");
         var i = selObj.selectedIndex;
-        window.location.href = "systemDDLAction_list.action?keyword=" + selObj.options[i].value;
+        window.location.href = "systemDDLAction_list?keyword=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

@@ -34,7 +34,7 @@
         <div class="row-fluid">
             <div class="span12">
                 <div class="well well-small">
-                    <form action="activitiAction_newProcess.action" enctype="multipart/form-data" method="post">
+                    <form action="activitiAction_newProcess" enctype="multipart/form-data" method="post">
                         <input type="file" id="upload" name="processFile"/>
                         <button class="offset1" type="submit" id="uploader"><span
                                 class="icon16 icomoon-icon-upload-3"></span> 上传

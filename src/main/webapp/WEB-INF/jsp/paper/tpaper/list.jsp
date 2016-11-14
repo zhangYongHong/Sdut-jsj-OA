@@ -68,11 +68,9 @@
                             </div>
                             <shiro:hasRole name="admin">
                                 <div class="bottom ">
-                                    <a href="tPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
-                                    <a href="tPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
-                                    <%--<a href="tPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>"--%>
-                                       <%--class="btn btip marginR10 marginB10" >导出</a>--%>
-                                    <a data-remodal-target="modal"
+                                    <a href="tPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                    <a href="tPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="tPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                        class="btn btip marginR10 marginB10" >导出</a>
                                 </div>
                             </shiro:hasRole>
@@ -130,11 +128,11 @@
                                     <td>
                                         <div class="controls center">
                                             <shiro:hasPermission name="trainingPaper:update">
-                                                <a href="tPAction_updateUI.action?tid=<s:property value="tid"/>"
+                                                <a href="tPAction_updateUI?tid=<s:property value="tid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
                                             </shiro:hasPermission>
                                             <shiro:hasPermission name="trainingPaper:delete">
-                                                <a href="tPAction_delete.action?tid=<s:property value="tid"/>"
+                                                <a href="tPAction_delete?tid=<s:property value="tid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </shiro:hasPermission>
@@ -163,7 +161,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href = "tPAction_list.action?schoolYear=" + selObj.options[i].value;
+        window.location.href = "tPAction_list?schoolYear=" + selObj.options[i].value;
     }
 </script>
 

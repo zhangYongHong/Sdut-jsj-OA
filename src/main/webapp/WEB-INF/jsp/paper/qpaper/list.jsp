@@ -65,12 +65,12 @@
                             </div>
                             <div class="bottom">
                                 <shiro:hasPermission name="questionPaper:add">
-                                    <a href="qPAction_addUI.action" class="btn btip marginR10 marginB10">新增</a>
+                                    <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
                                 </shiro:hasPermission>
                                 <shiro:hasPermission name="page:upload">
-                                    <a href="qPAction_loadingExcelUI.action" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
                                 </shiro:hasPermission>
-                                <a href="qPAction_exportExcel.action?schoolYear=<s:property value="schoolYear"/>"
+                                <a href="qPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                    class="btn btip marginR10 marginB10">导出</a>
                             </div>
                         </div>
@@ -140,11 +140,11 @@
                                     <td>
                                         <div class="controls center">
                                             <shiro:hasPermission name="questionPaper:update">
-                                                <a href="qPAction_updateUI.action?qid=<s:property value="qid"/>"
+                                                <a href="qPAction_updateUI?qid=<s:property value="qid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
                                             </shiro:hasPermission>
                                             <shiro:hasPermission name="questionPaper:delete">
-                                                <a href="qPAction_delete.action?qid=<s:property value="qid"/>"
+                                                <a href="qPAction_delete?qid=<s:property value="qid"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </shiro:hasPermission>
@@ -174,7 +174,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href = "qPAction_list.action?schoolYear=" + selObj.options[i].value;
+        window.location.href = "qPAction_list?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>

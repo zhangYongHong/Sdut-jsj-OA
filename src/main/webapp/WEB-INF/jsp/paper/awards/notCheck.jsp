@@ -147,7 +147,7 @@
     function selectChange() {
         var selObj = document.getElementById("state");
         var i = selObj.selectedIndex;
-        window.location.href="awardsAction_waitForCheckList.action?state=" + selObj.options[i].value;
+        window.location.href="awardsAction_waitForCheckList?state=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

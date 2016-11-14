@@ -52,7 +52,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="tPAction_update.action" method="post">
+                        <form class="form-horizontal" action="tPAction_update" method="post">
 
                             <div class="form-row row-fluid">
                                 <div class="span12">

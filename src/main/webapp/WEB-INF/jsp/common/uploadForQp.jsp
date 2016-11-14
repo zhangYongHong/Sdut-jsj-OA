@@ -32,7 +32,7 @@
         </div><!-- End .heading-->
 
         <!-- Build page from here: -->
-        <form action="qPAction_uploadExcel.action" enctype="multipart/form-data" method="post">
+        <form action="qPAction_uploadExcel" enctype="multipart/form-data" method="post">
             <div class="row-fluid">
                 <div class="span12">
                     <div class="well well-small">

@@ -44,7 +44,7 @@
                         <div class="offset5">
                             <s:fielderror name="Error" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="roleAction_add.action" method="post">
+                        <form class="form-horizontal" action="roleAction_add" method="post">
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">

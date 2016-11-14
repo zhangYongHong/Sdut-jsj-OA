@@ -50,7 +50,7 @@
                     <h4>个人信息添加</h4>
                 </div>
 
-                <form class="form-horizontal seperator" action="userAction_add.action" method="post">
+                <form class="form-horizontal seperator" action="userAction_add" method="post">
                     <div class="offset3">
                         <s:fielderror name="userError" cssStyle="color: crimson"/>
                     </div>
