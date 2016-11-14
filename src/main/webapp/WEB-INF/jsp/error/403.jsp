@@ -50,11 +50,11 @@
             <h1 class="center">403 <small>error</small></h1>
         </div>
 
-        <h2 class="center">Access to this page is forbidden</h2>
+        <h2 class="center">禁止访问此页面！</h2>
 
         <div class="center">
-            <a href="javascript: history.go(-1)" class="btn" style="margin-right:10px;"><span class="icon16 icomoon-icon-arrow-left-10"></span>Go back</a>
-            <a href="index.html" class="btn"><span class="icon16 icomoon-icon-screen"></span>Dashboard</a>
+            <a href="javascript: history.go(-1)" class="btn" style="margin-right:10px;"><span class="icon16 icomoon-icon-arrow-left-10"></span>返回</a>
+            <a href="index.html" class="btn"><span class="icon16 icomoon-icon-screen"></span>首页</a>
         </div>
 
     </div>

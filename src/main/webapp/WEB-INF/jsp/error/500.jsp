@@ -50,11 +50,11 @@
             <h1 class="center">500</h1>
         </div>
 
-        <h2 class="center">Internal Server Error!</h2>
+        <h2 class="center">内部服务错误!</h2>
 
         <div class="center">
-            <a href="javascript: history.go(-1)" class="btn" style="margin-right:10px;"><span class="icon16 icomoon-icon-arrow-left-10"></span>Go back</a>
-            <a href="index.html" class="btn"><span class="icon16 icomoon-icon-screen"></span>Dashboard</a>
+            <a href="javascript: history.go(-1)" class="btn" style="margin-right:10px;"><span class="icon16 icomoon-icon-arrow-left-10"></span>返回</a>
+            <a href="index.html" class="btn"><span class="icon16 icomoon-icon-screen"></span>首页</a>
         </div>
 
     </div>
