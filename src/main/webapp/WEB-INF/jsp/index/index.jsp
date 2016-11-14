@@ -69,7 +69,7 @@
         </div><!-- End .row-fluid -->
     </div>
 </div><!-- End contentwrapper -->
-<s:include value="/WEB-INF/jsp/index/tail.jspjsp/index/tail.jsp"/>
+<s:include value="/WEB-INF/jsp/index/tail.jsp"/>
 <!-- End #wrapper -->
 
 <!-- Le javascript
