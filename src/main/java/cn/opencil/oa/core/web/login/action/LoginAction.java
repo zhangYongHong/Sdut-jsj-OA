@@ -23,20 +23,22 @@ import java.util.List;
  * File Name:LoginAction.java
  * Date:2016-5-15下午1:50:19
  * Author : 张树伟
- *
  */
 @Controller
 @Scope("prototype")
-public class LoginAction extends BaseAction<User>{
+public class LoginAction extends BaseAction<User> {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     @Autowired
     private SystemDDLService systemDDLService;
     @Autowired
     private UserService userService;
 
+    public String login() {
+        return "loginIn";
+    }
 
-    public String login(){
+    public String signIn() {
         User user = null;
         Subject currentUser = SecurityUtils.getSubject();
         try {
@@ -62,8 +64,8 @@ public class LoginAction extends BaseAction<User>{
             return "login";
         }
 
-		HttpSession session = this.getRequest().getSession();
-		session.setAttribute(ContantKey.GLOBLE_USER_INFO, user);
+        HttpSession session = this.getRequest().getSession();
+        session.setAttribute(ContantKey.GLOBLE_USER_INFO, user);
         //角色
         this.loadSource("role");
         //系别
@@ -80,17 +82,18 @@ public class LoginAction extends BaseAction<User>{
         this.loadSource("available");
         this.loadSource("schoolYear");
 
-		return SUCCESS;
-	}
+        return SUCCESS;
+    }
 
     public String signOut() {
         HttpSession session = this.getRequest().getSession();
         session.removeAttribute(ContantKey.GLOBLE_USER_INFO);
         return "login";
     }
+
     public boolean loadSource(String valueName) {
         List<SystemDDL> sourceList = systemDDLService.getDDLs(valueName);
-        if(null != sourceList) {
+        if (null != sourceList) {
             ActionContext.getContext().getSession().put(valueName + "List", sourceList);
             return true;
         }

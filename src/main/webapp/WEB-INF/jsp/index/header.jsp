@@ -16,7 +16,7 @@
     <div class="navbar">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="index.jsp">山东理工大学计算机学院协同办公系统</a>
+                <a class="brand" href="noticeAction_list">山东理工大学计算机学院协同办公系统</a>
                 <div class="nav-no-collapse">
                     <ul class="nav pull-right usernav">
                         <li class="dropdown">

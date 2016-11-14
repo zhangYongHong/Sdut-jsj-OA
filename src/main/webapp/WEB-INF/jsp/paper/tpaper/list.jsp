@@ -25,7 +25,7 @@
 </head>
 
 <body>
-<s:include value="/header.jsp"/>
+<s:include value="/WEB-INF/jsp/index/header.jsp"/>
 <!--Body content-->
 <p>sdasdasdasdas</p>
 <div id="content" class="clearfix">
@@ -153,7 +153,7 @@
         <!-- Page end here -->
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->
-<s:include value="/tail.jsp"/>
+<s:include value="/WEB-INF/jsp/index/tail.jsp"/>
 <!-- End #wrapper -->
 <!-- Le javascript
 ================================================== -->

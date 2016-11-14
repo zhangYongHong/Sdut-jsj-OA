@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<s:include value="/header.jsp"/>
+<s:include value="/WEB-INF/jsp/index/header.jsp"/>
 <!--Body content-->
 
 <div id="content" class="clearfix">
