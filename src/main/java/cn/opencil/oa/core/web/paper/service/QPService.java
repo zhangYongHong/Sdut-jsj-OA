@@ -6,6 +6,7 @@ import cn.opencil.oa.core.domain.QuestionPaper;
 import cn.opencil.oa.core.query.BaseQuery;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -19,9 +20,11 @@ public interface QPService  extends BaseService<QuestionPaper>{
 
 	ArrayList<String> getFieldDataNameExcel();
 
-	ArrayList<ArrayList<String>> getFieldDataExcel(BaseQuery baseQuery);
-
 	PageResult<QuestionPaper> getPageResultForQP(BaseQuery baseQuery);
 
 	void uploadExcel(File uploadfile, String schoolYear);
+
+    InputStream exportExcel(String schoolYear);
+
+	String getExcelName(String schoolYear);
 }

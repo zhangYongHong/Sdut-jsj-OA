@@ -18,7 +18,7 @@
 			<result name="excel" type="stream">
 				<param name="contentType">application/vnd.ms-excel</param>
 			    <param name="inputName">inputStream</param>
-			    <param name="contentDisposition">attachment;filename="${#request.filename}"</param>
+			    <param name="contentDisposition">attachment;filename="${excelName}"</param>
 			    <param name="bufferSize">1024</param>
 			</result>
 			<result name="input">/WEB-INF/jsp/paper/qpaper/add.jsp</result>
