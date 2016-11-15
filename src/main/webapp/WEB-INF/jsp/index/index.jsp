@@ -45,20 +45,30 @@
                     <div class="content noPad center">
                         <div>
                             <ul class="unstyled">
-                                <s:subset source="#notices" start="0" count="5">
-                                    <s:iterator>
-                                        <li><span class="icon12 typ-icon-arrow-right green"></span>
-                                            <h3>
-                                                <a class="btn-link"
+                                <div class="content noPad">
+                                    <table class="table">
+                                        <s:subset source="#notices" start="0" count="5">
+                                        <s:iterator>
+                                        <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td><a class="btn-link"
                                                    href="noticeAction_content?uuid=<s:property value="uuid"/>">
-                                                    <s:property value="title"/></a>
-                                            </h3>
-                                            [
+                                                <s:property value="title"/></a>
+                                            </td>
                                             <td><s:date name="beginDate" format="yyyy-MM-dd"/></td>
-                                            ]
-                                        </li>
-                                    </s:iterator>
-                                </s:subset>
+                                        </tr>
+
+                                        </s:iterator>
+                                        <s:if test="#notices.size > 3">
+                                            <td></td>
+                                            <td><a href="noticeAction_moreNotice">更多</a></td>
+                                            <td></td>
+                                        </s:if>
+                                        </s:subset>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </ul>
                         </div>
                     </div>

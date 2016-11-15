@@ -11,6 +11,7 @@
 			<result name="content">WEB-INF/jsp/notice/notice.jsp</result>
 			<result name="addUI">WEB-INF/jsp/notice/add.jsp</result>
 			<result name="noticeList">WEB-INF/jsp/notice/list.jsp</result>
+			<result name="moreNotice">WEB-INF/jsp/notice/listForUser.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">noticeAction_noticeList</param>
 				<param name="namespace">/</param>

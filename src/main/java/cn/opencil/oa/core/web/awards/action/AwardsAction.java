@@ -141,7 +141,6 @@ public class AwardsAction extends BaseAction<Awards> {
         return "adjust";
     }
 
-    @RequiresPermissions("awards:adjust")
     public String adjust() {
         this.getModel().setState(1);
         awardsService.updateAwards(this.getModel());
@@ -180,6 +179,11 @@ public class AwardsAction extends BaseAction<Awards> {
             e.printStackTrace();
         }
         return "downZip";
+    }
+
+    public String exportExcel() {
+
+        return "exportExcel";
     }
     //==================================================================
 

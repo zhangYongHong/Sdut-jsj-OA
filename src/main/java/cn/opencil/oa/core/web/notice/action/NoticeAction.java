@@ -57,4 +57,10 @@ public class NoticeAction extends BaseAction<Notice> {
         noticeService.deleteEntry(this.getModel().getUuid());
         return "redirect";
     }
+
+    public String moreNotice() {
+        Collection<Notice> noticeList = noticeService.getEntrys();
+        ActionContext.getContext().put("notices", noticeList);
+        return "moreNotice";
+    }
 }
