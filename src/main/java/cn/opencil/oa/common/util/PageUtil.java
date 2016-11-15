@@ -9,13 +9,14 @@ import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 
 import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 /**
  * Created by mnzero on 16-7-23.
@@ -258,9 +259,9 @@ public class PageUtil {
         role.setResourceIdsStr(str.replaceAll(" ", ""));
     }
 
-    public static String uploadAnnex(File srcFile) {
+    public static String  uploadAnnex(File srcFile, String schoolYear) {
         String name = srcFile.getName();
-        String path = ServletActionContext.getServletContext().getRealPath("/upload/images") + "/";
+        String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + schoolYear) + "/";
         String fileName = UUID.randomUUID() + ".jpeg";
         File tempFile = new File(path + fileName);
         try {
@@ -270,4 +271,47 @@ public class PageUtil {
         }
         return path + fileName;
     }
+    /**
+     * 文档压缩
+     */
+    public final static void deCompress(File file, String dest) throws Exception {
+        try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(dest))) {
+            zipFile(file, zos, "");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public final static void zipFile(File inFile, ZipOutputStream zos, String dir) throws IOException {
+        if (inFile.isDirectory()) {
+            File[] files = inFile.listFiles();
+            if (files.length > 0) {
+                for (File file : files) {
+                    String name = inFile.getName();
+                    if (!"".equals(dir)) {
+                        name = dir + "/" + name;
+                    }
+                    zipFile(file, zos, name);
+                }
+            }
+        } else {
+            String entryName = null;
+            if (!"".equals(dir)) {
+                entryName = dir + "/" + inFile.getName();
+            } else {
+                entryName = inFile.getName();
+            }
+            ZipEntry entry = new ZipEntry(entryName);
+            zos.putNextEntry(entry);
+            try (InputStream is = new FileInputStream(inFile)) {
+                int len = 0;
+                while ((len = is.read()) != -1) {
+                    zos.write(len);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 }

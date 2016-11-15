@@ -2,13 +2,13 @@ package cn.opencil.oa.core.web.awards.action;
 
 import cn.opencil.oa.common.page.PageResult;
 import cn.opencil.oa.common.util.ContantKey;
-import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.AwardsQuery;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
+import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.log4j.Logger;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -19,6 +19,7 @@ import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpSession;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Project Name:SdutOA
@@ -34,6 +35,8 @@ public class AwardsAction extends BaseAction<Awards> {
 
     @Autowired
     private AwardsService awardsService;
+    @Autowired
+    private SystemDDLService systemDDLService;
 
     private Logger log = Logger.getLogger(AwardsAction.class);
     private Long aid;
@@ -43,10 +46,7 @@ public class AwardsAction extends BaseAction<Awards> {
     public String list() {
         awardsQuery = new AwardsQuery();
         awardsQuery.setState(2);
-        if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
-            awardsQuery.setSchoolYear(DateUtil.groupSchoolYear());
-        else
-            awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
+        awardsQuery.setSchoolYear(this.getModel().getSchoolYear());
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);
@@ -153,6 +153,33 @@ public class AwardsAction extends BaseAction<Awards> {
         InputStream annex = awardsService.showAnnex(this.getModel().getAid());
         ActionContext.getContext().put("annex", annex);
         return "showAnnex";
+    }
+
+    public String downImage() {
+        Awards awards = awardsService.downloadImage(this.getModel().getAid());
+        InputStream annex = awards.getInputStream();
+        ActionContext.getContext().put("annex", annex);
+        String filename = awards.getCompetitionView() + ".jpeg";
+        try {
+            filename = new String(filename.getBytes("gbk"), "iso-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        ActionContext.getContext().put("fileName", filename);
+        return "downImage";
+    }
+
+    public String downZip() {
+        try {
+            Awards awards = awardsService.downloadZip(this.getModel().getSchoolYear());
+            String fileName = systemDDLService.getSystenDDL("schoolYear", Integer.parseInt(this.getModel().getSchoolYear())).getDdlName();
+            fileName = new String(fileName.getBytes("gbk"), "iso-8859-1");
+            ActionContext.getContext().put("zip", awards.getInputStream());
+            ActionContext.getContext().put("fileName", fileName + ".zip");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "downZip";
     }
     //==================================================================
 

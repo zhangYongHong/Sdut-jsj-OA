@@ -1,7 +1,6 @@
 package cn.opencil.oa.core.web.awards.service.impl;
 
 import cn.opencil.oa.common.page.PageResult;
-import cn.opencil.oa.common.util.DateUtil;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
@@ -14,6 +13,7 @@ import cn.opencil.oa.core.web.awards.dao.AwardsDao;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import org.apache.commons.io.FileUtils;
+import org.apache.struts2.ServletActionContext;
 import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,11 +44,10 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     }
 
     public void addAwards(Awards awards) throws DataException {
-        String path = PageUtil.uploadAnnex(awards.getAnnexFile());
+        String path = PageUtil.uploadAnnex(awards.getAnnexFile(), awards.getSchoolYear());
         if (path != null) {
             User user = PageUtil.getUser();
             awards.setFileNum(PageUtil.getFileNum(awards.getClasses()));
-            awards.setSchoolYear(DateUtil.groupSchoolYear());
             awards.setEmployeenum(user.getEmployeenum());
             awards.setAnnex(path);
             super.addEntry(awards);
@@ -132,7 +131,7 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     public void updateAwards(Awards model) {
         if (model.getState() == null || model.getState() != 3) {
             if (model.getAnnexFile() != null) {
-                String path = PageUtil.uploadAnnex(model.getAnnexFile());
+                String path = PageUtil.uploadAnnex(model.getAnnexFile(), model.getSchoolYear());
                 if (path != null)
                     model.setAnnex(path);
             }
@@ -145,5 +144,33 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
                 }
         }
         awardsDao.updateEntry(model);
+    }
+
+    @Override
+    public Awards downloadImage(Long aid) {
+        Awards awards = awardsDao.getEntryById(aid);
+        SystemDDL systemDDL = systemDDLService.getSystenDDL("competitionView", awards.getCompetitionid());
+        awards.setCompetitionView(systemDDL.getDdlName());
+        String annex = awards.getAnnex();
+        File file = new File(annex);
+        try {
+            awards.setInputStream(new FileInputStream(file));
+            return awards;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public Awards downloadZip(String schoolYear) throws Exception {
+        String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + schoolYear);
+        File file = new File(path);
+        String zipPath = ServletActionContext.getServletContext().getRealPath("/upload/zip/" + schoolYear + ".zip");
+        PageUtil.deCompress(file, zipPath);
+        InputStream inputStream = new FileInputStream(zipPath);
+        Awards awards = new Awards();
+        awards.setInputStream(inputStream);
+        return awards;
     }
 }

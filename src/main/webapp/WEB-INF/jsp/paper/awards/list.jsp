@@ -69,8 +69,8 @@
                             </div>
                             <shiro:hasRole name="admin">
                                 <div class="bottom ">
-                                    <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
-                                    <a href="qPAction_exportExcel" class="btn btip marginR10 marginB10">导出</a>
+                                    <a href="awardsAction_exportExcel" class="btn btip marginR10 marginB10">导出</a>
+                                    <a href="#" class="btn btip marginR10 marginB10" onclick="downZip()">附件压缩包下载</a>
                                 </div>
                             </shiro:hasRole>
                         </div>
@@ -131,6 +131,7 @@
                                     <td>
                                         <div>
                                             <a href="awardsAction_showAnnex?aid=<s:property value="aid"/>">查看附件</a>
+                                            <a href="awardsAction_downImage?aid=<s:property value="aid"/>">下载附件</a>
                                         </div>
                                     </td>
                                     <shiro:hasPermission name="awards:delete">
@@ -162,10 +163,21 @@
 <!-- Le javascript
 ================================================== -->
 <script type="text/javascript">
+
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
         window.location.href = "awardsAction_list?schoolYear=" + selObj.options[i].value;
+    }
+    function downZip() {
+        var selObj = document.getElementById("schoolYear");
+        var i = selObj.selectedIndex;
+        window.location.href = "awardsAction_downZip?schoolYear=" + selObj.options[i].value;
+    }
+    function downExcel() {
+        var selObj = document.getElementById("schoolYear");
+        var i = selObj.selectedIndex;
+        window.location.href = "awardsAction_downloadExcel?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

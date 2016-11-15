@@ -26,4 +26,8 @@ public interface AwardsService  extends BaseService<Awards>{
     void deleteAwards(Long aid);
 
     void updateAwards(Awards model);
+
+    Awards downloadImage(Long aid);
+
+    Awards downloadZip(String schoolYear) throws Exception;
 }

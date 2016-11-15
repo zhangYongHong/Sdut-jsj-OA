@@ -43,15 +43,12 @@ public class TPAction extends BaseAction<TrainingPaper> {
     private File uploadfile;
     private String schoolYear;
 
-    @RequiresPermissions("questionPaper:view")
+    @RequiresPermissions("trainingPaper:view")
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
         Subject subject = SecurityUtils.getSubject();
         try {
-            if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
-                tpQuery.setSchoolYear(DateUtil.groupSchoolYear());
-            else
-                tpQuery.setSchoolYear(this.getModel().getSchoolYear());
+            tpQuery.setSchoolYear(this.getModel().getSchoolYear());
             //非管理员只能查看自身的试卷列表
             if (!subject.hasRole("admin"))
                 tpQuery.setTeacher(PageUtil.getUser().getUserName());
@@ -66,12 +63,11 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
-    @RequiresPermissions("questionPaper:add")
+    @RequiresPermissions("trainingPaper:add")
     public String addUI() {
         return addUI;
     }
 
-    @RequiresPermissions("questionPaper:add")
     public String add() {
         TrainingPaper paper = this.getModel();
         if (checkValue(paper)) {
@@ -89,14 +85,13 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
-    @RequiresPermissions("questionPaper:update")
+    @RequiresPermissions("trainingPaper:update")
     public String updateUI() {
         tempId = this.getModel().getTid();
         this.loadingValue();
         return updateUI;
     }
 
-    @RequiresPermissions("questionPaper:update")
     public String update() {
         TrainingPaper trainingPaper = this.getModel();
         trainingPaper.setTid(tempId);
@@ -116,7 +111,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
-    @RequiresPermissions("questionPaper:delete")
+    @RequiresPermissions("trainingPaper:delete")
     public String delete() {
         Long id = this.getModel().getTid();
         this.tpService.deleteEntry(id);
@@ -213,6 +208,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
             ActionContext.getContext().put("old", old);
         }
     }
+
     //===========================================================================
     public PaperQuery getTpQuery() {
         return tpQuery;
