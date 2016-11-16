@@ -258,10 +258,9 @@ public class PageUtil {
         role.setResourceIdsStr(str.replaceAll(" ", ""));
     }
 
-    public static String  uploadAnnex(File srcFile, String schoolYear, String competitionView) {
-        String name = srcFile.getName();
+    public static String  uploadAnnex(File srcFile, String schoolYear, String achievement) {
         String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + schoolYear) + "/";
-        String fileName = competitionView + ".jpeg";
+        String fileName = achievement + ".jpeg";
         File tempFile = new File(path + fileName);
         try {
             FileUtils.copyFile(srcFile, tempFile);
@@ -274,10 +273,10 @@ public class PageUtil {
      * 文档压缩
      */
     public final static void deCompress(File file, String dest) throws Exception {
-        File file1 = new File(dest);
-        if (!file1.exists()) {
-            file1.mkdirs();
-        }
+        String zipPath = ServletActionContext.getServletContext().getRealPath("/upload/zip/");
+        File test = new File(zipPath);
+        if (!test.exists())
+            test.mkdirs();
         try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(dest))) {
             zipFile(file, zos, "");
         } catch (IOException e) {

@@ -45,7 +45,8 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 
     public void addAwards(Awards awards) throws DataException {
         String achievement = awards.getAchievement();
-        String path = PageUtil.uploadAnnex(awards.getAnnexFile(), awards.getSchoolYear(), achievement);
+        String schoolYear = systemDDLService.getSystenDDL("schoolYear", Integer.parseInt(awards.getSchoolYear())).getDdlName();
+        String path = PageUtil.uploadAnnex(awards.getAnnexFile(), schoolYear, achievement);
         if (path != null) {
             User user = PageUtil.getUser();
             awards.setFileNum(PageUtil.getFileNum(awards.getClasses()));
@@ -166,7 +167,8 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
 
     @Override
     public Awards downloadZip(String schoolYear) throws Exception {
-        String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + schoolYear);
+        String fileName = systemDDLService.getSystenDDL("schoolYear", Integer.parseInt(schoolYear)).getDdlName();
+        String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + fileName);
         File file = new File(path);
         String zipPath = ServletActionContext.getServletContext().getRealPath("/upload/zip/" + schoolYear + ".zip");
         PageUtil.deCompress(file, zipPath);
