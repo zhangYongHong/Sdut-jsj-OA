@@ -73,7 +73,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">成果展示:</label>
-                                        <input class="span6" id="normalInput" type="text" name="achievement" value="<s:property value="#awards.achievement"/>"/>
+                                        <input class="span6" id="normalInput" type="text" name="achievement" value="<s:property value="#awards.achievement"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">参赛学生:</label>
-                                        <input class="span6 focused" id="focusedInput" type="text" name="stuname" value="<s:property value="#awards.stuname"/>"/>
+                                        <input class="span6 focused" id="focusedInput" type="text" name="stuname" value="<s:property value="#awards.stuname"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">专业:</label>
-                                        <input class="span6 focused" type="text" name="specialty" value="<s:property value="#awards.specialty"/>"/>
+                                        <input class="span6 focused" type="text" name="specialty" value="<s:property value="#awards.specialty"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +97,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">班级:</label>
-                                        <input class="span6 focused" type="text" name="classes" value="<s:property value="#awards.classes"/>"/>
+                                        <input class="span6 focused" type="text" name="classes" value="<s:property value="#awards.classes"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="teacher">指导老师:</label>
-                                        <input class="span6 focused"  type="text" id="teacher" name="teacher" value="<s:property value="#awards.teacher"/>"/>
+                                        <input class="span6 focused"  type="text" id="teacher" name="teacher" value="<s:property value="#awards.teacher"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="atime">获奖时间:</label>
-                                        <input class="span6 focused" id="atime" type="text" name="atime" value="<s:property value="#awards.atime"/>"/>
+                                        <input class="span6 focused" id="atime" type="text" name="atime" value="<s:property value="#awards.atime"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="prizeunit">颁奖单位:</label>
-                                        <input class="span6 focused" id="prizeunit" type="text" name="prizeunit" value="<s:property value="#awards.prizeunit"/>"/>
+                                        <input class="span6 focused" id="prizeunit" type="text" name="prizeunit" value="<s:property value="#awards.prizeunit"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <label class="form-label span4">附件:</label>
-                                    <input type="file" name="annexFile"/>
+                                    <input type="file" name="annexFile" onchange="fileAnnexChange(this)"/>
                                 </div>
                             </div>
                             <s:hidden name="aid" value="%{#awards.aid}"/>
@@ -209,6 +209,32 @@
 <script type="text/javascript" src="js/supr-theme/jquery-ui-sliderAccess.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-
+<script type="application/javascript">
+    function fileAnnexChange(target) {
+        var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+        var fileSize = 0;
+        if (isIE && !target.files) {
+            var filePath = target.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            var file = fileSystem.GetFile (filePath);
+            fileSize = file.Size;
+        } else {
+            fileSize = target.files[0].size;
+        }
+        var size = fileSize / 1024;
+        if(size>2000){
+            alert("附件不能大于2M");
+            target.value="";
+            return
+        }
+        var name=target.value;
+        var fileName = name.substring(name.lastIndexOf(".")+1).toLowerCase();
+        if(fileName !="jpeg"){
+            alert("请选择图片格式文件上传(仅限jpeg格式)！");
+            target.value="";
+            return
+        }
+    }
+</script>
 </body>
 </html>
