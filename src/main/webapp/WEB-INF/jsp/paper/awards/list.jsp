@@ -103,7 +103,7 @@
                                 <tr>
                                     <td><s:property value="#i.index+1"/></td>
                                     <td><s:property value="idView"/></td>
-                                        <td><s:property value="competitionView"/></td>
+                                    <td><s:property value="competitionView"/></td>
                                     <td><s:property value="achievement"/></td>
                                     <td>
                                         <s:if test="level == 1">国家级</s:if>
