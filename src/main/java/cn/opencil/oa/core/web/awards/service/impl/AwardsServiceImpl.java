@@ -1,6 +1,7 @@
 package cn.opencil.oa.core.web.awards.service.impl;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.ExcelFileGeneratorUtil;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.dao.BaseDao;
 import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
@@ -8,10 +9,12 @@ import cn.opencil.oa.core.domain.Awards;
 import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.BaseQuery;
+import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import cn.opencil.oa.core.web.awards.dao.AwardsDao;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
+import cn.opencil.oa.core.web.excel.service.ExcelService;
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.exception.DataException;
@@ -19,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -37,6 +41,8 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     private SystemDDLService systemDDLService;
     @Autowired
     private ActivitiService activitiService;
+    @Autowired
+    private ExcelService excelService;
 
     @Override
     public BaseDao getBaseDao() {
@@ -179,7 +185,107 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     }
 
     @Override
-    public void exportExcel() {
+    public InputStream exportExcel(String schoolYear) {
+        PaperQuery paperQuery = new PaperQuery();
+        paperQuery.setSchoolYear(schoolYear);
+        ArrayList<String> fieldDataName = this.getFieldDataNameExcel();
+        ArrayList<ArrayList<String>> fieldDatas = this.getFieldDataExcel(paperQuery);
+        if (fieldDatas.size() == 0) {
+            return null;
+        }
+        ExcelFileGeneratorUtil excelFileGenerator = new ExcelFileGeneratorUtil(
+                fieldDataName, fieldDatas);
+        String title = this.getTitle(schoolYear);
+        String filename = this.getExcelName(schoolYear);
+        excelFileGenerator.setTitle(title);
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        try {
+            excelFileGenerator.expordExcel(os);// 使用输出流，导出
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        byte[] buf = os.toByteArray();
+        ByteArrayInputStream in = new ByteArrayInputStream(buf);
+        return in;
+    }
 
+    private ArrayList<ArrayList<String>> getFieldDataExcel(PaperQuery paperQuery) {
+        List<Awards> rows = this.getAwardsPageResult(paperQuery).getRows();
+        List<Awards> arrayList = new ArrayList<>(rows);
+        ArrayList<ArrayList<String>> datas = new ArrayList<ArrayList<String>>();
+
+        if (null != rows && arrayList.size() > 0) {
+            for (int i = 0; i < arrayList.size(); i++) {
+
+                Awards awards = arrayList.get(i);
+                ArrayList<String> oneData = new ArrayList<String>();
+
+                oneData.add(awards.getIdView());
+                oneData.add(awards.getCompetitionView());
+                oneData.add(awards.getAchievement());
+                oneData.add(switchLevel(awards.getLevel()));
+                oneData.add(switchGrade(awards.getGrade()));
+                oneData.add(awards.getStuname());
+                oneData.add(awards.getSpecialty());
+                oneData.add(awards.getClasses());
+                oneData.add(awards.getTeacher());
+                oneData.add(awards.getAtime());
+                oneData.add(awards.getPrizeunit());
+                oneData.add(awards.getComment());
+                datas.add(oneData);
+            }
+        }
+        return datas;
+    }
+
+    private ArrayList<String> getFieldDataNameExcel() {
+        return excelService.getExcelByAwards();
+    }
+
+    @Override
+    public String getExcelName(String schoolYear) {
+        String ddlName = systemDDLService.getSystenDDL("schoolYear", Integer.parseInt(schoolYear)).getDdlName();
+        String fileName = ddlName + "-获奖情况详情表.xls";
+        try {
+            fileName = new String(fileName.getBytes("gbk"), "iso-8859-1");// 转换文件名编码
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return fileName;
+    }
+
+    private String getTitle(String schoolYear) {
+        String year = systemDDLService.getSystenDDL("schoolYear", Integer.parseInt(schoolYear)).getDdlName();
+        return year +"-获奖情况表";
+    }
+
+    private String switchLevel(int level) {
+        switch (level) {
+            case 1:
+                return "国家级";
+            case 2:
+                return "省级";
+            case 3:
+                return "校级";
+            case 4:
+                return "院级";
+        }
+        return null;
+    }
+
+    private String switchGrade(int grade) {
+        switch (grade) {
+            case 1:
+                return "特等奖";
+            case 2:
+                return "一等奖";
+            case 3:
+                return "二等奖";
+            case 4:
+                return "三等奖";
+            case 5:
+                return "优胜奖";
+        }
+        return null;
     }
 }

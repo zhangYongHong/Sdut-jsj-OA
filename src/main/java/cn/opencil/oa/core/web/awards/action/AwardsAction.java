@@ -10,6 +10,7 @@ import cn.opencil.oa.core.query.AwardsQuery;
 import cn.opencil.oa.core.web.awards.service.AwardsService;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.BeanUtils;
@@ -182,7 +183,17 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String exportExcel() {
-        awardsService.exportExcel();
+        String schoolYear = this.getModel().getSchoolYear();
+        if (!StringUtils.isNotEmpty(schoolYear))
+            schoolYear = "0";
+        InputStream inputStream = awardsService.exportExcel(schoolYear);
+        if (inputStream != null) {
+            String excelName = awardsService.getExcelName(schoolYear);
+            ActionContext.getContext().put("excel", inputStream);
+            ActionContext.getContext().put("excelName", excelName);
+        } else {
+            return "listAction";
+        }
         return "exportExcel";
     }
     //==================================================================

@@ -69,7 +69,7 @@
                             </div>
                             <shiro:hasRole name="admin">
                                 <div class="bottom ">
-                                    <a href="awardsAction_exportExcel" class="btn btip marginR10 marginB10">导出</a>
+                                    <a href="#" class="btn btip marginR10 marginB10" onclick="downExcel()">导出</a>
                                     <a href="#" class="btn btip marginR10 marginB10" onclick="downZip()">附件压缩包下载</a>
                                 </div>
                             </shiro:hasRole>
@@ -103,7 +103,6 @@
                                 <tr>
                                     <td><s:property value="#i.index+1"/></td>
                                     <td><s:property value="idView"/></td>
-                                        <%--<td><s:property value="id"/></td>--%>
                                         <td><s:property value="competitionView"/></td>
                                     <td><s:property value="achievement"/></td>
                                     <td>
@@ -177,7 +176,7 @@
     function downExcel() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href = "awardsAction_downloadExcel?schoolYear=" + selObj.options[i].value;
+        window.location.href = "awardsAction_exportExcel?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>

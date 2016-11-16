@@ -35,5 +35,7 @@ public interface AwardsService extends BaseService<Awards> {
 
     Awards downloadZip(String schoolYear) throws Exception;
 
-    void exportExcel();
+    InputStream exportExcel(String schoolYear);
+
+    String getExcelName(String schoolYear);
 }
