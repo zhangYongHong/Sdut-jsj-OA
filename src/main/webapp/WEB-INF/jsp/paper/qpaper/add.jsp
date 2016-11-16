@@ -45,13 +45,13 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="qPAction_add" method="post">
+                        <form id="qp-form" class="form-horizontal" action="qPAction_add" method="post">
 
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">授课老师</label>
-                                        <input class="span8" id="normalInput" type="text" name="teacher"/>
+                                        <input class="span8" id="normalInput" type="text" name="teacher" required/>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">授课班级</label>
                                         <input class="span8 focused" id="focusedInput" type="text"
-                                               name="className"/>
+                                               name="className" required/>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">课程名称</label>
-                                        <input class="span8 focused" type="text" name="course"/>
+                                        <input class="span8 focused" type="text" name="course" required/>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
 <script type="text/javascript" src="plugins/select/select2.min.js"></script>
 <script type="text/javascript" src="plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>
 <script type="text/javascript" src="plugins/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="plugins/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="plugins/validate/jquery.validate.js"></script>
 <script type="text/javascript" src="plugins/search/tipuesearch_set.js"></script>
 
 <script type="text/javascript" src="plugins/animated-progress-bar/jquery.progressbar.js"></script>
@@ -318,6 +318,21 @@
 <script type="text/javascript" src="js/supr-theme/jquery-ui-sliderAccess.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-
+<script type="application/javascript">
+    $().ready(function() {
+        $("#qp-form").validate({
+            rules: {
+                num: {
+                    min: 0,
+                    max: 300
+                },
+                pnum: {
+                    min: 0,
+                    max: 300
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

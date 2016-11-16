@@ -53,7 +53,7 @@
                                         <div class="row-fluid">
                                             <label class="form-label span4">授课老师</label>
                                             <input class="span8" id="normalInput" type="text" name="teacher"
-                                                   value="<s:property value="#old.teacher"/>">
+                                                   value="<s:property value="#old.teacher"/>" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                         <div class="row-fluid">
                                             <label class="form-label span4" for="focusedInput">授课班级</label>
                                             <input class="span8 focused" id="focusedInput" type="text" name="className"
-                                                   value="<s:property value="#old.className"/>"/>
+                                                   value="<s:property value="#old.className"/>" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@
                                         <div class="row-fluid">
                                             <label class="form-label span4" for="focusedInput">课程名称</label>
                                             <input class="span8 focused" type="text" name="course"
-                                                   value="<s:property value="#old.course"/>"/>
+                                                   value="<s:property value="#old.course"/>" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                                         <div class="row-fluid">
                                             <label class="form-label span4">考试人数</label>
                                             <input class="span8" type="text" name="num"
-                                                   value="<s:property value="#old.num"/>"/>
+                                                   value="<s:property value="#old.num"/>" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@
                                         <div class="row-fluid">
                                             <label class="form-label span4">试卷份数</label>
                                             <input class="span8 tip" type="text" name="pnum"
-                                                   value="<s:property value="#old.pnum"/>"/>
+                                                   value="<s:property value="#old.pnum"/>" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -385,7 +385,7 @@
                             <div class="offset5">
                                 <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                             </div>
-                            <form class="form-horizontal" action="qPAction_update.action" method="post">
+                            <form id="qp-form" class="form-horizontal" action="qPAction_update.action" method="post">
 
                                 <div class="form-row row-fluid">
                                     <div class="span12">
@@ -768,6 +768,21 @@
 <script type="text/javascript" src="js/supr-theme/jquery-ui-sliderAccess.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-
+<script type="application/javascript">
+    $().ready(function() {
+        $("#qp-form").validate({
+            rules: {
+                num: {
+                    min: 0,
+                    max: 300
+                },
+                pnum: {
+                    min: 0,
+                    max: 300
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

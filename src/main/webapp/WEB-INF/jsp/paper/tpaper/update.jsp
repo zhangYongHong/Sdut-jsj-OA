@@ -52,7 +52,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="tPAction_update" method="post">
+                        <form id="tp-form" class="form-horizontal" action="tPAction_update" method="post">
 
                             <div class="form-row row-fluid">
                                 <div class="span12">
@@ -149,7 +149,7 @@
 
                                         <label class="form-label span4">课程性质</label>
                                         <input class="span8 tip" type="text" name="nature"
-                                               value="<s:property value="#old.nature"/>"/>
+                                               value="<s:property value="#old.nature"/>" re/>
                                     </div>
                                 </div>
                             </div>
@@ -330,7 +330,22 @@
 <script type="text/javascript" src="js/supr-theme/jquery-ui-sliderAccess.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
-
+<script type="application/javascript">
+    $().ready(function() {
+        $("#tp-form").validate({
+            rules: {
+                num: {
+                    min: 0,
+                    max: 300
+                },
+                tnum: {
+                    min: 0,
+                    max: 300
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>
 

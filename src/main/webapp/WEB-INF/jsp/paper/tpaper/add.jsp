@@ -52,13 +52,13 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="tPAction_add" method="post">
+                        <form id="tp-form" class="form-horizontal" action="tPAction_add" method="post">
 
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">姓&nbsp;&nbsp;名</label>
-                                        <input class="span8" id="normalInput" type="text" name="teacher"/>
+                                        <input class="span8" id="normalInput" type="text" name="teacher" required/>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">课&nbsp;&nbsp;程</label>
-                                        <input class="span8 focused" id="focusedInput" type="text" name="course"/>
+                                        <input class="span8 focused" id="focusedInput" type="text" name="course" required/>
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4" for="focusedInput">班&nbsp;&nbsp;级</label>
-                                        <input class="span8 focused" type="text" name="className"/>
+                                        <input class="span8 focused" type="text" name="className" required/>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">选课人数</label>
-                                        <input class="span8" type="text" name="num"/>
+                                        <input class="span8" type="text" id="num" name="num"/>
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">试卷份数</label>
-                                        <input class="span8 tip" type="text" name="tnum"/>
+                                        <input class="span8 tip" type="text" id="tnum" name="tnum"/>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +180,6 @@
                                             <div class="left marginT5">
                                                 <input type="radio" name="standard" value="1"/>有
                                                 <input type="radio" name="standard" value="0" checked="checked"/>无
-
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +262,7 @@
 <script type="text/javascript" src="plugins/select/select2.min.js"></script>
 <script type="text/javascript" src="plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>
 <script type="text/javascript" src="plugins/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="plugins/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="plugins/validate/jquery.validate.js"></script>
 <script type="text/javascript" src="plugins/search/tipuesearch_set.js"></script>
 
 <script type="text/javascript" src="plugins/animated-progress-bar/jquery.progressbar.js"></script>
@@ -279,7 +278,22 @@
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/supr-theme/jquery-ui-sliderAccess.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
+<script type="application/javascript">
+    $().ready(function() {
+        $("#tp-form").validate({
+            rules: {
+                num: {
+                    min: 0,
+                    max: 300
+                },
+                tnum: {
+                    min: 0,
+                    max: 300
+                }
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

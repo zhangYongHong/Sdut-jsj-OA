@@ -101,7 +101,7 @@
                             <div class="row-fluid">
                                 <label class="form-label span3" for="email">邮&nbsp&nbsp&nbsp箱:</label>
                                 <input class="span4" id="email" type="text" name="email"
-                                       value="<s:property value="#oldUser.email"/>"/>
+                                       value="<s:property value="#oldUser.email"/>" required/>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                             <div class="row-fluid">
                                 <label class="form-label span3" for="phone">手机号:</label>
                                 <input class="span4" id="phone" type="text" name="phone"
-                                       value="<s:property value="#oldUser.phone "/>"/>
+                                       value="<s:property value="#oldUser.phone "/>" required/>
                             </div>
                         </div>
                     </div>

@@ -50,7 +50,7 @@
                     <h4>个人信息添加</h4>
                 </div>
 
-                <form class="form-horizontal seperator" action="userAction_add" method="post">
+                <form id="user-form" class="form-horizontal seperator" action="userAction_add" method="post">
                     <div class="offset3">
                         <s:fielderror name="userError" cssStyle="color: crimson"/>
                     </div>
@@ -58,7 +58,7 @@
                         <div class="span12">
                             <div class="row-fluid">
                                 <label class="form-label span3" for="employeenum">工&nbsp&nbsp&nbsp号:</label>
-                                <input class="span4" id="employeenum" type="text" name="employeenum"/>
+                                <input class="span4" id="employeenum" type="text" name="employeenum" required/>
                             </div>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
                     <div class="form-row row-fluid">
                         <div class="span12">
                             <div class="row-fluid">
-                                <label class="form-label span3" for="name">用户名:</label>
-                                <input class="span4" id="name" type="text" name="userName"/>
+                                <label class="form-label span3" for="userName">用户名:</label>
+                                <input class="span4" id="userName" type="text" name="userName" required/>
                             </div>
                         </div>
                     </div>
@@ -96,8 +96,7 @@
                         <div class="span12">
                             <div class="row-fluid">
                                 <label class="form-label span3" for="email">邮&nbsp&nbsp&nbsp箱:</label>
-                                <input class="span4" id="email" type="text" name="email"
-                                       value="<s:property value="%{#oldUser.email}"/>"/>
+                                <input class="span4" id="email" type="text" name="email" required/>
                             </div>
                         </div>
                     </div>
@@ -105,8 +104,7 @@
                         <div class="span12">
                             <div class="row-fluid">
                                 <label class="form-label span3" for="phone">手机号:</label>
-                                <input class="span4" id="phone" type="text" name="phone"
-                                       value="<s:property value="%{#oldUser.phone}"/>"/>
+                                <input class="span4" id="phone" type="text" name="phone" required/>
                             </div>
                         </div>
                     </div>
@@ -141,12 +139,11 @@
 <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="plugins/validate/jquery.validate.js"></script>
 
 <!-- Important Place before main.js  -->
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-
-
 </body>
 </html>
 

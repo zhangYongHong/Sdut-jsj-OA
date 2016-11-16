@@ -55,7 +55,7 @@
                     </div>
                     <div class="content">
 
-                        <form class="form-horizontal" id="form-validate" action="userAction_passWord"
+                        <form id="password-form" class="form-horizontal" id="form-validate" action="userAction_passWord"
                               method="post">
                             <div class="offset5">
                                 <s:fielderror name="userError" cssStyle="color: crimson"/>
@@ -124,7 +124,7 @@
 <script type="text/javascript" src="plugins/select/select2.min.js"></script>
 <script type="text/javascript" src="plugins/dualselect/jquery.dualListBox-1.3.min.js"></script>
 <script type="text/javascript" src="plugins/tiny_mce/jquery.tinymce.js"></script>
-<script type="text/javascript" src="plugins/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="plugins/validate/jquery.validate.js"></script>
 
 <script type="text/javascript" src="plugins/touch-punch/jquery.ui.touch-punch.min.js"></script>
 
@@ -135,6 +135,32 @@
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
+<script type="application/javascript">
+    $("#password-form").validate({
+        rules: {
+            password: {
+                required: true,
+                minlength: 5
+            },
+            passwordConfirm: {
+                required: true,
+                minlength: 5,
+                equalTo: "#password"
+            }
+        },
+        messages: {
+            password: {
+                required: "请输入密码",
+                minlength: jQuery.format("密码不能小于{0}个字符")
+            },
+            passwordConfirm: {
+                required: "请输入确认密码",
+                minlength: "确认密码不能小于5个字符",
+                equalTo: "两次输入密码不一致不一致"
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
