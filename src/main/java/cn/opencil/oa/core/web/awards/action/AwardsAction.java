@@ -158,7 +158,7 @@ public class AwardsAction extends BaseAction<Awards> {
         Awards awards = awardsService.downloadImage(this.getModel().getAid());
         InputStream annex = awards.getInputStream();
         ActionContext.getContext().put("annex", annex);
-        String filename = awards.getCompetitionView() + ".jpeg";
+        String filename = awards.getAchievement() + ".jpeg";
         try {
             filename = new String(filename.getBytes("gbk"), "iso-8859-1");
         } catch (UnsupportedEncodingException e) {
@@ -182,7 +182,7 @@ public class AwardsAction extends BaseAction<Awards> {
     }
 
     public String exportExcel() {
-
+        awardsService.exportExcel();
         return "exportExcel";
     }
     //==================================================================

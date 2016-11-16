@@ -12,15 +12,19 @@ import java.io.InputStream;
  * File Name:AwardsService.java
  * Date:2016-4-15下午1:37:01
  * Author : 张树伟
- *
+ * <p>
  * 获奖管理的serive
  */
-public interface AwardsService  extends BaseService<Awards>{
+public interface AwardsService extends BaseService<Awards> {
 
-	PageResult<Awards> getAwardsPageResult(BaseQuery baseQuery);
+    PageResult<Awards> getAwardsPageResult(BaseQuery baseQuery);
+
     void addAwards(Awards awards);
+
     void startProcess(Long id);
+
     String getAnnex(Long id);
+
     InputStream showAnnex(Long id);
 
     void deleteAwards(Long aid);
@@ -30,4 +34,6 @@ public interface AwardsService  extends BaseService<Awards>{
     Awards downloadImage(Long aid);
 
     Awards downloadZip(String schoolYear) throws Exception;
+
+    void exportExcel();
 }

@@ -60,7 +60,7 @@
                                         </tr>
 
                                         </s:iterator>
-                                        <s:if test="#notices.size > 3">
+                                        <s:if test="#notices.size > 5">
                                             <td></td>
                                             <td><a href="noticeAction_moreNotice">更多</a></td>
                                             <td></td>

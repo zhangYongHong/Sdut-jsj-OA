@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
@@ -259,10 +258,10 @@ public class PageUtil {
         role.setResourceIdsStr(str.replaceAll(" ", ""));
     }
 
-    public static String  uploadAnnex(File srcFile, String schoolYear) {
+    public static String  uploadAnnex(File srcFile, String schoolYear, String competitionView) {
         String name = srcFile.getName();
         String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + schoolYear) + "/";
-        String fileName = UUID.randomUUID() + ".jpeg";
+        String fileName = competitionView + ".jpeg";
         File tempFile = new File(path + fileName);
         try {
             FileUtils.copyFile(srcFile, tempFile);
@@ -275,6 +274,10 @@ public class PageUtil {
      * 文档压缩
      */
     public final static void deCompress(File file, String dest) throws Exception {
+        File file1 = new File(dest);
+        if (!file1.exists()) {
+            file1.mkdirs();
+        }
         try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(dest))) {
             zipFile(file, zos, "");
         } catch (IOException e) {

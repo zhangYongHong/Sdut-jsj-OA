@@ -44,7 +44,8 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     }
 
     public void addAwards(Awards awards) throws DataException {
-        String path = PageUtil.uploadAnnex(awards.getAnnexFile(), awards.getSchoolYear());
+        String achievement = awards.getAchievement();
+        String path = PageUtil.uploadAnnex(awards.getAnnexFile(), awards.getSchoolYear(), achievement);
         if (path != null) {
             User user = PageUtil.getUser();
             awards.setFileNum(PageUtil.getFileNum(awards.getClasses()));
@@ -131,7 +132,8 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
     public void updateAwards(Awards model) {
         if (model.getState() == null || model.getState() != 3) {
             if (model.getAnnexFile() != null) {
-                String path = PageUtil.uploadAnnex(model.getAnnexFile(), model.getSchoolYear());
+                String achievement = model.getAchievement();
+                String path = PageUtil.uploadAnnex(model.getAnnexFile(), model.getSchoolYear(), achievement);
                 if (path != null)
                     model.setAnnex(path);
             }
@@ -172,5 +174,10 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
         Awards awards = new Awards();
         awards.setInputStream(inputStream);
         return awards;
+    }
+
+    @Override
+    public void exportExcel() {
+
     }
 }
