@@ -49,19 +49,19 @@ public class LoginAction extends BaseAction<User> {
             user = userService.getUserByEmployeenum(employeenum);
         } catch (UnknownAccountException uae) {
             this.addFieldError("loginError", "用户名错误！");
-            return "login";
+            return "loginIn";
         } catch (IncorrectCredentialsException ice) {
             this.addFieldError("loginError", "密码错误！");
-            return "login";
+            return "loginIn";
         } catch (LockedAccountException lae) {
             this.addFieldError("loginError", "您的账号已锁定，请联系管理员解锁！");
-            return "login";
+            return "loginIn";
         } catch (ExcessiveAttemptsException eae) {
             this.addFieldError("loginError", "登陆错误！");
-            return "login";
+            return "loginIn";
         } catch (AuthenticationException e) {
             this.addFieldError("loginError", "登陆错误！");
-            return "login";
+            return "loginIn";
         }
 
         HttpSession session = this.getRequest().getSession();
@@ -88,7 +88,7 @@ public class LoginAction extends BaseAction<User> {
     public String signOut() {
         HttpSession session = this.getRequest().getSession();
         session.removeAttribute(ContantKey.GLOBLE_USER_INFO);
-        return "login";
+        return "loginIn";
     }
 
     public boolean loadSource(String valueName) {
