@@ -145,7 +145,7 @@
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <label class="form-label span4">附件:</label>
-                                    <input type="file" name="annexFile" onchange="fileAnnexChange(this)"/>
+                                    <input type="file" name="annexFile" onchange="fileAnnexChange(this)" required/>
                                 </div>
                             </div>
                             <s:hidden name="aid" value="%{#awards.aid}"/>
