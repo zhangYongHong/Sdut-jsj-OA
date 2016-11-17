@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 /**
  * Project Name:SdutOA
  * File Name:SystemDDLAction.java
@@ -53,6 +55,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 			SystemDDL systemDDL = this.getModel();
 			systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
 			systemDDLService.addEntry(systemDDL);
+			loadSource(systemDDL.getKeyword());
 		} catch (Exception e) {
 		}
 		return REDIRECT;
@@ -72,6 +75,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 	public String update() {
 		try {
 			systemDDLService.updateEntry(this.getModel());
+			loadSource(this.getModel().getKeyword());
 		} catch (Exception e) {
 		}
 		return REDIRECT;
@@ -85,6 +89,15 @@ public class SystemDDLAction extends BaseAction<SystemDDL>{
 
 		}
 		return REDIRECT;
+	}
+
+	private boolean loadSource(String valueName) {
+		List<SystemDDL> sourceList = systemDDLService.getDDLs(valueName);
+		if (null != sourceList) {
+			ActionContext.getContext().getSession().put(valueName + "List", sourceList);
+			return true;
+		}
+		return false;
 	}
 
 //=======================================================================
