@@ -54,7 +54,7 @@
 
         <div class="center">
             <a href="javascript: history.go(-1)" class="btn" style="margin-right:10px;"><span class="icon16 icomoon-icon-arrow-left-10"></span>返回</a>
-            <a href="index.html" class="btn"><span class="icon16 icomoon-icon-screen"></span>首页</a>
+            <a href="noticeAction_list" class="btn"><span class="icon16 icomoon-icon-screen"></span>首页</a>
         </div>
 
     </div>
