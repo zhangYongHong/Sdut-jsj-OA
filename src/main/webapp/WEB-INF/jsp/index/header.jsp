@@ -92,9 +92,6 @@
                                                     class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
                                         <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI"><span class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
                                         </li>
-                                        <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI"><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>添加字典</a>
-                                        </li>
                                     </ul>
                                 </li>
                                 <li>
