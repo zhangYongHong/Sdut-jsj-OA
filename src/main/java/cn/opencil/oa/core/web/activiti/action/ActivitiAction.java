@@ -4,7 +4,6 @@ import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.web.activiti.service.ActivitiService;
 import com.opensymphony.xwork2.ActionContext;
 import org.activiti.engine.repository.ProcessDefinition;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -31,7 +30,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
     /**
      * 流程部署列表
      */
-    @RequiresPermissions("activiti:view")
     public String list() {
         List<ProcessDefinition> definitions = activitiService.getDefinitions();
         ActionContext.getContext().put("definitions", definitions);
@@ -42,7 +40,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
      * 跳转到规则文件上传页面
      * @return
      */
-    @RequiresPermissions("activiti:newProcess")
     public String newProcessUI() {
         return NEWPROCESSUI;
     }
@@ -51,7 +48,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
      * 新建流程
      * @return
      */
-    @RequiresPermissions("activiti:newProcess")
     public String newProcess() {
         activitiService.deploy(processFile);
         return "redirect";
@@ -60,7 +56,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
     /**
      * 删除流程list
      */
-    @RequiresPermissions("activiti:deleteProcess")
     public String deleteProcess() {
         activitiService.delete(deploymentId);
         return LISTACTION;
@@ -69,7 +64,6 @@ public class ActivitiAction extends BaseAction<ProcessDefinition> {
     /**
      * 查看流程规则图片
      */
-    @RequiresPermissions("activiti:showImage")
     public String showImage() {
         inputStream = activitiService.getResourceAsStream(deploymentId, resourceName);
         return "flowImage";

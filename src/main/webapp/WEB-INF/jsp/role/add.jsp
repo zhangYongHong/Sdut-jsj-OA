@@ -69,6 +69,9 @@
 
                                         <div class="controls">
                                             <div class="left marginT5">
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="39" name="resourceIdsStr">
+                                                    查看</label>
                                                 <label>流程管理</label>
                                                 <label class="left marginT5">
                                                     <input type="checkbox" value="40" name="resourceIdsStr">
@@ -76,9 +79,6 @@
                                                 <label class="left marginT5">
                                                     <input type="checkbox" value="41" name="resourceIdsStr">
                                                     删除</label>
-                                                <label class="left marginT5">
-                                                    <input type="checkbox" value="39" name="resourceIdsStr">
-                                                    查看</label>
                                             </div>
                                         </div>
                                     </div>
@@ -134,17 +134,24 @@
                                             <div class="left marginT5">
                                                 <label>试卷归档管理</label>
                                                 <label class="left marginT5">
+                                                    <input type="checkbox" value="8" name="resourceIdsStr">
+                                                    查看</label>
+                                                <label class="left marginT5">
                                                     <input type="checkbox" value="9" name="resourceIdsStr">
                                                     添加</label>
-                                                <label class="left marginT5">
-                                                    <input type="checkbox" value="11" name="resourceIdsStr">
-                                                    修改</label>
                                                 <label class="left marginT5">
                                                     <input type="checkbox" value="10" name="resourceIdsStr">
                                                     删除</label>
                                                 <label class="left marginT5">
-                                                    <input type="checkbox" value="8" name="resourceIdsStr">
-                                                    查看</label>
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    修改</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    导入</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    导出</label>
+
                                             </div>
                                         </div>
                                     </div>
@@ -167,6 +174,12 @@
                                                 <label class="left marginT5">
                                                     <input type="checkbox" value="16" name="resourceIdsStr">
                                                     修改</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    导入</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    导出</label>
                                             </div>
                                         </div>
                                     </div>
@@ -189,6 +202,12 @@
                                                 <label class="left marginT5">
                                                     <input type="checkbox" value="6" name="resourceIdsStr">
                                                     修改</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    下载压缩包</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="11" name="resourceIdsStr">
+                                                    导出Excel</label>
                                             </div>
                                         </div>
                                     </div>

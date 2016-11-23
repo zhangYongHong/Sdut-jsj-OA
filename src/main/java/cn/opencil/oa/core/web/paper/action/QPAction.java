@@ -9,7 +9,6 @@ import cn.opencil.oa.core.web.paper.service.QPService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -39,8 +38,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
     @Autowired
     private QPService qpService;
 
-
-    @RequiresPermissions("questionPaper:view")
     public String list() {
         PageResult<QuestionPaper> qustionPapers = null;
         Subject subject = SecurityUtils.getSubject();
@@ -61,12 +58,10 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return listAction;
     }
 
-    @RequiresPermissions("questionPaper:add")
     public String addUI() {
         return addUI;
     }
 
-    @RequiresPermissions("questionPaper:add")
     public String add() {
         QuestionPaper paper = this.getModel();
         try {
@@ -84,14 +79,12 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return "redirect";
     }
 
-    @RequiresPermissions("questionPaper:update")
     public String updateUI() {
         tempId = this.getModel().getQid();
         this.loadingValue();
         return updateUI;
     }
 
-    @RequiresPermissions("questionPaper:update")
     public String update() {
         QuestionPaper questionPaper = this.getModel();
         questionPaper.setQid(tempId);
@@ -116,7 +109,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
         }
     }
 
-    @RequiresPermissions("questionPaper:delete")
     public String delete() {
         Long id = null;
         try {
@@ -150,7 +142,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return "excel";
     }
 
-    @RequiresPermissions("page:upload")
     public String loadingExcelUI() {
         return "loadingExcelUI";
     }
@@ -160,7 +151,6 @@ public class QPAction extends BaseAction<QuestionPaper> {
      *
      * @return String
      */
-    @RequiresPermissions("page:upload")
     public String uploadExcel() {
         schoolYear = this.getModel().getSchoolYear();
         qpService.uploadExcel(uploadfile, schoolYear);

@@ -7,7 +7,6 @@ import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.query.SystemDDLQuery;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import com.opensymphony.xwork2.ActionContext;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -29,7 +28,6 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
     @Autowired
     private SystemDDLService systemDDLService;
 
-    @RequiresPermissions("systemDDLAction:view")
     public String list() {
         SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
         if (this.getModel().getKeyword() == null)
@@ -41,7 +39,6 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
         return LISTACTION;
     }
 
-    @RequiresPermissions("systemDDLAction:add")
     public String addUI() {
         return addUI;
     }
@@ -54,21 +51,18 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
         return REDIRECT;
     }
 
-    @RequiresPermissions("systemDDLAction:update")
     public String updateUI() {
         SystemDDL systemDDL = systemDDLService.getEntryById(this.getModel().getSid());
         ActionContext.getContext().put("systemDDL", systemDDL);
         return REDIRECT;
     }
 
-    @RequiresPermissions("systemDDLAction:update")
     public String update() {
         systemDDLService.updateEntry(this.getModel());
         loadSource(this.getModel().getKeyword());
         return REDIRECT;
     }
 
-    @RequiresPermissions("systemDDLAction:delete")
     public String delete() {
         systemDDLService.deleteEntry(this.getModel().getSid());
         return REDIRECT;

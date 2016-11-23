@@ -11,7 +11,6 @@ import cn.opencil.oa.core.web.paper.service.TPService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.hibernate.exception.DataException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +42,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
     private File uploadfile;
     private String schoolYear;
 
-    @RequiresPermissions("trainingPaper:view")
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
         Subject subject = SecurityUtils.getSubject();
@@ -63,7 +61,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
-    @RequiresPermissions("trainingPaper:add")
     public String addUI() {
         return addUI;
     }
@@ -85,7 +82,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
-    @RequiresPermissions("trainingPaper:update")
     public String updateUI() {
         tempId = this.getModel().getTid();
         this.loadingValue();
@@ -111,7 +107,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
-    @RequiresPermissions("trainingPaper:delete")
     public String delete() {
         Long id = this.getModel().getTid();
         this.tpService.deleteEntry(id);
@@ -122,7 +117,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     /**
      * 导出excel
-     *
      * @return
      */
     public String exportExcel() {
@@ -161,7 +155,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     /**
      * 导入Excel
-     *
      * @param
      * @return
      */

@@ -10,7 +10,6 @@ import cn.opencil.oa.core.web.role.service.RoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -46,7 +45,6 @@ public class UserAction extends BaseAction<User> {
     private int rid = 3;
     private UserQuery userQuery = new UserQuery();
 
-    @RequiresPermissions("user:view")
     public String list() {
         PageResult<User> userPageResult = this.userService
                 .getUserPageResult(userQuery);
@@ -54,12 +52,10 @@ public class UserAction extends BaseAction<User> {
         return listAction;
     }
 
-    @RequiresPermissions("user:add")
     public String addUI() {
         return addUI;
     }
 
-    @RequiresPermissions("user:add")
     public String add() {
         User user;
         user = this.getModel();
@@ -83,14 +79,12 @@ public class UserAction extends BaseAction<User> {
         }
     }
 
-    @RequiresPermissions("user:update")
     public String updateUI() {
         tempUid = this.getModel().getUid();
         this.loadingInfoForUser();
         return "updateUI";
     }
 
-    @RequiresPermissions("user:update")
     public String update() {
         User user = this.getModel();
         Subject currentUser = SecurityUtils.getSubject();
@@ -132,14 +126,12 @@ public class UserAction extends BaseAction<User> {
         }
     }
 
-    @RequiresPermissions("user:delete")
     public String delete() {
         Long uid = this.getModel().getUid();
         this.userService.deleteEntry(uid);
         return "redirect";
     }
 
-    @RequiresPermissions("user:reset")
     public String resetPassword() {
         Long uid = this.getModel().getUid();
         User user = null;
@@ -154,12 +146,10 @@ public class UserAction extends BaseAction<User> {
         return "redirect";
     }
 
-    @RequiresPermissions("user:passWord")
     public String passWordUI() {
         return "passWordUI";
     }
 
-    @RequiresPermissions("user:passWord")
     public String passWord() {
         User user = this.getModel();
         User userByDB = userService.getUserByEmployeenum(user.getEmployeenum());
