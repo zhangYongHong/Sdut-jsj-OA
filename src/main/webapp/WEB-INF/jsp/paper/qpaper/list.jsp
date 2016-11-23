@@ -33,7 +33,7 @@
 
         <div class="heading">
 
-            <h3>数据表</h3>
+            <h3>试卷归档管理表</h3>
 
 
         </div><!-- End .heading-->
@@ -48,7 +48,7 @@
 
                     <div class="title">
                         <h4>
-                            <span>数据表</span>
+                            <span>试卷归档管理表</span>
                         </h4>
                     </div>
 
