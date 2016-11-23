@@ -31,7 +31,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
     public String list() {
         SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
         if (this.getModel().getKeyword() == null)
-            systemDDLQuery.setKeyword("role");
+            systemDDLQuery.setKeyword("dept");
         else
             systemDDLQuery.setKeyword(this.getModel().getKeyword());
         PageResult<SystemDDL> systemDDLs = this.systemDDLService.getPageResultByKeyword(systemDDLQuery);

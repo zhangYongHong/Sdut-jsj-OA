@@ -63,7 +63,6 @@
                                         <select name="keyword" id="keyword" onchange="selectChange()">
                                             <option>请选择</option>
                                             <option value="competitionView">竞赛奖项</option>
-                                            <option value="role">角色</option>
                                             <option value="dept">系别</option>
                                             <option value="classes">班级</option>
                                             <option value="level">获奖等级</option>
