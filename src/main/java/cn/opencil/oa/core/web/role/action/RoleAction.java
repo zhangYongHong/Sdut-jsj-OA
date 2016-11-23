@@ -4,12 +4,15 @@ package cn.opencil.oa.core.web.role.action;
 import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Role;
+import cn.opencil.oa.core.domain.SystemDDL;
+import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import cn.opencil.oa.core.web.role.service.RoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 张树伟 on 16-5-16.
@@ -18,6 +21,8 @@ import java.util.ArrayList;
 public class RoleAction extends BaseAction<Role> {
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private SystemDDLService systemDDLService;
 
     public String list() {
         ArrayList<Role> roleList;
@@ -33,6 +38,7 @@ public class RoleAction extends BaseAction<Role> {
     public String add() {
         Role role = getModel();
         PageUtil.removeSpaces(role);
+        addSystemDDL(role);
         roleService.addEntry(role);
         return "redirect";
     }
@@ -54,5 +60,17 @@ public class RoleAction extends BaseAction<Role> {
         Long id = getModel().getId();
         roleService.deleteEntry(id);
         return "redirect";
+    }
+
+    private void addSystemDDL(Role role) {
+        SystemDDL systemDDL = new SystemDDL();
+        systemDDL.setKeyword("role");
+        systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
+        systemDDL.setDdlName(role.getRole());
+        systemDDLService.addEntry(systemDDL);
+        List<SystemDDL> sourceList = systemDDLService.getDDLs("role");
+        if (null != sourceList) {
+            ActionContext.getContext().getSession().put("roleList", sourceList);
+        }
     }
 }
