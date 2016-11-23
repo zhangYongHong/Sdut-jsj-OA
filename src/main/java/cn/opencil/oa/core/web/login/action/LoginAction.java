@@ -56,14 +56,15 @@ public class LoginAction extends BaseAction<User> {
         } catch (LockedAccountException lae) {
             this.addFieldError("loginError", "您的账号已锁定，请联系管理员解锁！");
             return "loginIn";
-        } catch (ExcessiveAttemptsException eae) {
-            this.addFieldError("loginError", "登陆错误！");
-            return "loginIn";
-        } catch (AuthenticationException e) {
-            this.addFieldError("loginError", "登陆错误！");
-            return "loginIn";
         }
 
+//        catch (ExcessiveAttemptsException eae) {
+//            this.addFieldError("loginError", "登陆错误！");
+//            return "loginIn";
+//        } catch (AuthenticationException e) {
+//            this.addFieldError("loginError", "登陆错误！");
+//            return "loginIn";
+//        }
         HttpSession session = this.getRequest().getSession();
         session.setAttribute(ContantKey.GLOBLE_USER_INFO, user);
         //角色
