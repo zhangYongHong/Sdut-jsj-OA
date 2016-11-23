@@ -97,24 +97,26 @@ public class UserAction extends BaseAction<User> {
 
         try {
             User userByDB = userService.getEntryById(tempUid);
-            if (StringUtils.isNotEmpty(this.getModel().getEmail())) {
-                if (!this.checkEmail(this.getModel().getEmail())) {
-                    this.loadingInfoForUser();
-                    this.addFieldError("userError", "邮箱格式错误");
-                    return "updateUI";
-                }
-            }
-            if (StringUtils.isNotEmpty(this.getModel().getPhone())) {
-                if (!this.checkPhone(this.getModel().getPhone())) {
-                    this.loadingInfoForUser();
-                    this.addFieldError("userError", "手机号格式错误");
-                    return "updateUI";
-                }
-            }
+
             //若为管理员权限则可以修改角色
             if (currentUser.hasRole("admin")) {
                 userByDB.setRoleIdsStr(user.getRole());
                 userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getDescription());
+            } else {
+                if (StringUtils.isNotEmpty(this.getModel().getEmail())) {
+                    if (!this.checkEmail(this.getModel().getEmail())) {
+                        this.loadingInfoForUser();
+                        this.addFieldError("userError", "邮箱格式错误");
+                        return "updateUI";
+                    }
+                }
+                if (StringUtils.isNotEmpty(this.getModel().getPhone())) {
+                    if (!this.checkPhone(this.getModel().getPhone())) {
+                        this.loadingInfoForUser();
+                        this.addFieldError("userError", "手机号格式错误");
+                        return "updateUI";
+                    }
+                }
             }
             userByDB.setDeptid(user.getDeptid());
             userByDB.setEmail(user.getEmail());

@@ -84,6 +84,24 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-row row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <label class="form-label span3" for="email">邮&nbsp&nbsp&nbsp箱:</label>
+                                    <input class="span4" type="text" name="email"
+                                           value="<s:property value="#oldUser.email"/>"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <label class="form-label span3" for="phone">手机号:</label>
+                                    <input class="span4" type="text" name="phone"
+                                           value="<s:property value="#oldUser.phone "/>"/>
+                                </div>
+                            </div>
+                        </div>
                     </shiro:hasRole>
                     <shiro:hasRole name="teacher">
                         <div class="form-row row-fluid">
@@ -95,26 +113,25 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="form-row row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <label class="form-label span3" for="email">邮&nbsp&nbsp&nbsp箱:</label>
+                                    <input class="span4" id="email" type="text" name="email"
+                                           value="<s:property value="#oldUser.email"/>" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <label class="form-label span3" for="phone">手机号:</label>
+                                    <input class="span4" id="phone" type="text" name="phone"
+                                           value="<s:property value="#oldUser.phone "/>" required/>
+                                </div>
+                            </div>
+                        </div>
                     </shiro:hasRole>
-                    <div class="form-row row-fluid">
-                        <div class="span12">
-                            <div class="row-fluid">
-                                <label class="form-label span3" for="email">邮&nbsp&nbsp&nbsp箱:</label>
-                                <input class="span4" id="email" type="text" name="email"
-                                       value="<s:property value="#oldUser.email"/>" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row row-fluid">
-                        <div class="span12">
-                            <div class="row-fluid">
-                                <label class="form-label span3" for="phone">手机号:</label>
-                                <input class="span4" id="phone" type="text" name="phone"
-                                       value="<s:property value="#oldUser.phone "/>" required/>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="form-row row-fluid">
                         <div class="span12">
                             <div class="row-fluid">
