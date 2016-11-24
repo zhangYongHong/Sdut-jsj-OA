@@ -100,30 +100,6 @@ public class User implements Serializable {
     }
 
     public String getDeptview() {
-        if (this.getDeptid() != null) {
-            switch (this.getDeptid()) {
-                case 1:
-                    deptview = "计算机科学与技术";
-                    break;
-                case 2:
-                    deptview = "软件工程";
-                    break;
-                case 3:
-                    deptview = "通信工程";
-                    break;
-                case 4:
-                    deptview = "数字媒体";
-                    break;
-                case 5:
-                    deptview = "基础部";
-                    break;
-                default:
-                    deptview = "";
-                    break;
-            }
-        } else {
-            this.deptview = "";
-        }
         return deptview;
     }
 

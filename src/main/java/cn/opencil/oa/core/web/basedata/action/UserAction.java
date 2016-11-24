@@ -35,9 +35,6 @@ public class UserAction extends BaseAction<User> {
     @Autowired
     private PasswordHelper passwordHelper;
 
-
-    private static Long tempUid;
-    private static String employeenum;
     private String oldPassword;
     private String newPassword;
     private int rid = 3;

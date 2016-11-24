@@ -6,15 +6,15 @@ import cn.opencil.oa.core.base.service.impl.BaseServiceImpl;
 import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.UserQuery;
 import cn.opencil.oa.core.web.basedata.dao.UserDao;
+import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import cn.opencil.oa.core.web.basedata.service.UserService;
 import cn.opencil.oa.core.web.role.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Project Name:SdutOA
@@ -30,7 +30,8 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     private UserDao userDao;
     @Autowired
     private RoleService roleService;
-    private Lock lock = new ReentrantLock();
+    @Autowired
+    private SystemDDLService systemDDLService;
 
     @Override
     public BaseDao getBaseDao() {
@@ -41,6 +42,11 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
     @Override
     public PageResult<User> getUserPageResult(final UserQuery userQuery) {
         PageResult<User> userPageResult = this.getPageResult(userQuery);
+        List<User> rows = userPageResult.getRows();
+        for (User user : rows) {
+            String dept = systemDDLService.getSystenDDL("dept", user.getDeptid()).getDdlName();
+            user.setDeptview(dept);
+        }
         return userPageResult;
     }
 
