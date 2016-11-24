@@ -231,8 +231,8 @@
                                             <div class="span8 controls">
 
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="invigilation" value="1"  checked="checked"/>有
-                                                    <input type="radio" name="invigilation" value="0"/>无
+                                                    <input type="radio" name="invigilation" value="1"/>有
+                                                    <input type="radio" name="invigilation" value="0" checked="checked"/>无
                                                 </div>
 
                                             </div>
@@ -241,8 +241,8 @@
                                             <div class="span8 controls">
 
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="invigilation" value="1"/>有
-                                                    <input type="radio" name="invigilation" value="0" checked="checked"/>无
+                                                    <input type="radio" name="invigilation" value="1" checked="checked"/>有
+                                                    <input type="radio" name="invigilation" value="0"/>无
                                                 </div>
 
                                             </div>

@@ -109,7 +109,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
             this.qpService.updateEntry(questionPaper);
             this.loadingValue();
             this.addFieldError("qpError", "提交成功！");
-            return updateUI;
+            return "redirect";
         } catch (Exception e) {
             e.getStackTrace();
             this.loadingValue();
