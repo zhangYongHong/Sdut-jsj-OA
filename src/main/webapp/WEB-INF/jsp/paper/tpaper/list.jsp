@@ -66,14 +66,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <shiro:hasRole name="admin">
-                                <div class="bottom ">
-                                    <a href="tPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                    <a href="tPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
-                                    <a href="tPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
-                                       class="btn btip marginR10 marginB10" >导出</a>
-                                </div>
-                            </shiro:hasRole>
+                            <div class="bottom ">
+                                <a href="tPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                <a href="tPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                <a href="tPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
+                                   class="btn btip marginR10 marginB10">导出</a>
+                            </div>
 
                         </div>
                         <table id="table_id_example" cellpadding="0" cellspacing="0" border="0"
@@ -127,15 +125,11 @@
                                     <td><s:property value="isChange"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <shiro:hasPermission name="trainingPaper:update">
-                                                <a href="tPAction_updateUI?tid=<s:property value="tid"/>"
-                                                   class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            </shiro:hasPermission>
-                                            <shiro:hasPermission name="trainingPaper:delete">
-                                                <a href="tPAction_delete?tid=<s:property value="tid"/>"
-                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                        class="icon12 icomoon-icon-remove"></span></a>
-                                            </shiro:hasPermission>
+                                            <a href="tPAction_updateUI?tid=<s:property value="tid"/>"
+                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                            <a href="tPAction_delete?tid=<s:property value="tid"/>"
+                                               onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                    class="icon12 icomoon-icon-remove"></span></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -192,7 +186,6 @@
 <script type="text/javascript" src="plugins/pretty-photo/jquery.prettyPhoto.js"></script>
 
 <script type="text/javascript" src="plugins/dataTables/jquery.dataTables.min.js"></script>
-
 
 
 <!-- Important Place before main.js  -->

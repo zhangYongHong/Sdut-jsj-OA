@@ -9,6 +9,7 @@
 		<action name="userAction_*" class="userAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/user/list.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/user/add.jsp</result>
+			<result name="updateAdminUI">/WEB-INF/jsp/user/updateForAdmin.jsp</result>
 			<result name="updateUI">/WEB-INF/jsp/user/update.jsp</result>
 			<result name="passWordUI">WEB-INF/jsp/user/password.jsp</result>
 			<result name="redirect" type="redirectAction">

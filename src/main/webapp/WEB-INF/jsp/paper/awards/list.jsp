@@ -67,12 +67,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <shiro:hasRole name="admin">
-                                <div class="bottom ">
-                                    <a href="#" class="btn btip marginR10 marginB10" onclick="downExcel()">导出</a>
-                                    <a href="#" class="btn btip marginR10 marginB10" onclick="downZip()">附件压缩包下载</a>
-                                </div>
-                            </shiro:hasRole>
+                            <div class="bottom ">
+                                <a href="#" class="btn btip marginR10 marginB10" onclick="downExcel()">导出</a>
+                                <a href="#" class="btn btip marginR10 marginB10" onclick="downZip()">附件压缩包下载</a>
+                            </div>
                         </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
@@ -133,15 +131,13 @@
                                             <a href="awardsAction_downImage?aid=<s:property value="aid"/>">下载附件</a>
                                         </div>
                                     </td>
-                                    <shiro:hasPermission name="awards:delete">
-                                        <td>
-                                            <div class="left">
-                                                <a href="awardsAction_delete?aid=<s:property value="aid"/>"
-                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                        class="icon12 icomoon-icon-remove"></span></a>
-                                            </div>
-                                        </td>
-                                    </shiro:hasPermission>
+                                    <td>
+                                        <div class="left">
+                                            <a href="awardsAction_delete?aid=<s:property value="aid"/>"
+                                               onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                    class="icon12 icomoon-icon-remove"></span></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             </s:iterator>
                             </tbody>

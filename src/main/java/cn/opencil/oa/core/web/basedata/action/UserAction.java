@@ -9,8 +9,6 @@ import cn.opencil.oa.core.web.basedata.service.UserService;
 import cn.opencil.oa.core.web.role.service.RoleService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -79,48 +77,47 @@ public class UserAction extends BaseAction<User> {
         }
     }
 
+    public String updateAdminUI() {
+        User user = userService.getEntryById(this.getModel().getUid());
+        ActionContext.getContext().put("oldUser", user);
+        return "updateAdminUI";
+    }
+
+    public String updateAdmin() {
+        User user = this.getModel();
+        user.setRole(roleService.getOne(Long.parseLong(user.getRoleIdsStr())).getRole());
+        user.setDeptid(user.getDeptid());
+        this.userService.updateEntry(user);
+        return "redirect";
+    }
+
     public String updateUI() {
-        tempUid = this.getModel().getUid();
-        this.loadingInfoForUser();
+        User user = userService.getEntryById(this.getModel().getUid());
+        ActionContext.getContext().put("oldUser", user);
         return "updateUI";
     }
 
     public String update() {
         User user = this.getModel();
-        Subject currentUser = SecurityUtils.getSubject();
-
         try {
-            User userByDB = userService.getEntryById(tempUid);
-
-            //若为管理员权限则可以修改角色
-            if (currentUser.hasRole("admin")) {
-                userByDB.setRoleIdsStr(user.getRole());
-                userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getRole());
-            } else {
-                if (StringUtils.isNotEmpty(this.getModel().getEmail())) {
-                    if (!this.checkEmail(this.getModel().getEmail())) {
-                        this.loadingInfoForUser();
-                        this.addFieldError("userError", "邮箱格式错误");
-                        return "updateUI";
-                    }
-                }
-                if (StringUtils.isNotEmpty(this.getModel().getPhone())) {
-                    if (!this.checkPhone(this.getModel().getPhone())) {
-                        this.loadingInfoForUser();
-                        this.addFieldError("userError", "手机号格式错误");
-                        return "updateUI";
-                    }
-                }
-            }
-            userByDB.setDeptid(user.getDeptid());
-            userByDB.setEmail(user.getEmail());
-            userByDB.setPhone(user.getPhone());
-            this.userService.updateEntry(userByDB);
-            this.loadingInfoForUser();
+//            if (StringUtils.isNotEmpty(this.getModel().getEmail())) {
+//                if (!this.checkEmail(this.getModel().getEmail())) {
+//                    this.addFieldError("userError", "邮箱格式错误");
+//                    return "updateUI";
+//                }
+//            }
+//            if (StringUtils.isNotEmpty(this.getModel().getPhone())) {
+//                if (!this.checkPhone(this.getModel().getPhone())) {
+//                    this.addFieldError("userError", "手机号格式错误");
+//                    return "updateUI";
+//                }
+//            }
+            this.userService.updateEntry(user);
+            this.loadingInfoForUser(user.getUid());
             this.addFieldError("userError", "信息更新成功！");
             return "updateUI";
         } catch (Exception e) {
-            this.loadingInfoForUser();
+            this.loadingInfoForUser(user.getUid());
             this.addFieldError("userError", "信息保存失败！");
             return "updateUI";
         }
@@ -206,14 +203,9 @@ public class UserAction extends BaseAction<User> {
         return false;
     }
 
-    private void loadingInfoForUser() {
-        User oldUser = userService.getEntryById(tempUid);
-        employeenum = oldUser.getEmployeenum();
-
-        if (oldUser == null) {
-        } else {
-            ActionContext.getContext().put("oldUser", oldUser);
-        }
+    private void loadingInfoForUser(Long uid) {
+        User oldUser = userService.getEntryById(uid);
+        ActionContext.getContext().put("oldUser", oldUser);
     }
 
     private boolean checkUserName(String userName) {

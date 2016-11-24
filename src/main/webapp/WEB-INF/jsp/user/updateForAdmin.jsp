@@ -38,19 +38,14 @@
             <div class="span12">
 
                 <div class="page-header">
-                    <h4>个人信息修改</h4>
+                    <h4>用户信息修改</h4>
                 </div>
 
-                <form class="form-horizontal seperator" action="userAction_update" method="post">
-                    <div class="offset3">
-                        <s:fielderror name="userError" cssStyle="color: crimson"/>
-                    </div>
+                <form class="form-horizontal seperator" action="userAction_updateAdmin" method="post">
                     <s:hidden name="uid" value="%{#oldUser.uid}"/>
                     <s:hidden name="password" value="%{#oldUser.password}"/>
-                    <s:hidden name="roleIdsStr" value="%{#oldUser.roleIdsStr}"/>
                     <s:hidden name="salt" value="%{#oldUser.salt}"/>
                     <s:hidden name="locked" value="%{#oldUser.locked}"/>
-                    <s:hidden name="role" value="%{#oldUser.role}"/>
                     <div class="form-row row-fluid">
                         <div class="span12">
                             <div class="row-fluid">
@@ -70,33 +65,43 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-row row-fluid">
-                        <div class="row-fluid">
-                            <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
-                            <div class="span2">
-                                <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
-                                          name="deptid" value="%{#oldUser.deptid}" readonly="readonly"></s:select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row row-fluid">
-                        <div class="span12">
+                        <div class="form-row row-fluid">
                             <div class="row-fluid">
-                                <label class="form-label span3" for="email">邮&nbsp&nbsp&nbsp箱:</label>
-                                <input class="span4" id="email" type="text" name="email"
-                                       value="<s:property value="#oldUser.email"/>" required/>
+                                <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
+                                <div class="span2">
+                                    <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
+                                              name="roleIdsStr" value="ddlCode"
+                                              cssClass="select2-active"></s:select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row row-fluid">
-                        <div class="span12">
+                        <div class="form-row row-fluid">
                             <div class="row-fluid">
-                                <label class="form-label span3" for="phone">手机号:</label>
-                                <input class="span4" id="phone" type="text" name="phone"
-                                       value="<s:property value="#oldUser.phone "/>" required/>
+                                <label class="form-label span3">系&nbsp;&nbsp;&nbsp;别:</label>
+                                <div class="span2">
+                                    <s:select list="%{#session.deptList}" listKey="ddlCode" listValue="ddlName"
+                                              name="deptid" value="%{#oldUser.deptid}"></s:select>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="form-row row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <label class="form-label span3">邮&nbsp&nbsp&nbsp箱:</label>
+                                    <input class="span4" type="text" name="email"
+                                           value="<s:property value="#oldUser.email"/>"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <label class="form-label span3">手机号:</label>
+                                    <input class="span4" type="text" name="phone"
+                                           value="<s:property value="#oldUser.phone "/>"/>
+                                </div>
+                            </div>
+                        </div>
                     <div class="form-row row-fluid">
                         <div class="span12">
                             <div class="row-fluid">

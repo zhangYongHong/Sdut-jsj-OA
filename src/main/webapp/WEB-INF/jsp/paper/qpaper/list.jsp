@@ -58,18 +58,17 @@
                                 <div class="row-fluid">
                                     <label class="form-label span1">&nbsp;&nbsp;学年:</label>
                                     <div class="span3">
-                                        <s:select list="%{#session.schoolYearList}" listKey="ddlCode" listValue="ddlName"
-                                                  name="schoolYear" headerKey="0" headerValue="请选择" cssClass="select2-active" id="schoolYear" onchange="selectChange()"></s:select>
+                                        <s:select list="%{#session.schoolYearList}" listKey="ddlCode"
+                                                  listValue="ddlName"
+                                                  name="schoolYear" headerKey="0" headerValue="请选择"
+                                                  cssClass="select2-active" id="schoolYear"
+                                                  onchange="selectChange()"></s:select>
                                     </div>
                                 </div>
                             </div>
                             <div class="bottom">
-                                <shiro:hasPermission name="questionPaper:add">
-                                    <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                </shiro:hasPermission>
-                                <shiro:hasPermission name="page:upload">
-                                    <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
-                                </shiro:hasPermission>
+                                <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
                                 <a href="qPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                    class="btn btip marginR10 marginB10">导出</a>
                             </div>
@@ -139,15 +138,11 @@
                                     <td><s:property value="isChange"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <shiro:hasPermission name="questionPaper:update">
-                                                <a href="qPAction_updateUI?qid=<s:property value="qid"/>"
-                                                   class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            </shiro:hasPermission>
-                                            <shiro:hasPermission name="questionPaper:delete">
-                                                <a href="qPAction_delete?qid=<s:property value="qid"/>"
-                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                        class="icon12 icomoon-icon-remove"></span></a>
-                                            </shiro:hasPermission>
+                                            <a href="qPAction_updateUI?qid=<s:property value="qid"/>"
+                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                            <a href="qPAction_delete?qid=<s:property value="qid"/>"
+                                               onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                    class="icon12 icomoon-icon-remove"></span></a>
                                         </div>
                                     </td>
                                 </tr>
