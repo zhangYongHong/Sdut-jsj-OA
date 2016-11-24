@@ -56,7 +56,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
     public String updateUI() {
         SystemDDL systemDDL = systemDDLService.getEntryById(this.getModel().getUuid());
         ActionContext.getContext().put("systemDDL", systemDDL);
-        return REDIRECT;
+        return "updateUI";
     }
 
     public String update() {
