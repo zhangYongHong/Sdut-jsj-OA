@@ -35,7 +35,7 @@
 
                     <div class="title center">
                         <h4>
-                            <span>获奖情况申请</span>
+                            <span>获奖情况重新申请</span>
                         </h4>
                     </div>
                     <div class="content">

@@ -140,7 +140,8 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
         if (model.getState() == null || model.getState() != 3) {
             if (model.getAnnexFile() != null) {
                 String achievement = model.getAchievement();
-                String path = PageUtil.uploadAnnex(model.getAnnexFile(), model.getSchoolYear(), achievement);
+                String schoolYear = systemDDLService.getSystenDDL("schoolYear", Integer.parseInt(model.getSchoolYear())).getDdlName();
+                String path = PageUtil.uploadAnnex(model.getAnnexFile(), schoolYear, achievement);
                 if (path != null)
                     model.setAnnex(path);
             }
