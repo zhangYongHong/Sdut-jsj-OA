@@ -60,64 +60,74 @@
     <div id="sidebar">
 
         <div class="sidenav">
-
             <div class="sidebar-widget" style="margin: -1px 0 0 0;">
                 <h5 class="title" style="margin-bottom:0">Navigation</h5>
             </div><!-- End .sidenav-widget -->
             <div class="mainnav">
                 <ul>
                     <li><a href="noticeAction_list"><span class="icon16 icomoon-icon-home"></span>首页</a></li>
-                    <li>
-                        <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
-                                <ul class="sub">
+                    <shiro:hasPermission name="system:*">
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>系统管理</a>
+                            <ul class="sub">
+                                <shiro:hasPermission name="activiti:*">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/activitiAction_list"><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
+                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>流程管理</a>
+                                        <ul class="sub">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/activitiAction_list"><span
+                                                        class="icon16 icomoon-icon-arrow-right-2"></span>流程列表</a></li>
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/activitiAction_newProcessUI"><span
+                                                        class="input-small"/><span
+                                                        class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </shiro:hasPermission>
+                                <shiro:hasPermission name="systemDDL:*">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/activitiAction_newProcessUI"><span
-                                                class="input-small"/><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>流程部署</a>
+                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
+                                        <ul class="sub">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/systemDDLAction_list"><span
+                                                        class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>字典管理</a>
-                                <ul class="sub">
+                                </shiro:hasPermission>
+                                <shiro:hasPermission name="role:*">
                                     <li>
-                                        <a href="${pageContext.request.contextPath}/systemDDLAction_list"><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>字典列表</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/systemDDLAction_addUI"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>字典添加</a>
+                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
+                                        <ul class="sub">
+                                            <li><a href="${pageContext.request.contextPath}/roleAction_list"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
+                                            </li>
+                                            <li><a href="${pageContext.request.contextPath}/roleAction_addUI"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>角色管理</a>
-                                <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/roleAction_list"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>角色列表</a>
+                                </shiro:hasPermission>
+                                <shiro:hasPermission name="notice:*">
+                                    <li>
+                                        <a href="#"><span class="icon16 icomoon-icon-list-view"></span>通知管理</a>
+                                        <ul class="sub">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/noticeAction_noticeList"><span
+                                                        class="icon16 icomoon-icon-arrow-right-2"></span>通知列表</a>
+                                            </li>
+                                            <li><a href="${pageContext.request.contextPath}/noticeAction_addUI"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>添加通知</a>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li><a href="${pageContext.request.contextPath}/roleAction_addUI"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>角色添加</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>通知管理</a>
-                                <ul class="sub">
-                                    <li><a href="${pageContext.request.contextPath}/noticeAction_noticeList"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>通知列表</a>
-                                    </li>
-                                    <li><a href="${pageContext.request.contextPath}/noticeAction_addUI"><span
-                                            class="icon16 icomoon-icon-arrow-right-2"></span>添加通知</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                                </shiro:hasPermission>
+                            </ul>
+                        </li>
+                    </shiro:hasPermission>
                     <li>
                         <a href="#"><span class="icon16 icomoon-icon-grid"></span>个人办公</a>
                         <ul class="sub">
@@ -158,18 +168,20 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><span class="icon16 icomoon-icon-users"></span>人员管理</a>
-                        <ul class="sub">
-                            <li><a href="userAction_list"><span
-                                    class="icon16 icomoon-icon-people"></span>用户列表</a>
-                            </li>
-                            <li><a href="userAction_addUI"><span
-                                    class="icon16  icomoon-icon-man"></span>用户添加</a>
-                            </li>
-                            <li>
-                        </ul>
-                    </li>
+                    <shiro:hasPermission name="user:*">
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-users"></span>人员管理</a>
+                            <ul class="sub">
+                                <li><a href="userAction_list"><span
+                                        class="icon16 icomoon-icon-people"></span>用户列表</a>
+                                </li>
+                                <li><a href="userAction_addUI"><span
+                                        class="icon16  icomoon-icon-man"></span>用户添加</a>
+                                </li>
+                                <li>
+                            </ul>
+                        </li>
+                    </shiro:hasPermission>
                     <li>
                         <a href="#"><span class="icon16 icomoon-icon-users"></span>个人信息管理</a>
                         <ul class="sub">

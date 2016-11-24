@@ -8,6 +8,7 @@ import cn.opencil.oa.core.domain.SystemDDL;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import cn.opencil.oa.core.web.role.service.RoleService;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -45,13 +46,19 @@ public class RoleAction extends BaseAction<Role> {
         systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
         systemDDL.setDdlName(role.getRole());
         role.setDdlId(systemDDL.getUuid());
+        String[] temp = {"8", "9", "10", "11", "12", "13"};
+        if (StringUtils.isNotEmpty(role.getResourceIdsStr()))
+        for (String str : temp)
+            if (role.getResourceIdsStr().contains(str)) {
+                String resourceIdsStr = role.getResourceIdsStr();
+                resourceIdsStr = resourceIdsStr + ",14";
+                role.setResourceIdsStr(resourceIdsStr);
+            }
         Long id = (Long) roleService.addEntry(role);
         systemDDL.setDdlCode(id.intValue());
         systemDDLService.addEntry(systemDDL);
         List<SystemDDL> sourceList = systemDDLService.getDDLs("role");
-        if (null != sourceList) {
-            ActionContext.getContext().getSession().put("roleList", sourceList);
-        }
+        ActionContext.getContext().getSession().put("roleList", sourceList);
         return "redirect";
     }
 
