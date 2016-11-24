@@ -46,14 +46,6 @@
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
                         <form class="form-horizontal" action="systemDDLAction_add" method="post">
-                                <%--<div class="form-row row-fluid">--%>
-                                <%--<div class="span12">--%>
-                                    <%--<div class="row-fluid">--%>
-                                        <%--<label class="form-label span4">类型</label>--%>
-                                        <%--<input class="span8" id="normalInput" type="text" name="keyword"/>--%>
-                                    <%--</div>--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
                             <div class="form-row row-fluid offset2">
                                 <div class="span12">
                                     <label class="form-label span2">类型:</label>
@@ -61,7 +53,6 @@
                                         <select name="keyword" id="keyword">
                                             <option>请选择</option>
                                             <option value="competitionView">竞赛奖项</option>
-                                            <option value="role">角色</option>
                                             <option value="dept">系别</option>
                                             <option value="classes">班级</option>
                                             <option value="level">获奖等级</option>

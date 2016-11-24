@@ -45,7 +45,7 @@
                         </div>
                         <form class="form-horizontal" action="systemDDLAction_update" method="post">
 
-                            <s:hidden name="sid" value="%{#systemDDL.sid}"/>
+                            <s:hidden name="uuid" value="%{#systemDDL.uuid}"/>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">

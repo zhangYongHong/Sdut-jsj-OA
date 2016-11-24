@@ -96,9 +96,9 @@
                                     <td>
                                         <div class="controls center">
 
-                                            <a href="systemDDLAction_updateUI?sid=<s:property value="sid"/>"
+                                            <a href="systemDDLAction_updateUI?uuid=<s:property value="uuid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <a href="systemDDLAction_delete?sid=<s:property value="sid"/>"
+                                            <a href="systemDDLAction_delete?uuid=<s:property value="uuid"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                         </div>

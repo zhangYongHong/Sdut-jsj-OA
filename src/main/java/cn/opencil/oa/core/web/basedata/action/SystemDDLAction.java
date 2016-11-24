@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Project Name:SdutOA
@@ -45,6 +46,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
 
     public String add() {
         SystemDDL systemDDL = this.getModel();
+        systemDDL.setUuid(UUID.randomUUID().toString());
         systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
         systemDDLService.addEntry(systemDDL);
         loadSource(systemDDL.getKeyword());
@@ -52,7 +54,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
     }
 
     public String updateUI() {
-        SystemDDL systemDDL = systemDDLService.getEntryById(this.getModel().getSid());
+        SystemDDL systemDDL = systemDDLService.getEntryById(this.getModel().getUuid());
         ActionContext.getContext().put("systemDDL", systemDDL);
         return REDIRECT;
     }
@@ -64,7 +66,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
     }
 
     public String delete() {
-        systemDDLService.deleteEntry(this.getModel().getSid());
+        systemDDLService.deleteEntry(this.getModel().getUuid());
         return REDIRECT;
     }
 

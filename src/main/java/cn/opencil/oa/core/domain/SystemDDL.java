@@ -13,17 +13,19 @@ public class SystemDDL implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	private Long sid;		//主键ID(自增长)
+	private String uuid;		//主键ID(自增长)
 	private String keyword;		//数据类型
 	private Integer ddlCode;	//数据项的code
 	private String ddlName;		//数据项的value
-	
-	public Long getSid() {
-		return sid;
+
+	public String getUuid() {
+		return uuid;
 	}
-	public void setSid(Long sid) {
-		this.sid = sid;
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
 	}
+
 	public String getKeyword() {
 		return keyword;
 	}
