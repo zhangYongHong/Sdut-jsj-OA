@@ -49,7 +49,7 @@
                                 <div class="span9">
                                     <div class="row-fluid">
                                         <label class="form-label span4">角色:</label>
-                                        <input class="span6 focused" type="text" name="role"/>
+                                        <input class="span6 focused" type="text" name="role" required/>
                                     </div>
                                 </div>
                             </div>
@@ -94,6 +94,24 @@
                                                     实训归档管理</label>
                                                 <label class="left marginT5">
                                                     <input type="checkbox" value="1" name="resourceIdsStr">
+                                                    获奖信息管理</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <label class="form-label span4"></label>
+
+                                        <div class="controls">
+                                            <div class="left marginT5">
+                                                <label>显示相关(仅显示自身相关数据)：</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="4" name="resourceIdsStr">
+                                                    试卷归档管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="6" name="resourceIdsStr">
+                                                    实训归档管理</label>
+                                                <label class="left marginT5">
+                                                    <input type="checkbox" value="2" name="resourceIdsStr">
                                                     获奖信息管理</label>
                                             </div>
                                         </div>

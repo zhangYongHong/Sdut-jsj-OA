@@ -161,9 +161,11 @@
                                     <li>
                                         <a href="${pageContext.request.contextPath}/awardsAction_waitForCheckList"><span
                                                 class="icon16 icomoon-icon-arrow-right-2"></span>查看</a></li>
-                                    <li>
-                                        <a href="${pageContext.request.contextPath}/awardsAction_list"><span
-                                                class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
+                                    <shiro:hasPermission name="awards:*">
+                                        <li>
+                                            <a href="${pageContext.request.contextPath}/awardsAction_list"><span
+                                                    class="icon16 icomoon-icon-arrow-right-2"></span>列表</a></li>
+                                    </shiro:hasPermission>
                                 </ul>
                             </li>
                         </ul>

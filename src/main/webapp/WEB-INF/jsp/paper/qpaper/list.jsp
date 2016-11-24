@@ -67,8 +67,10 @@
                                 </div>
                             </div>
                             <div class="bottom">
-                                <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                <shiro:hasPermission name="questionPaper:*">
+                                    <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                    <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                </shiro:hasPermission>
                                 <a href="qPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                    class="btn btip marginR10 marginB10">导出</a>
                             </div>
@@ -97,6 +99,9 @@
                                 <th>归档号</th>
                                 <th>状态</th>
                                 <th>操作</th>
+                                <shiro:hasPermission name="questionPaper:*">
+                                    <th>管理员操作</th>
+                                </shiro:hasPermission>
                             </tr>
                             </thead>
                             <tbody>
@@ -140,11 +145,19 @@
                                         <div class="controls center">
                                             <a href="qPAction_updateUI?qid=<s:property value="qid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <a href="qPAction_delete?qid=<s:property value="qid"/>"
-                                               onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
                                         </div>
                                     </td>
+                                    <shiro:hasPermission name="questionPaper:*">
+                                        <td>
+                                            <div class="controls center">
+                                                <a href="qPAction_updateAdminUI?qid=<s:property value="qid"/>"
+                                                   class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                                <a href="qPAction_delete?qid=<s:property value="qid"/>"
+                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                        class="icon12 icomoon-icon-remove"></span></a>
+                                            </div>
+                                        </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

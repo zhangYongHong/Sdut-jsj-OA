@@ -67,8 +67,10 @@
                                 </div>
                             </div>
                             <div class="bottom ">
-                                <a href="tPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                <a href="tPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                <shiro:hasPermission name="trainingPaper:*">
+                                    <a href="tPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                    <a href="tPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                </shiro:hasPermission>
                                 <a href="tPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                    class="btn btip marginR10 marginB10">导出</a>
                             </div>
@@ -96,6 +98,9 @@
                                 <th>归档号</th>
                                 <th>状态</th>
                                 <th>操作</th>
+                                <shiro:hasPermission name="trainingPaper:*">
+                                    <th>管理员操作</th>
+                                </shiro:hasPermission>
                             </tr>
                             </thead>
                             <tbody>
@@ -105,13 +110,12 @@
                                     <td><s:property value="teacher"/></td>
                                     <td><s:property value="course"/></td>
                                     <td><s:property value="className"/></td>
-                                    <td><s:property value="psourceview"/></td>
                                     <td>
-                                        <s:if test="examineway==1">开卷</s:if>
-                                        <s:elseif test="examineway==2">闭卷</s:elseif>
-                                        <s:elseif test="examineway==3">答辩</s:elseif>
-                                        <s:elseif test="examineway==2">大作业</s:elseif>
-                                        <s:elseif test="examineway==2">上机</s:elseif>
+                                        <s:if test="psource==1">自拟</s:if>
+                                        <s:elseif test="psource==2">统一命题</s:elseif>
+                                    </td>
+                                    <td>
+                                        答辩
                                     </td>
                                     <td><s:property value="num"/></td>
                                     <td><s:property value="tnum"/></td>
@@ -127,11 +131,19 @@
                                         <div class="controls center">
                                             <a href="tPAction_updateUI?tid=<s:property value="tid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <a href="tPAction_delete?tid=<s:property value="tid"/>"
-                                               onclick="return confirm('你确定要删除？')" class="tip"><span
-                                                    class="icon12 icomoon-icon-remove"></span></a>
                                         </div>
                                     </td>
+                                    <shiro:hasPermission name="trainingPaper:*">
+                                        <td>
+                                            <div class="controls center">
+                                                <a href="tPAction_updateAdminUI?tid=<s:property value="tid"/>"
+                                                   class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                                <a href="tPAction_delete?tid=<s:property value="tid"/>"
+                                                   onclick="return confirm('你确定要删除？')" class="tip"><span
+                                                        class="icon12 icomoon-icon-remove"></span></a>
+                                            </div>
+                                        </td>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

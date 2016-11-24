@@ -41,19 +41,16 @@ public class QPAction extends BaseAction<QuestionPaper> {
     public String list() {
         PageResult<QuestionPaper> qustionPapers = null;
         Subject subject = SecurityUtils.getSubject();
-        try {
-            if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
-                //默认显示数据字典中设置的一个学年信息
-                qpQuery.setSchoolYear("1");
-            else
-                qpQuery.setSchoolYear(this.getModel().getSchoolYear());
-            if (!subject.hasRole("admin"))
-                qpQuery.setTeacher(PageUtil.getUser().getUserName());
-            qustionPapers = this.qpService.getPageResultForQP(qpQuery);
-        } catch (Exception e) {
-            this.addFieldError("qpListError", "试卷列表获取失败！");
-            return listAction;
+        if (this.getModel().getSchoolYear() == null || this.getModel().getSchoolYear().equals(""))
+            //默认显示数据字典中设置的一个学年信息
+            qpQuery.setSchoolYear("1");
+        else
+            qpQuery.setSchoolYear(this.getModel().getSchoolYear());
+        qpQuery.setTeacher(PageUtil.getUser().getUserName());
+        if (subject.isPermitted("questionPaper:*")) {
+            qpQuery.setTeacher(null);
         }
+        qustionPapers = this.qpService.getPageResultForQP(qpQuery);
         ActionContext.getContext().put("questionPapers", qustionPapers);
         return listAction;
     }
@@ -79,6 +76,18 @@ public class QPAction extends BaseAction<QuestionPaper> {
         return "redirect";
     }
 
+    public String updateAdminUI() {
+        QuestionPaper questionPaper = qpService.getEntryById(this.getModel().getQid());
+        ActionContext.getContext().put("old", questionPaper);
+        return "updateAdminUI";
+    }
+
+    public String updateAdmin() {
+        QuestionPaper questionPaper = this.getModel();
+        this.qpService.updateEntry(questionPaper);
+        return "redirect";
+    }
+
     public String updateUI() {
         tempId = this.getModel().getQid();
         this.loadingValue();
@@ -99,12 +108,12 @@ public class QPAction extends BaseAction<QuestionPaper> {
             questionPaper.setIsChange("已修改");
             this.qpService.updateEntry(questionPaper);
             this.loadingValue();
-            this.addFieldError("qpError", "更新成功！");
+            this.addFieldError("qpError", "提交成功！");
             return updateUI;
         } catch (Exception e) {
             e.getStackTrace();
             this.loadingValue();
-            this.addFieldError("qpError", "更新失败！");
+            this.addFieldError("qpError", "提交失败！");
             return updateUI;
         }
     }

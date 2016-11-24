@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: mnzero
+  Date: 16-7-20
+  Time: 上午10:44
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/jsp/common/common.jsp" %>
@@ -25,7 +32,7 @@
 <div id="content" class="clearfix">
     <div class="contentwrapper "><!--Content wrapper-->
         <div class="heading">
-            <h3>试卷归档管理</h3>
+            <h3>实训归档详情表</h3>
         </div><!-- End .heading-->
         <!-- Build page from here: Usual with <div class="row-fluid"></div> -->
 
@@ -37,7 +44,7 @@
 
                     <div class="title center">
                         <h4>
-                            <span>试卷归档情况修改</span>
+                            <span>实训情况修改</span>
                         </h4>
 
                     </div>
@@ -45,14 +52,14 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form id="qp-form" class="form-horizontal" action="qPAction_update" method="post">
-
+                        <form id="tp-form" class="form-horizontal" action="tPAction_updateAdmin" method="post">
+                            <s:hidden name="tid" value="%{#old.tid}"/>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">授课老师</label>
-                                        <input class="span8" type="text" name="teacher"
-                                               value="<s:property value="#old.teacher"/>" readonly="readonly">
+                                        <label class="form-label span4">姓&nbsp;&nbsp;名</label>
+                                        <input class="span8" id="normalInput" type="text" name="teacher"
+                                               value="<s:property value="#old.teacher"/>">
                                     </div>
                                 </div>
                             </div>
@@ -60,35 +67,40 @@
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">授课班级</label>
-                                        <input class="span8 focused" type="text" name="className"
-                                               value="<s:property value="#old.className"/>" readonly="readonly"/>
+                                        <label class="form-label span4" for="focusedInput">授课班级</label>
+                                        <input class="span8 focused" id="focusedInput" type="text" name="className"
+                                               value="<s:property value="#old.className"/>"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">课程名称</label>
+                                        <label class="form-label span4" for="focusedInput">课程名称</label>
                                         <input class="span8 focused" type="text" name="course"
-                                               value="<s:property value="#old.course"/>" readonly="readonly"/>
+                                               value="<s:property value="#old.course"/>"/>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-
                                         <label class="form-label span4">试题来源</label>
-
-
                                         <s:if test="#old.psource==1">
                                             <div class="span8 controls">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="psource" value="1" checked="checked"/>自拟
-                                                    <input type="radio" name="psource" value="2"/>统一命题
-                                                </div>
+                                                <s:if test="#old.psource==1">
+                                                    <div class="left marginT5">
+                                                        <input type="radio" name="psource" value="1" checked="checked"/>自拟
+                                                        <input type="radio" name="psource" value="2"/>统一命题
+                                                    </div>
+                                                </s:if>
+                                                <s:elseif test="#old.psource==2">
+                                                    <div class="left marginT5">
+                                                        <input type="radio" name="psource" value="1"/>自拟
+                                                        <input type="radio" name="psource" value="2" checked="checked"/>统一命题
+                                                    </div>
+                                                </s:elseif>
+
                                             </div>
                                         </s:if>
                                         <s:elseif test="#old.psource==2">
@@ -109,59 +121,21 @@
                                     <div class="row-fluid">
 
                                         <label class="form-label span4">考核方式</label>
-                                        <s:if test="#old.examineway==1">
-                                            <div class="span8 controls">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="1"/>开卷
-                                                    <input type="radio" name="examineway" value="2"/>闭卷
-                                                    <input type="radio" name="examineway" value="3"/>大作业
-                                                    <input type="radio" name="examineway" value="4"/>上机
-                                                </div>
+                                        <div class="span8 controls">
+
+                                            <div class="left marginT5">
+                                                <input type="radio" name="examineway" checked="checked" value="1"/>答辩
                                             </div>
-                                        </s:if>
-                                        <s:elseif test="#old.examineway==2">
-                                            <div class="span8 controls">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="examineway" value="1"/>开卷
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="2"/>闭卷
-                                                    <input type="radio" name="examineway" value="3"/>大作业
-                                                    <input type="radio" name="examineway" value="4"/>上机
-                                                </div>
-                                            </div>
-                                        </s:elseif>
-                                        <s:elseif test="#old.examineway==3">
-                                            <div class="span8 controls">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="examineway" value="1"/>开卷
-                                                    <input type="radio" name="examineway" value="2"/>闭卷
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="3"/>大作业
-                                                    <input type="radio" name="examineway" value="4"/>上机
-                                                </div>
-                                            </div>
-                                        </s:elseif>
-                                        <s:elseif test="#old.examineway==4">
-                                            <div class="span8 controls">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="examineway" value="1"/>开卷
-                                                    <input type="radio" name="examineway" value="2"/>闭卷
-                                                    <input type="radio" name="examineway" value="3"/>大作业
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="4"/>上机
-                                                </div>
-                                            </div>
-                                        </s:elseif>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">考试人数</label>
+                                        <label class="form-label span4">选课人数</label>
                                         <input class="span8" type="text" name="num"
-                                               value="<s:property value="#old.num"/>" readonly="readonly"/>
+                                               value="<s:property value="#old.num"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -169,8 +143,18 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">试卷份数</label>
-                                        <input class="span8 tip" type="text" name="pnum"
-                                               value="<s:property value="#old.pnum"/>"/>
+                                        <input class="span8 tip" type="text" name="tnum"
+                                               value="<s:property value="#old.tnum"/>"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row row-fluid">
+                                <div class="span12">
+                                    <div class="row-fluid">
+
+                                        <label class="form-label span4">课程性质</label>
+                                        <input class="span8 tip" type="text" name="nature"
+                                               value="<s:property value="#old.nature"/>"/>
                                     </div>
                                 </div>
                             </div>
@@ -179,23 +163,28 @@
                                     <div class="row-fluid">
 
                                         <label class="form-label span4">试卷分析</label>
+                                        <s:if test="#old.analyzes==0">
+                                            <div class="span8 controls">
 
-                                        <div class="span8 controls">
-                                            <s:if test="#old.analyzes==1">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="analyzes" value="1"
-                                                           checked="checked"/>有
-                                                    <input type="radio" name="analyzes" value="0"/>无
-                                                </div>
-                                            </s:if>
-                                            <s:elseif test="#old.analyzes==0">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="analyzes" value="1"/>有
                                                     <input type="radio" name="analyzes" value="0"
                                                            checked="checked"/>无
                                                 </div>
-                                            </s:elseif>
-                                        </div>
+
+                                            </div>
+                                        </s:if>
+                                        <s:elseif test="#old.analyzes==1">
+                                            <div class="span8 controls">
+
+                                                <div class="left marginT5">
+                                                    <input type="radio" name="analyzes" value="1"/>有
+                                                    <input type="radio" name="analyzes" value="0"
+                                                           checked="checked"/>无
+                                                </div>
+
+                                            </div>
+                                        </s:elseif>
                                     </div>
                                 </div>
                             </div>
@@ -204,102 +193,21 @@
                                     <div class="row-fluid">
 
                                         <label class="form-label span4">考试大纲</label>
+                                        <s:if test="#old.plan==0">
+                                            <div class="span8 controls">
 
-                                        <div class="span8 controls">
-                                            <s:if test="#old.plan==1">
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="plan" value="1" checked="checked"/>有
-                                                    <input type="radio" name="plan" value="0"/>无
-                                                </div>
-                                            </s:if>
-                                            <s:elseif test="#old.plan==0">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="plan" value="1"/>有
                                                     <input type="radio" name="plan" value="0" checked="checked"/>无
                                                 </div>
-                                            </s:elseif>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span12">
-                                    <div class="row-fluid">
-
-                                        <label class="form-label span4">监考记录</label>
-                                        <s:if test="#old.invigilation==0">
-                                            <div class="span8 controls">
-
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="invigilation" value="1"/>有
-                                                    <input type="radio" name="invigilation" value="0"
-                                                           checked="checked"/>无
-                                                </div>
-
                                             </div>
                                         </s:if>
-                                        <s:elseif test="#old.invigilation==1">
+                                        <s:elseif test="#old.plan==1">
                                             <div class="span8 controls">
 
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="invigilation" value="1"/>有
-                                                    <input type="radio" name="invigilation" value="0"
-                                                           checked="checked"/>无
-                                                </div>
-
-                                            </div>
-                                        </s:elseif>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span12">
-                                    <div class="row-fluid">
-
-                                        <label class="form-label span4">AB卷 </label>
-                                        <s:if test="#old.ab==0">
-                                            <div class="span8 controls">
-
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="ab" value="1"/>有
-                                                    <input type="radio" name="ab" value="0" checked="checked"/>无
-                                                </div>
-                                            </div>
-                                        </s:if>
-                                        <s:elseif test="#old.ab==1">
-                                            <div class="span8 controls">
-
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="ab" value="1" checked="checked"/>有
-                                                    <input type="radio" name="ab" value="0"/>无
-                                                </div>
-                                            </div>
-                                        </s:elseif>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span12">
-                                    <div class="row-fluid">
-
-                                        <label class="form-label span4">标准答案</label>
-                                        <s:if test="#old.answer==0">
-                                            <div class="span8 controls">
-
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="answer" value="1"/>有
-                                                    <input type="radio" name="answer" value="0" checked="checked"/>无
-
-                                                </div>
-                                            </div>
-                                        </s:if>
-                                        <s:elseif test="#old.answer==1">
-                                            <div class="span8 controls">
-
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="answer" value="1" checked="checked"/>有
-                                                    <input type="radio" name="answer" value="0"/>无
-
+                                                    <input type="radio" name="plan" value="1" checked="checked"/>有
+                                                    <input type="radio" name="plan" value="0"/>无
                                                 </div>
                                             </div>
                                         </s:elseif>
@@ -311,26 +219,23 @@
                                     <div class="row-fluid">
 
                                         <label class="form-label span4">评分标准</label>
-                                        <s:if test="#old.standard==0">
-                                            <div class="span8 controls">
 
-                                                <div class="left marginT5">
-                                                    <input type="radio" name="standard" value="1"/>有
-                                                    <input type="radio" name="standard" value="0"
-                                                           checked="checked"/>无
-                                                </div>
-                                            </div>
-                                        </s:if>
-                                        <s:elseif test="#old.standard==1">
-                                            <div class="span8 controls">
-
+                                        <div class="span8 controls">
+                                            <s:if test="#old.standard==1">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="standard" value="1"
                                                            checked="checked"/>有
                                                     <input type="radio" name="standard" value="0"/>无
                                                 </div>
-                                            </div>
-                                        </s:elseif>
+                                            </s:if>
+                                            <s:elseif test="#old.standard==0">
+                                                <div class="left marginT5">
+                                                    <input type="radio" name="standard" value="1"/>有
+                                                    <input type="radio" name="standard" value="0"
+                                                           checked="checked"/>无
+                                                </div>
+                                            </s:elseif>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -345,6 +250,7 @@
                                                 <div class="left marginT5">
                                                     <input type="radio" name="score" value="1"/>有
                                                     <input type="radio" name="score" value="0" checked="checked"/>无
+
                                                 </div>
                                             </div>
                                         </s:if>
@@ -354,6 +260,7 @@
                                                 <div class="left marginT5">
                                                     <input type="radio" name="score" value="1" checked="checked"/>有
                                                     <input type="radio" name="score" value="0"/>无
+
                                                 </div>
                                             </div>
                                         </s:elseif>
@@ -369,14 +276,17 @@
                                     </div>
                                 </div>
                             </div>
+
                             <s:hidden name="fileNum" value="%{#old.fileNum}"/>
                             <s:hidden name="schoolYear" value="%{#old.schoolYear}"/>
+                            <s:hidden name="isChange" value="%{#old.isChange}"/>
                             <div class="form-actions offset2">
                                 <button type="submit" class="btn btn-info">保存</button>
                                 <button type="button" class="btn">取消</button>
                             </div>
 
                         </form>
+
                     </div>
                 </div><!-- End .box -->
             </div><!-- End .span6 -->
@@ -429,13 +339,13 @@
 
 <script type="application/javascript">
     $().ready(function () {
-        $("#qp-form").validate({
+        $("#tp-form").validate({
             rules: {
                 num: {
                     min: 0,
                     max: 300
                 },
-                pnum: {
+                tnum: {
                     min: 0,
                     max: 300
                 }
@@ -445,3 +355,4 @@
 </script>
 </body>
 </html>
+

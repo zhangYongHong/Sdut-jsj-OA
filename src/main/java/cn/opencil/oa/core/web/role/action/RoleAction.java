@@ -53,6 +53,7 @@ public class RoleAction extends BaseAction<Role> {
                 String resourceIdsStr = role.getResourceIdsStr();
                 resourceIdsStr = resourceIdsStr + ",14";
                 role.setResourceIdsStr(resourceIdsStr);
+                continue;
             }
         Long id = (Long) roleService.addEntry(role);
         systemDDL.setDdlCode(id.intValue());

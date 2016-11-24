@@ -35,11 +35,11 @@ public class PaperQuery extends BaseQuery{
 	@Override
 	public Map<String, Object> buildWhere() {
 
-		if(StringUtils.isNotBlank(this.getTeacher())){
+		if(StringUtils.isNotEmpty(this.getTeacher())){
 			this.getWhereKV().put("teacher", this.getTeacher());
 		}
 
-		if (StringUtils.isNotBlank(this.getSchoolYear())) {
+		if (StringUtils.isNotEmpty(this.getSchoolYear())) {
 			this.getWhereKV().put("schoolYear", this.getSchoolYear());
 		}
 		return this.getWhereKV();

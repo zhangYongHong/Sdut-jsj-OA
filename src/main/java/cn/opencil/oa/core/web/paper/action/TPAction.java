@@ -45,20 +45,15 @@ public class TPAction extends BaseAction<TrainingPaper> {
     public String list() {
         PageResult<TrainingPaper> trainingPapers = null;
         Subject subject = SecurityUtils.getSubject();
-        try {
-            tpQuery.setSchoolYear(this.getModel().getSchoolYear());
-            //非管理员只能查看自身的试卷列表
-            if (!subject.hasRole("admin"))
-                tpQuery.setTeacher(PageUtil.getUser().getUserName());
-            trainingPapers = this.tpService
-                    .getPageResultForTP(tpQuery);
-            ActionContext.getContext().put("trainingPapers", trainingPapers);
-            return listAction;
-        } catch (Exception e) {
-            this.addFieldError("qpListError", "试卷列表获取失败！");
-            e.getStackTrace();
-            return listAction;
-        }
+        tpQuery.setSchoolYear(this.getModel().getSchoolYear());
+        //非管理员只能查看自身的试卷列表
+        tpQuery.setTeacher(PageUtil.getUser().getUserName());
+        if (subject.isPermitted("trainingPaper:*"))
+            tpQuery.setTeacher(null);
+        trainingPapers = this.tpService
+                .getPageResultForTP(tpQuery);
+        ActionContext.getContext().put("trainingPapers", trainingPapers);
+        return listAction;
     }
 
     public String addUI() {
@@ -82,6 +77,18 @@ public class TPAction extends BaseAction<TrainingPaper> {
         }
     }
 
+    public String updateAdminUI() {
+        TrainingPaper trainingPaper = tpService.getEntryById(this.getModel().getTid());
+        ActionContext.getContext().put("old", trainingPaper);
+        return "updateAdminUI";
+    }
+
+    public String updateAdmin() {
+        TrainingPaper trainingPaper = this.getModel();
+        this.tpService.updateEntry(trainingPaper);
+        return "redirect";
+    }
+
     public String updateUI() {
         tempId = this.getModel().getTid();
         this.loadingValue();
@@ -90,7 +97,6 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     public String update() {
         TrainingPaper trainingPaper = this.getModel();
-        trainingPaper.setTid(tempId);
         if (checkValue(trainingPaper)) {
             this.loadingValue();
             return updateUI;
@@ -117,6 +123,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     /**
      * 导出excel
+     *
      * @return
      */
     public String exportExcel() {
@@ -155,6 +162,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     /**
      * 导入Excel
+     *
      * @param
      * @return
      */

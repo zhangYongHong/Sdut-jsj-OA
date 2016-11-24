@@ -67,7 +67,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">名称</label>
-                                        <input class="span8 focused" type="text" name="ddlName"/>
+                                        <input class="span8 focused" type="text" name="ddlName" required/>
                                     </div>
                                 </div>
                             </div>

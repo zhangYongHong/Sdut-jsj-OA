@@ -10,6 +10,7 @@
 		<action name="qPAction_*" class="QPAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/paper/qpaper/list.jsp</result>
 			<result name="addUI">/WEB-INF/jsp/paper/qpaper/add.jsp</result>
+			<result name="updateAdminUI">/WEB-INF/jsp/paper/qpaper/updateAdmin.jsp</result>
 			<result name="redirect" type="redirectAction">
 				<param name="actionName">qPAction_list</param>
 				<param name="namespace">/</param>

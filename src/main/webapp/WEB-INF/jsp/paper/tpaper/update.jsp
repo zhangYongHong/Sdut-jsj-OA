@@ -41,12 +41,10 @@
             <div class="span8">
 
                 <div class="box">
-
                     <div class="title center">
                         <h4>
                             <span>实训情况修改</span>
                         </h4>
-
                     </div>
                     <div class="content">
                         <div class="offset5">
@@ -86,10 +84,7 @@
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-
                                         <label class="form-label span4">试题来源</label>
-
-
                                         <s:if test="#old.psource==1">
                                             <div class="span8 controls">
                                                 <div class="left marginT5">
@@ -139,7 +134,7 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4">试卷份数</label>
                                         <input class="span8 tip" type="text" name="tnum"
-                                               value="<s:property value="#old.tnum"/>"/>
+                                               value="<s:property value="#old.tnum"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +144,7 @@
 
                                         <label class="form-label span4">课程性质</label>
                                         <input class="span8 tip" type="text" name="nature"
-                                               value="<s:property value="#old.nature"/>" re/>
+                                               value="<s:property value="#old.nature"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -271,8 +266,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <s:hidden name="tid" value="%{#old.tid}"/>
                             <s:hidden name="fileNum" value="%{#old.fileNum}"/>
                             <s:hidden name="schoolYear" value="%{#old.schoolYear}"/>
+                            <s:hidden name="isChange" value="%{#old.isChange}"/>
                             <div class="form-actions offset2">
                                 <button type="submit" class="btn btn-info">保存</button>
                                 <button type="button" class="btn">取消</button>

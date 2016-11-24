@@ -45,14 +45,14 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form id="qp-form" class="form-horizontal" action="qPAction_update" method="post">
-
+                        <form class="form-horizontal" action="qPAction_updateAdmin" method="post">
+                            <s:hidden name="qid" value="%{#old.qid}"/>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">授课老师</label>
-                                        <input class="span8" type="text" name="teacher"
-                                               value="<s:property value="#old.teacher"/>" readonly="readonly">
+                                        <input class="span8" id="normalInput" type="text" name="teacher"
+                                               value="<s:property value="#old.teacher"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -60,18 +60,18 @@
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">授课班级</label>
-                                        <input class="span8 focused" type="text" name="className"
-                                               value="<s:property value="#old.className"/>" readonly="readonly"/>
+                                        <label class="form-label span4" for="focusedInput">授课班级</label>
+                                        <input class="span8 focused" id="focusedInput" type="text" name="className"
+                                               value="<s:property value="#old.className"/>" required/>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">课程名称</label>
+                                        <label class="form-label span4" for="focusedInput">课程名称</label>
                                         <input class="span8 focused" type="text" name="course"
-                                               value="<s:property value="#old.course"/>" readonly="readonly"/>
+                                               value="<s:property value="#old.course"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4">考试人数</label>
                                         <input class="span8" type="text" name="num"
-                                               value="<s:property value="#old.num"/>" readonly="readonly"/>
+                                               value="<s:property value="#old.num"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                     <div class="row-fluid">
                                         <label class="form-label span4">试卷份数</label>
                                         <input class="span8 tip" type="text" name="pnum"
-                                               value="<s:property value="#old.pnum"/>"/>
+                                               value="<s:property value="#old.pnum"/>" required/>
                                     </div>
                                 </div>
                             </div>
@@ -371,6 +371,7 @@
                             </div>
                             <s:hidden name="fileNum" value="%{#old.fileNum}"/>
                             <s:hidden name="schoolYear" value="%{#old.schoolYear}"/>
+                            <s:hidden name="isChange" value="%{#old.isChange}"/>
                             <div class="form-actions offset2">
                                 <button type="submit" class="btn btn-info">保存</button>
                                 <button type="button" class="btn">取消</button>
