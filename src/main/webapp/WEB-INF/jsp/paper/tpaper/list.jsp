@@ -70,9 +70,9 @@
                                 <shiro:hasPermission name="trainingPaper:*">
                                     <a href="tPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
                                     <a href="tPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="tPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
+                                       class="btn btip marginR10 marginB10">导出</a>
                                 </shiro:hasPermission>
-                                <a href="tPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
-                                   class="btn btip marginR10 marginB10">导出</a>
                             </div>
 
                         </div>

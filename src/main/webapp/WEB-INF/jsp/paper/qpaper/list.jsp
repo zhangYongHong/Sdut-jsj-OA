@@ -70,9 +70,9 @@
                                 <shiro:hasPermission name="questionPaper:*">
                                     <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
                                     <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="qPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
+                                       class="btn btip marginR10 marginB10">导出</a>
                                 </shiro:hasPermission>
-                                <a href="qPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
-                                   class="btn btip marginR10 marginB10">导出</a>
                             </div>
                         </div>
                         <table cellpadding="0" cellspacing="0" border="0"
