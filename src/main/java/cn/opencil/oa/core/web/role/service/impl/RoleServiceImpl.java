@@ -77,15 +77,14 @@ public class RoleServiceImpl extends BaseServiceImpl<Role> implements RoleServic
     }
 
     @Override
-    public String
-    getRoleName(Long[] roleIds) {
+    public String getRoleName(Long[] roleIds) {
         StringBuffer stringBuffer = new StringBuffer();
         for (int i = 0; i < roleIds.length; i++) {
             Long roleId = roleIds[i];
             if (i != roleIds.length - 1) {
-                stringBuffer.append(getOne(roleId).getDescription() + ",");
+                stringBuffer.append(getOne(roleId).getRole() + ",");
             } else {
-                stringBuffer.append(getOne(roleId).getDescription());
+                stringBuffer.append(getOne(roleId).getRole());
             }
         }
         return stringBuffer.toString();

@@ -57,13 +57,13 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     }
 
     @Override
-    public void addEntry(T t) throws DataException {
+    public Serializable addEntry(T t) throws DataException {
         //org.springframework.dao.InvalidDataAccessApiUsageException: Write operations are not allowed in read-only mode (FlushMode.MANUAL): Turn your Session into FlushMode.COMMIT/AUTO or remove 'readOnly' marker from transaction definition.
         //解决导入Excel 时出现此异常
         //这种解决方式有可能引起其他问题
         //http://stackoverflow.com/questions/6810158/java-hibernate-write-operations-are-not-allowed-in-read-only-mode
 //        this.getHibernateTemplate().getSessionFactory().getCurrentSession().setFlushMode(FlushMode.AUTO);
-        this.hibernateTemplate.save(t);
+        return this.hibernateTemplate.save(t);
     }
 
     @Override

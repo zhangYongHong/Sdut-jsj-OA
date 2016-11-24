@@ -60,7 +60,6 @@
                             <tr>
                                 <th>序号</th>
                                 <th>角色</th>
-                                <th>描述</th>
                                 <th>权限</th>
                                 <th>状态</th>
                                 <th>操作</th>
@@ -71,7 +70,6 @@
                                 <tr class="odd gradeX">
                                     <td><s:property value="#i.index+1"/></td>
                                     <td><s:property value="role"/></td>
-                                    <td><s:property value="description"/></td>
                                     <td><s:property value="resourceIdsStr"/></td>
                                     <td>
                                         <s:if test="available==false">正常</s:if>

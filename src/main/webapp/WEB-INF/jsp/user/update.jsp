@@ -70,7 +70,7 @@
                                 <label class="form-label span3">角&nbsp;&nbsp;&nbsp;色:</label>
                                 <div class="span2">
                                     <s:select list="%{#session.roleList}" listKey="ddlCode" listValue="ddlName"
-                                              name="role" value="%{#oldUser.role}"
+                                              name="role" value="ddlCode"
                                               cssClass="select2-active"></s:select>
                                 </div>
                             </div>

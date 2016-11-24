@@ -56,14 +56,6 @@
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">描述:</label>
-                                        <input class="span6 focused" type="text" name="description"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span9">
-                                    <div class="row-fluid">
 
                                         <label class="form-label span4">权限:</label>
 

@@ -95,7 +95,7 @@ public class UserAction extends BaseAction<User> {
             //若为管理员权限则可以修改角色
             if (currentUser.hasRole("admin")) {
                 userByDB.setRoleIdsStr(user.getRole());
-                userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getDescription());
+                userByDB.setRole(roleService.getOne(Long.parseLong(user.getRole())).getRole());
             } else {
                 if (StringUtils.isNotEmpty(this.getModel().getEmail())) {
                     if (!this.checkEmail(this.getModel().getEmail())) {

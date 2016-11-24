@@ -56,20 +56,13 @@
                             <div class="form-row row-fluid">
                                 <div class="span9">
                                     <div class="row-fluid">
-                                        <label class="form-label span4">描述:</label>
-                                        <input class="span6 focused" type="text" name="description" value="<s:property value="#roles.description"/>"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row row-fluid">
-                                <div class="span9">
-                                    <div class="row-fluid">
                                         <label class="form-label span4">权限:</label>
                                         <input class="span6" id="normalInput" type="text" name="resourceIdsStr" value="<s:property value="#roles.resourceIdsStr"/>"/>
                                     </div>
                                 </div>
                             </div>
                             <s:hidden name="id" value="%{#roles.id}"/>
+                            <s:hidden name="ddlId" value="%{#roles.ddlId}"/>
                             <s:hidden name="available" value="0"/>
                             <div class="form-actions offset1">
                                 <button type="submit" class="btn btn-info">保存</button>

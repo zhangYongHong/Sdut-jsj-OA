@@ -28,9 +28,8 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 	}
 	
 	@Override
-	public void addEntry(T t) throws DataException {
-
-		this.getBaseDao().addEntry(t);
+	public Serializable addEntry(T t) throws DataException {
+		return this.getBaseDao().addEntry(t);
 	}
 
 	@Override

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by 张树伟 on 16-5-16.
@@ -38,8 +39,19 @@ public class RoleAction extends BaseAction<Role> {
     public String add() {
         Role role = getModel();
         PageUtil.removeSpaces(role);
-        addSystemDDL(role);
-        roleService.addEntry(role);
+        SystemDDL systemDDL = new SystemDDL();
+        systemDDL.setUuid(UUID.randomUUID().toString());
+        systemDDL.setKeyword("role");
+        systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
+        systemDDL.setDdlName(role.getRole());
+        role.setDdlId(systemDDL.getUuid());
+        Long id = (Long) roleService.addEntry(role);
+        systemDDL.setDdlCode(id.intValue());
+        systemDDLService.addEntry(systemDDL);
+        List<SystemDDL> sourceList = systemDDLService.getDDLs("role");
+        if (null != sourceList) {
+            ActionContext.getContext().getSession().put("roleList", sourceList);
+        }
         return "redirect";
     }
 
@@ -53,24 +65,18 @@ public class RoleAction extends BaseAction<Role> {
     public String update() {
         Role role = getModel();
         roleService.updateEntry(role);
+        SystemDDL systemDDL = systemDDLService.getEntryById(role.getDdlId());
+        systemDDL.setDdlName(role.getRole());
+        systemDDLService.updateEntry(systemDDL);
         return "redirect";
     }
 
     public String delete() {
         Long id = getModel().getId();
+        Role role = roleService.getOne(id);
+        String uuid = systemDDLService.getEntryById(role.getDdlId()).getUuid();
+        systemDDLService.deleteEntry(uuid);
         roleService.deleteEntry(id);
         return "redirect";
-    }
-
-    private void addSystemDDL(Role role) {
-        SystemDDL systemDDL = new SystemDDL();
-        systemDDL.setKeyword("role");
-        systemDDL.setDdlCode(systemDDLService.getNumberIsNotInDdlCode(systemDDL.getKeyword()));
-        systemDDL.setDdlName(role.getRole());
-        systemDDLService.addEntry(systemDDL);
-        List<SystemDDL> sourceList = systemDDLService.getDDLs("role");
-        if (null != sourceList) {
-            ActionContext.getContext().getSession().put("roleList", sourceList);
-        }
     }
 }

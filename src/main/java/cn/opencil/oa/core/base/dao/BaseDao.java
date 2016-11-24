@@ -31,7 +31,7 @@ public interface BaseDao<T> {
 	 * 添加
 	 * @param t
 	 */
-	void addEntry(T t) throws DataException;
+	Serializable addEntry(T t) throws DataException;
 	
 	/**
 	 * 查询一个
