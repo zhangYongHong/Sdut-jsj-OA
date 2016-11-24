@@ -38,12 +38,12 @@ public class TasksServiceImpl implements TasksService {
         //判断用户权限
         //通过用户名查找对应的任务
         Subject subject = SecurityUtils.getSubject();
-        if (subject.hasRole("admin")) {
+        if (subject.isPermitted("activiti:*")) {
             List<Task> taskList;
             taskList = taskService.createTaskQuery()
                     .orderByTaskCreateTime().desc().list();
             for (int i = 0; i < taskList.size(); i++) {
-                if (!StringUtils.isNotEmpty(taskList.get(i).getAssignee()) || taskList.get(i).getAssignee().equals("超级管理员")) {
+                if (!StringUtils.isNotEmpty(taskList.get(i).getAssignee()) || taskList.get(i).getAssignee().equals(user.getUserName())) {
                     list.add(taskList.get(i));
                 }
             }

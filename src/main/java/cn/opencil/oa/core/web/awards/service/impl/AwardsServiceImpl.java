@@ -100,7 +100,7 @@ public class AwardsServiceImpl extends BaseServiceImpl<Awards> implements Awards
             HashMap<String, Object> value = new HashMap<>();
             //classType: 业务对象类型
             //objId:业务ID
-            value.put("inputUser", user.getUserName());
+            value.put("owner", user.getUserName());
             value.put("classType", processDefinitionKey);
             value.put("objId", awards.getAid());
             //业务对象与流程建立关系

@@ -125,6 +125,10 @@ public class AwardsAction extends BaseAction<Awards> {
         return "redirectToTask";
     }
 
+    /**
+     * 重新提交
+     * @return
+     */
     public String adjustUI() {
         aid = this.getModel().getAid();
         Awards awards = awardsService.getEntryById(aid);
