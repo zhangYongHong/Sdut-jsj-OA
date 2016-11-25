@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="SdutOA:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="SdutOA-1.0.war">
-      <element id="artifact" artifact-name="SdutOA:war exploded" />
-    </root>
-  </artifact>
-</component>
