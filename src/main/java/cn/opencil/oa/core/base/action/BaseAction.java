@@ -83,7 +83,6 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T>,Servl
 	
 	@Override
 	public void setServletRequest(HttpServletRequest request) {
-		
 		this.request = request;
 	}
 

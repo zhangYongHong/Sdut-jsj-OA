@@ -28,6 +28,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
 
     @Autowired
     private SystemDDLService systemDDLService;
+    private String keyword;
 
     public String list() {
         SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
@@ -77,5 +78,15 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
             return true;
         }
         return false;
+    }
+
+    //-----------------------------------------------------------------------------------------------
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
 }
