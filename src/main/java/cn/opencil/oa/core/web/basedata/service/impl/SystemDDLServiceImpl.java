@@ -21,55 +21,57 @@ import java.util.List;
  * Author : 张树伟
  */
 @Service
-public class SystemDDLServiceImpl extends BaseServiceImpl<SystemDDL> implements SystemDDLService{
+public class SystemDDLServiceImpl extends BaseServiceImpl<SystemDDL> implements SystemDDLService {
 
-	@Autowired
-	private SystemDDLDao systemDDLDao;
-	
-	@Override
-	public PageResult<SystemDDL> getPageResultByKeyword(SystemDDLQuery baseQuery) {
-		return this.systemDDLDao.getPageResultByKeyword(baseQuery);
-	}
+    @Autowired
+    private SystemDDLDao systemDDLDao;
 
-	@Override
-	public SystemDDL getSystenDDL(String keyword, Integer ddlCode) {
-		try {
-			return this.systemDDLDao.getSystenDDL(keyword, ddlCode);
-		} catch (Exception e) {
-			return null;
-		}
-	}
+    @Override
+    public PageResult<SystemDDL> getPageResultByKeyword(SystemDDLQuery baseQuery) {
+        PageResult<SystemDDL> pageResult = this.systemDDLDao.getPageResultByKeyword(baseQuery);
+        List<SystemDDL> list = pageResult.getRows();
+        sortList(list);
+        return pageResult;
+    }
 
-	@Override
-	public BaseDao getBaseDao() {
-		return systemDDLDao;
-	}
+    @Override
+    public SystemDDL getSystenDDL(String keyword, Integer ddlCode) {
+        try {
+            return this.systemDDLDao.getSystenDDL(keyword, ddlCode);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @Override
+    public BaseDao getBaseDao() {
+        return systemDDLDao;
+    }
 
 
+    @Override
+    public void addDDL(String keyword, SystemDDL systemDDL) throws Exception {
+        //查询当前keyword的最大DDLcode
+        Integer maxCode = this.getCodeByKeyword(keyword);
+        systemDDL.setDdlCode((maxCode + 1));
+        systemDDL.setKeyword(keyword);
+        this.systemDDLDao.addDDL(systemDDL);
 
-	@Override
-	public void addDDL(String keyword, SystemDDL systemDDL) throws Exception {
-		
-		//查询当前keyword的最大DDLcode
-		Integer maxCode = this.getCodeByKeyword(keyword);
-		systemDDL.setDdlCode((maxCode+1));
-		systemDDL.setKeyword(keyword);
-		this.systemDDLDao.addDDL(systemDDL);
-		
-	}
+    }
 
-	public Integer getCodeByKeyword(String keyword) {
-		return this.systemDDLDao.getCodeByKeyword(keyword);
-	}
+    public Integer getCodeByKeyword(String keyword) {
+        return this.systemDDLDao.getCodeByKeyword(keyword);
+    }
 
-	@Override
-	public List<SystemDDL> getDDLs(String keyword) {
-		// TODO Auto-generated method stub
-		return  this.systemDDLDao.getDDLs(keyword);
-	}
+    @Override
+    public List<SystemDDL> getDDLs(String keyword) {
+        List<SystemDDL> list = this.systemDDLDao.getDDLs(keyword);
+        sortList(list);
+        return list;
+    }
 
-	@Override
-	public Integer getNumberIsNotInDdlCode(String keyword) {
+    @Override
+    public Integer getNumberIsNotInDdlCode(String keyword) {
         List<SystemDDL> list = this.getDDLs(keyword);
         if (list != null && list.size() > 0) {
             List<Integer> l = new ArrayList<>();
@@ -84,13 +86,25 @@ public class SystemDDLServiceImpl extends BaseServiceImpl<SystemDDL> implements 
                         if ((integers[i + 1] - integers[i]) > 1)
                             return integers[i] + 1;
                     }
-                    return integers[integers.length - 1] + 1;
+                return integers[integers.length - 1] + 1;
             } else {
                 if (integers[0] == 1)
                     return 2;
             }
         }
         return 1;
-	}
+    }
 
+    private void sortList(List<SystemDDL> list) {
+        SystemDDL temp;
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i; j < list.size(); j++) {
+                if (list.get(i).getDdlCode() > list.get(j).getDdlCode()) {
+                    temp = list.get(i);
+                    list.set(i, list.get(j));
+                    list.set(j, temp);
+                }
+            }
+        }
+    }
 }

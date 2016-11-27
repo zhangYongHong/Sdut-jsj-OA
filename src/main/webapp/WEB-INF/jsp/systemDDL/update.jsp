@@ -50,7 +50,7 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">类型</label>
-                                        <input class="span8" id="normalInput" type="text" name="keyword" value="<s:property value="#systemDDL.keyword"/> " readonly="readonly"/>
+                                        <input class="span8" id="normalInput" type="text" name="keyword" value="<s:property value="#systemDDL.keyword"/>" readonly="readonly"/>
                                     </div>
                                 </div>
                             </div>

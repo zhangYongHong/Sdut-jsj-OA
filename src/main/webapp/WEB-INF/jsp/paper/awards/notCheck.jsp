@@ -75,6 +75,7 @@
                             <!-- dynamicTable -->
                             <thead>
                             <tr>
+                                <th>排序</th>
                                 <th>序号</th>
                                 <th>竞赛项目</th>
                                 <th>成果展示</th>
@@ -93,6 +94,7 @@
                             <tbody>
                             <s:iterator value="#awardsPapers.rows" status="i">
                                 <tr class="odd gradeX">
+                                    <td><s:property value="#i.index+1"/></td>
                                     <td><s:property value="idView"/></td>
                                     <td><s:property value="competitionView"/></td>
                                     <td><s:property value="achievement"/></td>

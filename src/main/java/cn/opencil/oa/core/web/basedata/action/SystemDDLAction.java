@@ -28,7 +28,6 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
 
     @Autowired
     private SystemDDLService systemDDLService;
-    private String keyword;
 
     public String list() {
         SystemDDLQuery systemDDLQuery = new SystemDDLQuery();
@@ -62,7 +61,7 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
 
     public String update() {
         systemDDLService.updateEntry(this.getModel());
-        loadSource(this.getModel().getKeyword());
+        loadSource(this.getModel().getKeyword().replace(" ", ""));
         return REDIRECT;
     }
 
@@ -82,11 +81,4 @@ public class SystemDDLAction extends BaseAction<SystemDDL> {
 
     //-----------------------------------------------------------------------------------------------
 
-    public String getKeyword() {
-        return keyword;
-    }
-
-    public void setKeyword(String keyword) {
-        this.keyword = keyword;
-    }
 }
