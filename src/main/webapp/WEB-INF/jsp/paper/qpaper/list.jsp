@@ -152,7 +152,7 @@
                                             <div class="controls center">
                                                 <a href="qPAction_updateAdminUI?qid=<s:property value="qid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                                <a href="qPAction_delete?qid=<s:property value="qid"/>"
+                                                <a href="qPAction_delete?qid=<s:property value="qid"/>&schoolYear=<s:property value="schoolYear"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>

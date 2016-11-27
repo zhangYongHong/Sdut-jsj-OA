@@ -86,31 +86,20 @@
                                 <div class="span12">
                                     <div class="row-fluid">
                                         <label class="form-label span4">试题来源</label>
-                                        <s:if test="#old.psource==1">
-                                            <div class="span8 controls">
-                                                <s:if test="#old.psource==1">
-                                                    <div class="left marginT5">
-                                                        <input type="radio" name="psource" value="1" checked="checked"/>自拟
-                                                        <input type="radio" name="psource" value="2"/>统一命题
-                                                    </div>
-                                                </s:if>
-                                                <s:elseif test="#old.psource==2">
-                                                    <div class="left marginT5">
-                                                        <input type="radio" name="psource" value="1"/>自拟
-                                                        <input type="radio" name="psource" value="2" checked="checked"/>统一命题
-                                                    </div>
-                                                </s:elseif>
-
-                                            </div>
-                                        </s:if>
-                                        <s:elseif test="#old.psource==2">
-                                            <div class="span8 controls">
+                                        <div class="span8 controls">
+                                            <s:if test="#old.psource==1">
+                                                <div class="left marginT5">
+                                                    <input type="radio" name="psource" value="1" checked="checked"/>自拟
+                                                    <input type="radio" name="psource" value="2"/>统一命题
+                                                </div>
+                                            </s:if>
+                                            <s:elseif test="#old.psource==2">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="psource" value="1"/>自拟
                                                     <input type="radio" name="psource" value="2" checked="checked"/>统一命题
                                                 </div>
-                                            </div>
-                                        </s:elseif>
+                                            </s:elseif>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -178,9 +167,8 @@
                                             <div class="span8 controls">
 
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="analyzes" value="1"/>有
-                                                    <input type="radio" name="analyzes" value="0"
-                                                           checked="checked"/>无
+                                                    <input type="radio" name="analyzes" value="1" checked="checked"/>有
+                                                    <input type="radio" name="analyzes" value="0"/>无
                                                 </div>
 
                                             </div>
@@ -223,16 +211,14 @@
                                         <div class="span8 controls">
                                             <s:if test="#old.standard==1">
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="standard" value="1"
-                                                           checked="checked"/>有
+                                                    <input type="radio" name="standard" value="1" checked="checked"/>有
                                                     <input type="radio" name="standard" value="0"/>无
                                                 </div>
                                             </s:if>
                                             <s:elseif test="#old.standard==0">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="standard" value="1"/>有
-                                                    <input type="radio" name="standard" value="0"
-                                                           checked="checked"/>无
+                                                    <input type="radio" name="standard" value="0" checked="checked"/>无
                                                 </div>
                                             </s:elseif>
                                         </div>

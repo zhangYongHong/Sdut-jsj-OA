@@ -109,7 +109,6 @@
 
                                 <div class="span12">
                                     <div class="row-fluid">
-
                                         <label class="form-label span4">考核方式</label>
                                         <div class="span8 controls">
 
@@ -141,7 +140,6 @@
                             <div class="form-row row-fluid">
                                 <div class="span12">
                                     <div class="row-fluid">
-
                                         <label class="form-label span4">课程性质</label>
                                         <input class="span8 tip" type="text" name="nature"
                                                value="<s:property value="#old.nature"/>" required/>
@@ -155,24 +153,18 @@
                                         <label class="form-label span4">试卷分析</label>
                                         <s:if test="#old.analyzes==0">
                                             <div class="span8 controls">
-
                                                 <div class="left marginT5">
                                                     <input type="radio" name="analyzes" value="1"/>有
-                                                    <input type="radio" name="analyzes" value="0"
-                                                           checked="checked"/>无
+                                                    <input type="radio" name="analyzes" value="0" checked="checked"/>无
                                                 </div>
-
                                             </div>
                                         </s:if>
                                         <s:elseif test="#old.analyzes==1">
                                             <div class="span8 controls">
-
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="analyzes" value="1"/>有
-                                                    <input type="radio" name="analyzes" value="0"
-                                                           checked="checked"/>无
+                                                    <input type="radio" name="analyzes" value="1" checked="checked"/>有
+                                                    <input type="radio" name="analyzes" value="0"/>无
                                                 </div>
-
                                             </div>
                                         </s:elseif>
                                     </div>
@@ -185,7 +177,6 @@
                                         <label class="form-label span4">考试大纲</label>
                                         <s:if test="#old.plan==0">
                                             <div class="span8 controls">
-
                                                 <div class="left marginT5">
                                                     <input type="radio" name="plan" value="1"/>有
                                                     <input type="radio" name="plan" value="0" checked="checked"/>无
@@ -213,16 +204,14 @@
                                         <div class="span8 controls">
                                             <s:if test="#old.standard==1">
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="standard" value="1"
-                                                           checked="checked"/>有
+                                                    <input type="radio" name="standard" value="1" checked="checked"/>有
                                                     <input type="radio" name="standard" value="0"/>无
                                                 </div>
                                             </s:if>
                                             <s:elseif test="#old.standard==0">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="standard" value="1"/>有
-                                                    <input type="radio" name="standard" value="0"
-                                                           checked="checked"/>无
+                                                    <input type="radio" name="standard" value="0" checked="checked"/>无
                                                 </div>
                                             </s:elseif>
                                         </div>

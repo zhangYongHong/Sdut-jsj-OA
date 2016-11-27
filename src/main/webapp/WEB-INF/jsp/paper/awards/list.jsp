@@ -133,7 +133,7 @@
                                     </td>
                                     <td>
                                         <div class="left">
-                                            <a href="awardsAction_delete?aid=<s:property value="aid"/>"
+                                            <a href="awardsAction_delete?aid=<s:property value="aid"/>&schoolYear=<s:property value="schoolYear"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                         </div>

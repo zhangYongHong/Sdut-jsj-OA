@@ -68,6 +68,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
         try {
             paper.setFileNum(PageUtil.getFileNum(paper.getClassName()));
             paper.setIsChange("未修改");
+            schoolYear = paper.getSchoolYear();
             this.tpService.addEntry(paper);
             this.addFieldError("tpError", "信息添加成功！");
             return "redirect";
@@ -85,6 +86,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     public String updateAdmin() {
         TrainingPaper trainingPaper = this.getModel();
+        schoolYear = trainingPaper.getSchoolYear();
         this.tpService.updateEntry(trainingPaper);
         return "redirect";
     }
@@ -104,6 +106,7 @@ public class TPAction extends BaseAction<TrainingPaper> {
         try {
             trainingPaper.setFileNum(PageUtil.getFileNum(trainingPaper.getClassName()));
             trainingPaper.setIsChange("已修改");
+            schoolYear = trainingPaper.getSchoolYear();
             this.tpService.updateEntry(trainingPaper);
             return "redirect";
         } catch (Exception e) {
@@ -115,10 +118,9 @@ public class TPAction extends BaseAction<TrainingPaper> {
 
     public String delete() {
         Long id = this.getModel().getTid();
+        schoolYear = this.getModel().getSchoolYear();
         this.tpService.deleteEntry(id);
-        // 跳转到列表页面的字符串
         return "redirect";
-
     }
 
     /**

@@ -138,7 +138,7 @@
                                             <div class="controls center">
                                                 <a href="tPAction_updateAdminUI?tid=<s:property value="tid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                                <a href="tPAction_delete?tid=<s:property value="tid"/>"
+                                                <a href="tPAction_delete?tid=<s:property value="tid"/>&schoolYear=<s:property value="schoolYear"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>

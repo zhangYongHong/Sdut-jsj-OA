@@ -37,6 +37,7 @@ public class AwardsAction extends BaseAction<Awards> {
     private AwardsService awardsService;
     @Autowired
     private SystemDDLService systemDDLService;
+    private String schoolYear;
 
     private Logger log = Logger.getLogger(AwardsAction.class);
     private Long aid;
@@ -61,7 +62,6 @@ public class AwardsAction extends BaseAction<Awards> {
         //默认显示登陆用户新提交的表单信息
         awardsQuery.setEmployeenum(user.getEmployeenum());
         awardsQuery.setState(this.getModel().getState());
-
         try {
             PageResult<Awards> awardsPageResult = awardsService.getAwardsPageResult(awardsQuery);
             ActionContext.getContext().put("awardsPapers", awardsPageResult);
@@ -86,11 +86,13 @@ public class AwardsAction extends BaseAction<Awards> {
         Awards awards = this.awardsService.getEntryById(this.getModel().getAid());
         BeanUtils.copyProperties(this.getModel(), awards);
         this.awardsService.updateEntry(awards);
+        schoolYear = awards.getSchoolYear();
         return "redirect";
     }
 
     public String delete() {
         Long aid = this.getModel().getAid();
+        schoolYear = this.getModel().getSchoolYear();
         this.awardsService.deleteAwards(aid);
         return "redirect";
     }
@@ -201,4 +203,11 @@ public class AwardsAction extends BaseAction<Awards> {
         this.aid = aid;
     }
 
+    public String getSchoolYear() {
+        return schoolYear;
+    }
+
+    public void setSchoolYear(String schoolYear) {
+        this.schoolYear = schoolYear;
+    }
 }

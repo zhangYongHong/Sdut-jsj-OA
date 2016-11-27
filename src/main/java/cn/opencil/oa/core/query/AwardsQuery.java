@@ -1,5 +1,7 @@
 package cn.opencil.oa.core.query;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Map;
 
 /**
@@ -40,11 +42,11 @@ public class AwardsQuery extends BaseQuery {
      */
     @Override
     public Map<String, Object> buildWhere() {
-        if (null != employeenum)
+        if (StringUtils.isNotEmpty(employeenum))
             this.getWhereKV().put("employeenum", employeenum);
-        if (null != schoolYear)
+        if (StringUtils.isNotEmpty(schoolYear))
             this.getWhereKV().put("schoolYear", schoolYear);
-        if (null!= state) {
+        if (null != state) {
             this.getWhereKV().put("state", state);
         }
         return this.getWhereKV();

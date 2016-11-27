@@ -11,10 +11,7 @@
 			<result name="addUI">/WEB-INF/jsp/paper/tpaper/add.jsp</result>
 			<result name="updateUI">/WEB-INF/jsp/paper/tpaper/update.jsp</result>
 			<result name="updateAdminUI">/WEB-INF/jsp/paper/tpaper/updateAdmin.jsp</result>
-			<result name="redirect" type="redirectAction">
-				<param name="actionName">tPAction_list</param>
-				<param name="namespace">/</param>
-			</result>
+			<result name="redirect" type="redirect">tPAction_list?schoolYear=${schoolYear}</result>
 			<result name="excel" type="stream">
 				<param name="contentType">application/vnd.ms-excel</param>
 			    <param name="inputName">inputStream</param>

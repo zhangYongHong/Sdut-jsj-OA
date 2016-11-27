@@ -67,6 +67,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
             }
             paper.setFileNum(PageUtil.getFileNum(paper.getClassName()));
             paper.setIsChange("未修改");
+            schoolYear = paper.getSchoolYear();
             this.qpService.addEntry(paper);
         } catch (Exception e) {
             this.addFieldError("qpAddError", "试卷信息添加失败！");
@@ -84,6 +85,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
 
     public String updateAdmin() {
         QuestionPaper questionPaper = this.getModel();
+        schoolYear = questionPaper.getSchoolYear();
         this.qpService.updateEntry(questionPaper);
         return "redirect";
     }
@@ -106,6 +108,7 @@ public class QPAction extends BaseAction<QuestionPaper> {
         try {
             questionPaper.setFileNum(PageUtil.getFileNum(questionPaper.getClassName()));
             questionPaper.setIsChange("已修改");
+            schoolYear = questionPaper.getSchoolYear();
             this.qpService.updateEntry(questionPaper);
             this.loadingValue();
             this.addFieldError("qpError", "提交成功！");
@@ -122,12 +125,11 @@ public class QPAction extends BaseAction<QuestionPaper> {
         Long id = null;
         try {
             id = this.getModel().getQid();
+            schoolYear = this.getModel().getSchoolYear();
             this.qpService.deleteEntry(id);
         } catch (Exception e) {
             this.addFieldError("qpDeleteError", "删除失败！");
         }
-
-        // 跳转到列表页面的字符串
         return "redirect";
     }
 

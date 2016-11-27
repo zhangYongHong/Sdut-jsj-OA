@@ -95,10 +95,9 @@
                                     <td><s:property value="ddlName"/></td>
                                     <td>
                                         <div class="controls center">
-
                                             <a href="systemDDLAction_updateUI?uuid=<s:property value="uuid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                            <a href="systemDDLAction_delete?uuid=<s:property value="uuid"/>"
+                                            <a href="systemDDLAction_delete?uuid=<s:property value="uuid"/>&keyword=<s:property value="keyword"/>"
                                                onclick="return confirm('你确定要删除？')" class="tip"><span
                                                     class="icon12 icomoon-icon-remove"></span></a>
                                         </div>

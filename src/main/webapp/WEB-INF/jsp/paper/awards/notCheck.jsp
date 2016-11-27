@@ -60,8 +60,8 @@
                                 <div class="row-fluid">
                                     <label class="form-label span2">状态:</label>
                                     <div class="span8 controls">
-                                        <select name="state" id="state" onchange="selectChange()">
-                                            <option>请选择</option>
+                                        <select name="state" id="state" onchange="selectSate()">
+                                            <option value="1">请选择</option>
                                             <option value="1">审核中</option>
                                             <option value="2">已通过</option>
                                             <option value="3">驳回</option>
@@ -146,10 +146,10 @@
 <!-- Le javascript
 ================================================== -->
 <script type="text/javascript">
-    function selectChange() {
-        var selObj = document.getElementById("state");
-        var i = selObj.selectedIndex;
-        window.location.href="awardsAction_waitForCheckList?state=" + selObj.options[i].value;
+    function selectSate() {
+        var state = document.getElementById("state");
+        var j = state.selectedIndex;
+        window.location.href="awardsAction_waitForCheckList?state=" + state.options[j].value;
     }
 </script>
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
