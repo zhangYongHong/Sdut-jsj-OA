@@ -7,10 +7,10 @@
 	<package name="tpaper" extends="struts-default" namespace="/">
 	
 		<action name="tPAction_*" class="TPAction" method="{1}">
-			<result name="listAction">/WEB-INF/jsp/paper/tpaper/list.jsp</result>
-			<result name="addUI">/WEB-INF/jsp/paper/tpaper/add.jsp</result>
-			<result name="updateUI">/WEB-INF/jsp/paper/tpaper/update.jsp</result>
-			<result name="updateAdminUI">/WEB-INF/jsp/paper/tpaper/updateAdmin.jsp</result>
+			<result name="listAction">/WEB-INF/jsp/test/tpaper/list.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/test/tpaper/add.jsp</result>
+			<result name="updateUI">/WEB-INF/jsp/test/tpaper/update.jsp</result>
+			<result name="updateAdminUI">/WEB-INF/jsp/test/tpaper/updateAdmin.jsp</result>
 			<result name="redirect" type="redirect">tPAction_list?schoolYear=${schoolYear}</result>
 			<result name="excel" type="stream">
 				<param name="contentType">application/vnd.ms-excel</param>
@@ -18,7 +18,7 @@
 			    <param name="contentDisposition">attachment;filename="${#request.filename}"</param>
 			    <param name="bufferSize">1024</param>
 			</result>
-			<result name="input">/WEB-INF/jsp/paper/tpaper/add.jsp</result>
+			<result name="input">/WEB-INF/jsp/test/tpaper/add.jsp</result>
 			<result name="loadingExcelUI">/WEB-INF/jsp/common/uploadForTp.jsp</result>
 		</action>
 		
