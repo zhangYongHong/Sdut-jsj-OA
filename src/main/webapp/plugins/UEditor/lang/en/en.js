@@ -454,7 +454,7 @@ UE.I18N['en'] = {
             'lang_input_removePic':'RemoveImage',
             'J_imgTxt':{title:'Add background image'}
         },
-        'noScarwl':"No paint, a white paper...",
+        'noScarwl':"No paint, a white test...",
         'scrawlUpLoading':"Image is uploading, please wait...",
         'continueBtn':"Try again",
         'imageError':"Image failed to load!",

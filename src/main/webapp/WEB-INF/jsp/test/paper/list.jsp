@@ -33,7 +33,7 @@
 
         <div class="heading">
 
-            <h3>试卷归档管理表</h3>
+            <h3>教研论文管理表</h3>
 
 
         </div><!-- End .heading-->
@@ -48,7 +48,7 @@
 
                     <div class="title">
                         <h4>
-                            <span>试卷归档管理表</span>
+                            <span>教研论文管理表</span>
                         </h4>
                     </div>
 
@@ -81,23 +81,14 @@
                             <thead>
                             <tr>
                                 <th>序号</th>
-                                <th>授课老师</th>
-                                <th>授课班级</th>
-                                <th>课程名称</th>
-                                <th>试题来源</th>
-                                <th>考核方式</th>
-                                <th>人数</th>
-                                <th>试卷份数</th>
-                                <th>试卷考核</th>
-                                <th>考核大纲</th>
-                                <th>监考记录</th>
-                                <th>AB卷</th>
-                                <th>标准答案</th>
-                                <th>评分标准</th>
-                                <th>成绩单</th>
-                                <th>备注</th>
-                                <th>归档号</th>
-                                <th>状态</th>
+                                <th>论文题目</th>
+                                <th>第一作者</th>
+                                <th>参与者</th>
+                                <th>刊物级别</th>
+                                <th>发表时间</th>
+                                <th>检索类型</th>
+                                <th>卷期</th>
+                                <th>附件</th>
                                 <th>操作</th>
                                 <shiro:hasPermission name="questionPaper:*">
                                     <th>管理员操作</th>

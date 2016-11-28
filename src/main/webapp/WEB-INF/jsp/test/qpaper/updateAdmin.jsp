@@ -45,7 +45,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form class="form-horizontal" action="qPAction_updateAdmin" method="post">
+                        <form class="form-horizontal" action="qp_updateAdmin" method="post">
                             <s:hidden name="qid" value="%{#old.qid}"/>
                             <div class="form-row row-fluid">
                                 <div class="span12">

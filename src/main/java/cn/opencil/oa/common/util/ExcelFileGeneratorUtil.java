@@ -2,7 +2,7 @@ package cn.opencil.oa.common.util;
 
 import cn.opencil.oa.core.domain.QuestionPaper;
 import cn.opencil.oa.core.domain.TrainingPaper;
-import cn.opencil.oa.core.web.paper.service.impl.QPServiceImpl;
+import cn.opencil.oa.core.web.test.service.impl.QPServiceImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.poi.hssf.usermodel.*;

@@ -52,7 +52,7 @@
                         <div class="offset5">
                             <s:fielderror name="qpError" cssStyle="color: crimson"></s:fielderror>
                         </div>
-                        <form id="tp-form" class="form-horizontal" action="tPAction_updateAdmin" method="post">
+                        <form id="tp-form" class="form-horizontal" action="tp_updateAdmin" method="post">
                             <s:hidden name="tid" value="%{#old.tid}"/>
                             <div class="form-row row-fluid">
                                 <div class="span12">
