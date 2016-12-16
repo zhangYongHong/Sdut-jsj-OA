@@ -104,7 +104,7 @@
         <property name="usernameParam" value="username"/>
         <property name="passwordParam" value="password"/>
         <property name="rememberMeParam" value="rememberMe"/>
-        <property name="loginUrl" value="/loginAction_login.action"/>
+        <property name="loginUrl" value="/loginAction"/>
     </bean>
 
     <bean id="sysUserFilter" class="cn.opencil.oa.core.web.shiro.filter.SysUserFilter"/>
@@ -135,10 +135,6 @@
             </value>
         </property>
     </bean>
-
     <!-- Shiro生命周期处理器-->
     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
-
-
-
 </beans>

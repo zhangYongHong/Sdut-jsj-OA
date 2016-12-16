@@ -101,8 +101,9 @@
                                             <div class="left marginT5">
                                                 <input type="radio" name="examineway" value="1"/>开卷
                                                 <input type="radio" name="examineway" checked="checked" value="2"/>闭卷
-                                                <input type="radio" name="examineway" value="3"/>大作业
-                                                <input type="radio" name="examineway" value="4"/>上机
+                                                <input type="radio" name="examineway" value="3"/>答辩
+                                                <input type="radio" name="examineway" value="4"/>大作业
+                                                <input type="radio" name="examineway" value="5"/>上机
                                             </div>
                                         </div>
                                     </div>

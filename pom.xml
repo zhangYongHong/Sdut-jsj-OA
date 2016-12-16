@@ -89,6 +89,11 @@
             <artifactId>activiti-spring</artifactId>
             <version>${activiti.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-rest</artifactId>
+            <version>5.19.0</version>
+        </dependency>
 
         <!-- Shiro 配置 -->
         <dependency>

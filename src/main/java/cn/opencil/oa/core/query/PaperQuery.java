@@ -1,6 +1,7 @@
 package cn.opencil.oa.core.query;
 
-import org.apache.commons.lang.StringUtils;
+
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
 
@@ -15,6 +16,8 @@ public class PaperQuery extends BaseQuery{
 
 	private String teacher;
 	private String schoolYear;
+	private String author;
+	private String particpants;
 
 	public String getTeacher() {
 		return teacher;
@@ -32,6 +35,22 @@ public class PaperQuery extends BaseQuery{
 		this.schoolYear = schoolYear;
 	}
 
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getParticpants() {
+		return particpants;
+	}
+
+	public void setParticpants(String particpants) {
+		this.particpants = particpants;
+	}
+
 	@Override
 	public Map<String, Object> buildWhere() {
 
@@ -41,6 +60,13 @@ public class PaperQuery extends BaseQuery{
 
 		if (StringUtils.isNotEmpty(this.getSchoolYear())) {
 			this.getWhereKV().put("schoolYear", this.getSchoolYear());
+		}
+
+		if (StringUtils.isNotEmpty(this.getAuthor())) {
+			this.getWhereKV().put("author", author);
+		}
+		if (StringUtils.isNotEmpty(this.getParticpants())) {
+			this.getWhereKV().put("particpants", particpants);
 		}
 		return this.getWhereKV();
 	}

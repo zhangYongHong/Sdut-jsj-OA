@@ -99,7 +99,6 @@ public class AwardsAction extends BaseAction<Awards> {
 
     /**
      * 提交获奖管理信息
-     *
      * @param id
      * @return
      */

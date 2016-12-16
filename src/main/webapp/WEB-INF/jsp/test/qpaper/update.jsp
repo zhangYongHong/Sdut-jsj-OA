@@ -112,11 +112,11 @@
                                         <s:if test="#old.examineway==1">
                                             <div class="span8 controls">
                                                 <div class="left marginT5">
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="1"/>开卷
+                                                    <input type="radio" name="examineway" value="1" checked="checked"/>开卷
                                                     <input type="radio" name="examineway" value="2"/>闭卷
-                                                    <input type="radio" name="examineway" value="3"/>大作业
-                                                    <input type="radio" name="examineway" value="4"/>上机
+                                                    <input type="radio" name="examineway" value="3"/>答辩
+                                                    <input type="radio" name="examineway" value="4"/>大作业
+                                                    <input type="radio" name="examineway" value="5"/>上机
                                                 </div>
                                             </div>
                                         </s:if>
@@ -124,10 +124,10 @@
                                             <div class="span8 controls">
                                                 <div class="left marginT5">
                                                     <input type="radio" name="examineway" value="1"/>开卷
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="2"/>闭卷
-                                                    <input type="radio" name="examineway" value="3"/>大作业
-                                                    <input type="radio" name="examineway" value="4"/>上机
+                                                    <input type="radio" name="examineway" value="2" checked="checked"/>闭卷
+                                                    <input type="radio" name="examineway" value="3"/>答辩
+                                                    <input type="radio" name="examineway" value="4"/>大作业
+                                                    <input type="radio" name="examineway" value="5"/>上机
                                                 </div>
                                             </div>
                                         </s:elseif>
@@ -136,9 +136,9 @@
                                                 <div class="left marginT5">
                                                     <input type="radio" name="examineway" value="1"/>开卷
                                                     <input type="radio" name="examineway" value="2"/>闭卷
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="3"/>大作业
-                                                    <input type="radio" name="examineway" value="4"/>上机
+                                                    <input type="radio" name="examineway" value="3" checked="checked"/>答辩
+                                                    <input type="radio" name="examineway" value="4"/>大作业
+                                                    <input type="radio" name="examineway" value="5"/>上机
                                                 </div>
                                             </div>
                                         </s:elseif>
@@ -147,9 +147,20 @@
                                                 <div class="left marginT5">
                                                     <input type="radio" name="examineway" value="1"/>开卷
                                                     <input type="radio" name="examineway" value="2"/>闭卷
-                                                    <input type="radio" name="examineway" value="3"/>大作业
-                                                    <input type="radio" name="examineway" checked="checked"
-                                                           value="4"/>上机
+                                                    <input type="radio" name="examineway" value="3"/>答辩
+                                                    <input type="radio" name="examineway" value="4" checked="checked"/>大作业
+                                                    <input type="radio" name="examineway" value="5"/>上机
+                                                </div>
+                                            </div>
+                                        </s:elseif>
+                                        <s:elseif test="#old.examineway==5">
+                                            <div class="span8 controls">
+                                                <div class="left marginT5">
+                                                    <input type="radio" name="examineway" value="1"/>开卷
+                                                    <input type="radio" name="examineway" value="2"/>闭卷
+                                                    <input type="radio" name="examineway" value="3"/>答辩
+                                                    <input type="radio" name="examineway" value="4"/>大作业
+                                                    <input type="radio" name="examineway" value="5" checked="checked"/>上机
                                                 </div>
                                             </div>
                                         </s:elseif>

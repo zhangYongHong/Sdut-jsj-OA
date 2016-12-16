@@ -1,6 +1,8 @@
 package cn.opencil.oa.core.web.activiti;
 
+import cn.opencil.oa.core.domain.Paper;
 import cn.opencil.oa.core.web.activiti.service.TasksService;
+import cn.opencil.oa.core.web.test.service.PaperService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,9 +22,27 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class TasksServiceTest {
     @Autowired
     TasksService tasksService;
+    @Autowired
+    PaperService paperService;
     @Test
     public void historyList() {
         tasksService.historyList();
         Assert.assertNotNull(tasksService.historyList());
+    }
+
+    @Test
+    public void test() {
+        Paper paper = new Paper();
+        paper.setUuid("1233");
+        paper.setAnnex("122");
+        paper.setAuthor("eeqw");
+        paper.setLevel(1);
+        paper.setParticpants("sdasd");
+        paper.setPublishedDate(new java.sql.Date(122121221212121l));
+        paper.setSchoolYear(1);
+        paper.setTitle("sdasdas");
+        paper.setType(1);
+        paper.setVolumePeriod("asdasd");
+        paperService.addEntry(paper);
     }
 }

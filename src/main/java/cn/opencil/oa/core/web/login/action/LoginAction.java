@@ -7,6 +7,7 @@ import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.web.basedata.service.SystemDDLService;
 import cn.opencil.oa.core.web.basedata.service.UserService;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
@@ -33,6 +34,7 @@ public class LoginAction extends BaseAction<User> {
     private SystemDDLService systemDDLService;
     @Autowired
     private UserService userService;
+    private Logger logger = Logger.getLogger(LoginAction.class);
 
     public String login() {
         return "loginIn";
@@ -56,15 +58,11 @@ public class LoginAction extends BaseAction<User> {
         } catch (LockedAccountException lae) {
             this.addFieldError("loginError", "您的账号已锁定，请联系管理员解锁！");
             return "loginIn";
+        } catch (ExcessiveAttemptsException eae) {
+            logger.error(eae.getMessage());
+        } catch (AuthenticationException e) {
+            logger.error(e.getMessage());
         }
-
-//        catch (ExcessiveAttemptsException eae) {
-//            this.addFieldError("loginError", "登陆错误！");
-//            return "loginIn";
-//        } catch (AuthenticationException e) {
-//            this.addFieldError("loginError", "登陆错误！");
-//            return "loginIn";
-//        }
         HttpSession session = this.getRequest().getSession();
         session.setAttribute(ContantKey.GLOBLE_USER_INFO, user);
         //角色

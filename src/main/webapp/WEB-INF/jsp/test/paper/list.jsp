@@ -68,9 +68,9 @@
                             </div>
                             <div class="bottom">
                                 <shiro:hasPermission name="questionPaper:*">
-                                    <a href="qPAction_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                    <a href="qPAction_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
-                                    <a href="qPAction_exportExcel?schoolYear=<s:property value="schoolYear"/>"
+                                    <a href="p_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                    <a href="p_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
+                                    <a href="p_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                        class="btn btip marginR10 marginB10">导出</a>
                                 </shiro:hasPermission>
                             </div>
@@ -96,54 +96,40 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <s:iterator value="#questionPapers.rows" status="i">
+                            <s:iterator value="#papers" status="i">
                                 <tr class="odd gradeX">
                                     <td><s:property value="#i.index+1"/></td>
-                                    <td><s:property value="teacher"/></td>
-                                    <td><s:property value="className"/></td>
-                                    <td><s:property value="course"/></td>
+                                    <td><s:property value="title"/></td>
+                                    <td><s:property value="author"/></td>
+                                    <td><s:property value="particpants"/></td>
                                     <td>
-                                        <s:if test="psource==1">自拟</s:if>
-                                        <s:elseif test="psource==2">统一命题</s:elseif>
+                                        <s:if test="level==1">核心期刊</s:if>
+                                        <s:elseif test="level==2">一般期刊</s:elseif>
                                     </td>
+                                    <td><s:date name="publishedDate" format="yyyy-MM"/></td>
+
                                     <td>
-                                        <s:if test="examineway==1">开卷</s:if>
-                                        <s:elseif test="examineway==2">闭卷</s:elseif>
-                                        <s:elseif test="examineway==3">答辩</s:elseif>
-                                        <s:elseif test="examineway==2">大作业</s:elseif>
-                                        <s:elseif test="examineway==2">上机</s:elseif>
+                                        <s:if test="type==1">无</s:if>
+                                        <s:elseif test="type==2">EI检索</s:elseif>
+                                        <s:elseif test="type==3">SCI检索</s:elseif>
+                                        <s:elseif test="type==2">CSCD检索</s:elseif>
+                                        <s:elseif test="type==2">ISTP检索</s:elseif>
+                                        <s:elseif test="type==2">CSSCI检索</s:elseif>
                                     </td>
-                                    <td><s:property value="num"/></td>
-                                    <td><s:property value="pnum"/></td>
-                                    <td><s:if test="analyzes==1">有</s:if> <s:elseif
-                                            test="analyzes==0">无</s:elseif></td>
-                                    <td><s:if test="plan==1">有</s:if> <s:elseif
-                                            test="plan==0">无</s:elseif></td>
-                                    <td><s:if test="invigilation==1">有</s:if> <s:elseif
-                                            test="invigilation==0">无</s:elseif></td>
-                                    <td><s:if test="ab==1">有</s:if> <s:elseif
-                                            test="ab==0">无</s:elseif></td>
-                                    <td><s:if test="answer==1">有</s:if> <s:elseif
-                                            test="answer==0">无</s:elseif></td>
-                                    <td><s:if test="standard==1">有</s:if> <s:elseif
-                                            test="standard==0">无</s:elseif></td>
-                                    <td><s:if test="score==1">有</s:if> <s:elseif
-                                            test="score==0">无</s:elseif></td>
-                                    <td><s:property value="comment"/></td>
-                                    <td><s:property value="fileNum"/></td>
-                                    <td><s:property value="isChange"/></td>
+                                    <td><s:property value="volumePeriod"/></td>
+                                    <td><s:property value="annex"/></td>
                                     <td>
                                         <div class="controls center">
-                                            <a href="qPAction_updateUI?qid=<s:property value="qid"/>"
+                                            <a href="p_updateUI?qid=<s:property value="uuid"/>"
                                                class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
                                         </div>
                                     </td>
                                     <shiro:hasPermission name="questionPaper:*">
                                         <td>
                                             <div class="controls center">
-                                                <a href="qPAction_updateAdminUI?qid=<s:property value="qid"/>"
+                                                <a href="p_updateAdminUI?uuid=<s:property value="uuid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                                <a href="qPAction_delete?qid=<s:property value="qid"/>&schoolYear=<s:property value="schoolYear"/>"
+                                                <a href="p_delete?qid=<s:property value="qid"/>&schoolYear=<s:property value="schoolYear"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>
@@ -173,7 +159,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href = "qPAction_list?schoolYear=" + selObj.options[i].value;
+        window.location.href = "p_list?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>

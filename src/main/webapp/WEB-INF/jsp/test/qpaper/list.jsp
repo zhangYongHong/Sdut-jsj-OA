@@ -119,8 +119,8 @@
                                         <s:if test="examineway==1">开卷</s:if>
                                         <s:elseif test="examineway==2">闭卷</s:elseif>
                                         <s:elseif test="examineway==3">答辩</s:elseif>
-                                        <s:elseif test="examineway==2">大作业</s:elseif>
-                                        <s:elseif test="examineway==2">上机</s:elseif>
+                                        <s:elseif test="examineway==4">大作业</s:elseif>
+                                        <s:elseif test="examineway==5">上机</s:elseif>
                                     </td>
                                     <td><s:property value="num"/></td>
                                     <td><s:property value="pnum"/></td>
