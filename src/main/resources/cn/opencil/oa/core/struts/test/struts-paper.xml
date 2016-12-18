@@ -9,6 +9,7 @@
 	
 		<action name="p_*" class="paperAction" method="{1}">
 			<result name="listAction">/WEB-INF/jsp/test/paper/list.jsp</result>
+			<result name="addUI">/WEB-INF/jsp/test/paper/add.jsp</result>
 		</action>
 		
 	</package>

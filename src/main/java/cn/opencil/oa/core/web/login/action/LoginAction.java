@@ -80,6 +80,7 @@ public class LoginAction extends BaseAction<User> {
         this.loadSource("state");
         this.loadSource("available");
         this.loadSource("schoolYear");
+        this.loadSource("searchLevel");
 
         return SUCCESS;
     }
