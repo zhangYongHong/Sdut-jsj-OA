@@ -1,5 +1,7 @@
 package cn.opencil.oa.core.domain;
 
+import java.io.File;
+import java.io.InputStream;
 import java.sql.Date;
 
 /**
@@ -20,6 +22,8 @@ public class Paper {
     private String volumePeriod; // 卷期
     private String annex; // 附件地址
     private Integer schoolYear;
+    private File annexFile;
+    private InputStream inputStream;
 
     public String getUuid() {
         return uuid;
@@ -99,6 +103,22 @@ public class Paper {
 
     public void setSchoolYear(Integer schoolYear) {
         this.schoolYear = schoolYear;
+    }
+
+    public File getAnnexFile() {
+        return annexFile;
+    }
+
+    public void setAnnexFile(File annexFile) {
+        this.annexFile = annexFile;
+    }
+
+    public InputStream getInputStream() {
+        return inputStream;
+    }
+
+    public void setInputStream(InputStream inputStream) {
+        this.inputStream = inputStream;
     }
 
     @Override

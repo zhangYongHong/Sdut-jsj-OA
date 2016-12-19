@@ -258,8 +258,8 @@ public class PageUtil {
         role.setResourceIdsStr(str.replaceAll(" ", ""));
     }
 
-    public static String  uploadAnnex(File srcFile, String schoolYear, String achievement) {
-        String path = ServletActionContext.getServletContext().getRealPath("/upload/images/" + schoolYear) + "/";
+    public static String uploadAnnex(File srcFile, String schoolYear, String achievement, String model) {
+        String path = ServletActionContext.getServletContext().getRealPath("/upload/" + model + "/" + schoolYear) + "/";
         String fileName = achievement + ".jpeg";
         File tempFile = new File(path + fileName);
         try {
@@ -269,6 +269,7 @@ public class PageUtil {
         }
         return path + fileName;
     }
+
     /**
      * 文档压缩
      */

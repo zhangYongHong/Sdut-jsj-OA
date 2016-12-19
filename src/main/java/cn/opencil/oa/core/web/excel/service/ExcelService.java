@@ -16,4 +16,6 @@ public interface ExcelService {
 	ArrayList<String> getExcelByTPaper();
 
     ArrayList<String> getExcelByAwards();
+
+	ArrayList<String> getExcelByPaper();
 }

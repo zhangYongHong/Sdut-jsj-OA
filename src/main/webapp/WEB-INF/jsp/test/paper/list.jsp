@@ -69,7 +69,6 @@
                             <div class="bottom">
                                 <shiro:hasPermission name="questionPaper:*">
                                     <a href="p_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                    <a href="p_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
                                     <a href="p_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                        class="btn btip marginR10 marginB10">导出</a>
                                 </shiro:hasPermission>
@@ -89,10 +88,9 @@
                                 <th>检索类型</th>
                                 <th>卷期</th>
                                 <th>附件</th>
-                                <th>操作</th>
-                                <shiro:hasPermission name="questionPaper:*">
+                                <%--<shiro:hasPermission name="paper:*">--%>
                                     <th>管理员操作</th>
-                                </shiro:hasPermission>
+                                <%--</shiro:hasPermission>--%>
                             </tr>
                             </thead>
                             <tbody>
@@ -117,24 +115,23 @@
                                         <s:elseif test="type==2">CSSCI检索</s:elseif>
                                     </td>
                                     <td><s:property value="volumePeriod"/></td>
-                                    <td><s:property value="annex"/></td>
                                     <td>
-                                        <div class="controls center">
-                                            <a href="p_updateUI?qid=<s:property value="uuid"/>"
-                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
+                                        <div>
+                                            <a href="p_showAnnex?uuid=<s:property value="uuid"/>">查看附件</a>
+                                            <a href="p_downImage?uuid=<s:property value="uuid"/>">下载附件</a>
                                         </div>
                                     </td>
-                                    <shiro:hasPermission name="questionPaper:*">
+                                    <%--<shiro:hasPermission name="paper:*">--%>
                                         <td>
                                             <div class="controls center">
-                                                <a href="p_updateAdminUI?uuid=<s:property value="uuid"/>"
+                                                <a href="p_updateUI?uuid=<s:property value="uuid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                                <a href="p_delete?qid=<s:property value="qid"/>&schoolYear=<s:property value="schoolYear"/>"
+                                                <a href="p_delete?uuid=<s:property value="uuid"/>&schoolYear=<s:property value="schoolYear"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>
                                         </td>
-                                    </shiro:hasPermission>
+                                    <%--</shiro:hasPermission>--%>
                                 </tr>
                             </s:iterator>
                             </tbody>

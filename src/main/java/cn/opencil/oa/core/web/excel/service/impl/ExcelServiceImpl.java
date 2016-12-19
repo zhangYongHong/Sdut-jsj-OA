@@ -80,4 +80,18 @@ public class ExcelServiceImpl implements ExcelService {
 		return excelDao.getFieldDataNameExcel(titleList);
     }
 
+    @Override
+    public ArrayList<String> getExcelByPaper() {
+		ArrayList<String> titleList = new ArrayList<>();
+		titleList.add("序号");
+		titleList.add("论文题目");
+		titleList.add("第一作者");
+		titleList.add("参与者");
+		titleList.add("刊物级别");
+		titleList.add("发表时间");
+		titleList.add("检索类型");
+		titleList.add("卷期");
+		return excelDao.getFieldDataNameExcel(titleList);
+    }
+
 }

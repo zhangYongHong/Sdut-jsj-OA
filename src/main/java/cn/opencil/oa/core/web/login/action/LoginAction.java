@@ -81,6 +81,7 @@ public class LoginAction extends BaseAction<User> {
         this.loadSource("available");
         this.loadSource("schoolYear");
         this.loadSource("searchLevel");
+        this.loadSource("type");
 
         return SUCCESS;
     }
