@@ -67,8 +67,8 @@
                                 </div>
                             </div>
                             <div class="bottom ">
+                                <a href="tp_addUI" class="btn btip marginR10 marginB10">新增</a>
                                 <shiro:hasPermission name="trainingPaper:*">
-                                    <a href="tp_addUI" class="btn btip marginR10 marginB10">新增</a>
                                     <a href="tp_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
                                     <a href="tp_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                        class="btn btip marginR10 marginB10">导出</a>

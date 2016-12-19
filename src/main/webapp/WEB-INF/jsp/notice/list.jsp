@@ -53,6 +53,9 @@
                     </div>
 
                     <div class="content noPad clearfix">
+                        <div class="bottom center">
+                            <a href="noticeAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                        </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
                             <!-- dynamicTable -->
@@ -71,7 +74,7 @@
                                 <tr class="odd gradeX">
                                     <td><s:property value="uuid"/></td>
                                     <td><s:property value="title"/></td>
-                                    <%--<td><s:property value="content"/></td>--%>
+                                        <%--<td><s:property value="content"/></td>--%>
                                     <td><s:date name="beginDate" format="yyyy-MM-dd"/></td>
                                     <td><s:property value="user"/></td>
                                     <td>

@@ -16,6 +16,7 @@
 	<include file="cn/opencil/oa/core/struts/test/struts-paper.xml"></include>
 	<include file="cn/opencil/oa/core/struts/test/struts-tpaper.xml"></include>
 	<include file="cn/opencil/oa/core/struts/test/struts-qpaper.xml"></include>
+	<include file="cn/opencil/oa/core/struts/test/struts-topics.xml"></include>
 
 	<!--权限管理-->
 	<include file="cn/opencil/oa/core/struts/role/struts-role.xml"></include>

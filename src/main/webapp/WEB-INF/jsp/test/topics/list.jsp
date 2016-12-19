@@ -33,7 +33,7 @@
 
         <div class="heading">
 
-            <h3>试卷归档管理表</h3>
+            <h3>教研课题管理</h3>
 
 
         </div><!-- End .heading-->
@@ -48,7 +48,7 @@
 
                     <div class="title">
                         <h4>
-                            <span>试卷归档管理表</span>
+                            <span>教研课题管理</span>
                         </h4>
                     </div>
 
@@ -67,10 +67,9 @@
                                 </div>
                             </div>
                             <div class="bottom">
-                                <a href="qp_addUI" class="btn btip marginR10 marginB10">新增</a>
-                                <shiro:hasPermission name="questionPaper:*">
-                                    <a href="qp_loadingExcelUI" class="btn btip marginR10 marginB10">导入</a>
-                                    <a href="qp_exportExcel?schoolYear=<s:property value="schoolYear"/>"
+                                <a href="topics_addUI" class="btn btip marginR10 marginB10">新增</a>
+                                <shiro:hasPermission name="topics:*">
+                                    <a href="topics_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                        class="btn btip marginR10 marginB10">导出</a>
                                 </shiro:hasPermission>
                             </div>
@@ -81,78 +80,38 @@
                             <thead>
                             <tr>
                                 <th>序号</th>
-                                <th>授课老师</th>
-                                <th>授课班级</th>
-                                <th>课程名称</th>
-                                <th>试题来源</th>
-                                <th>考核方式</th>
-                                <th>人数</th>
-                                <th>试卷份数</th>
-                                <th>试卷考核</th>
-                                <th>考核大纲</th>
-                                <th>监考记录</th>
-                                <th>AB卷</th>
-                                <th>标准答案</th>
-                                <th>评分标准</th>
-                                <th>成绩单</th>
-                                <th>备注</th>
-                                <th>归档号</th>
-                                <th>状态</th>
-                                <th>操作</th>
-                                <shiro:hasPermission name="questionPaper:*">
+                                <th>项目名称</th>
+                                <th>类别</th>
+                                <th>负责人</th>
+                                <th>课题组成员</th>
+                                <th>立项时间</th>
+                                <th>结题时间</th>
+                                <th>结题评价</th>
+                                <th>项目层次</th>
+                                <shiro:hasPermission name="topics:*">
                                     <th>管理员操作</th>
                                 </shiro:hasPermission>
                             </tr>
                             </thead>
                             <tbody>
-                            <s:iterator value="#questionPapers.rows" status="i">
+                            <s:iterator value="#topics" status="i">
                                 <tr class="odd gradeX">
                                     <td><s:property value="#i.index+1"/></td>
-                                    <td><s:property value="teacher"/></td>
-                                    <td><s:property value="className"/></td>
-                                    <td><s:property value="course"/></td>
-                                    <td>
-                                        <s:if test="psource==1">自拟</s:if>
-                                        <s:elseif test="psource==2">统一命题</s:elseif>
-                                    </td>
-                                    <td>
-                                        <s:if test="examineway==1">开卷</s:if>
-                                        <s:elseif test="examineway==2">闭卷</s:elseif>
-                                        <s:elseif test="examineway==3">答辩</s:elseif>
-                                        <s:elseif test="examineway==4">大作业</s:elseif>
-                                        <s:elseif test="examineway==5">上机</s:elseif>
-                                    </td>
-                                    <td><s:property value="num"/></td>
-                                    <td><s:property value="pnum"/></td>
-                                    <td><s:if test="analyzes==1">有</s:if> <s:elseif
-                                            test="analyzes==0">无</s:elseif></td>
-                                    <td><s:if test="plan==1">有</s:if> <s:elseif
-                                            test="plan==0">无</s:elseif></td>
-                                    <td><s:if test="invigilation==1">有</s:if> <s:elseif
-                                            test="invigilation==0">无</s:elseif></td>
-                                    <td><s:if test="ab==1">有</s:if> <s:elseif
-                                            test="ab==0">无</s:elseif></td>
-                                    <td><s:if test="answer==1">有</s:if> <s:elseif
-                                            test="answer==0">无</s:elseif></td>
-                                    <td><s:if test="standard==1">有</s:if> <s:elseif
-                                            test="standard==0">无</s:elseif></td>
-                                    <td><s:if test="score==1">有</s:if> <s:elseif
-                                            test="score==0">无</s:elseif></td>
-                                    <td><s:property value="comment"/></td>
-                                    <td><s:property value="fileNum"/></td>
-                                    <td><s:property value="isChange"/></td>
-                                    <td>
-                                        <div class="controls center">
-                                            <a href="qp_updateUI?qid=<s:property value="qid"/>"
-                                               class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                        </div>
-                                    </td>
-                                    <shiro:hasPermission name="questionPaper:*">
+                                    <td><s:property value="name"/></td>
+                                    <td><s:property value="type"/></td>
+                                    <td><s:property value="principal"/></td>
+                                    <td><s:property value="member"/></td>
+                                    <td><s:date name="startTime" format="yyyy-MM"/></td>
+                                    <td><s:date name="endTime" format="yyyy-MM"/></td>
+                                    <td><s:property value="evaluate"/></td>
+                                    <td><s:property value="gradation"/></td>
+
+                                    <shiro:hasPermission name="topics:*">
                                         <td>
                                             <div class="controls center">
-                                                <a href="qp_updateAdminUI?qid=<s:property value="qid"/>"
+                                                <a href="topics_updateUI?uuid=<s:property value="uuid"/>"
                                                    class="tip"><span class="icon12 icomoon-icon-pencil"></span></a>
-                                                <a href="qp_delete?qid=<s:property value="qid"/>&schoolYear=<s:property value="schoolYear"/>"
+                                                <a href="topics_delete?uuid=<s:property value="uuid"/>&schoolYear=<s:property value="schoolYear"/>"
                                                    onclick="return confirm('你确定要删除？')" class="tip"><span
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>
@@ -182,7 +141,7 @@
     function selectChange() {
         var selObj = document.getElementById("schoolYear");
         var i = selObj.selectedIndex;
-        window.location.href = "qp_list?schoolYear=" + selObj.options[i].value;
+        window.location.href = "topics_list?schoolYear=" + selObj.options[i].value;
     }
 </script>
 <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>

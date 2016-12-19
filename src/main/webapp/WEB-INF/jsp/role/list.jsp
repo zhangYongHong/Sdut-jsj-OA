@@ -51,10 +51,13 @@
                             <span>角色管理列表</span>
                         </h4>
                     </div>
-
+                    <div class="bottom center">
+                        <a href="roleAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                    </div>
                     <div class="content noPad clearfix">
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">
+
                             <!-- dynamicTable -->
                             <thead>
                             <tr>

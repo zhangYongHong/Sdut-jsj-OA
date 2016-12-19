@@ -115,8 +115,6 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
     @Override
     public int getCount(final BaseQuery baseQuery) {
-
-
         return this.hibernateTemplate.execute(
                 new HibernateCallback<Integer>() {
                     @Override

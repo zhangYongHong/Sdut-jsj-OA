@@ -73,6 +73,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="bottom">
+                                <a href="systemDDLAction_addUI" class="btn btip marginR10 marginB10">新增</a>
+                            </div>
                         </div>
                         <table cellpadding="0" cellspacing="0" border="0"
                                class="responsive dynamicTable display table table-bordered" width="100%">

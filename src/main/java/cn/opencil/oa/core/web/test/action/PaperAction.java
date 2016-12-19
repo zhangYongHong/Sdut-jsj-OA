@@ -1,12 +1,16 @@
 package cn.opencil.oa.core.web.test.action;
 
 import cn.opencil.oa.common.page.PageResult;
+import cn.opencil.oa.common.util.PageUtil;
 import cn.opencil.oa.core.base.action.BaseAction;
 import cn.opencil.oa.core.domain.Paper;
+import cn.opencil.oa.core.domain.User;
 import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.test.service.PaperService;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -33,11 +37,16 @@ public class PaperAction extends BaseAction<Paper> {
     public String list() {
         PaperQuery paperQuery = new PaperQuery();
         String schoolYear = this.getModel().getSchoolYear();
-//        if (schoolYear != null)
-//            paperQuery.setSchoolYear(schoolYear.toString());
-//        User user = PageUtil.getUser();
-//        // 根据当前用户的用户名与第一作者比对
-//        paperQuery.setAuthor(user.getUserName());
+        Subject subject = SecurityUtils.getSubject();
+        if (schoolYear != null)
+            paperQuery.setSchoolYear(schoolYear.toString());
+        // 根据当前用户的用户名与第一作者比对
+        User user = PageUtil.getUser();
+        paperQuery.setAuthor(user.getUserName());
+        if (subject.isPermitted("paper:*")) {
+            paperQuery.setAuthor(null);
+        }
+
         PageResult<Paper> pageResult = paperService.getPageResult(paperQuery);
         List<Paper> papers = pageResult.getRows();
         if (papers == null)

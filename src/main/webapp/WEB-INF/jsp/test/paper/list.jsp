@@ -67,8 +67,8 @@
                                 </div>
                             </div>
                             <div class="bottom">
+                                <a href="p_addUI" class="btn btip marginR10 marginB10">新增</a>
                                 <shiro:hasPermission name="questionPaper:*">
-                                    <a href="p_addUI" class="btn btip marginR10 marginB10">新增</a>
                                     <a href="p_exportExcel?schoolYear=<s:property value="schoolYear"/>"
                                        class="btn btip marginR10 marginB10">导出</a>
                                 </shiro:hasPermission>
@@ -88,9 +88,9 @@
                                 <th>检索类型</th>
                                 <th>卷期</th>
                                 <th>附件</th>
-                                <%--<shiro:hasPermission name="paper:*">--%>
+                                <shiro:hasPermission name="paper:*">
                                     <th>管理员操作</th>
-                                <%--</shiro:hasPermission>--%>
+                                </shiro:hasPermission>
                             </tr>
                             </thead>
                             <tbody>
@@ -121,7 +121,7 @@
                                             <a href="p_downImage?uuid=<s:property value="uuid"/>">下载附件</a>
                                         </div>
                                     </td>
-                                    <%--<shiro:hasPermission name="paper:*">--%>
+                                    <shiro:hasPermission name="paper:*">
                                         <td>
                                             <div class="controls center">
                                                 <a href="p_updateUI?uuid=<s:property value="uuid"/>"
@@ -131,7 +131,7 @@
                                                         class="icon12 icomoon-icon-remove"></span></a>
                                             </div>
                                         </td>
-                                    <%--</shiro:hasPermission>--%>
+                                    </shiro:hasPermission>
                                 </tr>
                             </s:iterator>
                             </tbody>

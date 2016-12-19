@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.opencil.oa.core.domain.Topics" table="jsj_topics">
+		<id name="uuid" type="java.lang.String"/>
+		<property name="name" type="java.lang.String"/>
+		<property name="type" type="java.lang.String"/>
+		<property name="principal" type="java.lang.String"/>
+		<property name="member" type="java.lang.String"/>
+		<property name="startTime" type="java.sql.Date"/>
+		<property name="endTime" type="java.sql.Date"/>
+		<property name="evaluate" type="java.lang.String"/>
+		<property name="gradation" type="java.lang.String"/>
+		<property name="schoolYear" type="java.lang.String"/>
+	</class>
+</hibernate-mapping>

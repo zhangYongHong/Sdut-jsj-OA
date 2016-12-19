@@ -154,7 +154,7 @@
                                     <li><a href="${pageContext.request.contextPath}/p_list"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>教研论文管理</a>
                                     </li>
-                                    <li><a href="${pageContext.request.contextPath}/tPAction_list"><span
+                                    <li><a href="${pageContext.request.contextPath}/topics_list"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>教研课题管理</a>
                                     </li>
                                 </ul>
