@@ -30,25 +30,23 @@
         </div><!-- End .heading-->
 
         <!-- Build page from here: -->
-        <form action="qPAction_uploadExcel" enctype="multipart/form-data" method="post">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="well well-small">
-                        <form action="tPAction_uploadExcel.action" enctype="multipart/form-data" method="post">
-                            <input type="file" id="upload" name="uploadfile"/>
-                            <div class="span2">
-                                <s:select list="%{#session.schoolYearList}" listKey="ddlCode" listValue="ddlName"
-                                          name="schoolYear" cssClass="select2-active"></s:select>
-                            </div>
-                            <button class="offset1" type="submit" id="uploader"><span
-                                    class="icon16 icomoon-icon-upload-3"></span> 导入
-                            </button>
-                        </form>
-                    </div>
-                </div><!-- End .span12 -->
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="well well-small">
+                    <form action="tp_uploadExcel" enctype="multipart/form-data" method="post">
+                        <input type="file" id="upload" name="uploadfile"/>
+                        <div class="span2">
+                            <s:select list="%{#session.schoolYearList}" listKey="ddlCode" listValue="ddlName"
+                                      name="schoolYear" cssClass="select2-active"></s:select>
+                        </div>
+                        <button class="offset1" type="submit" id="uploader"><span
+                                class="icon16 icomoon-icon-upload-3"></span> 导入
+                        </button>
+                    </form>
+                </div>
+            </div><!-- End .span12 -->
 
-            </div><!-- End .row-fluid -->
-        </form>
+        </div><!-- End .row-fluid -->
     </div><!-- End contentwrapper -->
 </div><!-- End #content -->
 
