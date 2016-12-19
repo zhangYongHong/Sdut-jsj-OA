@@ -6,11 +6,13 @@ import cn.opencil.oa.core.domain.Paper;
 import cn.opencil.oa.core.query.PaperQuery;
 import cn.opencil.oa.core.web.test.service.PaperService;
 import com.opensymphony.xwork2.ActionContext;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -30,7 +32,7 @@ public class PaperAction extends BaseAction<Paper> {
 
     public String list() {
         PaperQuery paperQuery = new PaperQuery();
-        Integer schoolYear = this.getModel().getSchoolYear();
+        String schoolYear = this.getModel().getSchoolYear();
 //        if (schoolYear != null)
 //            paperQuery.setSchoolYear(schoolYear.toString());
 //        User user = PageUtil.getUser();
@@ -68,19 +70,47 @@ public class PaperAction extends BaseAction<Paper> {
         return LISTACTION;
     }
 
-    public String exportExcel() {
-        Integer schoolYear = this.getModel().getSchoolYear();
-        if (schoolYear == null)
-            schoolYear = 0;
-        InputStream inputStream = paperService.exportExcel(schoolYear);
-//        if (inputStream != null) {
-//            String excelName = paperService.getExcelName(schoolYear);
-//            ActionContext.getContext().put("inputStream", inputStream);
-//            ActionContext.getContext().put("excelName", excelName);
-//        } else {
-//            return "listAction";
-//        }
-//        return "excel";
-        return null;
+    public String delete() {
+        String uuid = this.getModel().getUuid();
+        Paper paper = paperService.getEntryById(uuid);
+        paperService.deleteEntry(uuid);
+        ActionContext.getContext().put("schoolYear", paper.getSchoolYear());
+        return "redirect";
     }
+
+    public String exportExcel() {
+        String schoolYear = this.getModel().getSchoolYear();
+        if (!StringUtils.isNotEmpty(schoolYear))
+            schoolYear = "0";
+        InputStream inputStream = paperService.exportExcel(schoolYear);
+        if (inputStream != null) {
+            String excelName = paperService.getExcelName(schoolYear);
+            ActionContext.getContext().put("inputStream", inputStream);
+            ActionContext.getContext().put("excelName", excelName);
+        } else {
+            return "listAction";
+        }
+        return "excel";
+    }
+
+    public String showAnnex() {
+        InputStream annex = paperService.showAnnex(this.getModel().getUuid());
+        ActionContext.getContext().put("annex", annex);
+        return "showAnnex";
+    }
+
+    public String downImage() {
+        Paper paper = paperService.downloadImage(this.getModel().getUuid());
+        InputStream annex = paper.getInputStream();
+        ActionContext.getContext().put("annex", annex);
+        String filename = paper.getTitle() + ".jpeg";
+        try {
+            filename = new String(filename.getBytes("gbk"), "iso-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        ActionContext.getContext().put("fileName", filename);
+        return "downImage";
+    }
+
 }

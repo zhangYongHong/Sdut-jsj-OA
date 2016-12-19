@@ -13,6 +13,6 @@
 		<property name="type" type="java.lang.Integer"/>
 		<property name="volumePeriod" type="java.lang.String"/>
 		<property name="annex" type="java.lang.String"/>
-		<property name="schoolYear" type="java.lang.Integer"/>
+		<property name="schoolYear" type="java.lang.String"/>
 	</class>
 </hibernate-mapping>

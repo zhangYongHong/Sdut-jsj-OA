@@ -39,7 +39,7 @@ public class TasksServiceTest {
         paper.setLevel(1);
         paper.setParticpants("sdasd");
         paper.setPublishedDate(new java.sql.Date(122121221212121l));
-        paper.setSchoolYear(1);
+        paper.setSchoolYear("0");
         paper.setTitle("sdasdas");
         paper.setType(1);
         paper.setVolumePeriod("asdasd");

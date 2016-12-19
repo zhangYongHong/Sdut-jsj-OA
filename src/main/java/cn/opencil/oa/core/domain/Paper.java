@@ -21,7 +21,7 @@ public class Paper {
     private Integer type; // 检索类型 : 无、EI检索、SCI检索、CSCD检索、ISTP检索、CSSCI检索
     private String volumePeriod; // 卷期
     private String annex; // 附件地址
-    private Integer schoolYear;
+    private String schoolYear;
     private File annexFile;
     private InputStream inputStream;
 
@@ -97,11 +97,11 @@ public class Paper {
         this.annex = annex;
     }
 
-    public Integer getSchoolYear() {
+    public String getSchoolYear() {
         return schoolYear;
     }
 
-    public void setSchoolYear(Integer schoolYear) {
+    public void setSchoolYear(String schoolYear) {
         this.schoolYear = schoolYear;
     }
 
