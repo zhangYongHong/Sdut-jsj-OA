@@ -10,6 +10,5 @@
     <div class="center">
         <p style="font-size: 15px">山东理工大学计算机学院©2016</p>
         <p>技术支持 : 智能装备创新实验室</p>
-        <p>邮箱: mnzero@163.com</p>
     </div>
 </div>
