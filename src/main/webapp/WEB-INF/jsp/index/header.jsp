@@ -143,7 +143,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>试卷管理</a>
+                                <a href="#"><span class="icon16 icomoon-icon-list-view"></span>教务管理</a>
                                 <ul class="sub">
                                     <li><a href="${pageContext.request.contextPath}/qp_list"><span
                                             class="icon16 icomoon-icon-arrow-right-2"></span>试卷归档管理</a>
